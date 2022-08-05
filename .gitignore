@@ -1,0 +1,12 @@
+
+*.pak
+
+*.exe
+
+LocalBK/post-images/
+
+*.dll
+
+*.dat
+
+*.bin
