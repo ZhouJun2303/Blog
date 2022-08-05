@@ -1,0 +1,30 @@
+{
+  "config": {
+    "archivesPageSize": 50,
+    "archivesPath": "archives",
+    "dateFormat": "YYYY-MM-DD",
+    "feedCount": 10,
+    "feedFullText": true,
+    "footerInfo": "Powered by <a href=\"https://zhoujun2303.github.io/\">胖胖</a>",
+    "postPageSize": 10,
+    "postPath": "post",
+    "postUrlFormat": "SLUG",
+    "showFeatureImage": true,
+    "siteDescription": "10000小时定律",
+    "siteName": "长胖是个梦想",
+    "tagPath": "tag",
+    "tagUrlFormat": "SHORT_ID",
+    "themeName": "space"
+  },
+  "customConfig": {
+    "albumStyle": "1",
+    "baiduStats": "",
+    "bgColor": "#ffffff",
+    "customCss": "",
+    "github": "",
+    "imgDisabled": "1",
+    "twitter": "",
+    "weibo": "",
+    "zhihu": ""
+  }
+}

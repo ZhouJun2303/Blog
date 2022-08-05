@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=app://./favicon.ico><title>Gridea</title><style>.landing {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+      }
+
+      .loading-inner--fadeout {
+          -webkit-animation: .2s ease 0s normal forwards 1 loading-inner--fadeout;
+          animation: .2s ease 0s normal forwards 1 loading-inner--fadeout;
+          opacity: 1
+      }
+
+      @-webkit-keyframes loading-inner--fadeout {
+          0% {
+              opacity: 1
+          }
+
+          100% {
+              opacity: 0
+          }
+      }
+
+      @keyframes loading-inner--fadeout {
+          0% {
+              opacity: 1
+          }
+
+          100% {
+              opacity: 0
+          }
+      }
+
+      .loading-inner--loading {
+          -webkit-animation: .2s ease .8s normal forwards 1 loading-inner--loading;
+          animation: .2s ease .8s normal forwards 1 loading-inner--loading;
+          opacity: 0
+      }
+
+      @-webkit-keyframes loading-inner--loading {
+          0% {
+              opacity: 0
+          }
+
+          100% {
+              opacity: 1
+          }
+      }
+
+      @keyframes loading-inner--loading {
+          0% {
+              opacity: 0
+          }
+
+          100% {
+              opacity: 1
+          }
+      }
+
+      .loading-inner--fadein {
+          -webkit-animation: .2s ease 0s normal forwards 1 loading-inner--fadein;
+          animation: .2s ease 0s normal forwards 1 loading-inner--fadein;
+          opacity: 1;
+      }
+
+      @-webkit-keyframes loading-inner--fadein {
+          0% {
+              opacity: 0
+          }
+
+          100% {
+              opacity: 1
+          }
+      }
+
+      @keyframes loading-inner--fadein {
+          0% {
+              opacity: 0
+          }
+
+          100% {
+              opacity: 1
+          }
+      }
+
+      .pulse-spinner {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          margin: 100px auto;
+      }
+
+      .pulse-spinner__nib {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          margin-left: -1.5px;
+          width: 2px;
+          height: 6px;
+          border-radius: 1.5px;
+          -webkit-transform-origin: center 12px;
+          transform-origin: center 12px;
+          -webkit-animation-name: nib;
+          animation-name: nib;
+          animation-direction: reverse;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-timing-function: cubic-bezier(-webkit-calc(1 / 3),0,-webkit-calc(2 / 3),-webkit-calc(1 / 3));
+          animation-timing-function: cubic-bezier(calc(1 / 3),0,calc(2 / 3),calc(1 / 3));
+          background: #000
+      }
+
+      .pulse-spinner__nib-0 {
+          -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+          -webkit-transform: rotate(0);
+          transform: rotate(0)
+      }
+
+      .pulse-spinner__nib-1 {
+          -webkit-animation-delay: -.91667s;
+          animation-delay: -.91667s;
+          -webkit-transform: rotate(30deg);
+          transform: rotate(30deg)
+      }
+
+      .pulse-spinner__nib-2 {
+          -webkit-animation-delay: -.83333s;
+          animation-delay: -.83333s;
+          -webkit-transform: rotate(60deg);
+          transform: rotate(60deg)
+      }
+
+      .pulse-spinner__nib-3 {
+          -webkit-animation-delay: -.75s;
+          animation-delay: -.75s;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg)
+      }
+
+      .pulse-spinner__nib-4 {
+          -webkit-animation-delay: -.66667s;
+          animation-delay: -.66667s;
+          -webkit-transform: rotate(120deg);
+          transform: rotate(120deg)
+      }
+
+      .pulse-spinner__nib-5 {
+          -webkit-animation-delay: -.58333s;
+          animation-delay: -.58333s;
+          -webkit-transform: rotate(150deg);
+          transform: rotate(150deg)
+      }
+
+      .pulse-spinner__nib-6 {
+          -webkit-animation-delay: -.5s;
+          animation-delay: -.5s;
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg)
+      }
+
+      .pulse-spinner__nib-7 {
+          -webkit-animation-delay: -.41667s;
+          animation-delay: -.41667s;
+          -webkit-transform: rotate(210deg);
+          transform: rotate(210deg)
+      }
+
+      .pulse-spinner__nib-8 {
+          -webkit-animation-delay: -.33333s;
+          animation-delay: -.33333s;
+          -webkit-transform: rotate(240deg);
+          transform: rotate(240deg)
+      }
+
+      .pulse-spinner__nib-9 {
+          -webkit-animation-delay: -.25s;
+          animation-delay: -.25s;
+          -webkit-transform: rotate(270deg);
+          transform: rotate(270deg)
+      }
+
+      .pulse-spinner__nib-10 {
+          -webkit-animation-delay: -.16667s;
+          animation-delay: -.16667s;
+          -webkit-transform: rotate(300deg);
+          transform: rotate(300deg)
+      }
+
+      .pulse-spinner__nib-11 {
+          -webkit-animation-delay: -83.33ms;
+          animation-delay: -83.33ms;
+          -webkit-transform: rotate(330deg);
+          transform: rotate(330deg)
+      }
+
+      @-webkit-keyframes nib {
+          0% {
+              opacity: .16863
+          }
+
+          100% {
+              opacity: 1
+          }
+      }
+
+      @keyframes nib {
+          0% {
+              opacity: .16863
+          }
+
+          100% {
+              opacity: 1
+          }
+      }</style><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css integrity=sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js integrity=sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ crossorigin=anonymous></script><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700"><link href=https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css rel=stylesheet><script src=https://cdn.headwayapp.co/widget.js></script><link href=app://./js/chunk-2d0a3577.bf767ffa.js rel=prefetch><link href=app://./js/chunk-2d0a43df.340f5f2f.js rel=prefetch><link href=app://./js/chunk-2d0aa90c.d7635384.js rel=prefetch><link href=app://./js/chunk-2d0aab07.97cd5c90.js rel=prefetch><link href=app://./js/chunk-2d0abc00.6aa447b5.js rel=prefetch><link href=app://./js/chunk-2d0ae937.c848eb3c.js rel=prefetch><link href=app://./js/chunk-2d0aeb45.c34a966b.js rel=prefetch><link href=app://./js/chunk-2d0afa49.65edc883.js rel=prefetch><link href=app://./js/chunk-2d0b2762.ea0762a8.js rel=prefetch><link href=app://./js/chunk-2d0b6187.9855e6f5.js rel=prefetch><link href=app://./js/chunk-2d0ba136.d1a5ee4d.js rel=prefetch><link href=app://./js/chunk-2d0bb267.86780440.js rel=prefetch><link href=app://./js/chunk-2d0bcec1.002a3c2a.js rel=prefetch><link href=app://./js/chunk-2d0bff92.cf9169a1.js rel=prefetch><link href=app://./js/chunk-2d0c0494.e08e83bc.js rel=prefetch><link href=app://./js/chunk-2d0c0a09.1731d140.js rel=prefetch><link href=app://./js/chunk-2d0c1ed0.f91bcc8c.js rel=prefetch><link href=app://./js/chunk-2d0c4313.85d639b5.js rel=prefetch><link href=app://./js/chunk-2d0c46d1.f325ab35.js rel=prefetch><link href=app://./js/chunk-2d0c512b.b69d9a65.js rel=prefetch><link href=app://./js/chunk-2d0cf16e.dcbdeb47.js rel=prefetch><link href=app://./js/chunk-2d0d056d.238c889a.js rel=prefetch><link href=app://./js/chunk-2d0d0645.0a0c3286.js rel=prefetch><link href=app://./js/chunk-2d0d7e63.93483ded.js rel=prefetch><link href=app://./js/chunk-2d0e1b57.7cf446f0.js rel=prefetch><link href=app://./js/chunk-2d0e1fbe.9b1a1d56.js rel=prefetch><link href=app://./js/chunk-2d0e22d6.981ae9d9.js rel=prefetch><link href=app://./js/chunk-2d0e542a.3fb13239.js rel=prefetch><link href=app://./js/chunk-2d0e57ec.058ad620.js rel=prefetch><link href=app://./js/chunk-2d0e6553.d423a5dd.js rel=prefetch><link href=app://./js/chunk-2d0e6c86.2feb0786.js rel=prefetch><link href=app://./js/chunk-2d0ea098.77dfef3f.js rel=prefetch><link href=app://./js/chunk-2d208ac5.af5dfcde.js rel=prefetch><link href=app://./js/chunk-2d209408.f980f200.js rel=prefetch><link href=app://./js/chunk-2d20f745.ee7f8067.js rel=prefetch><link href=app://./js/chunk-2d20ff23.8dae693e.js rel=prefetch><link href=app://./js/chunk-2d2138c7.7929e389.js rel=prefetch><link href=app://./js/chunk-2d216f3b.a4b57140.js rel=prefetch><link href=app://./js/chunk-2d217e5b.98f30d74.js rel=prefetch><link href=app://./js/chunk-2d21b84a.42c86df8.js rel=prefetch><link href=app://./js/chunk-2d21dcd2.112500bb.js rel=prefetch><link href=app://./js/chunk-2d21f327.d4fc4875.js rel=prefetch><link href=app://./js/chunk-2d2214b3.0a560aa4.js rel=prefetch><link href=app://./js/chunk-2d221814.87ce92c2.js rel=prefetch><link href=app://./js/chunk-2d221a34.1eefad95.js rel=prefetch><link href=app://./js/chunk-2d22502a.79fc23eb.js rel=prefetch><link href=app://./js/chunk-2d228ca6.73a18635.js rel=prefetch><link href=app://./js/chunk-2d2295e9.7bdf7168.js rel=prefetch><link href=app://./js/chunk-2d22c171.6245a1e1.js rel=prefetch><link href=app://./js/chunk-2d22c2b8.a307496f.js rel=prefetch><link href=app://./js/chunk-2d22ca58.42ffb920.js rel=prefetch><link href=app://./js/chunk-2d2311f7.f6ca7d84.js rel=prefetch><link href=app://./js/chunk-2d237ee7.c24f0bfd.js rel=prefetch><link href=app://./js/chunk-2d238465.8c40b77e.js rel=prefetch><link href=app://./js/chunk-7498b54e.d5546d12.js rel=prefetch><link href=app://./js/chunk-7532b3ea.21a47815.js rel=prefetch><link href=app://./js/chunk-774ac664.b0b875c9.js rel=prefetch><link href=app://./css/app.07dd0e9c.css rel=preload as=style><link href=app://./css/chunk-vendors.d1c91a9d.css rel=preload as=style><link href=app://./js/app.36afefc7.js rel=modulepreload as=script><link href=app://./js/chunk-vendors.c212ddc4.js rel=modulepreload as=script><link href=app://./css/chunk-vendors.d1c91a9d.css rel=stylesheet><link href=app://./css/app.07dd0e9c.css rel=stylesheet></head><body><noscript><strong>We're sorry but Gridea doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app><div id=landing class=landing><div class=pulse-spinner><div class="pulse-spinner__nib pulse-spinner__nib-0"></div><div class="pulse-spinner__nib pulse-spinner__nib-1"></div><div class="pulse-spinner__nib pulse-spinner__nib-2"></div><div class="pulse-spinner__nib pulse-spinner__nib-3"></div><div class="pulse-spinner__nib pulse-spinner__nib-4"></div><div class="pulse-spinner__nib pulse-spinner__nib-5"></div><div class="pulse-spinner__nib pulse-spinner__nib-6"></div><div class="pulse-spinner__nib pulse-spinner__nib-7"></div><div class="pulse-spinner__nib pulse-spinner__nib-8"></div><div class="pulse-spinner__nib pulse-spinner__nib-9"></div><div class="pulse-spinner__nib pulse-spinner__nib-10"></div><div class="pulse-spinner__nib pulse-spinner__nib-11"></div></div></div></div><script type=module src=app://./js/chunk-vendors.c212ddc4.js></script><script type=module src=app://./js/app.36afefc7.js></script><script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script></body></html>
