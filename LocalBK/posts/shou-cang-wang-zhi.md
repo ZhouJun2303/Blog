@@ -1,10 +1,10 @@
 ---
 title: '收藏网址'
-date: 2022-08-05 15:00:38
+date: 2020-12-08 15:00:38
 tags: [收藏]
 published: true
 hideInList: false
-feature: /post-images/shou-cang-wang-zhi.jpg
+feature: /post-images/shou-cang-wang-zhi.png
 isTop: false
 ---
 [疑难杂症大佬在线](https://www.jianshu.com/p/ff462d5efd2)

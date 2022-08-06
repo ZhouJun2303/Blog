@@ -1,10 +1,10 @@
 ---
 title: 'windows批处理'
-date: 2022-08-05 10:33:42
-tags: [Windows]
+date: 2020-08-26 10:33:42
+tags: [Windows,Bat]
 published: true
 hideInList: false
-feature: /post-images/wang-de-fa.jpg
+feature: /post-images/windows-pi-chu-li.png
 isTop: false
 ---
 - 1，批量处理删除文件

@@ -1,6 +1,44 @@
 {
   "posts": [
     {
+      "content": "[有道笔记](https://note.youdao.com/s/53kLYfdi)",
+      "data": {
+        "title": "关于UnityBuild 模板使用",
+        "date": "2022-08-06 14:46:53",
+        "tags": [
+          "Unity",
+          "Android"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/guan-yu-unitybuild-mo-ban-shi-yong.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "guan-yu-unitybuild-mo-ban-shi-yong"
+    },
+    {
+      "content": "[有道笔记](https://note.youdao.com/s/V0wIfI58)",
+      "data": {
+        "title": "UnityC#转dll",
+        "date": "2022-08-06 14:45:13",
+        "tags": [
+          "Unity",
+          "Dll"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/unityczhuan-dll.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unityczhuan-dll"
+    },
+    {
       "content": "[![](https://zhoujun2303.github.io/post-images/1659687743641.jpg)](https://play.google.com/store/apps/details?id=wanyou.miaole.snakeraceio)",
       "data": {
         "title": "GameRecord",
@@ -10,7 +48,7 @@
         ],
         "published": true,
         "hideInList": false,
-        "feature": "/post-images/gamerecord.jpg",
+        "feature": "/post-images/gamerecord.png",
         "isTop": false
       },
       "isEmpty": false,
@@ -19,16 +57,424 @@
       "fileName": "gamerecord"
     },
     {
+      "content": "- Key store path:存放路径（文件名和后缀都可以根据需要任意填写）\r\n- Key Alias:别名\r\n- Validity(years):有效期（一般默认25年）\r\n- Certificate:证书\r\n- First and Last Name：姓名\r\n- Organization Unit：组织单位\r\n- Organization：组织\r\n- City or Locality：城市或地区\r\n- State or Province：州或省\r\n- Country Code(XX)：国家代码(XX)，中国：86",
+      "data": {
+        "title": "安卓应用签名配置",
+        "date": "2022-08-02 14:30:28",
+        "tags": [
+          "Android"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/an-zhuo-ying-yong-qian-ming-pei-zhi.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "an-zhuo-ying-yong-qian-ming-pei-zhi"
+    },
+    {
+      "content": "\r\n# git archieve\r\n可以用于将库中代码打包。\r\n1. 基本用法：\r\n\r\ngit archive --format tar.gz --output \"./output.tar.gz\" master\r\n\r\n\r\n说明：\r\n将master分支打包为output.tar.gz\r\n--format指明打包格式，若不指明此项，则根据--output中的文件名推断文件格式。所以你也可以将上述命令简化为:\r\n\r\ngit archive --output \"./output.tar.gz\" master\r\n\r\n\r\n可以使用-l参数获得支持的文件格式列表。\r\n\r\n[@sjs_73_171 gittest]$ git archive -l\r\ntar\r\ntgz\r\ntar.gz\r\nzip\r\n\r\n\r\n--output指明输出包名\r\n2. 打包不同的分支或commit\r\n如果想打包不同分支，只要使用不同分支名即可。比如我有一个分支名为“testbr”，可以用如下命令将其打包。\r\n\r\ngit archive --format tar.gz --output \"./output.tar.gz\" testbr\r\n\r\n\r\n如果要打包某个commit，只要先使用git log找到相应的commit id, 再使用该commit id打包即可。比如：\r\n\r\ngit archive --format tar.gz --output \"./output.tar.gz\" 5ca16ac0d603603\r\n\r\n\r\n3. 打包某个目录\r\n如果想打包master下的mydir mydir2目录，可以用下面命令\r\n\r\ngit archive --format tar.gz --output \"./output.tar.gz\" master mydir mydir2  \r\n\r\n\r\n4. 注意\r\n打包建议在代码库的根目录下进行，不然会碰到各种问题。比如，如果在master分支的mydir目录下执行如下命令：\r\n\r\ngit archive --output \"./output.tar.gz\" master\r\n\r\n\r\n就只会将mydir目录下的内容打包。\r\n\r\n将CN分支打包给发行\r\n![](https://zhoujun2303.github.io/post-images/1659770215987.png)\r\n😀具体百度吧\r\n排版TODO\r\n",
+      "data": {
+        "title": "git 命令archive",
+        "date": "2022-06-28 15:10:55",
+        "tags": [
+          "Git"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/git-ming-ling-archive.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "git-ming-ling-archive"
+    },
+    {
+      "content": "- #if (UNITY_IOS || UNITY_ANDROID) #endif\r\n正确写法\r\n```\r\n  private string GetABTestConfig(string key, string def)\r\n        {\r\n            string va = def;\r\n#if UNITY_EDITOR\r\n            return va;\r\n#endif\r\n#if (UNITY_IOS || UNITY_ANDROID)\r\n            va = GameAnalytics.GetRemoteConfigsValueAsString(key, def);\r\n            return va;\r\n#endif\r\n        }\r\n```\r\n错误写法\r\n```\r\n  private string GetABTestConfig(string key, string def)\r\n        {\r\n            string va = def;\r\n#if UNITY_EDITOR\r\n            return va;\r\n#endif\r\n#if (UNITY_IOS || UNITY_ANDROID)\r\n            va = GameAnalytics.GetRemoteConfigsValueAsString(key, def);\r\n            return va;\r\n        }\r\n#endif\r\n```\r\n错误写法在Visual studio上没有问题，但是在vsCode 上会存在\r\n```\r\nAssets\\GameMain\\Scripts\\Manager\\ABTestHelper.cs(125,2): error CS1513: } expected\r\n```\r\n离谱！\r\n",
+      "data": {
+        "title": "BUG #endif",
+        "date": "2022-06-13 15:07:52",
+        "tags": [
+          "Unity",
+          "Bug"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/bug-endif.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "bug-endif"
+    },
+    {
+      "content": "[有道链接](https://note.youdao.com/s/Vuj663Xg)",
+      "data": {
+        "title": "Strip Engine Code",
+        "date": "2022-06-11 15:04:55",
+        "tags": [
+          "Unity"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/strip-engine-code.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "strip-engine-code"
+    },
+    {
+      "content": "[有道笔记](https://note.youdao.com/s/d3aB0JW2)\r\n*图片真麻烦*\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "data": {
+        "title": "导出Xcode工程接好SDK如何更新",
+        "date": "2022-06-11 14:59:17",
+        "tags": [
+          "Unity",
+          "iOS",
+          "Xcode"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/dao-chu-xcode-gong-cheng-jie-hao-sdk-ru-he-geng-xin.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "dao-chu-xcode-gong-cheng-jie-hao-sdk-ru-he-geng-xin"
+    },
+    {
+      "content": "![](https://zhoujun2303.github.io/post-images/1659769096245.jpg)\r\n从空工程替换这个两个文件夹到已接好SDK的工程",
+      "data": {
+        "title": "导出安卓工程接好SDK后如何更新",
+        "date": "2022-06-11 14:56:02",
+        "tags": [
+          "Unity",
+          "Android"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/dao-chu-an-zhuo-gong-cheng-jie-hao-sdk-hou-ru-he-geng-xin.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "dao-chu-an-zhuo-gong-cheng-jie-hao-sdk-hou-ru-he-geng-xin"
+    },
+    {
+      "content": "```\r\n[InitializeOnEnterPlayModeAttribute]\r\n作用于静态方法，使编辑器类方法在进入 Play Mode 时初始化\r\n\r\n[MenuItem(\"WarlGMenu/Item #&g\")]\r\nstatic void WarlGMenuItem()\r\n{\r\n}\r\n作用于静态方法，为主菜单和 Inspector context menu 添加选项\r\n可添加快捷键：%（ctrl 或 command，区别于 Windows 或 MacOS） #（Shift） &（Alt）\r\n#LEFT （左Shift）LEFT, RIGHT, UP, DOWN, F1 .. F12, HOME, END, PGUP, PGDN等\r\n如：WarlGMenu/Item #&g 即 shift-alt-G WarlGMenu/Item _g 即仅适用 G 键\r\n\r\nOnOpenAssetAttribute\r\n作用于静态方法，当 Unity 将要打开一个 Asset 时，该方法被调用需满足如下条件：\r\nstatic bool OnOpenAsset(int instanceID, int line)\r\nstatic bool OnOpenAsset(int instanceID, int line, int column)\r\n返回 true 表明由方法处理该 Asset，返回 false 表明外部打开\r\n\r\n[PostProcessBuildAttribute(1)]\r\npublic static void OnPostprocessBuild(BuildTarget target, string pathToBuiltProject) {\r\n  Debug.Log( pathToBuiltProject );\r\n}\r\n作用于静态方法，构建 Player 之后被调用\r\n\r\n[PostProcessSceneAttribute]\r\n作用于静态方法，构建 Scene 或 Play Mode 调用 SceneManager.LoadScene 方法后被调用\r\n\r\n\r\n//Unity build 构建之前回调 可用于设置安卓密码\r\npublic interface IPreprocessBuildWithReport : IOrderedCallback{\r\n    void OnPreprocessBuild(BuildReport report);\r\n}\r\n```",
+      "data": {
+        "title": "EditorAttribute",
+        "date": "2022-03-02 14:42:08",
+        "tags": [
+          "Unity",
+          "UnityEditor"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/editorattribute.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "editorattribute"
+    },
+    {
+      "content": "```\r\n[AddComponentMenu(\"Transform/AddComponentMenuT\", 0)]\r\n可在Component里面快速增加脚本\r\n\r\n[AssemblyIsEditorAssembly]\r\n视为编辑器类，讲道理不会被打包\r\n\r\n[ColorUsage(true, true)]\r\n public Color Corlor;\r\n 作用于 Color 类型变量上，使其可在取色面板配置显示 Alpha 和采用 HDR 标准\r\n\r\n[ContextMenu(\"WarlG Context Menu\")]\r\nvoid CustomContext()\r\n{\r\n  Debug.Log(\"WarlGContext\");\r\n}\r\n作用于非静态方法上，在脚本 Inspector 的 context menu\r\n上添加额外操作（Inspector 上脚本右击菜单）\r\n\r\n[ContextMenuItem(\"ResetString\", \"ResetSampleString\")]\r\npublic string SampleString = \"\";\r\nvoid ResetSampleString()\r\n{\r\n      SampleString = \"WarlGSampleString\";\r\n}\r\n作用于变量上，给作用的变量在Inspector上添加右键菜单方法\r\n\r\n[CreateAssetMenu(fileName = \"WarlGAssetSample.asset\", menuName = \"WarlGAssetMenu/WarlGAssetItem\")]\r\npublic class WarlGAssetMenuSample : ScriptableObject\r\n{\r\n    public string assetName = \"WarlGAssetSample\";\r\n}\r\n作用于可脚本化的类上，自动列入Assets/Create 的子菜单中，添加创建\".asset\"文件的快捷路径\r\n\r\n[DisallowMultipleComponent]\r\n作用于类上，禁止 GameObject 添加多个相同类型组件\r\n\r\n [ExecuteAlways]\r\n    public class ExecuteAlwaysT : MonoBehaviour\r\n    {\r\n        private void Update()\r\n        {\r\n            Debug.Log(\"1\");\r\n        }\r\n    }\r\n无论是编辑器模式还是运行模式都会执行\r\n[ExecuteInEditMode]    \r\n在编辑器模式下执行同上\r\n\r\n[Header(\"WarlGHeader\")] \r\npublic string header;\r\n作用于变量上，给变量在 Inspector 中添加标题头\r\n\r\n[HelpURL(\"https://warl-g.github.io/\")]\r\npublic class WarlGAttributeSample : MonoBehaviour\r\n{\r\n}\r\n作用于类上，为类添加说明链接，可在 Inspector 脚本组件上的\"?\"标志跳转\r\n\r\n[Min(10)]\r\npublic int minValue;\r\n作用于 int 和 float 约束变量最小值\r\n\r\n[MultilineAttribute(30)]\r\n        public string hhhh = \"@向量（Vector3）在虚拟的游戏世界中，3D数学决定了游戏，+\" +\r\n            \"如何计算和模拟出开发者以及玩家看到的每一帧画面。学习基础的3D数学知识可以帮主用户对游戏引擎产生更深刻的了解。\" +\r\n            \" 向量定义：既有大小又有方向的量叫做向量。在空间中，向量用一段有方向的线段来表示。应用十分广泛，可用于描述具有大小和\" +\r\n            \"方向两个属性的物理量，例如物体运动的速度、加速度、摄像机观察方向、刚体受到的力等都是向量。因此向量是物理\" +\r\n            \"动画、三维图形的基础。 与向量相对的量成为标量:即只有大小没有方向的量。例如物体移动中的平均速率、路程。 \" +\r\n            \"模：向量的长度标准化（Normalizing）：保持方向不变，将向量的长度变为1.\" +\r\n            \"单位向量：长度为1的向量。 零向量：各分量均为0的向量向量运算——加减：\" +\r\n            \"向量的加法（减法）为各个分量分别相加（相减）。在物理上可以用来计算两个里的合力，或者几个速度份量的叠加。 \";\r\n作用于 string ，使 string 在 Inspector 显示多行文本区\r\n30 行数\r\nTips : string太长可以前面+ @ 之后回车可随意换行\r\n\r\n [RequireComponent(typeof(Rigidbody))]\r\n 作用于类， 在挂载该脚本同时会自动挂载该脚本依赖的组件，且删除时弹出警告\r\n\r\n  [RuntimeInitializeOnLoadMethodAttribute(RuntimeInitializeLoadType.AfterAssembliesLoaded)]\r\n        static void RuntimeInitializeOnLoadMethodAttributeTT()\r\n        {\r\n            Debug.Log(\"RuntimeInitializeOnLoadMethodAttribute\");\r\n        }\r\n作用于静态方法，允许运行时情况下加载游戏后，无需用户行为即可初始化运行时类方法；\r\n\r\n[SelectionBaseAttribute]\r\n作用于类，使被挂载的 GameObject 优先被选中；如当前 GameObject 为子物体，当点击该物体时会默认选中父物体，\r\n在该特性脚本挂载到子物体后会优先选中子物体\r\n\r\n[InitializeOnEnterPlayModeAttribute]\r\n作用于静态方法，使编辑器类方法在进入 Play Mode 时初始化\r\n```",
+      "data": {
+        "title": "Attributes",
+        "date": "2022-03-02 14:31:49",
+        "tags": [
+          "Unity",
+          "UnityEngine"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/attributes.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "attributes"
+    },
+    {
+      "content": "- Q 游戏切换场景的时候存在花屏\r\n- 游戏中存在两个摄像机\r\n解决方案 再添加一个摄像机\r\n![](https://zhoujun2303.github.io/post-images/1659770599618.jpg)\r\n- Q struct结构体序列化问题\r\n- 增加[System.Serializable]可以以保存在面板\r\n![](https://zhoujun2303.github.io/post-images/1659770604015.jpg)",
+      "data": {
+        "title": "Unity 一些问题记录",
+        "date": "2022-02-23 15:21:36",
+        "tags": [
+          "Unity"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-yi-xie-wen-ti-ji-lu"
+    },
+    {
+      "content": "在 CMD 命令中输入 diskpart\r\n```\r\nlist disk\r\nselect disk 1\r\nclean\r\n```",
+      "data": {
+        "title": "Mac强制将硬盘恢复出厂设置",
+        "date": "2022-01-05 14:28:58",
+        "tags": [
+          "Mac"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/mac-qiang-zhi-jiang-ying-pan-hui-fu-chu-han-she-zhi.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "mac-qiang-zhi-jiang-ying-pan-hui-fu-chu-han-she-zhi"
+    },
+    {
+      "content": "\r\n[自行百度](https://www.cnblogs.com/upze/p/10630713.html)\r\n- 引入websocket模块\r\n```\r\nnpm i nodejs-websocket  --sava\r\n```\r\n```\r\nnpm install socket.io --save\r\n```\r\n- 服务器端\r\n```\r\nnpm install -g ws //全局安装WS  npm指令自行学习\r\n```\r\n目录如下\r\n![](https://zhoujun2303.github.io/post-images/1659767199779.jpg)\r\nconstValue.js\r\n```\r\nexports.config = {\r\n    \"host\":\"192.168.5.178\",//服务器端口 此为我的电脑IP cmd -》 ipconfig\r\n    \"port\":3000,\r\n},\r\n\r\nexports.protocol={\r\n    login:101,\r\n    hallLogin:201,\r\n}\r\n```\r\napp.js\r\n```\r\nvar constValue = require(\"./hall/constValue\");\r\n\r\nvar ws = require(\"ws\").Server;\r\nconst connect = new ws({\r\n    port:constValue.config.port\r\n});\r\n\r\nconnect.on(\"listening\",function(){\r\n    console.log(\"服务器开启监听！！！\");\r\n})\r\n\r\nconnect.on(\"connection\",function(ws,req){\r\n    console.log(ws);\r\n    console.log(\"有刺客——————>\"+ req.connection.remoteAddress);\r\n    ws.on(\"message\",function(packet){\r\n        let msg = JSON.parse(packet);\r\n        if(msg.cmd == constValue.protocol.login){\r\n            login(msg)\r\n        }else if(msg.cmd == constValue.protocol.hallLogin){\r\n            hallLogin(msg)\r\n        }\r\n    });\r\n\r\n    ws.on(\"close\",function(msg){\r\n        console.log(\"有玩家关闭了连接\");\r\n        console.log(msg);\r\n    });\r\n\r\n    ws.on(\"ping\",function(msg){\r\n        console.log(\"ping\",msg);\r\n    });\r\n\r\n    ws.on(\"error\",function(msg){\r\n        console.log(\"error\",msg);\r\n    })\r\n\r\n    login = function(msg){\r\n        console.log(msg);\r\n        ws.send(\"来了老弟！\");\r\n    };\r\n\r\n    hallLogin = function(msg){\r\n        console.log(msg);\r\n        ws.send('进入大厅');\r\n    };\r\n    \r\n});\r\n\r\nconnect.on(\"headers\",function(msg,data){\r\n    console.log(msg);\r\n    console.log(data);\r\n})\r\n\r\n\r\nconsole.log(constValue.config);\r\n```\r\n- 项目初始化\r\n```\r\nnpm init\r\n```\r\npackage.json配置\r\n![](https://zhoujun2303.github.io/post-images/1659767215597.jpg)\r\n```\r\n//test:\"node app.js\"\r\n//启用包配置之后\r\n启动服务器可以为 \r\n    1-> node app.js\r\n    2-> npm test\r\n```\r\n服务器启动\r\n![](https://zhoujun2303.github.io/post-images/1659767226470.jpg)\r\n![](https://zhoujun2303.github.io/post-images/1659767244493.jpg)\r\n```\r\nCtrl + c 关闭服务器\r\n```\r\n在html中使用\r\n```\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    <script>\r\n    let ws = new WebSocket('ws://192.168.5.178:3000');\r\n    ws.onopen = function (params) {\r\n      console.log('客户端连接成功')\r\n      // 向服务器发送消息\r\n      let data ={\r\n          cmd:101,\r\n          msg:\"haha\"\r\n      }\r\n      ws.send(JSON.stringify(data))\r\n    };\r\n\r\n    ws.onmessage = function (e) {\r\n      console.log('收到服务器响应', e.data)\r\n    };\r\n\r\n    </script>\r\n</body>\r\n</html>\r\n```\r\n在cocos creator中使用同理\r\n```\r\nlet ws = new WebSocket('ws://192.168.5.178:3000');\r\n    ws.onopen = function (params) {\r\n      console.log('客户端连接成功')\r\n      // 向服务器发送消息\r\n      let data ={\r\n          cmd:101,\r\n          msg:\"haha\"\r\n      }\r\n      ws.send(JSON.stringify(data))\r\n    };\r\n\r\n    ws.onmessage = function (e) {\r\n      console.log('收到服务器响应', e.data)\r\n    };\r\n```\r\n![](https://zhoujun2303.github.io/post-images/1659767263042.jpg)\r\n\r\n",
+      "data": {
+        "title": "WebSocket",
+        "date": "2021-12-02 14:21:34",
+        "tags": [
+          "WebSocket"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/websocket.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "websocket"
+    },
+    {
+      "content": "# bundletool\r\n![](https://zhoujun2303.github.io/post-images/1659766786590.jpg)\r\n[官方文档](https://developer.android.google.cn/studio/command-line/bundletool?hl=zh_cn)\r\n# AAB  转 APKS \r\n```\r\njava -jar bundletool-all-1.8.0.jar build-apks --bundle=launcher.aab --output=release.apks --ks=E:/gitGogs/CarCraftRaceIO/CarCraftRace.keystore --ks-pass=pass:password --ks-key-alias=normalKey --key-pass=pass:password\r\n```\r\n\r\n*目录结构，同级目录打开命令行*\r\n![](https://zhoujun2303.github.io/post-images/1659766793471.jpg)\r\n[bundletool](https://github.com/google/bundletool)\r\n![](https://zhoujun2303.github.io/post-images/1659766799713.jpg)\r\n# 命令行安装APKS （一次安装到多个USB 设备自行百度）\r\n```\r\njava -jar bundletool-all-1.8.0.jar install-apks --apks=release.apks\r\n```",
+      "data": {
+        "title": "AAB 转 APKS本地测试(bundletool)",
+        "date": "2021-11-08 14:16:20",
+        "tags": [
+          "Java",
+          "Bundletool"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/aab-zhuan-apks-ben-di-ce-shi-bundletool.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "aab-zhuan-apks-ben-di-ce-shi-bundletool"
+    },
+    {
+      "content": "```\r\nLayerMask mask1 = 1 << (LayerMask.NameToLayer(\"Default\"));//\r\nLayerMask mask2 = 1 << (LayerMask.NameToLayer(\"Monster\"));\r\n\r\n//检测 Mask1 和 Mask2\r\nif (Physics.Raycast(ray, out hit, 50, mask1 | mask2))\r\n//除了Mask1 其他层都检测\r\nif (Physics.Raycast(ray, out hit, 50, ~mask1 ))\r\n//打开所有的层\r\n~(1 << 0) \r\n```",
+      "data": {
+        "title": "Physics.Raycast （LayerMask 参数避坑）",
+        "date": "2021-10-29 14:13:53",
+        "tags": [
+          "Physics",
+          "Unity"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/physicsraycast-layermask-can-shu-bi-keng.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "physicsraycast-layermask-can-shu-bi-keng"
+    },
+    {
+      "content": "\r\n![](https://zhoujun2303.github.io/post-images/1659766358955.jpg)\r\n![](https://zhoujun2303.github.io/post-images/1659766364601.jpg)\r\n\r\n安卓中的 activity 必须在 AndroidManifest中注册，否则不能使用（继承的只用注册一个）\r\n\r\n修改主Activity后跳转，可用于原生SDK接入\r\n![](https://zhoujun2303.github.io/post-images/1659766368950.jpg)\r\n\r\n",
+      "data": {
+        "title": "Unity打包安卓项目目录了解",
+        "date": "2021-08-12 14:11:24",
+        "tags": [
+          "Unity",
+          "Android"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/unity-da-bao-an-zhuo-xiang-mu-mu-lu-liao-jie-.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-da-bao-an-zhuo-xiang-mu-mu-lu-liao-jie-"
+    },
+    {
+      "content": "- 1,创建一个新的模块\r\n![](https://zhoujun2303.github.io/post-images/1659766098389.jpg)\r\n- 2,拷贝unity 自带jar包到模块下的lib\r\n![](https://zhoujun2303.github.io/post-images/1659766112757.jpg)\r\n- 3,添加lib到模块\r\n- 4,java 调用 C# 代码\r\n![](https://zhoujun2303.github.io/post-images/1659766121750.jpg)\r\n![](https://zhoujun2303.github.io/post-images/1659766125549.jpg)\r\n```\r\npackage com.miaole.mlunityplugins_v1_1;\r\n\r\nimport android.app.Activity;\r\nimport android.content.Context;\r\nimport android.os.Vibrator;\r\nimport android.util.Log;\r\nimport android.widget.Toast;\r\n\r\nimport com.unity3d.player.UnityPlayer;\r\n\r\npublic class MLSDK {\r\n    public static final String TAG = \"MLSDK\";\r\n    public static Activity activity = null;\r\n    public static Vibrator ChacheVb = null;\r\n\r\n    public static Activity getActivity() {\r\n        if (activity == null) {\r\n            activity = UnityPlayer.currentActivity;\r\n        }\r\n        return activity;\r\n    }\r\n\r\n    //震动\r\n    public static void Vibrator(long patter, int repeat) {\r\n        if (ChacheVb != null) {\r\n            ChacheVb.vibrate(patter);\r\n            return;\r\n        }\r\n        ChacheVb = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);\r\n        if (ChacheVb != null) {\r\n            ChacheVb.vibrate(patter);\r\n        }\r\n    }\r\n\r\n    public static void ShowToast(String msg, int length) {\r\n        Toast.makeText(getActivity(), \"msg\", length).show();\r\n    }\r\n\r\n    //Java 调用 C# 方法\r\n    public static void SetName(String name) {\r\n        UnityPlayer.UnitySendMessage(\"\",\"\",\"\");\r\n    }\r\n}\r\n```\r\n\r\n\r\n",
+      "data": {
+        "title": "Unity JAR 包制作",
+        "date": "2021-08-12 14:06:43",
+        "tags": [
+          "Unity",
+          "Jar"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/unity-jar-bao-zhi-zuo.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-jar-bao-zhi-zuo"
+    },
+    {
+      "content": "\r\n- 1，google国内镜像（安卓依赖包下载慢问题）\r\n```\r\n  url'http://maven.aliyun.com/nexus/content/groups/public/'\r\n```\r\n- 2，解决Failure [INSTALL_FAILED_TEST_ONLY]\r\n![](https://zhoujun2303.github.io/post-images/1659768635872.jpg)\r\n```\r\nandroid:testOnly=\"true\" \r\n改成 android:testOnly=\"false\"\r\n// 升级之后BUG \r\nandroid.injected.testOnly=false \r\n```\r\n- 3，测试打出来的是不是签名包\r\n    - a,打出来的签名release包安装至手机（签名release包）\r\n    - b,连接至Androidstudio\r\n    - c,查看logcat（能查看包名的release包不能上架市场，不能查看即为正常）\r\n    - d,检查 androidManifest.xml 文件中是否存在 isDebugger = true的标签，如果存在该标签,即使使用签名文件发布正式包，打出来的apk或者aab 也是debug包\r\n![](https://zhoujun2303.github.io/post-images/1659768662006.jpg)\r\n\r\n- 4，存在重复引用库问题\r\n[log.txt](https://note.youdao.com/s/GLwOleTm)\r\n检查.dragle文件 dependencies标签内是否存在重复引用\r\n切换到project视角，差看Lib 里面是否在存重复引用库\r\n- 5，编译不通过问题\r\n尝试升级 gradle版本\r\n",
+      "data": {
+        "title": "安卓常见问题",
+        "date": "2021-06-16 14:48:34",
+        "tags": [
+          "Android"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/an-zhuo-chang-jian-wen-ti-.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "an-zhuo-chang-jian-wen-ti-"
+    },
+    {
+      "content": "- mass 质量\r\n- radius 半径\r\n- wheelDampingRate 车轮阻尼率\r\n- suspension distance 悬挂距离\r\n- forceAppPointDistance   着力点距离\r\n- suspension spring \r\n    - Spring  越大到达目标位置约快\r\n    - Damper 越大弹簧移动越慢\r\n    - targetPosition 1max延伸悬挂 0 max压缩悬挂\r\n- forwardFriction 向前的摩擦力\r\n    - extremum slip 什么情况达到起步\r\n    - extremum value 起步摩擦力生效程度\r\n    - asymptote slip 什么时候达到匀速\r\n    - asymptote value 匀速时摩擦生效程度\r\n    - stiffness 0 打滑，越大越强 （有限制性）\r\n- sidewatsFriction 同上参考\r\n    - up\r\n    - .\r\n    - .\r\n    - .\r\n    - .\r\n![](https://zhoujun2303.github.io/post-images/1659765876893.jpg)\r\n",
+      "data": {
+        "title": "wheel collider",
+        "date": "2021-04-29 14:02:46",
+        "tags": [
+          "Physics",
+          "Unity"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/wheel-collider.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "wheel-collider"
+    },
+    {
+      "content": "[文档](https://docs.unity.cn/cn/2019.4/Manual/class-HingeJoint.html)\r\n- hinge joint 须配合 rigidbody 使用\r\n- 属性中的 spring  和 motor 不能同时使用，会导致意想不到的问题\r\n- 配合rigidbody 中的mass 属性需要和主角的重量考虑\r\n    - 在 rockCrawling中\r\n    - car mass 500 hinge joint 25\r\n- car body\r\n- car wheel\r\n![](https://zhoujun2303.github.io/post-images/1659765712852.jpg)\r\n- hingejoint rigidbofy\r\n![](https://zhoujun2303.github.io/post-images/1659765716689.jpg)\r\n- hinge joint\r\n![](https://zhoujun2303.github.io/post-images/1659765720978.jpg)\r\n",
+      "data": {
+        "title": "hinge joint",
+        "date": "2021-04-29 13:58:01",
+        "tags": [
+          "Unity",
+          "Physics"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/hinge-joint.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "hinge-joint"
+    },
+    {
+      "content": "```\r\n常用生命周期\r\nAwake() Start() Update() FixedUpdate()// 间隔每一帧的时间相同\r\n\r\n\r\n if (Input.GetKey(KeyCode.Space))\r\n {\r\n    for (int i = 0; i < m_Weapons.Count; i++)\r\n    {\r\n        m_Weapons[i].TryAttack();\r\n    }\r\n}\r\n\r\n//交互事件\r\nGetButtonDown：true \r\n按下的第一帧为True下一帧之后都为false\r\nGetButton:按下一直为true\r\nGetButtonUp:抬起的第一帧为True ,下一帧之后为false\r\n\r\nif (Input.GetAxis(\"Horizontal\")!=0)\r\n            {\r\n                Debug.Log(Input.GetAxis(\"Horizontal\"));\r\n            }\r\n\r\n            if (Input.GetAxis(\"Vertical\") != 0)\r\n            {\r\n                Debug.Log(Input.GetAxis(\"Vertical\"));\r\n            }\r\n            \r\nInstantiate //克隆游戏对象  \r\n//Instantiate(gameObject,position,rotation)    \r\n\r\n//Invoke\r\nInvoke(\"InvokeTest\", 1);//一秒后执行\r\nInvokeRepeating (\"InvokeTest\", 1,1);// 间隔一秒，之后一秒执行\r\nCancelInvoke();//停止所有\r\nCancelInvoke(\"InvokeTest\");//暂停InvokeTest\r\n        public void InvokeTest()\r\n        {\r\n\r\n        } \r\n        \r\n          \r\n//枚举\r\npublic  enum EntityType { W, N, S, D };\r\npublic EntityType _EntityType = EntityType.W;   \r\n```",
+      "data": {
+        "title": "Unity 学习",
+        "date": "2021-04-10 13:56:05",
+        "tags": [
+          "Unity"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/unity-xue-xi.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-xue-xi"
+    },
+    {
+      "content": "- 修饰符\r\n```\r\npublic \r\n公共的\r\n\r\nprivate\r\n私有，类内部才能访问\r\n\r\nprotected\r\n只修饰成员，类内部及子类内部可以访问\r\n\r\nstatic \r\n修饰类为静态类，不能实例化类\r\nstatic修饰构造函数时，构造函数不能含有任何参数及修饰符\r\n构造函数：名字和类名相同（实例，静态，私有）\r\n\r\ninternal\r\n默认修饰符，同一个程序集内成员可以访问\r\n\r\nabstract\r\nabstract可以修饰类，方法，属性\r\n抽象类不能被实例化\r\n抽象不能用sealed修饰，sealed修饰不能被继承\r\n抽象方法只能定义在抽象类，抽象方法只声明，不提供实现\r\n抽象方法声明不能用virtual或者static修饰\r\n不能在静态属性上用abstract修饰\r\n抽象属性在非抽象派生类覆盖重写，须使用override修饰符\r\n\r\npartial\r\n只能修饰类，可以将一个分成部分写在不同文件，这些文件只能在同一个程序集\r\n\r\nsealed\r\n修饰类不能被继承，修饰方法不能被重写\r\n\r\nvirtual\r\n修饰方法，父类可以有该方法的实现，子类可以重写改方法(注意和abstract区别)\r\n\r\noverride\r\n表示该方法覆盖了父类的方法\r\n\r\nreadonly\r\n修饰字段，运行时只读，修改无需编译\r\n\r\nconst\r\n只读，编译前确定值\r\n\r\noperator\r\n在类或结构声明中声明运算符\r\n\r\nbase\r\n调用构造函数，或者基类被重写的方法\r\n```\r\n- 注释\r\n```\r\n// 不会被编译\r\n/// 会被编译（影响编译速度，不影响执行速度）在调用代码时调用感知\r\n/// <summary>\r\n///\r\n/// </summary>\r\n```\r\n- 协程\r\n```\r\nhttps://blog.csdn.net/qq_36684665/article/details/80829049\r\nhttps://www.bilibili.com/video/BV1f5411G7bp?p=14\r\n\r\nStartCoroutine(\"BezierToTargetPosIenum\",0.1f);//way1 \r\nStartCoroutine(BezierToTargetPosIenum(0.1f));//way2\r\n /// <summary>\r\n/// 协程测试\r\n        /// </summary>\r\n        /// <param name=\"dt\"></param>\r\n        /// <returns></returns>\r\n        IEnumerator   BezierToTargetPosIenum(float dt)\r\n        {\r\n            Debug.Log(\"协程测试 开始\");\r\n            while (Count<10)\r\n            {\r\n                Count++;\r\n                yield return null;\r\n            }\r\n            Debug.Log(\"计数 结束\");\r\n            yield return new WaitForSeconds(0.5f);\r\n            Debug.Log(\"协程测试 结束\");\r\n        }\r\n```\r\n- 委托\r\n```\r\n //委托\r\n        delegate int  Multidelegate(int a,int b);\r\n        Multidelegate myMultidelegate;\r\n\r\n        public void TestMultidelegate()\r\n        {\r\n            myMultidelegate = AddNumber;\r\n            myMultidelegate += AddNumber;\r\n            myMultidelegate -= AddNumber;\r\n            // 没有进行任何操作是 为null\r\n            if (myMultidelegate == null) return;\r\n          Debug.Log(  myMultidelegate(3, 5));\r\n        }\r\n```\r\n- 接口\r\n```\r\n //接口\r\n    public interface TestInterFace1\r\n    {\r\n        void Test1();\r\n    }\r\n\r\n    public interface TestInterFace2<T>\r\n    {\r\n        void Test2(T s);\r\n    }\r\n\r\n//使用接口\r\n public partial class GameEntry : MonoBehaviour,TestInterFace1,TestInterFace2<int>\r\n \r\n  //接口实现\r\n        public void Test1()\r\n        {\r\n            Debug.Log(\"Test1\");\r\n        }\r\n\r\n        public void Test2(int num)\r\n        {\r\n            Debug.Log(\"Test2\"+num);\r\n        }\r\n```\r\n- 泛型\r\n```\r\n//泛型 \r\n        public List<string> StrList = new List<string>();\r\n\r\n        //class struct new  mono\r\n        public T GenericTest<T, U, V>(T t, U u, V v) where T :class\r\n        {\r\n            return t;\r\n        }\r\n\r\n        public void GenericTestS()\r\n        {\r\n            var test1 = GenericTest<TestSerializable, int, float>(new TestSerializable(), 10, 10f);\r\n            var tets2 = GenericTest(new TestSerializable(), 10, 10f);\r\n        }\r\n```\r\n",
+      "data": {
+        "title": "C# 学习",
+        "date": "2021-04-10 13:51:18",
+        "tags": [
+          "C#"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/c-xue-xi.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "c-xue-xi"
+    },
+    {
+      "content": "[黑苹果长期维护机型](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)\r\n\r\n[OpenCore下载](https://github.com/acidanthera/opencorepkg/releases)\r\n\r\n[macOS镜像下载](https://blog.daliansky.net/)\r\n\r\n[安装盘制作工具etcher下载](https://www.balena.io/etcher/)\r\n\r\n[OpenCore安装指南、驱动与SSDT下载](https://dortania.github.io/OpenCore-Install-Guide/)\r\n\r\n[SSDTTime下载](https://github.com/corpnewt/SSDTTime)\r\n\r\n[Config编辑器](https://github.com/ic005k/QtOpenCoreConfig)\r\n\r\n[OpenCore排错](https://opencore.slowgeek.com/)\r\n\r\n[DiskGenius下载](https://www.diskgenius.cn/)\r\n\r\n[视频](https://www.bilibili.com/video/BV18V41187JZ)\r\n\r\n[在虚拟机上安装详细教程](https://note.youdao.com/s/P4UWBFXq)",
+      "data": {
+        "title": "黑苹果",
+        "date": "2021-03-27 13:47:29",
+        "tags": [
+          "黑苹果"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/hei-ping-guo.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "hei-ping-guo"
+    },
+    {
+      "content": "- python2\r\n```\r\npython -m SimpleHTTPServer 8080\r\n```\r\n- python3\r\n```\r\npython -m http.server 9999\r\n```\r\n```http://localhost:8080/```",
+      "data": {
+        "title": "Python 快速搭建本地Server",
+        "date": "2021-03-10 13:44:54",
+        "tags": [
+          "Python"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/python-kuai-su-da-jian-ben-di-server.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "python-kuai-su-da-jian-ben-di-server"
+    },
+    {
       "content": "[疑难杂症大佬在线](https://www.jianshu.com/p/ff462d5efd2)\r\n[github多人协作](https://www.cnblogs.com/zhaoyanjun/p/5882784.html)\r\n[B站视频解析地址](https://www.guoxingjun.com/video/bilibili)\r\n[shell脚本编写](https://blog.csdn.net/nmgrd/article/details/78990468?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1)\r\n[贝塞尔曲线生成](https://1ko1.com/games/bezier/index.html)\r\n[网站模板](http://www.cssmoban.com/)\r\n[阿里云服务器控制台](https://www.aliyun.com/spm=5176.12901015.ahjq0uaqt.1.2b9a525cife9GO)\r\n[gitLab](https://gitlab.com/hordesolutions/Hamsters.js)\r\n[nodejs中文文档](http://nodejs.cn/api/cluster.html)\r\n[5G云资源分享网站](https://www.yunziyuan.com.cn/)\r\n[unity官方文档](https://learn.unity.com/projects)\r\n[安卓开发文档](https://developer.android.google.cn/index.html)\r\n[excel转JSON](http://www.bejson.com/json/col2json/)\r\n[linux使用](https://blog.csdn.net/intflojx/article/details/85882002)\r\n[前端状态管理mobx](https://cn.mobx.js.org/)\r\n[网络协议讲解](https://blog.shipengqi.top/2018/11/23/network-protocol/)\r\n[npm protobufjs](https://protobufjs.github.io/protobuf.js/Root.html#load)\r\n[pbkiller使用](https://www.jianshu.com/p/1ae9ce39e8d7)\r\n[nodejs多线程](https://gitlab.com/hordesolutions/Hamsters.js)\r\n[mySql8.0安装教程](https://www.seoxiehui.cn/article-144156-1.html)\r\n[安卓官网](https://developer.android.google.cn/studio/intro/studio-config)\r\n[数据库](https://www.seoxiehui.cn/article-144156-1.html)\r\n[支付宝接入](https://blog.csdn.net/lck8989/article/details/80324391)\r\n[cocos.org](https://forum.cocos.org/t/topic/42484)\r\n[cocos使用安卓打包](https://blog.csdn.net/hj3601947/article/details/81475408)\r\n[网道](https://wangdoc.com/javascript/oop/new.html)\r\n[菜鸟教程 Java script语法 ](https://www.runoob.com/js/js-datatypes.html)\r\n[cocos原生文档](https://docs.cocos2d-x.org/api-ref/js/V3.3/)\r\n[creator开发文档](https://docs.cocos.com/creator/2.1/manual/zh/getting-started/install.html)\r\n[在线抠图网](https://www.gaoding.com/koutu?hmsr=pcbaidu-sem-koutu-kt-kt-108292-sem&utm_medium=cpc&utm_source=pcbaidu)\r\n[在线抠图网2](https://www.gaoding.com/clip)\r\n[简书之cocos动作](https://www.jianshu.com/p/1588fd0b4135)\r\n[creator打包](https://www.cnblogs.com/skysand/p/4063584.html)\r\n[ES6语法](http://es6.ruanyifeng.com/)\r\n[画任意角度的弧形圆](https://blog.csdn.net/DayDreamWMM/article/details/83048699)\r\n[艺术字生成网站](https://www.qt86.com/)\r\n[图片缩小](https://tinypng.com/)\r\n[激励视频广告开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/ad/rewarded-video-ad.html)\r\n[免费音效网址](http://www.aigei.com/s?q=%E8%84%9A%E6%AD%A5&type=sound&detailTab=file)\r\n[阿里免费icon](https://www.iconfont.cn/)\r\n[cocos论坛项目汇总](https://forum.cocos.com/t/creator/44782)\r\n[网址变成二维码](https://cli.im/url/info?a9a4071a3012dd63171048902c5820f5)\r\n[fiddler截包教程](http://www.mianfeidianhua.net/fiddler-shujubao.html)\r\n[cocos物理引擎示例](https://github.com/2youyou2/physics-example)\r\n[php中文网站](https://www.php.cn/)\r\n[微信官方文档](https://developers.weixin.qq.com/doc/)\r\n[VSCode中使用git](https://www.jianshu.com/p/727ec2b586b4)\r\n[基于 Unity 引擎的游戏框架](https://gameframework.cn/)\r\n[手势识别](http://uwdata.github.io/gestrec/)\r\n[一笔画](https://blog.csdn.net/qq_41903941/article/details/90259274)\r\n[Laya2.0 实现模拟物体影子shader](https://blog.csdn.net/u012740992/article/details/89173665)\r\n[unity圣典](https://dev.gameres.com/program/unity3dmanual/Manual/index.html)\r\n[文件在线转换](https://cloudconvert.com/)\r\n[MP3压缩 ](https://www.mp3smaller.com/zh/)\r\n[js在线混淆 ](https://obfuscator.io/)\r\n[jshaman](http://www.jshaman.com/protect.html)\r\n[图片在线压缩](https://tinypng.com/)\r\n[bat文件目录问题](https://blog.csdn.net/chiyu5368/article/details/100611484?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159842026219195188328928%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=159842026219195188328928&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~rank_business_v1-2-100611484.ecpm_v3_rank_business_v1&utm_term=bat%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%AD%E5%90%8E%E7%BC%80%E5%90%8D&spm=1018.2118.3001.4187)\r\n[Laya的位图字体bitmapFont字体用法](https://blog.csdn.net/u010156024/article/details/88620229)\r\n[qq官方文档](https://q.qq.com/#/home)\r\n[穿山甲广告接入](https://www.pangle.cn/union/media/union/billing)\r\n[Laya原生反射](https://blog.csdn.net/xmx5166/article/details/106650449?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v28-3-106650449.nonecase&utm_term=android%E4%B8%8Elaya%E4%BA%92%E7%9B%B8%E8%B0%83%E7%94%A8&spm=1000.2123.3001.4430)\r\n[unity2018.4中文文档](https://docs.unity.cn/cn/current/Manual/UnityOverview.html)\r\n[gulp中文网址 ](https://www.gulpjs.com.cn/docs/getting-started/quick-start/)",
       "data": {
         "title": "收藏网址",
-        "date": "2022-08-05 15:00:38",
+        "date": "2020-12-08 15:00:38",
         "tags": [
           "收藏"
         ],
         "published": true,
         "hideInList": false,
-        "feature": "/post-images/shou-cang-wang-zhi.jpg",
+        "feature": "/post-images/shou-cang-wang-zhi.png",
         "isTop": false
       },
       "isEmpty": false,
@@ -37,16 +483,180 @@
       "fileName": "shou-cang-wang-zhi"
     },
     {
+      "content": "# 工具\r\n```\r\nvscode \r\nunity 2018 4.7 \r\nLayaAri  对应版本的Unity导出插件\r\n```\r\n# 导出设置\r\n- 插件设置\r\n![](https://zhoujun2303.github.io/post-images/1659764468420.jpg)\r\n- 此处路径对应自己电脑的路径 自定义路径设置package1\r\n![](https://zhoujun2303.github.io/post-images/1659764517955.jpg)\r\n- 导出后项目路径与unity中对应\r\n![](https://zhoujun2303.github.io/post-images/1659764536983.jpg)\r\n- vscode中路径\r\n![](https://zhoujun2303.github.io/post-images/1659764549086.jpg)\r\n- 编译与调试\r\n![](https://zhoujun2303.github.io/post-images/1659764564231.jpg)\r\n- 报错解决如下 \r\n![](https://zhoujun2303.github.io/post-images/1659764579393.jpg)\r\n### runtimeExecutable路径修改为 自己电脑浏览器路径，最好谷歌",
+      "data": {
+        "title": "Laya导出设置",
+        "date": "2020-11-25 13:39:31",
+        "tags": [
+          "Laya"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/laya-dao-chu-she-zhi.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "laya-dao-chu-she-zhi"
+    },
+    {
+      "content": "[混淆地址](https://obfuscator.io/)\r\n![](https://zhoujun2303.github.io/post-images/1659757241403.jpg)",
+      "data": {
+        "title": "JS混淆-基于obfuscator",
+        "date": "2020-10-27 11:38:45",
+        "tags": [
+          "JavaScript"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/js-hun-yao-ji-yu-obfuscator.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "js-hun-yao-ji-yu-obfuscator"
+    },
+    {
+      "content": "- 1，批量处理删除文件\r\n```\r\ndel /f /s /q *.meta\r\npause\r\n```\r\n- 2，批量修改图片名字\r\n```@echo off\r\nsetlocal enabledelayedexpansion\r\nset count=100\r\nfor /f \"delims=\" %%i in ('dir /b *.jpg,*.png,*.bmp,*.jpeg,*.gif') do call:Rename \"%%~i\"\r\npause\r\nexit\r\n \r\n:Rename\r\nset /a count+=1\r\nif /i \"%~1\"==\"!count:~1!%~x1\" goto :eof\r\nif exist \"!count:~1!%~x1\" goto Rename\r\necho 改名：%1 !count:~1!\r\nren \"%~1\" \"!count:~1!%~x1\"\r\ngoto :eof\r\n\r\n\r\n文件命名 .bat结尾\r\n```\r\n- 3，LayaAI obj convertTo Json\r\n```\r\nREM Author JUN_Z\r\nREM Time 2020/8/26/14:16:57\r\n@echo off    \r\nsetlocal enabledelayedexpansion\r\nfor %%i in ( *.obj ) do (\r\n    set \"FILE_NAME=%%~ni\"\r\n    echo \"fileName\": !FILE_NAME!\r\n    call:runConvert %%~i,!FILE_NAME!\r\n    )\r\npause\r\n\r\n:runConvert\r\nREM echo %1\r\nREM echo %2%JSON%\r\nstart python convert_obj_three.py -i %1 -o %2.json\r\ngoto :eof\r\n```\r\n\r\n",
+      "data": {
+        "title": "windows批处理",
+        "date": "2020-08-26 10:33:42",
+        "tags": [
+          "Windows",
+          "Bat"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/windows-pi-chu-li.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "windows-pi-chu-li"
+    },
+    {
+      "content": "😱😱😱😱😱😱😱😱\r\n想要在git中保留一个空的文件夹\r\n使用 .gitKeep",
+      "data": {
+        "title": "Git",
+        "date": "2020-07-22 15:19:20",
+        "tags": [
+          "Git"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/git.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "git"
+    },
+    {
+      "content": "# 搭建\r\n## node.js环境服务器\r\n## 安装mysql\r\n```\r\nwget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.24-linux-glibc2.12-x86_64.tar.gz\r\n```\r\n[nginx配置APK](https://www.cnblogs.com/yybrhr/p/11413035.html)\r\n[参考链接](https://www.jianshu.com/p/276d59cbc529)\r\n\r\n- linux配置图片\r\n```\r\n location ~ .*\\.(gif|jpg|jpeg|png)$ {  \r\n            expires 24h;  \r\n            root /home/pic/;#指定图片存放路径  \r\n            access_log  /home/nginx/logs/images.log;#图片 日志路径  \r\n            proxy_store on;  \r\n        }\r\n```\r\n- linux配置文件夹浏览\r\n```\r\n server {\r\n        listen       9002;\r\n        server_name  localhost;\r\n\r\n        location ~ ^/(img|data|js|css|html|templates)/ {\r\n            root  /Hot;\r\n        }\r\n\r\n        location ~ ^/customizedtraffic {\r\n            fastcgi_pass   0.0.0.0:9091;\r\n            fastcgi_param  QUERY_TYPE        traffic;\r\n            include        fastcgi_params;\r\n        }\r\n\r\n        location ~ ^/agentserver {\r\n            proxy_pass_header Server;\r\n            proxy_set_header Host $http_host;\r\n            proxy_set_header X-Real-IP $remote_addr;\r\n            proxy_set_header X-Scheme $scheme;\r\n            proxy_pass http://100.69.195.166:7143;\r\n        }\r\n\r\n        error_page   500 502 503 504  /50x.html;\r\n        location = /50x.html {\r\n            root   html;\r\n        }\r\n    }\r\n\r\n\r\n    server {\r\n        listen       9002;\r\n        server_name  localhost;\r\n\r\n        location / {\r\n            autoindex on;\r\n            autoindex_exact_size off;\r\n            root   /Hot;\r\n        }\r\n```\r\n\r\n- nginx重启\r\n```\r\ncd /usr/local/nginx/sbin\r\n./nginx -s reload\r\n```\r\n- pm2 常驻管理自动重启\r\n```\r\n重启所有： pm2 restart all \r\n 清楚日志 # pm2 flush              #Empty all log file\r\nnginx\r\n重启：./nginx  -s reload  //此命令在Sbin目录下执行\r\n```\r\n- lrzsz替代ftp上传和下载文件\r\n```\r\n// 首先安装lrzsz \r\n# yum -y install lrzsz \r\n// 上传文件，执行命令rz，会跳出文件选择窗口，选择好文件，点击确认即可。\r\n# rz\r\n\r\n// 下载文件，执行命令sz\r\n# sz\r\n```\r\n```\r\n空目录  opt  //主要操作目录\r\n安装文件目录 mnt //安装应用程序\r\n```\r\n- 网页配置demo\r\n```\r\nserver {\r\n        listen       8889;\r\n        server_name  localhost;\r\n\r\n        #charset koi8-r;\r\n\r\n        #access_log  logs/host.access.log  main;\r\n\r\n        location / {\r\n            root  /webgame/web-mobile;\r\n            index  index.html index.htm;\r\n        }\r\n\r\n        #error_page  404              /404.html;\r\n\r\n        # redirect server error pages to the static page /50x.html\r\n        #\r\n        error_page   500 502 503 504  /50x.html;\r\n        location = /50x.html {\r\n            root   html;\r\n        }\r\n    }\r\n```\r\n\r\n",
+      "data": {
+        "title": "Linux 探索",
+        "date": "2020-07-22 11:26:27",
+        "tags": [
+          "Linux"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/linux-tan-suo.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "linux-tan-suo"
+    },
+    {
+      "content": "```\r\n高动态光渲染 低端手机不支持\r\nml.camera._enableHDR = false\r\n```\r\n```\r\n摄像机自动裁剪  默认为 True\r\nml.camera.useOcclusionCulling = true;\r\n```\r\n```\r\n静态物体合批\r\nLaya.StaticBatchManager.combine(this.owner);\r\n```",
+      "data": {
+        "title": "Laya 常见问题",
+        "date": "2020-07-10 14:39:23",
+        "tags": [
+          "Laya"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/laya-chang-jian-wen-ti-.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "laya-chang-jian-wen-ti-"
+    },
+    {
+      "content": "# 安卓环境搭建\r\nJDK：1.8 个人qq群里有jdk1.8版本\r\n下载AS\r\n*1，下载NKDR16版本\r\n2，下载SDK主流版本，22-29\r\n3，配置好NDK和SDK的环境变量\r\n4，cocos Creator中配置\r\n# 使用cocos creator构建项目*\r\n并使用cocos creator导入构建好的项目\r\n可能出现的问题\r\n![](https://zhoujun2303.github.io/post-images/1659755923050.jpg)\r\n```\r\nManifest merger failed : uses-sdk:minSdkVersion 16 cannot be smaller than version 22 declared in library [:libcocos2dx] D:\\tmyclient\\build\\jsb-default\\frameworks\\cocos2d-x\\cocos\\platform\\android\\libcocos2dx\\build\\intermediates\\merged_manifests\\debug\\processDebugManifest\\merged\\AndroidManifest.xml as the library might be using APIs not available in 16\r\n\tSuggestion: use a compatible library with a minSdk of at most 16,\r\n\t\tor increase this project's minSdk version to at least 22,\r\n\t\tor use tools:overrideLibrary=\"org.cocos2dx.lib\" to force usage (may lead to runtime failures)\r\n```\r\nsdk版本不一致导致的问题\r\n解决办法 更改为最低需要的SDK版本\r\n\r\n# 导入依赖的资源包\r\nshowInExport:打开资源路径\r\nlibs包引入成功\r\n![](https://zhoujun2303.github.io/post-images/1659755991694.jpg)\r\n打开build.gradle，将所需的libs包引入\r\n![](https://zhoujun2303.github.io/post-images/1659756019666.jpg)\r\n点击sync now：立即改变\r\n打开appActivity\r\n将需要用到的方法声明写入\r\n![](https://zhoujun2303.github.io/post-images/1659756064938.jpg)\r\n![](https://zhoujun2303.github.io/post-images/1659756078819.jpg)\r\n\r\n打包成功之后就是原生反射调用JAVA中的函数",
+      "data": {
+        "title": "Cocos Android环境搭建",
+        "date": "2020-01-30 11:15:12",
+        "tags": [
+          "Cocos",
+          "Android"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/cocos-android-huan-jing-da-jian.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "cocos-android-huan-jing-da-jian"
+    },
+    {
+      "content": "cocos 中\r\n```\r\nthis.mapcamra.node.x = cc.misc.lerp(this.mapcamra.node.x, targetPos.x, 0.1);\r\nthis.mapcamra.node.y = cc.misc.lerp(this.mapcamra.node.y, targetPos.y, 0.1);\r\n```\r\nLaya 中\r\n```\r\nLaya.Vector3.lerp()\r\n```\r\nUnity \r\n```\r\n等我有空\r\n```\r\n理解\r\n```\r\n设 从spos(x,y,z) 移动到 tmpPos(x,y,z);\r\n假设每帧移动 this.lerps = 0.05相对距离\r\n   spos.x = spos.x + this.lerps * (tmpPos.x - spos.x);\r\n   spos.y = spos.y + this.lerps * (tmpPos.y - spos.y);\r\n   spos.z = spos.z + this.lerps * (tmpPos.z - spos.z);\r\n   永远追不上 \r\n```\r\n————————————————\r\n版权声明：本文为CSDN博主「长胖是个梦想」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。\r\n[原文链接](https://blog.csdn.net/qq_33569137/article/details/110954574)",
+      "data": {
+        "title": "Lerp运算",
+        "date": "2020-01-02 11:05:51",
+        "tags": [
+          "随口说"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/lerp-yun-suan.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "lerp-yun-suan"
+    },
+    {
+      "content": "- 其他组件\r\n```    \r\n    cc.Motionstreak 拖尾\r\n    cc.Animation 动画组件  cc.AnimationClip 动画剪辑\r\n```\r\n- 资源类型\r\n```\r\n    cc.AudioClip 音频资源\r\n    cc.SpriteFrame 图片资源\r\n   cc.SpriteFrameAtlas 图集资源\r\n   cc.AnimathonClip 动画剪辑资源\r\n   cc.Prefab  预制件\r\n```\r\n- 单例模式\r\n```\r\ncc.director \r\n    preloadScene() 预加载创景\r\n    loadScene()切换场景\r\n    pause()暂停游戏逻辑，不会禁用触摸事件\r\n    \r\ncc.loader\r\n    loadRes()  动态加载本地资源  resources 文件下面\r\n    load()  远程加载资源\r\ncc.audioEngine \r\n    play()\r\n    playMusic()\r\n    playEffect()//音效  \r\n cc.Button()按钮组件\r\n     过度类型：颜色，图片，缩放\r\n     四种状态：normal,hover,pressed,cancel\r\n     回调函数的绑定\r\n     禁用  interactable\r\n cc.ProgressBar\r\n     progress 进度\r\n cc.SrollView滚动视图\r\n     isAutoScrolling()是否在移动\r\n     this.scrollNode.stopAutoScroll();\r\n cc.Layout  布局\r\n cc.Widget 对其组件（做适配）\r\n cc.Canvas 画布 屏幕适配方案    \r\n cc.ToggleContainer 单选按钮\r\n ```\r\n \r\n- 渲染组件\r\n```\r\n cc.Sprite 精灵\r\n     九宫格精灵的使用\r\n     填充精灵的使用\r\n     混合模式的使用\r\n     动态切换精灵的图片\r\n cc.Label 文本的使用\r\n     内容的设置 .string、\r\n     文本的适配与对其\r\n     字体的使用\r\n     富文本的使用\r\n cc.ParticalSystem 粒子系统\r\n```\r\n                                               \r\n- 碰撞组件\r\n```\r\n  cc.Collider \r\n      boxCollider\r\n      circleCollider\r\n      PolygonCollider\r\n      分组设置\r\n      组别配对\r\n      碰撞回调\r\n      碰撞管理器  \r\n```\r\n\r\nadd 2020.01.03\r\n```\r\ndirector\r\n获取视图打下\r\ncc.director.getWinSize()\r\n=> cc.winSize\r\n获取屏幕的物理分辨率\r\ncc.view.getFrameSize()\r\n获取当前场景\r\ncc.director.getScene() ==>return this._scene;\r\n控制游戏帧率\r\ncc.game.setFrameRate();\r\n暂停动画\r\ncc.director.stopAnimation();\r\ngame\r\n切入后台，切入前台\r\ncc.game.EVENT_HIDE\r\ncc.game.EVENT_SHOW\r\n常驻节点的添加\r\ncc.game.addPersistRootNode();\r\ncc.game.removePersistRootNode();\r\ncc.game.isPersistRootNode();\r\nsystemEvent\r\ncc.systemEvent.KEY_DOWN;\r\ncc.systemEvent.KEY_UP;\r\ncc.systemEvent.DEVICEMOTION;//重力感应\r\nview\r\ncc.view.resizeWithBrowserSize()//自适应浏览器尺寸\r\ncc.view.setOrientation()//设置屏幕朝向\r\ncc.view.enableAutoFullScreen()//移动端全屏\r\ncc.view.setCanvasSize(width,height)//web端设置尺寸\r\n\r\n关闭FPS显示\r\ncc.debug.setDisplayStats(false);\r\n```\r\n",
+      "data": {
+        "title": "CocosAPI",
+        "date": "2019-12-28 10:54:57",
+        "tags": [
+          "Cocos"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/cocosapi.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "cocosapi"
+    },
+    {
       "content": "\r\n![](https://zhoujun2303.github.io/post-images/1659750458057.jpg)\r\n打开计算机管理\r\ncompmgmt.msc\r\n![](https://zhoujun2303.github.io/post-images/1659750471290.jpg)\r\n![](https://zhoujun2303.github.io/post-images/1659750476496.jpg)\r\n刷新DNS缓存\r\nipconfig/flushdns\r\n\r\n\r\nHosts\r\n```\r\n# Copyright (c) 1993-2009 Microsoft Corp.\r\n#\r\n# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.\r\n#\r\n# This file contains the mappings of IP addresses to host names. Each\r\n# entry should be kept on an individual line. The IP address should\r\n# be placed in the first column followed by the corresponding host name.\r\n# The IP address and the host name should be separated by at least one\r\n# space.\r\n#\r\n# Additionally, comments (such as these) may be inserted on individual\r\n# lines or following the machine name denoted by a '#' symbol.\r\n#\r\n# For example:\r\n#\r\n#      102.54.94.97     rhino.acme.com          # source server\r\n#       38.25.63.10     x.acme.com              # x client host\r\n\r\n# localhost name resolution is handled within DNS itself.\r\n#\t127.0.0.1       localhost\r\n#\t::1             localhost\r\n127.0.0.1 client.com\r\n127.0.0.2 ws.com\r\n```",
       "data": {
         "title": "IIS",
-        "date": "2022-08-05 14:54:18",
+        "date": "2019-11-09 14:54:18",
         "tags": [
           "Windows"
         ],
         "published": true,
         "hideInList": false,
-        "feature": "/post-images/iis.jpg",
+        "feature": "/post-images/iis.png",
         "isTop": false
       },
       "isEmpty": false,
@@ -55,22 +665,132 @@
       "fileName": "iis"
     },
     {
-      "content": "- 1，批量处理删除文件\r\n```\r\ndel /f /s /q *.meta\r\npause\r\n```\r\n- 2，批量修改图片名字\r\n```@echo off\r\nsetlocal enabledelayedexpansion\r\nset count=100\r\nfor /f \"delims=\" %%i in ('dir /b *.jpg,*.png,*.bmp,*.jpeg,*.gif') do call:Rename \"%%~i\"\r\npause\r\nexit\r\n \r\n:Rename\r\nset /a count+=1\r\nif /i \"%~1\"==\"!count:~1!%~x1\" goto :eof\r\nif exist \"!count:~1!%~x1\" goto Rename\r\necho 改名：%1 !count:~1!\r\nren \"%~1\" \"!count:~1!%~x1\"\r\ngoto :eof\r\n\r\n\r\n文件命名 .bat结尾\r\n```\r\n- 3，LayaAI obj convertTo Json\r\n```\r\nREM Author JUN_Z\r\nREM Time 2020/8/26/14:16:57\r\n@echo off    \r\nsetlocal enabledelayedexpansion\r\nfor %%i in ( *.obj ) do (\r\n    set \"FILE_NAME=%%~ni\"\r\n    echo \"fileName\": !FILE_NAME!\r\n    call:runConvert %%~i,!FILE_NAME!\r\n    )\r\npause\r\n\r\n:runConvert\r\nREM echo %1\r\nREM echo %2%JSON%\r\nstart python convert_obj_three.py -i %1 -o %2.json\r\ngoto :eof\r\n```\r\n\r\n",
+      "content": "- 动态添加按钮组件：函数的封装\r\n```\r\ncc.vv.addButton = function (data) {\r\n    for (let i in data) {\r\n        if (data[i] === null) {\r\n            cc.warn([i] + '不存在');\r\n            return false;\r\n        }\r\n    }\r\n    const transition = cc.Button.Transition.SCALE;\r\n    const duration = 0.1;\r\n    const zoomScale = 1.2;\r\n\r\n    var target = data.target;\r\n    var btn = data.btn;\r\n    var component = data.component;\r\n    var handler = data.handler;\r\n    var customEventData = data.customEventData;\r\n    var enableAutoGrayEffect = data.enableAutoGrayEffect;\r\n    var interactable = data.interactable;\r\n\r\n    var clickEventHandler = new cc.Component.EventHandler();\r\n    clickEventHandler.target = target;\r\n    clickEventHandler.component = component;\r\n    clickEventHandler.handler = handler;\r\n    clickEventHandler.customEventData = customEventData;\r\n    btn.clickEvents.push(clickEventHandler);\r\n\r\n    btn.transition = transition;\r\n    btn.duration = duration;\r\n    btn.zoomScale = zoomScale;\r\n    btn.enableAutoGrayEffect = enableAutoGrayEffect;\r\n    btn.interactable = interactable;\r\n};\r\n```\r\n- 函数的调用\r\n```\r\naddButton() {\r\n    for (let i = 0, pNode = this.mapPar.children, len = pNode.length; i < len; i += 1) {\r\n        let node = pNode[i];\r\n        let btn = node.addComponent(cc.Button);\r\n        cc.vv.addButton({\r\n            'target': this.node, 'btn': btn, 'component': 'Map', 'handler': 'chooseChapter',\r\n            'customEventData': i + 1, 'enableAutoGrayEffect': true, 'interactable': i + 1 <= 1\r\n        });\r\n    }\r\n},\r\n```\r\n",
       "data": {
-        "title": "windows批处理",
-        "date": "2022-08-05 10:33:42",
+        "title": "Cocos按钮封装",
+        "date": "2019-08-12 10:43:24",
         "tags": [
-          "Windows"
+          "Cocos"
         ],
         "published": true,
         "hideInList": false,
-        "feature": "/post-images/wang-de-fa.jpg",
+        "feature": "/post-images/cocos-an-niu-feng-zhuang.png",
         "isTop": false
       },
       "isEmpty": false,
       "excerpt": "",
       "abstract": "",
-      "fileName": "wang-de-fa"
+      "fileName": "cocos-an-niu-feng-zhuang"
+    },
+    {
+      "content": "```\r\ncc.Canvas.prototype.applySettings = function () {\r\n    var width = this.designResolution.width;\r\n    var height = this.designResolution.height;\r\n    if (CC_EDITOR) {\r\n        cc.engine.setDesignResolutionSize(width, height);\r\n    } else {\r\n        if ((cc.sys.isNative && cc.sys.isMobile) || CC_PREVIEW) {\r\n            // 横屏 FIXED_HEIGHT\r\n            // 竖屏 FIXED_WIDTH\r\n            // 强制拉伸 EXACT_FIT\r\n            // 当前屏幕尺寸 > 设计分辨率的时候,  将强制拉伸修改为按宽适配\r\n            var frameSize = cc.view.getFrameSize();\r\n            var resolutionPolicy = frameSize.width > frameSize.height ? cc.ResolutionPolicy.FIXED_HEIGHT : cc.ResolutionPolicy.FIXED_WIDTH;\r\n            var designSize = cc.view.getDesignResolutionSize();\r\n            var isFullScreen = frameSize.width / frameSize.height > designSize.width / designSize.height;\r\n            // resolutionPolicy = isFullScreen ? cc.ResolutionPolicy.EXACT_FIT : resolutionPolicy;\r\n            frameSize.width <= 640 && frameSize.height <= 960 && (resolutionPolicy = cc.ResolutionPolicy.EXACT_FIT);\r\n            cc.log(cc.director.getScene().name, frameSize.width, frameSize.height, designSize.width, designSize.height, isFullScreen, resolutionPolicy);\r\n            cc.view.setDesignResolutionSize(width, height, resolutionPolicy);\r\n        } else {\r\n            cc.view.setDesignResolutionSize(width, height, cc.ResolutionPolicy.SHOW_ALL);\r\n        }\r\n    }\r\n};\r\n```",
+      "data": {
+        "title": "Cocos适配",
+        "date": "2019-08-08 10:40:57",
+        "tags": [
+          "Cocos"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/cocos-gua-pei.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "cocos-gua-pei"
+    },
+    {
+      "content": "Key\r\n```\r\nd7be719a0580ae65f050b3ec85e75f57  key\r\n```\r\n```\r\n// Learn cc.Class:\r\n//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html\r\n//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html\r\n// Learn Attribute:\r\n//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html\r\n//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html\r\n// Learn life-cycle callbacks:\r\n//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html\r\n//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html\r\n\r\ncc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        // foo: {\r\n        //     // ATTRIBUTES:\r\n        //     default: null,        // The default value will be used only when the component attaching\r\n        //                           // to a node for the first time\r\n        //     type: cc.SpriteFrame, // optional, default is typeof default\r\n        //     serializable: true,   // optional, default is true\r\n        // },\r\n        // bar: {\r\n        //     get () {\r\n        //         return this._bar;\r\n        //     },\r\n        //     set (value) {\r\n        //         this._bar = value;\r\n        //     }\r\n        // },\r\n    },\r\n\r\n    // LIFE-CYCLE CALLBACKS:\r\n\r\n    onLoad() {\r\n        \r\n    },\r\n\r\n    getlocation(){\r\n        var map = new AMap.Map('container', {\r\n            resizeEnable: true, //是否监控地图容器尺寸变化\r\n            zoom: 11, //初始化地图层级\r\n            center: [116.397428, 39.90923] //初始化地图中心点\r\n        });\r\n        console.log(map);\r\n        map.on(\"complete\", function () {\r\n            log.success(\"地图加载完成！\");\r\n        });\r\n\r\n        //定位\r\n        map.plugin('AMap.Geolocation', function () {\r\n            var geolocation = new AMap.Geolocation({\r\n                // 是否使用高精度定位，默认：true\r\n                enableHighAccuracy: true,\r\n                // 设置定位超时时间，默认：无穷大\r\n                timeout: 10000,\r\n                // 定位按钮的停靠位置的偏移量，默认：Pixel(10, 20)\r\n                buttonOffset: new AMap.Pixel(10, 20),\r\n                //  定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false\r\n                zoomToAccuracy: true,\r\n                //  定位按钮的排放位置,  RB表示右下\r\n                buttonPosition: 'RB'\r\n            })\r\n\r\n            geolocation.getCurrentPosition()\r\n            AMap.event.addListener(geolocation, 'complete', onComplete)\r\n            AMap.event.addListener(geolocation, 'error', onError)\r\n\r\n            function onComplete(data) {\r\n                // data是具体的定位信息\r\n                console.log(\"定位成功！\");\r\n                console.log(data);\r\n            }\r\n\r\n            function onError(data) {\r\n                // 定位出错\r\n                console.log(\"定位出错!\");\r\n                console.log(data);\r\n            }\r\n        })\r\n\r\n\r\n        AMap.plugin('AMap.CitySearch', function () {\r\n            var citySearch = new AMap.CitySearch()\r\n            citySearch.getLocalCity(function (status, result) {\r\n              if (status === 'complete' && result.info === 'OK') {\r\n                // 查询成功，result即为当前所在城市信息\r\n                console.log(result);\r\n              }\r\n            })\r\n          })\r\n    },\r\n\r\n\r\n\r\n\r\n    //\r\n\r\n\r\n    start() {\r\n        this.getlocation();\r\n    },\r\n\r\n    // update (dt) {},\r\n});\r\n```\r\n```\r\n// Learn cc.Class:\r\n//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html\r\n//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html\r\n// Learn Attribute:\r\n//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html\r\n//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html\r\n// Learn life-cycle callbacks:\r\n//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html\r\n//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html\r\n\r\ncc.Class({\r\n    extends: cc.Component,\r\n\r\n    properties: {\r\n        // foo: {\r\n        //     // ATTRIBUTES:\r\n        //     default: null,        // The default value will be used only when the component attaching\r\n        //                           // to a node for the first time\r\n        //     type: cc.SpriteFrame, // optional, default is typeof default\r\n        //     serializable: true,   // optional, default is true\r\n        // },\r\n        // bar: {\r\n        //     get () {\r\n        //         return this._bar;\r\n        //     },\r\n        //     set (value) {\r\n        //         this._bar = value;\r\n        //     }\r\n        // },\r\n    },\r\n\r\n    // LIFE-CYCLE CALLBACKS:\r\n\r\n    onLoad() {\r\n        \r\n    },\r\n\r\n    getlocation(){\r\n        var map = new AMap.Map('container', {\r\n            resizeEnable: true, //是否监控地图容器尺寸变化\r\n            zoom: 11, //初始化地图层级\r\n            center: [116.397428, 39.90923] //初始化地图中心点\r\n        });\r\n        console.log(map);\r\n        map.on(\"complete\", function () {\r\n            log.success(\"地图加载完成！\");\r\n        });\r\n\r\n        //定位\r\n        map.plugin('AMap.Geolocation', function () {\r\n            var geolocation = new AMap.Geolocation({\r\n                // 是否使用高精度定位，默认：true\r\n                enableHighAccuracy: true,\r\n                // 设置定位超时时间，默认：无穷大\r\n                timeout: 10000,\r\n                // 定位按钮的停靠位置的偏移量，默认：Pixel(10, 20)\r\n                buttonOffset: new AMap.Pixel(10, 20),\r\n                //  定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false\r\n                zoomToAccuracy: true,\r\n                //  定位按钮的排放位置,  RB表示右下\r\n                buttonPosition: 'RB'\r\n            })\r\n\r\n            geolocation.getCurrentPosition()\r\n            AMap.event.addListener(geolocation, 'complete', onComplete)\r\n            AMap.event.addListener(geolocation, 'error', onError)\r\n\r\n            // function onComplete(data) {\r\n            //     // data是具体的定位信息\r\n            //     console.log(\"定位成功！\");\r\n            //     console.log(data);\r\n            // }\r\n\r\n            // function onError(data) {\r\n            //     // 定位出错\r\n            //     console.log(\"定位出错!\");\r\n            //     console.log(data);\r\n            // }\r\n        })\r\n\r\n\r\n        AMap.plugin('AMap.CitySearch', function () {\r\n            var citySearch = new AMap.CitySearch()\r\n            citySearch.getLocalCity(function (status, result) {\r\n              if (status === 'complete' && result.info === 'OK') {\r\n                // 查询成功，result即为当前所在城市信息\r\n                console.log(result.city);\r\n                console.log(result);\r\n                console.log(result.bounds.kc);\r\n              }\r\n            })\r\n          })\r\n    },\r\n\r\n\r\n\r\n\r\n    //搜索地名查出经纬度\r\n   geoCode() {\r\n        AMap.plugin('AMap.Geocoder', function() {\r\n            var geocoder = new AMap.Geocoder({\r\n                // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode\r\n            })\r\n            // var address  = document.getElementById('tipinput').value;\r\n            var address = '武汉';\r\n            geocoder.getLocation(address, function(status, result) {\r\n                if (status === 'complete' && result.info === 'OK') {\r\n                    var lnglat = result.geocodes[0].location.toString();\r\n                    var lnglatArray = lnglat.split(\",\");\r\n                    $(\"#lonNum\").val(lnglatArray[0]);\r\n                    $(\"#latNum\").val(lnglatArray[1]);\r\n                    var map = new AMap.Map(\"container\", {\r\n                    });\r\n                    var marker = new AMap.Marker({\r\n                        icon: \"//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png\",\r\n                        position: new AMap.LngLat(lnglatArray[0],lnglatArray[1]),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]\r\n                        offset: new AMap.Pixel(-13, -30)\r\n                    });\r\n                   \r\n                    console.log(marker);\r\n                    console.log(marker.bounds.kc);\r\n                }\r\n            })\r\n     \r\n        })\r\n    },\r\n\r\n    //搜索\r\n    search(){\r\n        AMap.plugin('AMap.Autocomplete', function(){\r\n            // 实例化Autocomplete\r\n            var autoOptions = {\r\n              //city 限定城市，默认全国\r\n              city: '全国'\r\n            }\r\n            var autoComplete= new AMap.Autocomplete(autoOptions);\r\n            autoComplete.search('广州', function(status, result) {\r\n              // 搜索成功时，result即是对应的匹配数据\r\n              console.log(\"搜索成功\");\r\n              console.log(result);\r\n              console.log(result.tips[0].location);\r\n            })\r\n          })\r\n    },\r\n    \r\n   \r\n\r\n\r\n    start() {\r\n        this.getlocation();\r\n        // this.geoCode();\r\n        this.search();\r\n    },\r\n\r\n    // update (dt) {},\r\n});\r\n```\r\n",
+      "data": {
+        "title": "Cocos集成高德定位",
+        "date": "2019-07-30 10:35:56",
+        "tags": [
+          "Cocos",
+          "定位"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/cocos-ji-cheng-gao-de-ding-wei-.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "cocos-ji-cheng-gao-de-ding-wei-"
+    },
+    {
+      "content": "- 创建数据库\r\n```\r\nCREATE` SCHEMA `数据库名字` ;\r\n```\r\n```\r\n-- show databases\r\n-- 选择使用的数据库\r\nuse qsz_database_20190703;\r\n-- 显示数据库下所有的表\r\nshow tables;\r\n-- 查看表单结构\r\ndescribe userinfo;\r\n-- 向表中添加信息\r\n-- insert into userinfo(uniqueID,accountID,passworld,nickName) values(2,2,3,\"A\");\r\n-- insert into userinfo(uniqueID,accountID,passworld,nickName) values( 3,2,3,\"B\");\r\n-- insert into userinfo(uniqueID,accountID,passworld,nickName) values( 5,2,3,\"C\");\r\n-- 显示表单内容\r\n-- select *from userinfo\r\n\r\nSET SQL_SAFE_UPDATES = 0;\r\n-- 删除玩家\r\ndelete from userinfo where  nickName=\"A\";\r\n-- 查找用户信息表\r\n-- select *from userinfo;\r\n\r\n-- 查找用户信息\r\nselect *from userinfo where nickName=\"B\";\r\n-- 修改指定用户的指定信息\r\n-- 一次修改一个人，可以修改多个值\r\nupdate  userinfo set passworld=6666,gameWon=10 where nickName=\"B\";\r\n\r\n-- 查找表\r\n-- select *from userinfo_qsz;\r\n-- 清空表\r\n-- TRUNCATE TABLE userinfo_qsz;\r\n\r\n-- 查找表是否存在\r\n-- SELECT table_name FROM information_schema.TABLES WHERE table_name = \"userinfo\";\r\n```\r\n# 数据库的\r\n![](https://zhoujun2303.github.io/post-images/1659752245956.jpg)\r\n\r\n- 创建数据表的操作指令\r\n```\r\nCREATE TABLE `qsz_database_20190703`.`userinfo` (\r\n  `uniqueID` INT NOT NULL,\r\n  `accountID` VARCHAR(45) NULL,\r\n  `passworld` VARCHAR(45) NULL,\r\n  `nickName` VARCHAR(45) NULL,\r\n  `avatarURL` VARCHAR(45) NULL,\r\n  `gameWon` INT UNSIGNED ZEROFILL NULL,\r\n  `gameLost` INT UNSIGNED ZEROFILL NULL,\r\n  PRIMARY KEY (`uniqueID`))\r\nENGINE = InnoDB\r\nDEFAULT CHARACTER SET = utf8;\r\n```\r\n[参考链接](https://www.jianshu.com/p/c8eb6d2471f8)\r\n\r\n```\r\nALTER USER 'root'@'localhost' IDENTIFIED BY '123456' PASSWORD EXPIRE NEVER;\r\n\r\n ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';  \r\n```\r\n```\r\nCREATE TABLE `数据库名`.`表名`(\r\n    \r\n)\r\n```\r\n![](https://zhoujun2303.github.io/post-images/1659752355662.jpg)\r\n- 数据库的查询\r\n![](https://zhoujun2303.github.io/post-images/1659752379560.jpg)\r\n```\r\nshow databases;\r\n```\r\n- 注释\r\n```\r\n--  空格\r\n```\r\n![](https://zhoujun2303.github.io/post-images/1659752454143.jpg)\r\n\r\n- 查看表单具体结构\r\n![](https://zhoujun2303.github.io/post-images/1659752471099.jpg)\r\n\r\n- 表中添加 信息\r\n![](https://zhoujun2303.github.io/post-images/1659752504465.jpg)\r\n\r\n- 非主键数据表数据删除\r\n![](https://zhoujun2303.github.io/post-images/1659752528723.jpg)\r\n\r\n",
+      "data": {
+        "title": "MySql随记",
+        "date": "2019-07-03 10:14:12",
+        "tags": [
+          "MySql"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/mysql-sui-ji-.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "mysql-sui-ji-"
+    },
+    {
+      "content": "- 安装mysql模块\r\n```\r\nnpm install mysql\r\n```\r\n- 创建表时的组装\r\n```\r\n let sql = `CREATE TABLE \\`${config.database}\\` .\\`userinfo_qsz\\`(\r\n                \\`uniqueID\\` INT NOT NULL,\r\n                \\`accountID\\` VARCHAR(45) NULL,\r\n                \\`password\\` VARCHAR(45) NULL,\r\n                \\`nickName\\` VARCHAR(45) NULL,\r\n                PRIMARY KEY (\\`uniqueID\\`))\r\n                ENGINE = InnoDB\r\n                DEFAULT CHARACTER SET = utf8;`\r\n```\r\n```\r\n\"CREATE TABLE USERINFO_FOR_QSZ(\r\n      uniqueID INT UNSIGNED NOT NULL AUTO_INCREMENT,\r\n      accountID VARCHAR(45)  NULL,\r\n      password VARCHAR(45)  NULL,\r\n      nickName VARCHAR(45)  NULL,\r\n)ENGINE = INNODB DEFAULT CHARSET = UTF8;\"\r\n```\r\n- 用户数据表的创建\r\n```\r\nCREATE TABLE `tank_07_05`.`userinfo_tank` (\r\n  `uniqueID` INT NOT NULL AUTO_INCREMENT,\r\n  `accountID` VARCHAR(45) NOT NULL,\r\n  `nickName` VARCHAR(45) NULL,\r\n  `avatarURL` VARCHAR(45) NULL,\r\n  `password` VARCHAR(45) NULL,\r\n  PRIMARY KEY (`uniqueID`, `accountID`));\r\n```",
+      "data": {
+        "title": "NodeJS连接数据库",
+        "date": "2019-07-03 10:06:59",
+        "tags": [
+          "NodeJS",
+          "MySql"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/nodejs-lian-jie-shu-ju-ku.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "nodejs-lian-jie-shu-ju-ku"
+    },
+    {
+      "content": "- 富文本使用\r\n```\r\nthis.win.string='<color=#00ff00>'+'游戏'+'</c><color=#0fffff>'+'完结</c>';\r\n```\r\n- 取两位字符\r\n```\r\nsubstring\r\n```\r\n\r\n```\r\n前后补字符\r\npadStart  //   padEnd\r\nJs判断转boolean类型为false的6种情况\r\nBoolean(0);\r\nBoolean('');\r\nBoolean(false);\r\nBoolean(NaN);\r\nBoolean(undefined);\r\nBoolean(null)\r\n```\r\n```\r\nprompt(\"\");接受外部的数据\r\nvar age= parseInt(prompt(\"请输入年龄\"))；\r\ninstanceof()//判断莫一个对象那个是否属于一个对象\r\n```\r\n- 数据类型\r\n```\r\nArray\r\nString\r\nNumber\r\nObject\r\nJSON\r\nDate\r\nMath\r\n```\r\n```\r\nhasOwnProperty\r\nvar str=\"sad9a9d90sa9578fa922f9a\";\r\nconsole.log(str.match(/\\d+/g).length);//正则表达式\r\nconsole.log(str.match(/\\d+/g));//求数字的长度和个数\r\n\r\nMath.ceil();//向上取整\r\nMath.floor();//向下取整\r\nMath.round();//四舍五入取整\r\nparseInt();//向下取整\r\n```\r\n```\r\n换行：<br>  \\n\r\n取整：parseInt\r\n输入： prompt\r\n输出： console.log()   document.write()  alert(\"弹窗\")\r\n内置函数：\r\n```\r\n\tparseInt():转整形\r\n\tparseFloat():转浮点型\r\n\tisNaN():\r\n\tisFinite():判断一个数值是否有限\r\n\teval():求字符串中表达式的值\r\n```\r\n空格:&nbsp\r\n函数体内定义全局变量，如果不使用var关键字，就是定义的全局变量\r\n```\r\n- API\r\n```\r\nTo:绝对动作(坐标)，相对于最开始的状态所做的动作；\r\nBy:相对动作(坐标)，相对于当前的状态所做的动作;\r\n\r\n\r\n移动\r\nmoveTo(time,x,y)\r\nmoveBy(time,cc.P(x,y))\r\n\r\n\r\n缩放\r\n图片对象.scale=0.3：缩小三倍\r\n\r\n旋转\r\nrotateTo(时间，绕x轴旋转坐标，绕y轴旋转坐标)\r\nrotateBy\r\n\r\n倾斜\r\nskewTo(时间，绕x轴旋转度数，绕y轴旋转度数)\r\nskewBy\r\n\r\n跳跃\r\njumpTo\r\n//以坐标原点为原点，移动到目标坐标\r\n//参数: (时间duration，目标坐标point(x, y)， 每次跳跃高度height， 跳跃次数count)\r\nvar jumpTo = cc.jumpTo(duration, cc.p(size.width / 2, size.height / 2), 50, 10);\r\nsprite.runAction(jumpTo);\r\n\r\n\r\n透明度\r\n对象.opacity=200(最大值为255)\r\n\r\n\r\n淡入淡出\r\nfadeTo\r\n//第二个参数为透明度,透明区间(0, 1)\r\nvar fadeTo = cc.fadeTo(duration, 0.5);\r\nsprite.runAction(fadeTo);\r\n\r\nfadeIn同上\r\nfadeOut\r\n\r\n\r\n闪烁效果\r\nblink\r\n//闪烁效果\r\n//第二个参数为duration时间内闪烁次数\r\nvar blink = cc.blink(duration, 5);\r\nsprite.runAction(blink);\r\n\r\n\r\n色调的改变\r\ntintTo\r\n//改变色调效果\r\nvar tintTo = cc.tintTo(duration, 255, 127.5, 0);\r\nsprite.runAction(tintTo);\r\n\r\n\r\n\r\n延迟执行\r\ndelay Time\r\nvar delaytime=cc.delayTime(时间)\r\n用于组合动作中\r\n\r\n\r\n顺序执行\r\nsequence\r\n//顺序执行当前添加的所有动作\r\nvar sequence = cc.sequence(moveby, moveto, scaleTo, scaleBy, fadeTo, \r\nfadeOut, fadeIn, blink, tintTo,rotateTo, rotateBy, skewBy, skewTo, \r\njumpBy, jumpTo, bezierTo, bezierBy);\r\n\r\nsprite.runAction(sequence);\r\n\r\n\r\n\r\n重复执行\r\nrepeat/repeatforever\r\n//重复执行\r\n//参数: (action，执行次数)\r\nvar repeat = cc.repeat(sequence, 3);\r\nsprite.runAction(repeat);\r\n\r\n\r\n//无限重复\r\nvar repeatForever = cc.repeatForever(sequence);\r\nsprite.runAction(repeatForever);\r\n\r\n\r\n\r\n同时执行\r\nspawn\r\n//spawn 同时执行\r\nvar spawn = cc.spawn(moveby, scaleTo, blink, tintTo);\r\nsprite.runAction(spawn);\r\n\r\n\r\n反向执行 reverse\r\n\r\n\r\n//坐标转换\r\npos=this.convertToNodeSpace(pos);\r\n```\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "data": {
+        "title": "Cocos随记",
+        "date": "2019-06-29 10:03:13",
+        "tags": [
+          "Cocos"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/cocos-sui-ji.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "cocos-sui-ji"
+    },
+    {
+      "content": "- function 中的this指向问题\r\n```\r\nJS 中this指向问题\r\n//undefined\r\nvar user = {\r\n    count:1,\r\n    getCount:function(){\r\n      return this.count;   \r\n    }\r\n}\r\nconsole.log(user.getCount()); //1\r\nvar otherGetCount = user.getCount;\r\nconsole.log(otherGetCount());  //undefined;\r\n\r\n//count为全局时的，this可以访问到var中的this\r\nvar count = 2;\r\nvar user = {\r\n    count:1,\r\n    getCount:function(){\r\n      return this.count;   \r\n    }\r\n}\r\nconsole.log(user.getCount()); //1\r\nvar otherGetCount = user.getCount;\r\nconsole.log(otherGetCount());  //2;\r\n```",
+      "data": {
+        "title": "JS笔记",
+        "date": "2019-05-17 09:57:55",
+        "tags": [
+          "JavaScript"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/js-bi-ji.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "js-bi-ji"
     },
     {
       "content": "> 欢迎来到我的小站呀，很高兴遇见你！🤝\r\n\r\n## 10000小时定律\r\n\r\n## 好记性不如烂笔头\r\n",
@@ -90,6 +810,141 @@
     }
   ],
   "tags": [
+    {
+      "name": "Git",
+      "slug": "kUs5Mp1Hy",
+      "used": true
+    },
+    {
+      "name": "Bug",
+      "slug": "lQuRARE5v",
+      "used": true
+    },
+    {
+      "name": "iOS",
+      "slug": "s3ueL15DH",
+      "used": true
+    },
+    {
+      "name": "Xcode",
+      "slug": "4Tfusap2Vy",
+      "used": true
+    },
+    {
+      "name": "Dll",
+      "slug": "QqtkKEVQJ",
+      "used": true
+    },
+    {
+      "name": "UnityEditor",
+      "slug": "DwKakt8ro",
+      "used": true
+    },
+    {
+      "name": "UnityEngine",
+      "slug": "szG58N8F94",
+      "used": true
+    },
+    {
+      "name": "Mac",
+      "slug": "eXTwChrjh",
+      "used": true
+    },
+    {
+      "name": "WebSocket",
+      "slug": "QMQyZwK7q",
+      "used": true
+    },
+    {
+      "name": "Java",
+      "slug": "s7pt2eoA-",
+      "used": true
+    },
+    {
+      "name": "Bundletool",
+      "slug": "bWeTDkpiP8",
+      "used": true
+    },
+    {
+      "name": "Jar",
+      "slug": "k5Nqo9gzt",
+      "used": true
+    },
+    {
+      "name": "Physics",
+      "slug": "b2n0xfep7",
+      "used": true
+    },
+    {
+      "name": "Unity",
+      "slug": "pz2bkmFLZ",
+      "used": true
+    },
+    {
+      "name": "C#",
+      "slug": "cPp_1OaTH",
+      "used": true
+    },
+    {
+      "name": "黑苹果",
+      "slug": "idkN0oS60",
+      "used": true
+    },
+    {
+      "name": "Python",
+      "slug": "b3-s7bOiB",
+      "used": true
+    },
+    {
+      "name": "Laya",
+      "slug": "wtsjevvSE",
+      "used": true
+    },
+    {
+      "name": "Bat",
+      "slug": "5YTAhCAXY",
+      "used": true
+    },
+    {
+      "name": "Linux",
+      "slug": "DtZN1URLN",
+      "used": true
+    },
+    {
+      "name": "Android",
+      "slug": "RROQah795",
+      "used": true
+    },
+    {
+      "name": "随口说",
+      "slug": "qpNhKOLii",
+      "used": true
+    },
+    {
+      "name": "定位",
+      "slug": "Ut6IdaN8p",
+      "used": true
+    },
+    {
+      "name": "NodeJS",
+      "slug": "7zdkLCDXy",
+      "used": true
+    },
+    {
+      "name": "MySql",
+      "slug": "k696wQVytz",
+      "used": true
+    },
+    {
+      "name": "Cocos",
+      "slug": "-kekcKgOE",
+      "used": true
+    },
+    {
+      "name": "JavaScript",
+      "slug": "jgaRICTcU",
+      "used": true
+    },
     {
       "index": -1,
       "name": "GameRecord",
