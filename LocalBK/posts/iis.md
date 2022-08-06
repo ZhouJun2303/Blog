@@ -7,12 +7,12 @@ hideInList: false
 feature: /post-images/iis.jpg
 isTop: false
 ---
-![](https://zhoujun2303.github.io/post-images/1659682615270.jpg)
 
+![](https://zhoujun2303.github.io/post-images/1659750458057.jpg)
 打开计算机管理
 compmgmt.msc
-![](https://zhoujun2303.github.io/post-images/1659682654311.jpg)
-![](https://zhoujun2303.github.io/post-images/1659682668456.jpg)
+![](https://zhoujun2303.github.io/post-images/1659750471290.jpg)
+![](https://zhoujun2303.github.io/post-images/1659750476496.jpg)
 刷新DNS缓存
 ipconfig/flushdns
 

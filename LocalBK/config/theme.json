@@ -5,7 +5,7 @@
     "dateFormat": "YYYY-MM-DD",
     "feedCount": 10,
     "feedFullText": true,
-    "footerInfo": "Powered by <a href=\"https://zhoujun2303.github.io/\">胖胖</a>",
+    "footerInfo": "Powered by <a href=\"https://github.com/ZhouJun2303/\">胖胖</a>",
     "postPageSize": 10,
     "postPath": "post",
     "postUrlFormat": "SLUG",
