@@ -14,17 +14,7 @@
     "siteName": "长胖是个梦想",
     "tagPath": "tag",
     "tagUrlFormat": "SHORT_ID",
-    "themeName": "space"
+    "themeName": "notes"
   },
-  "customConfig": {
-    "albumStyle": "1",
-    "baiduStats": "",
-    "bgColor": "#ffffff",
-    "customCss": "",
-    "github": "https://github.com/ZhouJun2303",
-    "imgDisabled": "1",
-    "twitter": "",
-    "weibo": "",
-    "zhihu": ""
-  }
+  "customConfig": {}
 }
