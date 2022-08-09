@@ -7,8 +7,5 @@ hideInList: true
 feature: 
 isTop: false
 ---
-> 欢迎来到我的小站呀，很高兴遇见你！🤝
-
 ## 10000小时定律
 
-## 好记性不如烂笔头
