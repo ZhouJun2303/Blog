@@ -8,4 +8,12 @@ feature:
 isTop: false
 ---
 ## 10000小时定律
-
+## 用心做游戏
+## 一天磨一点，早晚是个圆
+- JavaScript
+- C#
+- CocosCreator
+- Laya
+- Unity
+- Lua
+- OC
