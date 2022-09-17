@@ -4,7 +4,7 @@ date: 2021-04-29 14:02:46
 tags: [Physics,Unity]
 published: true
 hideInList: false
-feature: /post-images/wheel-collider.png
+feature: 
 isTop: false
 ---
 - mass 质量

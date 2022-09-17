@@ -4,7 +4,7 @@ date: 2021-11-08 14:16:20
 tags: [Java,Bundletool]
 published: true
 hideInList: false
-feature: /post-images/aab-zhuan-apks-ben-di-ce-shi-bundletool.png
+feature: 
 isTop: false
 ---
 # bundletool

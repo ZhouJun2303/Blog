@@ -4,7 +4,7 @@ date: 2019-08-12 10:43:24
 tags: [Cocos]
 published: true
 hideInList: false
-feature: /post-images/cocos-an-niu-feng-zhuang.png
+feature: 
 isTop: false
 ---
 - 动态添加按钮组件：函数的封装

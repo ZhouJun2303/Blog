@@ -4,7 +4,7 @@ date: 2019-12-28 10:54:57
 tags: [Cocos]
 published: true
 hideInList: false
-feature: /post-images/cocosapi.png
+feature: 
 isTop: false
 ---
 - 其他组件

@@ -4,7 +4,7 @@ date: 2020-07-22 15:19:20
 tags: [Git]
 published: true
 hideInList: false
-feature: /post-images/git.png
+feature: 
 isTop: false
 ---
 😱😱😱😱😱😱😱😱

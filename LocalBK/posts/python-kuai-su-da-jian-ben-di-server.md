@@ -4,7 +4,7 @@ date: 2021-03-10 13:44:54
 tags: [Python]
 published: true
 hideInList: false
-feature: /post-images/python-kuai-su-da-jian-ben-di-server.png
+feature: 
 isTop: false
 ---
 - python2

@@ -4,7 +4,7 @@ date: 2021-03-27 13:47:29
 tags: [黑苹果]
 published: true
 hideInList: false
-feature: /post-images/hei-ping-guo.png
+feature: 
 isTop: false
 ---
 [黑苹果长期维护机型](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)

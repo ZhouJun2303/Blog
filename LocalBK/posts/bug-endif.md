@@ -4,7 +4,7 @@ date: 2022-06-13 15:07:52
 tags: [Unity,Bug]
 published: true
 hideInList: false
-feature: /post-images/bug-endif.png
+feature: 
 isTop: false
 ---
 - #if (UNITY_IOS || UNITY_ANDROID) #endif

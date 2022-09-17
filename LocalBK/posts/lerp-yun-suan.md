@@ -4,7 +4,7 @@ date: 2020-01-02 11:05:51
 tags: [随口说]
 published: true
 hideInList: false
-feature: /post-images/lerp-yun-suan.png
+feature: 
 isTop: false
 ---
 cocos 中

@@ -4,7 +4,7 @@ date: 2022-08-02 14:30:28
 tags: [Android]
 published: true
 hideInList: false
-feature: /post-images/an-zhuo-ying-yong-qian-ming-pei-zhi.png
+feature: 
 isTop: false
 ---
 - Key store path:存放路径（文件名和后缀都可以根据需要任意填写）

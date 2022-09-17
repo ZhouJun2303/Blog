@@ -4,7 +4,7 @@ date: 2021-04-10 13:51:18
 tags: [C#]
 published: true
 hideInList: false
-feature: /post-images/c-xue-xi.png
+feature: 
 isTop: false
 ---
 - 修饰符

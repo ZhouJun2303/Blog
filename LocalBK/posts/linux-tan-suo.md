@@ -4,7 +4,7 @@ date: 2020-07-22 11:26:27
 tags: [Linux]
 published: true
 hideInList: false
-feature: /post-images/linux-tan-suo.png
+feature: 
 isTop: false
 ---
 # 搭建

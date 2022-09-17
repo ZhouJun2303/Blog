@@ -4,7 +4,7 @@ date: 2020-07-10 14:39:23
 tags: [Laya]
 published: true
 hideInList: false
-feature: /post-images/laya-chang-jian-wen-ti-.png
+feature: 
 isTop: false
 ---
 ```

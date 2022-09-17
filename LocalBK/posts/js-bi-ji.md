@@ -4,7 +4,7 @@ date: 2019-05-17 09:57:55
 tags: [JavaScript]
 published: true
 hideInList: false
-feature: /post-images/js-bi-ji.png
+feature: 
 isTop: false
 ---
 - function 中的this指向问题

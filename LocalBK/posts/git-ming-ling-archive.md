@@ -4,7 +4,7 @@ date: 2022-06-28 15:10:55
 tags: [Git]
 published: true
 hideInList: false
-feature: /post-images/git-ming-ling-archive.png
+feature: 
 isTop: false
 ---
 

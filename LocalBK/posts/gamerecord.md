@@ -4,7 +4,7 @@ date: 2022-08-05 16:16:19
 tags: [GameRecord]
 published: true
 hideInList: false
-feature: /post-images/gamerecord.png
+feature: 
 isTop: false
 ---
 🤝合作研发

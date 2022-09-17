@@ -4,7 +4,7 @@ date: 2020-01-30 11:15:12
 tags: [Cocos,Android]
 published: true
 hideInList: false
-feature: /post-images/cocos-android-huan-jing-da-jian.png
+feature: 
 isTop: false
 ---
 # 安卓环境搭建

@@ -4,7 +4,7 @@ date: 2021-10-29 14:13:53
 tags: [Physics,Unity]
 published: true
 hideInList: false
-feature: /post-images/physicsraycast-layermask-can-shu-bi-keng.png
+feature: 
 isTop: false
 ---
 ```

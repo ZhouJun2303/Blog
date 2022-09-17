@@ -4,7 +4,7 @@ date: 2021-04-29 13:58:01
 tags: [Unity,Physics]
 published: true
 hideInList: false
-feature: /post-images/hinge-joint.png
+feature: 
 isTop: false
 ---
 [文档](https://docs.unity.cn/cn/2019.4/Manual/class-HingeJoint.html)

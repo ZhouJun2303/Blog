@@ -4,7 +4,7 @@ date: 2019-08-08 10:40:57
 tags: [Cocos]
 published: true
 hideInList: false
-feature: /post-images/cocos-gua-pei.png
+feature: 
 isTop: false
 ---
 ```

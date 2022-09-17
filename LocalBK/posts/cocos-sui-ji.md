@@ -4,7 +4,7 @@ date: 2019-06-29 10:03:13
 tags: [Cocos]
 published: true
 hideInList: false
-feature: /post-images/cocos-sui-ji.png
+feature: 
 isTop: false
 ---
 - 富文本使用

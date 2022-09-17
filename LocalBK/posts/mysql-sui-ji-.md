@@ -4,7 +4,7 @@ date: 2019-07-03 10:14:12
 tags: [MySql]
 published: true
 hideInList: false
-feature: /post-images/mysql-sui-ji-.png
+feature: 
 isTop: false
 ---
 - 创建数据库

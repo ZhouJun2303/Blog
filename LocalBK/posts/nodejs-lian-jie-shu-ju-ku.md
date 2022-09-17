@@ -4,7 +4,7 @@ date: 2019-07-03 10:06:59
 tags: [NodeJS,MySql]
 published: true
 hideInList: false
-feature: /post-images/nodejs-lian-jie-shu-ju-ku.png
+feature: 
 isTop: false
 ---
 - 安装mysql模块

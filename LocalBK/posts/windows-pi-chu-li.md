@@ -4,7 +4,7 @@ date: 2020-08-26 10:33:42
 tags: [Windows,Bat]
 published: true
 hideInList: false
-feature: /post-images/windows-pi-chu-li.png
+feature: 
 isTop: false
 ---
 - 1，批量处理删除文件

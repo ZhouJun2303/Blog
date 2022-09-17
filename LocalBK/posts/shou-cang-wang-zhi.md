@@ -4,7 +4,7 @@ date: 2020-12-08 15:00:38
 tags: [收藏]
 published: true
 hideInList: false
-feature: /post-images/shou-cang-wang-zhi.png
+feature: 
 isTop: false
 ---
 [疑难杂症大佬在线](https://www.jianshu.com/p/ff462d5efd2)
