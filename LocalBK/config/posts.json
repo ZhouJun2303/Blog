@@ -1,6 +1,25 @@
 {
   "posts": [
     {
+      "content": "# GameEntry\r\n整个框架的启动入口\r\n## Builtin:内置组件\r\n### config\r\n Config 配置表位于Assets/GameMain/Configs/DefaultConfig\r\n ```\r\n //int类型值获取\r\n int c1 = GameEntry.Config.GetInt(\"configName\");\r\n //float\r\n float c2 = GameEntry.Config.GetFloat(\"configName\");\r\n //string\r\n string c3 = GameEntry.Config.GetString(\"configName\");\r\n //bool\r\n bool c4 = GameEntry.Config.GetBool(\"configName\");\r\n```\r\n### DataNode TODO\r\n### DataTable 配置表位于Assets/GameMain/DataTables\r\n```\r\n//获取实体表\r\nIDataTable<DREntity> table = GameEntry.DataTable.GetDataTable<DREntity>();\r\n//获取单行数据 请确认ID存在 \r\nint id = 1001;\r\nDREntity dataRow = table.GetDataRow(id);\r\nif (null == dataRow) UnityGameFramework.Runtime.Log.Error(\"实体表 编号{0} 不存在\", id);\r\n//获取所有表行数据\r\nDREntity[] dREntities = table.GetAllDataRows();\r\n//获取单行中数据\r\nvar tableRowData1 = dataRow.AssetName;\r\n```\r\n### Debugger 调试组件\r\n```\r\n//在开发阶段用于真机调试查看日志\r\nGameEntry.Debugger.ActiveWindow = true;\r\n```\r\n### Download TODO\r\n### Entity 实体模块\r\n```\r\n//显示实体  为异步操作 这里做了一层封装\r\nstring entityGroup = \"Default\";\r\nGameEntry.Entity.ShowDefaultEntity<PlayerEntity>(new PlayerEntityData(dataRow.Id), entityGroup);\r\n//\"Player\"为一个实体分组 增加或删除分组见Entity Inspector面板设置\r\n/*\r\n * 如Default分组\r\n * Name 分组名称\r\n * Auto Release Interval 自动销毁时间\r\n * Capaclity 最大缓存数量\r\n * Expire Time 失效时间\r\n * */\r\n//销毁实体\r\nint childEntityID = 0;\r\nint parentEntityID = 1;\r\nGameEntry.Entity.HideEntity(childEntityID);\r\n//附加实体\r\nGameEntry.Entity.AttachEntity(childEntityID, parentEntityID);\r\n//移除附加实体\r\nGameEntry.Entity.DetachChildEntities(parentEntityID);\r\nGameEntry.Entity.DetachEntity(childEntityID);\r\n//隐藏莫个分组所有实体\r\nGameEntry.Entity.HideAllLoadedEntities(\"entityGroup\");\r\n//隐藏全部实体\r\nGameEntry.Entity.HideAllLoadedEntities();\r\nGameEntry.Entity.HideAllLoadingEntities();\r\n```\r\n### Event\r\n```\r\n//订阅事件\r\n//先定义事件类\r\nGameEntry.Event.Subscribe(TempEvent.EventId, OnTempEvent);\r\n//发送事件\r\nGameEntry.Event.Fire(this, new TempEvent());//下一帧\r\nGameEntry.Event.FireNow(this, new TempEvent());//立即\r\n//取消订阅\r\nGameEntry.Event.Unsubscribe(TempEvent.EventId, OnTempEvent);\r\n```\r\n```\r\nprotected virtual void OnTempEvent(object sender, GameEventArgs e)\r\n{\r\n        TempEvent tempEvent = (TempEvent)e;\r\n        //如果传了参数可以拿到\r\n}\r\npublic class TempEvent : GameEventArgs\r\n{\r\n    public static readonly int EventId = typeof(TempEvent).GetHashCode();\r\n    public override int Id { get { return EventId; } }\r\n    public TempEvent() { }\r\n    public TempEvent(int param1) { }\r\n    public TempEvent(string parem1) { }\r\n    public override void Clear() { }\r\n}\r\n```\r\n### FileSystem TODO\r\n### Fsm TODO\r\n### Localization 本地化\r\n```\r\n//全局配置位于Assets/GameMain/Configs/DefaultDictionary\r\n//一份语言对应一份 xml配置文件(Assets/GameMain/Localization)\r\n//增加一种语种 需要在 Recourse Editor中增加一个变体目录\r\nGameEntry.Localization.GetString(\"languageKey\");\r\n//TODO 封装支持动态切换语言\r\n```\r\n### Network TODO\r\n### ObjectPool\r\n```\r\n//创建引用池\r\nvar tempTestObjectPoolItem = new TestItem();\r\nIObjectPool<TestObjectPoolItem> _itemObjectPool = GameEntry.ObjectPoolCreateSingleSpawnObjectPool<TestObjectPoolItem>(\"Test\", 16);\r\n//创建对象\r\nTestObjectPoolItem itemObject = _itemObjectPool.Spawn();\r\nif (itemObject != null)\r\n{\r\n    itemObject = (TestObjectPoolItem)itemObject.Target;\r\n}\r\nelse\r\n{\r\n    itemObject = UnityEngine.Object.Instantiate(tempTestObjectPoolItem);\r\n    _itemObjectPool.Register(TestObjectPoolItem.Create(itemObject), true);\r\n}\r\n//回收对象\r\n_itemObjectPool.Unspawn(itemObject);\r\n```\r\n```\r\npublic class TestObjectPoolItem : ObjectBase\r\n{\r\n    public static TestObjectPoolItem Create(object target)\r\n    {\r\n        TestObjectPoolItem itemObject = ReferencePool.Acquire<TestObjectPoolItem>();\r\n        itemObject.Initialize(target);\r\n        return itemObject;\r\n    }\r\n    protected override void Release(bool isShutdown)\r\n    {\r\n        TestItem item = (TestItem)Target;\r\n        if (item == null)\r\n        {\r\n            return;\r\n        }\r\n        Object.Destroy(item.gameObject);\r\n    }\r\n}\r\npublic class TestItem : MonoBehaviour\r\n{\r\n}\r\n```\r\n### Procedure 流程模块 TODO\r\n### Resource 资源模块 加载图片为例\r\n```\r\nstring path = \"TestPath\";\r\nImage obj = new GameObject().AddComponent<Image>();\r\nGameEntry.Resource.LoadAsset(path, Constant.AssetPriority.SpriteAsset, newLoadAssetCallbacks(LoadSuccessWhithNativeSize), obj);\r\n```\r\n### Scene \r\n```\r\n//加载场景\r\nGameEntry.Scene.LoadScene(\"Path\");\r\n//卸载场景\r\nGameEntry.Scene.UnloadScene(\"Path\");\r\n/**\r\n *  UnityGameFramework.Runtime.LoadSceneSuccessEventArgs.EventId    加载成功\r\n    UnityGameFramework.Runtime.LoadSceneFailureEventArgs.EventId    加载失败\r\n    UnityGameFramework.Runtime.UnloadSceneFailureEventArgs.EventId  卸载成功\r\n    UnityGameFramework.Runtime.UnloadSceneSuccessEventArgs.EventId  卸载失败\r\n    UnityGameFramework.Runtime.LoadSceneUpdateEventArgs.EventId     加载进度\r\n    具体 监听参考 Event 模块\r\n * */\r\n```\r\n### Setting 存储模块\r\n```\r\n//存储 Key + Object\r\nGameEntry.Setting.SetObject(\"UserData\", null);\r\n/*\r\n *  GameEntry.Setting.SetBool();\r\n *  GameEntry.Setting.SetFloat();\r\n *  GameEntry.Setting.SetInt();\r\n *  GameEntry.Setting.SetString();\r\n *  建议不同的数据存储类型不一样，方便于数据清理\r\n * **/\r\n//获取同上Get\r\n```\r\n### Sound 声音模块 配置表位于Assets/GameMain/DataTables\r\n```\r\n//播放音效 封装过\r\nGameEntry.Sound.PlaySound(1001);\r\n//TODO 封装音效循环 封装相同音效只允许存在单个\r\n```\r\n### UI UI模块 配置表位于Assets/GameMain/DataTables\r\n```\r\n//打开\r\nint gameFormId = (int)GameEntry.UI.OpenUIForm(UIFormId.GameForm);\r\n//关闭\r\nGameEntry.UI.CloseUIForm(gameFormId);\r\n//关闭所有\r\nGameEntry.UI.CloseAllLoadedUIForms();\r\nGameEntry.UI.CloseAllLoadingUIForms();\r\n```\r\n### WebRequest TODO\r\n\r\n## Customs:自定义组件\r\n### 如Native \r\n```\r\n脚本  NativeComponent : GameFrameworkComponent 并挂载于GF节点下\r\n//GameEntry获取\r\nNativeComponent Native = UnityGameFramework.Runtime.GameEntryGetComponent<NativeComponent>();\r\n//全局使用\r\nGameEntry.Native.Vibrate(50);\r\n//其他同\r\n```",
+      "data": {
+        "title": "GameFramework使用(Runtime)",
+        "date": "2022-09-17 12:23:54",
+        "tags": [
+          "Unity",
+          "GameFramework"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": "/post-images/gameframework-shi-yong-runtime.png",
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "gameframework-shi-yong-runtime"
+    },
+    {
       "content": "### 运算符(&)位与\r\n规则：两个数二进制所有位依次比较都为1则结果位为1\r\n```\r\n3 00000011\r\n1 00000001\r\n00000001&00000011 = 00000001\r\n输出 1\r\n```\r\n### 运算符(|)位或\r\n规则：两个数二进制所有位依次比较一个数为1则结果位为1\r\n```\r\n3 00000011\r\n1 00000001\r\n00000001|00000011 = 00000011\r\n输出 3\r\n```\r\n### 运算符(^)异或\r\n规则：两个数二进制所有位依次比较两个数不同则结果位为1\r\n```\r\n3 00000011\r\n5 00000101\r\n00000101^00000011 = 00000110\r\n输出 6\r\n```\r\n### 运算符(<<)左移\r\n规则：换成二进制后所有位向左移，右边补0\r\n```\r\n3 00000011\r\n3<<2 = 00001100 = 12 = 3*2*2\r\n输出 12\r\n```\r\n### 运算符(>>)右移\r\n规则：换成二进制后所有位向右移，左边边补0\r\n```\r\n7 00000111\r\n7>>2 = 00000001 = 1 = 7/2/2(没有小数位，取整)\r\n输出 1\r\n```\r\n看到同事分享的数据加密，不得不复习一下，不然忘干净了🤶",
       "data": {
         "title": "位运算（愉快的周末从写博客开始）",
@@ -866,6 +885,11 @@
     }
   ],
   "tags": [
+    {
+      "name": "GameFramework",
+      "slug": "V3VerJ2LU",
+      "used": true
+    },
     {
       "name": "Git",
       "slug": "kUs5Mp1Hy",
