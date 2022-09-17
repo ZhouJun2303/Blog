@@ -4,7 +4,7 @@ date: 2022-02-23 15:21:36
 tags: [Unity]
 published: true
 hideInList: false
-feature: 
+feature: /post-images/unity-yi-xie-wen-ti-ji-lu.png
 isTop: false
 ---
 - Q 游戏切换场景的时候存在花屏
