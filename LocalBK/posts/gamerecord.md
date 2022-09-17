@@ -5,7 +5,7 @@ tags: [GameRecord]
 published: true
 hideInList: false
 feature: /post-images/gamerecord.png
-isTop: true
+isTop: false
 ---
 🤝合作研发
 💪单挑研发
