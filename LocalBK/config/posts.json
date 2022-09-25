@@ -1,6 +1,25 @@
 {
   "posts": [
     {
+      "content": "- 记录一下Odin一些常用功能\r\n## 标题类型\r\n```\r\n[Title(\"Name\")]\r\n//标题，类似于Unity 原生Header\r\n```\r\n## 限制数值\r\n```\r\n[Range(0,100)]\r\n[MinValue(0)]\r\n[MaxValue(0)]\r\n[ProgressBar(0,100)]\r\n```\r\n## 颜色\r\n```\r\n[GUIColor(0,1,0)]//可以为字段，按钮添加颜色\r\n```\r\n## 提示信息\r\n```\r\n[ReadOnly]\r\n[Title(\"\")]\r\n[Space]\r\n[InfoBox(\"info\")]\r\n[Required(\"xx is Empty)]//空的时候会提示\r\n```\r\n## 显示在面板\r\n```\r\n[ShowInInspector]//私有成员,List,Map,类都可以显示\r\n[HideInInspector]//隐藏在面板\r\n[LabelText(\"描述\")]//非常好用，直接显示描述\r\n[InlineEditor(InlineEditorObjectFieldModes.Boxed)]//可以直接将.assets 文件显示在面板\r\n[ShowIf(\"bool值\")]//常用，通过bool决定是否显示在面板\r\n```\r\n## 分组\r\n```\r\n[TabGroup(\"GroupA\")]\r\n[TabGroup(\"GroupB\")]\r\n[TabGroup(\"GroupC\")]\r\n//可显示三个Group\r\n```\r\n## 按钮\r\n```\r\n[Button(60, Name = \"Generate\")]\r\n[ButtonGroup(\"MybuttonGroup\")]\r\n```\r\n## 路径\r\n```\r\n[FilePath]//文件路径\r\n[FolderPath]//文件夹路径\r\n```\r\n## 窗口\r\n```\r\n//DG.Tweening TMPro\r\npublic class ABTestCreator : OdinEditorWindow\r\n{\r\n    [MenuItem(\"Tools/ABTest/Created  Prefab\", false, 1)]\r\n    private static void CreateABTestPrefab()\r\n    {\r\n        if (UnityEngine.Object.FindObjectOfType(typeof(ABTestHelper)) == null)\r\n        {\r\n            GameObject go = PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath(DebugEditor.WhereIs(\"ABTest.prefab\", \"Prefab\"), typeof(GameObject))) as GameObject;\r\n            go.name = \"ABTest\";\r\n            Selection.activeObject = go;\r\n            Undo.RegisterCreatedObjectUndo(go, \"Created ABTest Object\");\r\n        }\r\n        else\r\n        {\r\n            Debug.LogWarning(\"A ABTest object already exists in this scene - you should never have more than one per scene!\");\r\n        }\r\n    }\r\n    [MenuItem(\"Tools/ABTest/ Creator\", false, 2)]\r\n    private static void OpenWindow()\r\n    {\r\n        GetWindow<ABTestCreator>().Show();\r\n    }\r\n}\r\n```\r\n",
+      "data": {
+        "title": "Odin Inspector",
+        "date": "2022-09-25 14:02:55",
+        "tags": [
+          "Unity",
+          "UnityEditor"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "odin-inspector"
+    },
+    {
       "content": "## 工具栏Game Framework\r\n### OpenFolder \r\n- 目录相关路径\r\n### ResourceTools ***\r\n#### Resource Builder ***\r\n#### Resource Editor *** \r\n#### Resource Analyzer\r\n#### Resource Pack Builder\r\n#### Resource Sync Tools\r\n### Scenes in Build Settings\r\n- 一键构建打包Scene\r\n### LogScripting Define Symbols\r\n- 日志打印\r\n### Documentation\r\n### API Reference\r\n\r\n## 构建流程\r\n### Resource Editor 构建ResourceCollection.xml\r\n![](https://zhoujun2303.github.io/post-images/1663402232621.jpg)\r\n- 保存之后可在ResourceCollection.xml 查看\r\n- 优化点 同一时间需要用到的资源放入同一个包可以优化加载时间\r\n- 优化点 游戏启动时需要的资源在同一个包可以优化启动时间\r\n### Resource Builder 构建资源文件\r\n![](https://zhoujun2303.github.io/post-images/1663402597440.jpg)\r\n- 构建完成之后可通过取消勾选Builtin Insperctor 面板Editor Resource Mode 模拟真机测试\r\n- 注意 部分Android studio 版本可能会忽略 Assetbundle文件大小写\r\n\r\n## 传送门\r\n### [GameFramework官网](https://gameframework.cn/)\r\n### [GameFramework仓库](https://github.com/EllanJiang/GameFramework)",
       "data": {
         "title": "GameFramework使用(Editor)",
