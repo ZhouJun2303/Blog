@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "content": "# 解决需求\r\n边走路边砍人，边走路边挥手\r\n# 单层动画播放\r\n```\r\n  skeletonAnimation.AnimationState.SetAnimation(0, animationName, loop);\r\n```\r\n# 多层融合\r\n## Unity导入Spine 动画后，在Unity端导出Animation Referance Assets\r\n![](https://zhoujun2303.github.io/post-images/1677721091327.jpg)\r\n## 代码中使用\r\n```\r\n//Step1: 加载并缓存 AnimationReferenceAsset 文件\r\n AnimationReferenceAsset asset = LoaderCtrl.Instance.Load<AnimationReferenceAsset>(path) as AnimationReferenceAsset;\r\n            CachedAnimationReferenceAsset.Add(type, asset);\r\n//Step2: 播放的时候使用不同的trackIndex\r\n CachedSkeletonAnimation.AnimationState.SetAnimation(0, SpineAssetLoaderHelper.GetAnimationReferenceAssetByType(AnimationReferenceType.TankMove), true);\r\n                CachedSkeletonAnimation.AnimationState.SetAnimation(1, SpineAssetLoaderHelper.GetAnimationReferenceAssetByType(AnimationReferenceType.TankAttrack), false);\r\n   \r\n```",
+      "data": {
+        "title": "Unity Spine融合动画",
+        "date": "2023-03-02 09:25:09",
+        "tags": [
+          "Spine"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-spine-rong-he-dong-hua"
+    },
+    {
       "content": "- 记录一下Odin一些常用功能\r\n## 标题类型\r\n```\r\n[Title(\"Name\")]\r\n//标题，类似于Unity 原生Header\r\n```\r\n## 限制数值\r\n```\r\n[Range(0,100)]\r\n[MinValue(0)]\r\n[MaxValue(0)]\r\n[ProgressBar(0,100)]\r\n```\r\n## 颜色\r\n```\r\n[GUIColor(0,1,0)]//可以为字段，按钮添加颜色\r\n```\r\n## 提示信息\r\n```\r\n[ReadOnly]\r\n[Title(\"\")]\r\n[Space]\r\n[InfoBox(\"info\")]\r\n[Required(\"xx is Empty)]//空的时候会提示\r\n```\r\n## 显示在面板\r\n```\r\n[ShowInInspector]//私有成员,List,Map,类都可以显示\r\n[HideInInspector]//隐藏在面板\r\n[LabelText(\"描述\")]//非常好用，直接显示描述\r\n[InlineEditor(InlineEditorObjectFieldModes.Boxed)]//可以直接将.assets 文件显示在面板\r\n[ShowIf(\"bool值\")]//常用，通过bool决定是否显示在面板\r\n```\r\n## 分组\r\n```\r\n[TabGroup(\"GroupA\")]\r\n[TabGroup(\"GroupB\")]\r\n[TabGroup(\"GroupC\")]\r\n//可显示三个Group\r\n```\r\n## 按钮\r\n```\r\n[Button(60, Name = \"Generate\")]\r\n[ButtonGroup(\"MybuttonGroup\")]\r\n```\r\n## 路径\r\n```\r\n[FilePath]//文件路径\r\n[FolderPath]//文件夹路径\r\n```\r\n## 窗口\r\n```\r\n//DG.Tweening TMPro\r\npublic class ABTestCreator : OdinEditorWindow\r\n{\r\n    [MenuItem(\"Tools/ABTest/Created  Prefab\", false, 1)]\r\n    private static void CreateABTestPrefab()\r\n    {\r\n        if (UnityEngine.Object.FindObjectOfType(typeof(ABTestHelper)) == null)\r\n        {\r\n            GameObject go = PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath(DebugEditor.WhereIs(\"ABTest.prefab\", \"Prefab\"), typeof(GameObject))) as GameObject;\r\n            go.name = \"ABTest\";\r\n            Selection.activeObject = go;\r\n            Undo.RegisterCreatedObjectUndo(go, \"Created ABTest Object\");\r\n        }\r\n        else\r\n        {\r\n            Debug.LogWarning(\"A ABTest object already exists in this scene - you should never have more than one per scene!\");\r\n        }\r\n    }\r\n    [MenuItem(\"Tools/ABTest/ Creator\", false, 2)]\r\n    private static void OpenWindow()\r\n    {\r\n        GetWindow<ABTestCreator>().Show();\r\n    }\r\n}\r\n```\r\n",
       "data": {
         "title": "Odin Inspector",
@@ -906,7 +924,7 @@
       "fileName": "js-bi-ji"
     },
     {
-      "content": "## 10000小时定律\r\n## 用心做游戏\r\n## 一天磨一点，早晚是个圆\r\n- JavaScript\r\n- C#\r\n- CocosCreator\r\n- Laya\r\n- Unity\r\n- Lua\r\n- OC",
+      "content": "## 10000小时定律\r\n## 用心做游戏\r\n## AweSome\r\n- JavaScript\r\n- C#\r\n- CocosCreator\r\n- Laya\r\n- Unity\r\n- Lua\r\n- OC",
       "data": {
         "title": "关于",
         "date": "2019-01-25 19:09:48",
@@ -923,6 +941,11 @@
     }
   ],
   "tags": [
+    {
+      "name": "Spine",
+      "slug": "ub-RrB6t4",
+      "used": true
+    },
     {
       "name": "GameFramework",
       "slug": "V3VerJ2LU",
