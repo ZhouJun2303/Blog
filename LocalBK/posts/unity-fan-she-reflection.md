@@ -7,8 +7,7 @@ hideInList: false
 feature: 
 isTop: false
 ---
-[参考视频：](https://www.bilibili.com/video/BV1UP4y1T7jE/?spm_id_from=333.999.0.0&vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3)
-<!-- more -->
+[参考视频](https://www.bilibili.com/video/BV1UP4y1T7jE/?spm_id_from=333.999.0.0&vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3)
 ```
 //step 1 获取对象的描述对象实例
 Type t = System.Type.GetType("ReflectionTest");
