@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "content": "## 问题\r\n\r\n使用 RuntimeInitializeOnLoadMethod 进行自动初始化一个常驻节点并添加一个挂载一个脚本\r\n```\r\n[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]\r\nstatic void Init()\r\n{\r\n    if (Instance == null)\r\n    {\r\n        Instance = EventGameObject.GetOrAddComponent<StoreGiveCardEventCenter>();\r\n    }\r\n}\r\n```\r\n在初始化Awake 注册了事件，在PC 能正常监听事件，在Android真机测试没有事件触发\r\n\r\n## 测试解决方案\r\n经过Debug 测试\r\n\r\n### 在应用程序注册之后\r\n```\r\n[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]\r\n\r\nprotected virtual void Awake()\r\n{\r\n    m_binder.Init(this);\r\n    Debug.Log(\"Event Test  Init \" + gameObject.name + \"  \" + this.GetType());\r\n}\r\n\r\nprotected virtual void OnDestroy()\r\n{\r\n    m_binder.Dispose();\r\n    Debug.Log(\"Event Test  Dispose \" + gameObject.name + \"  \" + this.GetType());\r\n}\r\n```\r\n真机实测\r\n```\r\n2023-03-10 15:15:42.611 7303-7412/com.hg.heromaking D/sdk5Events: logEvent failed eventsTracker doesn't exist\r\n2023-03-10 15:15:42.669 7303-7303/com.hg.heromaking D/sdk5Events: logEvent failed eventsTracker doesn't exist\r\n2023-03-10 15:15:42.776 7303-7303/com.hg.heromaking D/sdk5Events: logEvent failed eventsTracker doesn't exist\r\n2023-03-10 15:15:42.776 7303-7303/com.hg.heromaking D/sdk5Events: logEvent failed eventsTracker doesn't exist\r\n2023-03-10 15:15:42.915 7303-7366/com.hg.heromaking I/Unity: Event Test  Init GameEventCenter  StoreGiveCardEventCenter\r\n    UnityEngine.Logger:Log(LogType, Object)\r\n    UnityEngine.GameObject:AddComponent()\r\n    StoreGiveCardEventCenter:Init()\r\n2023-03-10 15:15:43.525 7303-7528/com.hg.heromaking D/sdk5Events: logEvent failed eventsTracker doesn't exist\r\n2023-03-10 15:15:45.050 7303-7366/com.hg.heromaking I/Unity: Event Test  Dispose GameEventCenter  StoreGiveCardEventCenter\r\n    UnityEngine.Logger:Log(LogType, Object)\r\n```\r\nEvent Test  Dispose 调用的销毁 离谱！分析的原因可能现在场景都没有，节点没处挂载。\r\n### 在场景加载之后\r\n```\r\n[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]\r\n\r\n一切正常\r\n``` \r\n\r\n### 直接挂载场景中的Awake 和 这个RuntimeInitializeOnLoadMethod Awake\r\n## Unity 编辑器\r\n+ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]\r\n+ 直接挂载在场景中的Awake\r\n+ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]\r\n## Android 平台\r\n+ 同编辑器平台",
+      "data": {
+        "title": "Unity RuntimeInitializeOnLoadMethod 吃人事件",
+        "date": "2023-03-14 15:16:17",
+        "tags": [
+          "UnityEngine"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-runtimeinitializeonloadmethod-chi-ren-shi-jian"
+    },
+    {
       "content": "[参考视频](https://www.bilibili.com/video/BV1UP4y1T7jE/?spm_id_from=333.999.0.0&vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3)\r\n```\r\n//step 1 获取对象的描述对象实例\r\nType t = System.Type.GetType(\"ReflectionTest\");\r\n\r\n//step 2 根据描述对象实例，构建一个对象实例\r\nvar instance = Activator.CreateInstance(t);\r\n\r\n//step 3 对成员变量进行设值\r\n//获取所有成员变量\r\nFieldInfo[] fields = t.GetFields();\r\n//获取单个 fieldInfo\r\nFieldInfo intValue = t.GetField(\"IntValue\");\r\n//设值对象实例的 IntValue 值\r\nintValue.SetValue(instance, 100);\r\n\r\n//debug\r\nReflectionTest reflectionTest = instance as ReflectionTest;\r\nDebug.Log(reflectionTest.IntValue);\r\n\r\n//调用成员函数\r\nMethodInfo methodInfo = t.GetMethod(\"Add\");\r\nobject[] par = new object[2] { 1, 3 };\r\nobject value = methodInfo.Invoke(instance, par);\r\nif(null != value)\r\n{\r\n    Debug.Log((int)value);\r\n}\r\n\r\n\r\n```",
       "data": {
         "title": "Unity 反射（Reflection）",
