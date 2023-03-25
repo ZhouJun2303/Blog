@@ -1,6 +1,43 @@
 {
   "posts": [
     {
+      "content": "性能调优",
+      "data": {
+        "title": "Unity Profiler",
+        "date": "2023-03-25 18:08:02",
+        "tags": [
+          "UnityEditor"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-profiler"
+    },
+    {
+      "content": "## 委托\r\n+ 使用``delegate``关键字来声明\r\n+ 委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null\r\n+ 委托是独立的，不依赖于事件\r\n+ 包含``Combine()``和``Remove()``方法，用于将方法添加到调用类表\r\n+ 可以作为方法参数传递\r\n+ =用于分配单个方法，+=分配多个方法\r\n多播委托\r\n```\r\nusing System.Collections;\r\nusing System.Collections.Generic;\r\nusing UnityEngine;\r\n\r\npublic class Main : MonoBehaviour\r\n{\r\n    // Start is called before the first frame update\r\n    void Start()\r\n    {\r\n        //create Game\r\n        MainGame mainGame = new MainGame();\r\n        //create Player\r\n        List<Player> cachedPlayers = new List<Player>();\r\n        for (int i = 0; i < 10; i++)\r\n        {\r\n            //Player player = new Player(mainGame.OnGameOverDelegate);\r\n            Player player = new Player();\r\n            cachedPlayers.Add(player);\r\n        }\r\n        //call MainGame GameOver\r\n        mainGame.GameOver();\r\n        //log\r\n\r\n        //relesePlayer\r\n        for (int i = 0; i < cachedPlayers.Count; i++)\r\n        {\r\n            cachedPlayers[i]?.Dispose();\r\n            cachedPlayers[i] = null;\r\n        }\r\n        cachedPlayers.Clear();\r\n\r\n        //call MainGame GameOver\r\n        mainGame.GameOver();\r\n\r\n        //可以直接赋值置空\r\n        MainGame.OnGameOverDelegate = null;\r\n    }\r\n\r\n    // Update is called once per frame\r\n    void Update()\r\n    {\r\n\r\n    }\r\n\r\n\r\n}\r\n\r\npublic delegate void OnGameOverDelegate();\r\npublic class MainGame\r\n{\r\n    public static OnGameOverDelegate OnGameOverDelegate = null;\r\n\r\n    public void GameOver()\r\n    {\r\n        OnGameOverDelegate?.Invoke();\r\n    }\r\n}\r\n\r\npublic class Player\r\n{\r\n    public static int PlayerIndex = 0;\r\n\r\n    private int _playerIndex;\r\n    public Player()\r\n    {\r\n        ++PlayerIndex;\r\n        _playerIndex = PlayerIndex;\r\n        MainGame.OnGameOverDelegate += OnGameOver;\r\n    }\r\n\r\n    public void Dispose()\r\n    {\r\n        MainGame.OnGameOverDelegate -= OnGameOver;\r\n    }\r\n\r\n    ~Player()\r\n    {\r\n\r\n    }\r\n\r\n    private void OnGameOver()\r\n    {\r\n        Debug.Log($\"player {_playerIndex} game over\");\r\n    }\r\n}\r\n\r\n```\r\n## 事件\r\n+ 使用``event``关键字来声明\r\n+ 依赖于委托的通知机制\r\n+ 依赖于委托，没有委托就无法创建，只允许添加或者移除目标\r\n+ 通过``AddEventHandler()``和``RemoveEventHandler()``向调用类表添加或者移除方法\r\n+ 事件被引发，不能作为方法参数传递\r\n+ =运算符不能应用于事件\r\n```\r\nusing System.Collections;\r\nusing System.Collections.Generic;\r\nusing UnityEngine;\r\n\r\npublic class MainEvent : MonoBehaviour\r\n{\r\n    // Start is called before the first frame update\r\n    void Start()\r\n    {\r\n        //create Game\r\n        MainGame1 mainGame = new MainGame1();\r\n        //create Player\r\n        List<Player> cachedPlayers = new List<Player>();\r\n        for (int i = 0; i < 10; i++)\r\n        {\r\n            //Player player = new Player(mainGame.OnGameOverDelegate);\r\n            Player player = new Player();\r\n            cachedPlayers.Add(player);\r\n        }\r\n        //call MainGame GameOver\r\n        mainGame.GameOver();\r\n        //log\r\n\r\n        //relesePlayer\r\n        for (int i = 0; i < cachedPlayers.Count; i++)\r\n        {\r\n            cachedPlayers[i]?.Dispose();\r\n            cachedPlayers[i] = null;\r\n        }\r\n        cachedPlayers.Clear();\r\n\r\n        //call MainGame GameOver\r\n        mainGame.GameOver();\r\n\r\n        //不能直接赋值\r\n        MainGame1.OnGameOverDelegateEvent = null;\r\n    }\r\n\r\n    // Update is called once per frame\r\n    void Update()\r\n    {\r\n\r\n    }\r\n\r\n\r\n}\r\n\r\npublic class MainGame1\r\n{\r\n    public static event OnGameOverDelegate OnGameOverDelegateEvent;\r\n    public void GameOver()\r\n    {\r\n        OnGameOverDelegateEvent?.Invoke();\r\n    }\r\n}\r\n\r\npublic class Player1\r\n{\r\n    public static int PlayerIndex = 0;\r\n\r\n    private int _playerIndex;\r\n    public Player1()\r\n    {\r\n        ++PlayerIndex;\r\n        _playerIndex = PlayerIndex;\r\n        MainGame1.OnGameOverDelegateEvent += OnGameOver;\r\n\r\n    }\r\n\r\n    public void Dispose()\r\n    {\r\n        MainGame1.OnGameOverDelegateEvent -= OnGameOver;\r\n    }\r\n\r\n    ~Player1()\r\n    {\r\n\r\n    }\r\n\r\n    private void OnGameOver()\r\n    {\r\n        Debug.Log($\"player {_playerIndex} game over\");\r\n    }\r\n}\r\n\r\n```",
+      "data": {
+        "title": "委托和事件",
+        "date": "2023-03-25 14:38:25",
+        "tags": [
+          "UnityEngine",
+          "C#"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "wei-tuo-he-shi-jian"
+    },
+    {
       "content": "[原文链接](https://fengzhouxuan.github.io/2022/10/24/Andoird-Gradle%E6%8E%92%E9%99%A4aar%E5%8C%85%E4%B8%AD%E5%BC%95%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%8C%85%E8%A7%A3%E5%86%B3%E5%BC%95%E7%94%A8%E5%86%B2%E7%AA%81/)\r\n随着接入的三方库越来越多，依赖的不管是jar包还是aar包也越来越多，依赖包之间的冲突经常出现,所以做个总结记录\r\n## 定位冲突的包\r\n首先需要找到哪些包冲突了，有些冲突的包是被其他包引用的，所以肉眼是看不出来的，比如 A包和B包冲突，是因为B包自己依赖了一个其他版本的A包，这个时候就需要定位\r\n在Android Studio中的控制台输入命令\r\n```./gradlew -q app:dependencies``` 其中```app```需要替换成当前的项目的模块，在unity开发中基本是```unityLibrary```，这条命令会列出指定模块的依赖树\r\n比如  \r\n我的项目中有两个依赖：  \r\n```implementation ('com.google.android.gms:play-services-ads-identifier:18.0.1')```  \r\n```implementation(name: 'com.google.android.gms.play-services-basement-18.0.0', ext:'aar')```\r\n生成的依赖树为：  \r\n```\r\n+--- :com.google.android.gms.play-services-basement-18.0.0\r\n+--- com.google.android.gms:play-services-ads-identifier:18.0.1\r\n|    \\--- com.google.android.gms:play-services-basement:18.0.0\r\n|         +--- androidx.collection:collection:1.0.0\r\n|   --- 等等其他一大串 ---\r\n```\r\n可以看出其中```play-services-ads-identifier```依赖了```play-services-basement```，所以产生了冲突 \r\n## 解决冲突\r\n现在有两个方案解决冲突\r\n第一种，直接删掉 ```implementation(name: 'com.google.android.gms.play-services-basement-18.0.0', ext:'aar')```，这个最简单  \r\n第二种，把 ```com.google.android.gms:play-services-ads-identifier:18.0.1' ``` 对 ``` com.google.android.gms.play-services-basement-18.0.0' ```的依赖干掉，这种方式更加的灵活，有时候是不能直接删掉依赖的，就需要用这种方法  \r\n具体操作  \r\n```\r\nimplementation ('com.google.android.gms:play-services-ads-identifier:18.0.1'){\r\n        exclude group: 'com.google.android.gms',module:'play-services-basement'\r\n    }\r\n```\r\n意思就是排除依赖，其中 ```group```接收的参数就是具体的包，```module```是该包所在模块，这个可以在依赖树 ```com.google.android.gms:play-services-basement```中看到以```：```分割\r\n因为排除的是aar包，所以存在```module```参数，如果是jar包是不需要 ```module``` 的，具体没有试验过",
       "data": {
         "title": "Android 排除引用包冲突",
