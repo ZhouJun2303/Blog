@@ -1,12 +1,31 @@
 {
   "posts": [
     {
+      "content": "## 图片大小\r\n图片大小一般采用小于等于2的次方大小\r\n在Unity 中，如果图片的大小不是2的次方，如``100*200``Unity会在导入之后将其缩放为128*256的纹理、如果是``129*256``的纹理大小，则导入之后为``256*256``的纹理大小\r\n## Read/Wite Enable\r\n开启``Read/Wite Enable``将允许自定义脚本访问，写入纹理数据。在运行时内存中会存储一份额外的贴图数据，使贴图大小翻倍，无特殊需要不要开启\r\n## 不是渐变色图片处理\r\n在Ps中，对于用不到256色的图片，进行减色处理，减少图片大小\r\n## RGB24和RGBA32\r\nRGB的24位纹理和RGBA的32位纹理都是常见的图像格式，它们之间的主要区别在于纹理中存储的每个像素的颜色信息的位数和类型。\r\n\r\n24位RGB纹理存储每个像素的颜色信息使用24个位，其中8个位分别用于存储红、绿和蓝三种颜色的分量。这种格式没有透明度信息，因此不支持透明度的效果。\r\n\r\n32位RGBA纹理存储每个像素的颜色信息使用32个位，其中24个位用于存储红、绿和蓝三种颜色的分量，另外8个位用于存储透明度信息。这种格式支持透明度效果，可以在渲染时使用混合（blending）技术来实现透明效果。 -- ChatGTP\r\n\r\n在游戏中选择使用哪种纹理格式通常取决于需要呈现的效果和资源的使用情况。如果需要呈现透明效果，或者需要在纹理中嵌入透明度信息，则应该使用32位RGBA纹理。如果不需要透明效果，则可以使用24位RGB纹理，这样可以减少资源占用，并提高渲染效率。\r\n## 根据平台选择支持的纹理压缩格式\r\n在对应平台上选择支持的压缩格式，如果是不支持的压缩格式，Unity会自动转换成RGBA32/RGB24格式，并且转换之前的内存也会保留，将消耗更多的时间， 内存\r\n[//Todo 各个平台纹理压缩区别] (https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html)\r\n## Generate Mip Maps \r\n+ 开启之后，可以让离摄像机较远的物体使用较小的纹理版本，但是运行时贴贴图大小将会变大。\r\n+ 如果是图集开启了mipmap,图集中的图片必须应用于距离摄像机相近的位置，否则会增加每帧渲染所需的纹理大小，会导致DC降了，但是渲染速度反而变慢了\r\n## 调整图集大小\r\n图集通过9宫格调整大小，调整较小的图片，如``1024*2048``但是只超了一点点，可以通过编辑器工具或者手动优化成``1024*1024``\r\n\r\n[参考于](https://zhuanlan.zhihu.com/p/125100817)",
+      "data": {
+        "title": "纹理内存优化",
+        "date": "2023-04-02 17:35:21",
+        "tags": [
+          "U3D性能优化"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "wen-li-nei-cun-you-hua"
+    },
+    {
       "content": "## Stats面板\r\n![](https://zhoujun2303.github.io/post-images/1680420126719.jpg)\r\n+ Render thread 渲染线程，渲染一帧需要多少ms\r\n+ Batches 批次，需要分几个批次提交给GPU\r\n+ Saved by batching  有多少物体是同一批次提交给GPU（合批数量）\r\n+ Tris: 三角形数（面数）\r\n+ Verts:顶点数\r\n+ Screen：屏幕分辨率大小，越大内存消耗越高\r\n+ SetPassCalls 一次完整的渲染流程切换Shader的次数\r\n+ Shadow casters 阴影开销\r\n+ Visible skinned meshes: 可见骨骼meshs数量，可见蒙皮骨骼\r\n\r\n## Profiler\r\n[Up主讲解](https://www.bilibili.com/video/BV1Rd4y1q7jt/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3)\r\nProfiler(Standalone Process) 单独开启一个线程进行分析，对现有游戏影响较小\r\n![](https://zhoujun2303.github.io/post-images/1680423428267.jpg)\r\n使用一个循环来伪造有问题的代码\r\n```\r\nusing System.Collections;\r\nusing System.Collections.Generic;\r\nusing System.Text;\r\nusing Unity.Profiling;\r\nusing UnityEngine;\r\nusing UnityEngine.Profiling;\r\n\r\npublic class ProfilerTest : MonoBehaviour\r\n{\r\n    // Start is called before the first frame update\r\n    private int _loopCount = 50000;\r\n    private StringBuilder _stringBuilder = new StringBuilder();\r\n    void Start()\r\n    {\r\n        ProfilerMarker test1 = new ProfilerMarker(\"Test1\");\r\n        test1.Begin();\r\n        //test1\r\n        for (int i = 0; i < _loopCount; i++)\r\n        {\r\n            Debug.Log(i+\"Test\");\r\n        }\r\n        test1.End();\r\n        //\r\n        Profiler.BeginSample(\"TTT\");\r\n        Profiler.EndSample();\r\n        //test2\r\n        StartCoroutine(DelayShowLoop());\r\n    }\r\n\r\n    // Update is called once per frame\r\n    void Update()\r\n    {\r\n       \r\n    }\r\n\r\n    IEnumerator DelayShowLoop()\r\n    {\r\n       for(int i = 0; i < 100000; i++)\r\n        {\r\n            yield return new WaitForFixedUpdate();\r\n            _stringBuilder.Clear();\r\n            _stringBuilder.Append(i);\r\n            Debug.Log($\"{_stringBuilder}\");\r\n        }\r\n    }\r\n}\r\n\r\n```\r\n+ 通过Hierarchy面板可以观察到在游戏开始的时候 Scripts处于异常状态，因为在一帧内做了50000次循环\r\n+ 通过``ProfilerMarker``的``Begin``和``End`` 来定位有问题的代码开销\r\n+ 在Profiler Start看到自定义的ProfilerMarker Test1占用了87.2%的开销，其中最耗内存的是`` LogStringToConsole``\r\n+ 在协程中的打印看到几乎没有什么波动\r\n## 真机调试定位\r\n+ 通过打出Debug包进行观察，在莫个时候非常卡的时候，可以快速定位或者录制\r\n+ 一般定位出某一时间段波动幅度非常到，如果是Script颜色占比非常高，大概率是莫个方法性能开销\r\n+ 如果是Rendering 则要考虑，同屏渲染是否开销过大，或者某个物体定点面数是否过于精细",
       "data": {
         "title": "Unity Profiler",
         "date": "2023-03-25 18:08:02",
         "tags": [
-          "UnityEditor"
+          "UnityEditor",
+          "U3D性能优化"
         ],
         "published": true,
         "hideInList": false,
@@ -1070,6 +1089,12 @@
     }
   ],
   "tags": [
+    {
+      "index": -1,
+      "name": "U3D性能优化",
+      "slug": "JFgC1cADY",
+      "used": true
+    },
     {
       "index": -1,
       "name": "User  Interface",
