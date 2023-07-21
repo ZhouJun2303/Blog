@@ -7,13 +7,4 @@ hideInList: true
 feature: 
 isTop: false
 ---
-## 10000小时定律
-## 用心做游戏
-## AweSome
-- JavaScript
-- C#
-- CocosCreator
-- Laya
-- Unity
-- Lua
-- OC
+# 日拱一卒，功不唐捐 
