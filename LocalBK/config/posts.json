@@ -1,7 +1,26 @@
 {
   "posts": [
     {
-      "content": "//todo",
+      "content": "### Google [官方文档](https://developer.android.google.cn/guide/playcore/asset-delivery/integrate-native?hl=zh-cn)\r\n### 原理\r\n#### U3D\r\n开启分包之后 Unity的部分资源文件在android中独立成一个资源package模块\r\n##### 设置 \r\n```\r\n// 切换Split Application Binary状态\r\nPlayerSettings.Android.useAPKExpansionFiles = BuildProjectWindows.GetShouldEnableSplitAPK();\r\nEditorUserBuildSettings.buildAppBundle = BuildProjectWindows.GetShouldEnableSplitAPK();\r\n```\r\n#### android \r\n##### launcher/build.gradle\r\n```\r\nold \r\n@@ -53,8 +53,10 @@ android {\r\n        doNotStrip '*/armeabi-v7a/*.so'\r\n        doNotStrip '*/arm64-v8a/*.so'\r\n    }\r\n\r\n\r\n\r\n    bundle {\r\n        language {\r\n            enableSplit = false\r\n        }\r\n\r\nnew\r\n@@ -53,8 +53,10 @@ android {\r\n        doNotStrip '*/armeabi-v7a/*.so'\r\n        doNotStrip '*/arm64-v8a/*.so'\r\n    }\r\n\r\n    assetPacks = [\":UnityDataAssetPack\"]\r\n\r\n    bundle {\r\n        language {\r\n            enableSplit = false\r\n        }\r\n\r\n```\r\n##### gradle.properties\r\n```\r\nold \r\n@@ -1,4 +1,5 @@\r\norg.gradle.jvmargs=-Xmx2048M\r\norg.gradle.parallel=true\r\nandroid.enableR8=false\r\nunityStreamingAssets=.unity3d, UnityServicesProjectConfiguration.json\r\n\r\nnew\r\n@@ -1,4 +1,5 @@\r\norg.gradle.jvmargs=-Xmx2048M\r\norg.gradle.parallel=true\r\nandroid.enableR8=false\r\nunityStreamingAssets=.unity3d\r\nandroid.bundle.enableUncompressedNativeLibs=false\r\nNo newline at end of file\r\n```\r\n##### settings.gradle\r\n```\r\nold\r\n@@ -1,1 +1,2 @@\r\ninclude ':launcher', ':unityLibrary'\r\nNo newline at end of file\r\n\r\nnew\r\n@@ -1,1 +1,2 @@\r\ninclude ':launcher', ':unityLibrary'\r\ninclude ':UnityDataAssetPack'\r\nNo newline at end of file\r\n\r\n```\r\n\r\n",
+      "data": {
+        "title": "Unity With GooglePlay Split Application",
+        "date": "2023-09-28 10:46:50",
+        "tags": [
+          "Android",
+          "Unity"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-with-googleplay-split-application"
+    },
+    {
+      "content": "## 设计思路 利用反射拿到自定一的特性值，在不同平台上渲染的方案\r\n## code\r\n### ScriptableObject 文件\r\n```\r\n[GUIColor(\"@Color.red\")]\r\n[GameGMRunTimeAttribute(\"设置版本号\", true, true)]\r\n[Button(\"设置版本号\", ButtonSizes.Medium)]\r\n[FoldoutGroup(\"通用功能\")]\r\npublic void SetTestGameVersion()\r\n{\r\n    if (!Application.isPlaying) return;\r\n    AdsCtrl.Instance.TestGameVersion = TempValue;\r\n}\r\n```\r\n### UnityEditor的展示\r\n实现基于Odin 的 ``Button`` 和 ``FoldoutGroup`` 特性在编辑器面板上展示.asset显示\r\nOdin 的使用可参考 [Odin Inspector](https://zhoujun2303.github.io/post/odin-inspector/);\r\n### 真机平台如何使用\r\n#### 必要知识 [反射](https://zhoujun2303.github.io/post/unity-fan-she-reflection/)\r\n#### GameGMRunTimeAttribute\r\n```\r\nusing System;\r\nusing System.Collections;\r\nusing System.Collections.Generic;\r\nusing System.Reflection;\r\nusing UnityEngine;\r\n\r\n\r\n[AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = true)]\r\npublic class GameGMRunTimeAttribute : Attribute\r\n{\r\n    /// <summary>\r\n    /// 作用域\r\n    /// </summary>\r\n    public static readonly BindingFlags EffectFlags = BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance;\r\n\r\n    /// <summary>\r\n    /// 显示方法名\r\n    /// </summary>\r\n    public string FunName { private set; get; }\r\n\r\n    /// <summary>\r\n    /// 是否使用参数\r\n    /// </summary>\r\n    public bool UseParameter { private set; get; }\r\n\r\n    /// <summary>\r\n    /// 是否在移动端展示\r\n    /// </summary>\r\n    public bool HideInMobile { private set; get; }\r\n\r\n    /// <summary>\r\n    /// GM runtime 特性\r\n    /// </summary>\r\n    /// <param name=\"funName\"></param>\r\n    public GameGMRunTimeAttribute(string funName)\r\n    {\r\n        FunName = funName;\r\n    }\r\n\r\n    /// <summary>\r\n    /// 在真机状态显示的方法名\r\n    /// </summary>\r\n    /// <param name=\"funName\">方法名</param>\r\n    /// <param name=\"useParameter\">是否需要使用参数配合</param>\r\n    public GameGMRunTimeAttribute(string funName, bool useParameter)\r\n    {\r\n        FunName = funName;\r\n        UseParameter = useParameter;\r\n    }\r\n\r\n    /// <summary>\r\n    ///  GM runtime 特性\r\n    /// </summary>\r\n    /// <param name=\"funName\">方法名</param>\r\n    /// <param name=\"useParameter\">是否需要使用参数配合</param>\r\n    /// <param name=\"hideInMobile\">真机隐藏按钮</param>\r\n    public GameGMRunTimeAttribute(string funName, bool useParameter, bool hideInMobile)\r\n    {\r\n        FunName = funName;\r\n        UseParameter = useParameter;\r\n        HideInMobile = hideInMobile;\r\n    }\r\n}\r\n```\r\n#### 核心代码\r\n```\r\nprivate void Init()\r\n{\r\n    if (GameGMSettingSo == null) return;\r\n    Type t = typeof(GameGMSettingSo);\r\n    _methods = t.GetMethods(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static | BindingFlags.Instance);\r\n    for (int i = 0; i < _methods.Length; i++)\r\n    {\r\n        var attribute = _methods[i].GetCustomAttribute<GameGMRunTimeAttribute>();\r\n        if (null == attribute) continue;\r\n        if (attribute.HideInMobile) continue;\r\n        string funcName = attribute.FunName;\r\n        GameObject go = GameObject.Instantiate(_tempButton.gameObject, _GMNode);\r\n        RunTimeGMItem runTimeGMItem = new RunTimeGMItem();\r\n        runTimeGMItem.OnShowNode(go, i, funcName, attribute.UseParameter, OnButtonClick);\r\n    }\r\n}\r\n```\r\n\r\n",
       "data": {
         "title": "Unity GameGM 在不同平台上的统一处理方案",
         "date": "2023-07-20 15:57:18",
@@ -17,7 +36,7 @@
       "fileName": "unity-gamegm-zai-bu-tong-ping-tai-shang-de-tong-yi-chu-li-fang-an"
     },
     {
-      "content": "//todo",
+      "content": "//todo 链接至有道 暂未开放",
       "data": {
         "title": "Unity 关于Google后台崩溃Crash批量解析工具",
         "date": "2023-07-20 15:56:06",
@@ -33,7 +52,7 @@
       "fileName": "unity-guan-yu-google-hou-tai-beng-kui-crash-pi-liang-jie-xi-gong-ju"
     },
     {
-      "content": "//todo 补充",
+      "content": "//todo 链接至有道 暂未开放",
       "data": {
         "title": "Unity 基于 Obfuscator的代码混淆",
         "date": "2023-07-20 15:54:40",
@@ -137,7 +156,7 @@
       "fileName": "2d"
     },
     {
-      "content": "## 图片大小\r\n图片大小一般采用小于等于2的次方大小\r\n在Unity 中，如果图片的大小不是2的次方，如``100*200``Unity会在导入之后将其缩放为128*256的纹理、如果是``129*256``的纹理大小，则导入之后为``256*256``的纹理大小\r\n## Read/Wite Enable\r\n开启``Read/Wite Enable``将允许自定义脚本访问，写入纹理数据。在运行时内存中会存储一份额外的贴图数据，使贴图大小翻倍，无特殊需要不要开启\r\n## 不是渐变色图片处理\r\n在Ps中，对于用不到256色的图片，进行减色处理，减少图片大小\r\n## RGB24和RGBA32\r\nRGB的24位纹理和RGBA的32位纹理都是常见的图像格式，它们之间的主要区别在于纹理中存储的每个像素的颜色信息的位数和类型。\r\n\r\n24位RGB纹理存储每个像素的颜色信息使用24个位，其中8个位分别用于存储红、绿和蓝三种颜色的分量。这种格式没有透明度信息，因此不支持透明度的效果。\r\n\r\n32位RGBA纹理存储每个像素的颜色信息使用32个位，其中24个位用于存储红、绿和蓝三种颜色的分量，另外8个位用于存储透明度信息。这种格式支持透明度效果，可以在渲染时使用混合（blending）技术来实现透明效果。 -- ChatGTP\r\n\r\n在游戏中选择使用哪种纹理格式通常取决于需要呈现的效果和资源的使用情况。如果需要呈现透明效果，或者需要在纹理中嵌入透明度信息，则应该使用32位RGBA纹理。如果不需要透明效果，则可以使用24位RGB纹理，这样可以减少资源占用，并提高渲染效率。\r\n## 根据平台选择支持的纹理压缩格式\r\n在对应平台上选择支持的压缩格式，如果是不支持的压缩格式，Unity会自动转换成RGBA32/RGB24格式，并且转换之前的内存也会保留，将消耗更多的时间， 内存\r\n[//Todo 各个平台纹理压缩区别] (https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html)\r\n## Generate Mip Maps \r\n+ 开启之后，可以让离摄像机较远的物体使用较小的纹理版本，但是运行时贴贴图大小将会变大。\r\n+ 如果是图集开启了mipmap,图集中的图片必须应用于距离摄像机相近的位置，否则会增加每帧渲染所需的纹理大小，会导致DC降了，但是渲染速度反而变慢了\r\n## 调整图集大小\r\n图集通过9宫格调整大小，调整较小的图片，如``1024*2048``但是只超了一点点，可以通过编辑器工具或者手动优化成``1024*1024``\r\n\r\n[参考于](https://zhuanlan.zhihu.com/p/125100817)",
+      "content": "## 图片大小\r\n图片大小一般采用小于等于2的次方大小\r\n在Unity 中，如果图片的大小不是2的次方，如``100*200``Unity会在导入之后将其缩放为128*256的纹理、如果是``129*256``的纹理大小，则导入之后为``256*256``的纹理大小\r\n## Read/Wite Enable\r\n开启``Read/Wite Enable``将允许自定义脚本访问，写入纹理数据。在运行时内存中会存储一份额外的贴图数据，使贴图大小翻倍，无特殊需要不要开启\r\n## 不是渐变色图片处理\r\n在Ps中，对于用不到256色的图片，进行减色处理，减少图片大小\r\n## RGB24和RGBA32\r\nRGB的24位纹理和RGBA的32位纹理都是常见的图像格式，它们之间的主要区别在于纹理中存储的每个像素的颜色信息的位数和类型。\r\n\r\n24位RGB纹理存储每个像素的颜色信息使用24个位，其中8个位分别用于存储红、绿和蓝三种颜色的分量。这种格式没有透明度信息，因此不支持透明度的效果。\r\n\r\n32位RGBA纹理存储每个像素的颜色信息使用32个位，其中24个位用于存储红、绿和蓝三种颜色的分量，另外8个位用于存储透明度信息。这种格式支持透明度效果，可以在渲染时使用混合（blending）技术来实现透明效果。 -- ChatGTP\r\n\r\n在游戏中选择使用哪种纹理格式通常取决于需要呈现的效果和资源的使用情况。如果需要呈现透明效果，或者需要在纹理中嵌入透明度信息，则应该使用32位RGBA纹理。如果不需要透明效果，则可以使用24位RGB纹理，这样可以减少资源占用，并提高渲染效率。\r\n## 根据平台选择支持的纹理压缩格式\r\n在对应平台上选择支持的压缩格式，如果是不支持的压缩格式，Unity会自动转换成RGBA32/RGB24格式，并且转换之前的内存也会保留，将消耗更多的时间， 内存\r\n[//Todo 各个平台纹理压缩区别] (https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html)\r\n## Generate Mip Maps \r\n+ 开启之后，可以让离摄像机较远的物体使用较小的纹理版本，但是运行时贴贴图大小将会变大。\r\n+ 如果是图集开启了mipmap,图集中的图片必须应用于距离摄像机相近的位置，否则会增加每帧渲染所需的纹理大小，会导致DC降了，但是渲染速度反而变慢了\r\n## 调整图集大小\r\n图集通过9宫格调整大小，调整较小的图片，如``1024*2048``但是只超了一点点，可以通过编辑器工具或者手动优化成``1024*1024``\r\n## 纹理压缩 \r\n``Android`` 首选  ``RGBA Compressed ETC2 8 bits``\r\n``iOS``首选 ``RGB(A) Compressed AST  4x4 block``\r\n\r\n[参考于](https://zhuanlan.zhihu.com/p/125100817)\r\n[包体分析工具](https://github.com/vinjn/pkg-doctor)",
       "data": {
         "title": "纹理内存优化",
         "date": "2023-04-02 17:35:21",

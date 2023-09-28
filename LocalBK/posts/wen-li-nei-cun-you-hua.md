@@ -30,5 +30,9 @@ RGB的24位纹理和RGBA的32位纹理都是常见的图像格式，它们之间
 + 如果是图集开启了mipmap,图集中的图片必须应用于距离摄像机相近的位置，否则会增加每帧渲染所需的纹理大小，会导致DC降了，但是渲染速度反而变慢了
 ## 调整图集大小
 图集通过9宫格调整大小，调整较小的图片，如``1024*2048``但是只超了一点点，可以通过编辑器工具或者手动优化成``1024*1024``
+## 纹理压缩 
+``Android`` 首选  ``RGBA Compressed ETC2 8 bits``
+``iOS``首选 ``RGB(A) Compressed AST  4x4 block``
 
 [参考于](https://zhuanlan.zhihu.com/p/125100817)
+[包体分析工具](https://github.com/vinjn/pkg-doctor)
