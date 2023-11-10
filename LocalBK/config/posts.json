@@ -1,6 +1,24 @@
 {
   "posts": [
     {
+      "content": "\n## 背景\n**针对Unity 使用ILCPP打包的安卓游戏进行逆向，进攻是为了更好的防守，无不良引导**\n## 工具\n### IDA (Interactive Disassembler Professiona)\n### WinHex (16 [进制](https://baike.baidu.com/item/%E8%BF%9B%E5%88%B6/317457?fromModule=lemma_inlink)编辑器)\n### jadx ([**jadx** - Dex to Java decompiler](https//github.com/skylot/jadx))\n### [APK Easy Tool ](https://www.filehorse.com/download-apk-easy-tool/)\n### [Il2CppDumper](https://github.com/Perfare/Il2CppDumper#command-line)\n### [frida](https://frida.re/docs/examples/android/)\n### [dnspy](https://github.com/dnSpy/dnSpy)\n### [ILSpy](https://github.com/icsharpcode/ILSpy)\n### [ARM to HEX](https://armconverter.com/?code=FSUB%20%20%20%20%20%20%20%20%20%20%20%20D8,%20D0,%20D8)\n## 技能点\n### C# \n**用于反编译so后查看C#代码**\n### [Smali](https://ctf-wiki.org/android/basic_operating_mechanism/java_layer/smali/smali/)\n### Assembly Language\n",
+      "data": {
+        "title": "逆向的\"矛\"",
+        "date": "2023-11-10 10:22:29",
+        "tags": [
+          "逆向"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "ni-xiang-de-mao"
+    },
+    {
       "content": "### Google [官方文档](https://developer.android.google.cn/guide/playcore/asset-delivery/integrate-native?hl=zh-cn)\r\n### 原理\r\n#### U3D\r\n开启分包之后 Unity的部分资源文件在android中独立成一个资源package模块\r\n##### 设置 \r\n```\r\n// 切换Split Application Binary状态\r\nPlayerSettings.Android.useAPKExpansionFiles = BuildProjectWindows.GetShouldEnableSplitAPK();\r\nEditorUserBuildSettings.buildAppBundle = BuildProjectWindows.GetShouldEnableSplitAPK();\r\n```\r\n#### android \r\n##### launcher/build.gradle\r\n```\r\nold \r\n@@ -53,8 +53,10 @@ android {\r\n        doNotStrip '*/armeabi-v7a/*.so'\r\n        doNotStrip '*/arm64-v8a/*.so'\r\n    }\r\n\r\n\r\n\r\n    bundle {\r\n        language {\r\n            enableSplit = false\r\n        }\r\n\r\nnew\r\n@@ -53,8 +53,10 @@ android {\r\n        doNotStrip '*/armeabi-v7a/*.so'\r\n        doNotStrip '*/arm64-v8a/*.so'\r\n    }\r\n\r\n    assetPacks = [\":UnityDataAssetPack\"]\r\n\r\n    bundle {\r\n        language {\r\n            enableSplit = false\r\n        }\r\n\r\n```\r\n##### gradle.properties\r\n```\r\nold \r\n@@ -1,4 +1,5 @@\r\norg.gradle.jvmargs=-Xmx2048M\r\norg.gradle.parallel=true\r\nandroid.enableR8=false\r\nunityStreamingAssets=.unity3d, UnityServicesProjectConfiguration.json\r\n\r\nnew\r\n@@ -1,4 +1,5 @@\r\norg.gradle.jvmargs=-Xmx2048M\r\norg.gradle.parallel=true\r\nandroid.enableR8=false\r\nunityStreamingAssets=.unity3d\r\nandroid.bundle.enableUncompressedNativeLibs=false\r\nNo newline at end of file\r\n```\r\n##### settings.gradle\r\n```\r\nold\r\n@@ -1,1 +1,2 @@\r\ninclude ':launcher', ':unityLibrary'\r\nNo newline at end of file\r\n\r\nnew\r\n@@ -1,1 +1,2 @@\r\ninclude ':launcher', ':unityLibrary'\r\ninclude ':UnityDataAssetPack'\r\nNo newline at end of file\r\n\r\n```\r\n\r\n",
       "data": {
         "title": "Unity With GooglePlay Split Application",
@@ -1244,6 +1262,11 @@
     }
   ],
   "tags": [
+    {
+      "name": "逆向",
+      "slug": "8MxG6F7dx",
+      "used": true
+    },
     {
       "name": "keyword",
       "slug": "eR1H5eAmI",
