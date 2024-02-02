@@ -1,6 +1,25 @@
 {
   "posts": [
     {
+      "content": "# 配置\r\n\r\n* 下载本仓库\r\n* 在DB文件夹中手动创建DB  //FIXME\r\n* 在项目文件夹中手动创建Record  //FIXME\r\n* 在 ``config\\projectConfig.js``中配置打包机IP地址\r\n* 在 ``Web\\main.js``中配置打包机IP地址\r\n* 在 ``config\\Web\\main.js``中配置打包机IP地址\r\n* 终端执行 ``npm install`` 安装所有依赖库\r\n* 项目依赖pm2 进程管理，pm2安装及使用自行查询\r\n* 项目依赖Visual Studio\r\n* 启动项目双击 .\\FirstStartup.bat\r\n\r\n# 说明\r\n\r\n* 目前仅支持局域网访问 //FIXME 内网穿透\r\n* 同时仅支持一个项目构建\r\n* 四小时无任何操作缓存APK将被清理\r\n* 请确保分支对应\r\n## 界面说明\r\n\r\n  ### 构建控制台\r\n  -  构建控制台地址 http://本机ip:9998\r\n  -  增加自动构建项目请点击 ``项目配置``\r\n  ### 项目配置界面\r\n  - 名称（主Key）\r\n  - Unity 工程路径 \r\n  - Android 工程路径\r\n  - 飞书机器人链接\r\n  - .....\r\n  - Unity 静态打包方法(构建完毕之Unity不会自动关闭，请在Unity 中执行完所有操作关闭Unity,否则将卡住整个构建流程)(适配协程或自定义异步构建设计)\r\n  - 添加值数据库\r\n  ### APK下载/日志\r\n    - APK 构建缓存路径\r\n    - Unity 构建输出日志路径\r\n\r\n## 参数说明\r\n\r\n* 项目名称\r\n* Unity 打包静态方法 （Unity构建静态方法）\r\n* 构建类型\r\n* Unity分支名称 （本地已经缓存的分支，请确保origin上有相同分支）\r\n* Android分支名称\r\n* 版本号\r\n* 导出Unity 工程 （Unity工程未修改可不勾选，减少打包耗时）\r\n* 同步最新Unity 分支代码:\r\n  * 丢弃本地缓存\r\n  * 切换至指定分支\r\n  * 拉取最新代码\r\n* 同步最新Android 分支代码 （同上）\r\n* 构建AAB\r\n* 推送日志消息（不勾选仅屏蔽不重要日志）\r\n* 清理Android 缓存 （Unity项目更改不大，同一天连续打包，可不勾选，极大提升构建速度 30分钟缩减至5分钟）\r\n\r\n## 流程说明（全部选项勾选为例）\r\n\r\n1. 写入操作记录到数据库\r\n2. 丢弃Unity 本地缓存\r\n3. 切换到指定Unity分支\r\n4. 拉取最新代码\r\n5. 执行Unity 的静态方法\r\n6. Android git 操作同上\r\n7. 设置Launcher.gradle 版本号，构建APK名称\r\n8. 清理android 缓存\r\n9. 同步最新更改\r\n10. 打包APK，拷贝至下载路径\r\n11. 打包AAB，拷贝至下载路径\r\n\r\n# 重要提示\r\n\r\n* projectPath + \"/launcher/build.gradle\" 配置签名路径\r\n\r\n    ```Java\r\n    示例\r\n    signingConfigs {\r\n    ​    ​release {\r\n    ​        ​storeFile file('xxxxxng_cn.keystore')\r\n            storePassword 'xxx'\r\n            keyAlias 'xxxxx'\r\n            keyPassword 'xxx'\r\n        }\r\n    ​    ​debug {\r\n    ​        ​storeFile file('xxxxxxng_cn.keystore')\r\n            storePassword 'xxx'\r\n            keyAlias 'xxx'\r\n            keyPassword 'xxx'\r\n        }\r\n    }\r\n\r\n    //buildTypes 必须在 signingConfigs 之后\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android.txt')\r\n            signingConfig signingConfigs.release\r\n            ndk {\r\n                debugSymbolLevel = 'FULL'\r\n            }\r\n        }\r\n        debug {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android.txt')\r\n            signingConfig signingConfigs.debug\r\n            jniDebuggable true\r\n        }\r\n    }\r\n    ```\r\n\r\n* 本地的 aar 包请手动引用\r\n```\r\n    implementation fileTree(dir: 'libs', include: ['*.jar'])\r\n    implementation(name: 'common', ext: 'aar')\r\n```\r\n\r\n\r\n* 请在 gradle.properties 指定 JDK路径\r\n```\r\n org.gradle.java.home=C\\:/Program Files/Android/Android Studio/jbr\r\n```\r\n\r\n",
+      "data": {
+        "title": "Unity自动化构建",
+        "date": "2024-02-01 15:08:08",
+        "tags": [
+          "UnityEditor",
+          "NodeJS"
+        ],
+        "published": true,
+        "hideInList": false,
+        "feature": null,
+        "isTop": false
+      },
+      "isEmpty": false,
+      "excerpt": "",
+      "abstract": "",
+      "fileName": "unity-zi-dong-hua-gou-jian"
+    },
+    {
       "content": "\n## 背景\n**针对Unity 使用ILCPP打包的安卓游戏进行逆向，进攻是为了更好的防守，无不良引导**\n## 工具\n### IDA (Interactive Disassembler Professiona)\n### WinHex (16 [进制](https://baike.baidu.com/item/%E8%BF%9B%E5%88%B6/317457?fromModule=lemma_inlink)编辑器)\n### jadx ([**jadx** - Dex to Java decompiler](https//github.com/skylot/jadx))\n### [APK Easy Tool ](https://www.filehorse.com/download-apk-easy-tool/)\n### [Il2CppDumper](https://github.com/Perfare/Il2CppDumper#command-line)\n### [frida](https://frida.re/docs/examples/android/)\n### [dnspy](https://github.com/dnSpy/dnSpy)\n### [ILSpy](https://github.com/icsharpcode/ILSpy)\n### [ARM to HEX](https://armconverter.com/?code=FSUB%20%20%20%20%20%20%20%20%20%20%20%20D8,%20D0,%20D8)\n## 技能点\n### C# \n**用于反编译so后查看C#代码**\n### [Smali](https://ctf-wiki.org/android/basic_operating_mechanism/java_layer/smali/smali/)\n### Assembly Language\n",
       "data": {
         "title": "逆向的\"矛\"",
