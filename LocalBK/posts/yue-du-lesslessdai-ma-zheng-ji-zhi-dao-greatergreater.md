@@ -40,3 +40,10 @@ isTop: false
 - 尽量减少注释（不赞同）
 - 注释不能代替屎山
 # 对象和数据结构
+- 得墨忒耳律 
+  ``final String outputDir = ctxt.getoptions().getScratchDir().getAbsolutePath()
+ ``
+- 区分数据结构和对象，存放数据的结构不能喝对象混用
+# 错误处理
+ - 尽量别返回空值，别传递空值
+
