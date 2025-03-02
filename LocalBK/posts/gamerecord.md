@@ -5,7 +5,7 @@ tags: [GameRecord]
 published: true
 hideInList: false
 feature: 
-isTop: false
+isTop: true
 ---
 🤝合作研发
 💪单挑研发
@@ -62,3 +62,6 @@ isTop: false
 [![](https://zhoujun2303.github.io/post-images/1659846366154.jpg)Dinosaur Race](https://play.google.com/store/apps/details?id=wanyou.miaole.DinosaurRace)|U3D|💪|📱|👍👍
 [![](https://zhoujun2303.github.io/post-images/1659846401825.png)Stack Build IO](https://play.google.com/store/apps/details?id=wanyou.miaole.drawfight)|U3D|💪|📱|👍👍👍
 [![](https://zhoujun2303.github.io/post-images/1659846469584.png)SankeRaceIO](https://play.google.com/store/apps/details?id=wanyou.miaole.snakeraceio)|U3D|💪|📱|👍👍
+[瘦身](https://play.google.com/store/apps/details?id=com.hg.fitnessclub.android)|U3D|🤝|📱|👍👍👍
+[英雄工厂](https://play.google.com/store/apps/details?id=com.hg.heromaking)|U3D|🤝|📱|👍👍👍
+[小鸡工厂](https://play.google.com/store/apps/details?id=com.hg.fitnessclub.android)|U3D|🤝|📱|👍👍👍
