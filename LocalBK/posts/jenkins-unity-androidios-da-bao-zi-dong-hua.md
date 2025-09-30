@@ -7,4 +7,12 @@ hideInList: false
 feature: 
 isTop: false
 ---
-Jenkins 
+- Jenkins 初始化及配置
+    * 插件
+    * Jenkins 权限
+    * 参数 
+- JenkinsFile
+- UnityCode 
+- AndroidCode
+- Android 构建环境
+- IIS 配置
