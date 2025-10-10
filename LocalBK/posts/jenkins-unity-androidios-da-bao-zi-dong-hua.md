@@ -17,6 +17,7 @@ isTop: false
         + Pipeline 可视化流水线
         + Hidden Parameter 参数隐藏
         + Persistent Parameter 参数持久化
+        + Active Choices
     * Jenkins 权限
         * Jenkins服务中使用管理员账号密码登录并重启服务
     * 参数 
