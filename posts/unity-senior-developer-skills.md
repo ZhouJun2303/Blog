@@ -16,13 +16,13 @@ tag_ids:
 categories: []
 published: true
 hideInList: false
-feature: https://zhoujun2303.github.io/post-images/unity-senior-developer-skill-map.svg
+feature: /post-images/unity-senior-developer-skill-map.svg
 isTop: false
 ---
 
 > “开发高级/资深”不是只负责写最难的代码，而是负责把 Unity 项目的技术方向、模块边界、性能质量、发版稳定性和团队交付串起来。本文采用“总分”结构：本文件是总览入口，下面的分文档展开每个方向的具体技能点。
 
-![Unity 开发高级/资深技能地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-skill-map.svg)
+![Unity 开发高级/资深技能地图](/post-images/unity-senior-developer-skill-map.svg)
 
 ## 阅读方式
 
@@ -31,7 +31,7 @@ isTop: false
 - 细分方式：每个分文档内继续按小方向拆分；如果某个方向后续需要更深案例，可以在同目录下继续新增专题文档。
 - 可跳转：目录表中的方向名都可以直接跳到对应分文档或分文档内的小节。
 - 工具要求：每个方向都列出了开发高级/资深需要掌握或至少能判断适用边界的工具。
-- 图片资源：本专题图片都放在 `LocalBK/post-images/` 下，正文统一使用 `https://zhoujun2303.github.io/post-images/...` 引用。
+- 图片资源：本专题图片都放在 `LocalBK/post-images/` 下，正文统一使用 `/post-images/...` 引用。
 
 ## 分文档导航
 
@@ -131,7 +131,7 @@ isTop: false
 
 ## 工具速查总览
 
-![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](/post-images/unity-senior-developer-toolchain-map.svg)
 
 | 方向 | 需要掌握的工具 | 跳转 |
 | --- | --- | --- |
@@ -171,7 +171,7 @@ isTop: false
 
 ## 能力分层图
 
-![开发高级/资深架构分层](https://zhoujun2303.github.io/post-images/unity-senior-developer-architecture-layers.svg)
+![开发高级/资深架构分层](/post-images/unity-senior-developer-architecture-layers.svg)
 
 开发高级/资深能力可以按四层理解：
 
@@ -182,7 +182,7 @@ isTop: false
 
 ## 交付闭环图
 
-![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)
+![开发高级/资深交付闭环](/post-images/unity-senior-developer-delivery-loop.svg)
 
 开发高级/资深的判断标准不是“我写完了”，而是闭环是否完整：
 
@@ -197,7 +197,7 @@ isTop: false
 
 ## 推荐学习路线
 
-![Unity 开发高级/资深学习路线](https://zhoujun2303.github.io/post-images/unity-senior-developer-learning-roadmap.svg)
+![Unity 开发高级/资深学习路线](/post-images/unity-senior-developer-learning-roadmap.svg)
 
 1. 第一阶段：Unity 基础、C# 基础、UGUI、资源加载、协程与异步。
 2. 第二阶段：UI 框架、网络协议、配置系统、事件系统、对象池、状态机。

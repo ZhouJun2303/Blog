@@ -12,13 +12,13 @@ tag_ids:
 categories: []
 published: true
 hideInList: false
-feature: https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg
+feature: /post-images/unity-senior-developer-toolchain-map.svg
 isTop: false
 ---
 
 > 本规范用于本仓库后续新增文章。只要是要发布到 Gridea 的文档，都要按这里的结构、路径、图片和链接规则处理。
 
-![](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
+![](/post-images/unity-senior-developer-toolchain-map.svg)
 
 ## 目录规则
 
@@ -45,7 +45,7 @@ date: 2026-06-10 21:00:00
 tags: [Unity,开发高级/资深,性能优化]
 published: true
 hideInList: false
-feature: https://zhoujun2303.github.io/post-images/example.svg
+feature: /post-images/example.svg
 isTop: false
 ---
 ```
@@ -57,7 +57,7 @@ isTop: false
 - `tags`：使用方括号数组，标签不要过多。
 - `published`：正式文章为 `true`。
 - `hideInList`：主文档为 `false`，分文档可设为 `true`。
-- `feature`：有封面图时使用完整站点 URL，没有则留空。
+- `feature`：有封面图时使用站点根路径 `/post-images/...`，没有则留空。
 - `isTop`：默认 `false`。
 
 ## 正文结构
@@ -79,10 +79,10 @@ isTop: false
 
 - 图片文件放在 `LocalBK/post-images/`。
 - 图片命名使用文章 slug 前缀，例如 `unity-senior-developer-toolchain-map.svg`。
-- Markdown 中使用完整线上路径：
+- Markdown 中使用站点根路径：
 
 ```markdown
-![](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
+![](/post-images/unity-senior-developer-toolchain-map.svg)
 ```
 
 - 不使用 `../`、`./images/`、本地绝对路径或仓库相对路径引用图片。
@@ -129,7 +129,7 @@ isTop: false
 - 是否有完整 frontmatter。
 - slug 是否稳定、可读、无中文和空格。
 - 图片是否在 `LocalBK/post-images/`。
-- 图片是否使用 `https://zhoujun2303.github.io/post-images/...`。
+- 图片是否使用 `/post-images/...`。
 - 内部链接是否使用 `https://zhoujun2303.github.io/post/<slug>/`。
 - 被跳转的小节是否有稳定 `<a id="..."></a>`。
 - 是否同步更新 `LocalBK/config/posts.json`。

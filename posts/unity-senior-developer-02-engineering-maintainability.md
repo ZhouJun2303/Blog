@@ -20,7 +20,7 @@ isTop: false
 
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](/post-images/unity-senior-developer-toolchain-map.svg)
 
 <a id="engineering-standards"></a>
 ## 工程规范

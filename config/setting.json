@@ -1,10 +1,20 @@
 {
   "platform": "github",
-  "domain": "",
-  "repository": "",
-  "branch": "",
-  "username": "",
-  "email": "",
-  "token": "",
-  "cname": ""
+  "platformConfigs": {
+    "github": {
+      "domain": "https://zhoujun2303.github.io",
+      "repository": "zhoujun2303.github.io",
+      "branch": "master",
+      "username": "ZhouJun2303",
+      "email": "",
+      "tokenUsername": "",
+      "token": "",
+      "cname": ""
+    }
+  },
+  "enabledPlatforms": [
+    "github"
+  ],
+  "proxyEnabled": false,
+  "proxyURL": ""
 }

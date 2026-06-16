@@ -22,7 +22,7 @@ isTop: false
 
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)
+![开发高级/资深交付闭环](/post-images/unity-senior-developer-delivery-loop.svg)
 
 <a id="combat"></a>
 ## 战斗系统
