@@ -1,12 +1,19 @@
 ---
-title: '纹理内存优化'
-date: 2023-04-02 17:35:21
-tags: [U3D性能优化]
+id: X37hML
+title: 纹理内存优化
+createdAt: "2023-04-02 17:35:21"
+updated: "2026-06-16 17:26:22"
+tags:
+    - U3D性能优化
+tag_ids:
+    - IQkNhj
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## 图片大小
 图片大小一般采用小于等于2的次方大小
 在Unity 中，如果图片的大小不是2的次方，如``100*200``Unity会在导入之后将其缩放为128*256的纹理、如果是``129*256``的纹理大小，则导入之后为``256*256``的纹理大小

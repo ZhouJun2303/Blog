@@ -1,0 +1,19 @@
+{
+  "enable": true,
+  "platform": "Gitalk",
+  "platformConfigs": {
+    "Cusdis": {},
+    "Disqus": {},
+    "Giscus": {},
+    "Gitalk": {
+      "admin": "zhoujun2303",
+      "clientId": "ca79a66585e72af3bff6",
+      "clientSecret": "4cf7eeea526df4a9d2fa6bfb14fcb3f135652731",
+      "owner": "zhoujun2303",
+      "repo": "zhoujun2303.github.io"
+    },
+    "Twikoo": {},
+    "Valine": {},
+    "Waline": {}
+  }
+}

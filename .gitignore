@@ -1,13 +1,24 @@
 
-*.pak
+# OS/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
 
-*.exe
-
-
-*.dll
-
-*.dat
-
-*.bin
-
+# Local publish settings / secrets
+config/setting.json
 LocalBK/config/setting.json
+
+# Generated render output
+.render-manifest.json
+output/
+
+# Binary/runtime artifacts
+*.pak
+*.exe
+*.dll
+*.dat
+*.bin
+*.log
+output

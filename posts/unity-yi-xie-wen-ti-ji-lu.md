@@ -1,12 +1,19 @@
 ---
-title: 'Unity 一些问题记录'
-date: 2022-02-23 15:21:36
-tags: [Unity]
+id: X4LiOL
+title: Unity 一些问题记录
+createdAt: "2022-02-23 15:21:36"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+tag_ids:
+    - FjODty
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - Q 游戏切换场景的时候存在花屏
 - 游戏中存在两个摄像机
 解决方案 再添加一个摄像机

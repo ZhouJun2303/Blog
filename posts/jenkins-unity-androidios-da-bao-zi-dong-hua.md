@@ -1,12 +1,17 @@
 ---
-title: 'Jenkins-Unity-Android/iOS打包自动化'
-date: 2025-07-22 11:08:06
+id: SEom4K
+title: Jenkins-Unity-Android/iOS打包自动化
+createdAt: "2025-07-22 11:08:06"
+updated: "2026-06-16 16:11:54"
 tags: []
+tag_ids: []
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## CI（Continuous Integration，持续集成）
      * 每次提交都会触发自动化流程：编译 → 测试 → 静态检查
 ## CD（Continuous Delivery / Continuous Deployment，持续交付/部署）

@@ -1,12 +1,19 @@
 ---
-title: 'Linux 探索'
-date: 2020-07-22 11:26:27
-tags: [Linux]
+id: atrQWQ
+title: Linux 探索
+createdAt: "2020-07-22 11:26:27"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Linux
+tag_ids:
+    - J1aZtK
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # 搭建
 ## node.js环境服务器
 ## 安装mysql
@@ -118,4 +125,3 @@ server {
         }
     }
 ```
-

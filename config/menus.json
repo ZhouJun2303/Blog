@@ -1,39 +1,46 @@
 {
-    "menus": [
-        {
-            "name": "首页",
-            "link": "/",
-            "openType": "Internal"
-        },
-        {
-            "name": "博客",
-            "link": "/post",
-            "openType": "Internal"
-        },
-        {
-            "name": "闪念",
-            "link": "/memos",
-            "openType": "Internal"
-        },
-        {
-            "name": "归档",
-            "link": "/archives",
-            "openType": "Internal"
-        },
-        {
-            "name": "标签",
-            "link": "/tags",
-            "openType": "Internal"
-        },
-        {
-            "name": "友链",
-            "link": "/links",
-            "openType": "Internal"
-        },
-        {
-            "name": "关于",
-            "link": "/post/about",
-            "openType": "Internal"
-        }
-    ]
+  "menus": [
+    {
+      "id": "AjYfyx",
+      "name": "首页",
+      "link": "/",
+      "openType": "Internal"
+    },
+    {
+      "id": "TQd5yo",
+      "name": "博客",
+      "link": "/post",
+      "openType": "Internal"
+    },
+    {
+      "id": "8duiLt",
+      "name": "闪念",
+      "link": "/memos",
+      "openType": "Internal"
+    },
+    {
+      "id": "P1o9AZ",
+      "name": "归档",
+      "link": "/archives",
+      "openType": "Internal"
+    },
+    {
+      "id": "N1hlSM",
+      "name": "标签",
+      "link": "/tags",
+      "openType": "Internal"
+    },
+    {
+      "id": "QOr2j4",
+      "name": "友链",
+      "link": "/links",
+      "openType": "Internal"
+    },
+    {
+      "id": "7euXPt",
+      "name": "关于",
+      "link": "/post/about",
+      "openType": "Internal"
+    }
+  ]
 }

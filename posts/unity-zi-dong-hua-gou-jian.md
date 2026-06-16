@@ -1,12 +1,21 @@
 ---
-title: 'Unity自动化构建'
-date: 2024-02-01 15:08:08
-tags: [UnityEditor,NodeJS]
+id: ChbiBE
+title: Unity自动化构建
+createdAt: "2024-02-01 15:08:08"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEditor
+    - NodeJS
+tag_ids:
+    - J7VXMO
+    - NodeJS
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # 配置
 
 * 下载本仓库
@@ -126,4 +135,3 @@ isTop: false
 ```
  org.gradle.java.home=C\:/Program Files/Android/Android Studio/jbr
 ```
-

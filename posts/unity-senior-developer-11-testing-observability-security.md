@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 11：测试、监控、线上排障与安全'
-date: 2026-06-10 22:01:00
-tags: [Unity,开发高级/资深,测试,安全]
+id: xrEfaR
+title: Unity 开发高级/资深 11：测试、监控、线上排障与安全
+createdAt: "2026-06-10 22:01:00"
+updated: "2026-06-16 17:26:21"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 测试
+    - 安全
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - gV4r4I
+    - W6Rjr9
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)

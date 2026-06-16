@@ -1,12 +1,21 @@
 ---
-title: 'Unity(UI Horizontal Layout Group)'
-date: 2023-03-19 14:24:12
-tags: [UnityEngine,User  Interface]
+id: q4CQUm
+title: Unity(UI Horizontal Layout Group)
+createdAt: "2023-03-19 14:24:12"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEngine
+    - User  Interface
+tag_ids:
+    - UNR80K
+    - Bpnrqu
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 宽屏横向适配问题
 适配 左-中-右，中间大小不变，左右自动拉升
 ## 方案1

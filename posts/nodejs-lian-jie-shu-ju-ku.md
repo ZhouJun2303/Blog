@@ -1,12 +1,21 @@
 ---
-title: 'NodeJS连接数据库'
-date: 2019-07-03 10:06:59
-tags: [NodeJS,MySql]
+id: BLIX9P
+title: NodeJS连接数据库
+createdAt: "2019-07-03 10:06:59"
+updated: "2026-06-16 17:26:23"
+tags:
+    - NodeJS
+    - MySql
+tag_ids:
+    - NodeJS
+    - gRjAxH
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 安装mysql模块
 ```
 npm install mysql

@@ -1,12 +1,21 @@
 ---
-title: 'windows批处理'
-date: 2020-08-26 10:33:42
-tags: [Windows,Bat]
+id: uScrjg
+title: windows批处理
+createdAt: "2020-08-26 10:33:42"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Windows
+    - Bat
+tag_ids:
+    - BhRpLA
+    - pQW03i
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 1，批量处理删除文件
 ```
 del /f /s /q *.meta
@@ -50,4 +59,3 @@ REM echo %2%JSON%
 start python convert_obj_three.py -i %1 -o %2.json
 goto :eof
 ```
-

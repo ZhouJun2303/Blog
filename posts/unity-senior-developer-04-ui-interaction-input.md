@@ -1,12 +1,23 @@
 ---
-title: 'Unity 开发高级/资深 04：UI、交互与输入'
-date: 2026-06-10 21:54:00
-tags: [Unity,开发高级/资深,UI]
+id: csEUEO
+title: Unity 开发高级/资深 04：UI、交互与输入
+createdAt: "2026-06-10 21:54:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - UI
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - 6wRaJA
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)

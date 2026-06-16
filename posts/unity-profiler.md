@@ -1,12 +1,21 @@
 ---
-title: 'Unity Profiler'
-date: 2023-03-25 18:08:02
-tags: [UnityEditor,U3D性能优化]
+id: 7nTljc
+title: Unity Profiler
+createdAt: "2023-03-25 18:08:02"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEditor
+    - U3D性能优化
+tag_ids:
+    - J7VXMO
+    - IQkNhj
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## Stats面板
 ![](https://zhoujun2303.github.io/post-images/1680420126719.jpg)
 + Render thread 渲染线程，渲染一帧需要多少ms

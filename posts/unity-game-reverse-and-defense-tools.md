@@ -1,10 +1,22 @@
 ---
-title: 'Unity 游戏逆向分析与防逆向加固工具教程'
-date: 2026-06-10 16:30:00
-tags: [Unity, 安全, 逆向, IL2CPP]
+id: g0LTEg
+title: Unity 游戏逆向分析与防逆向加固工具教程
+createdAt: "2026-06-10 16:30:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 安全
+    - 逆向
+    - IL2CPP
+tag_ids:
+    - FjODty
+    - W6Rjr9
+    - UEWN8u
+    - IL2CPP
+categories: []
 published: true
 hideInList: false
-feature:
+feature: ""
 isTop: false
 ---
 

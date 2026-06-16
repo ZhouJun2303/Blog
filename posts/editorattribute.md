@@ -1,12 +1,21 @@
 ---
-title: 'EditorAttribute'
-date: 2022-03-02 14:42:08
-tags: [Unity,UnityEditor]
+id: G3qaRS
+title: EditorAttribute
+createdAt: "2022-03-02 14:42:08"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - UnityEditor
+tag_ids:
+    - FjODty
+    - J7VXMO
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ```
 [InitializeOnEnterPlayModeAttribute]
 作用于静态方法，使编辑器类方法在进入 Play Mode 时初始化

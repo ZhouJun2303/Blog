@@ -1,12 +1,17 @@
 ---
-title: 'Unity GameGM 在不同平台上的统一处理方案'
-date: 2023-07-20 15:57:18
+id: jhvssb
+title: Unity GameGM 在不同平台上的统一处理方案
+createdAt: "2023-07-20 15:57:18"
+updated: "2026-06-16 16:11:54"
 tags: []
+tag_ids: []
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## 设计思路 利用反射拿到自定一的特性值，在不同平台上渲染的方案
 ## code
 ### ScriptableObject 文件
@@ -111,4 +116,3 @@ private void Init()
     }
 }
 ```
-

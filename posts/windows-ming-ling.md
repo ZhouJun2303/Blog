@@ -1,12 +1,19 @@
 ---
-title: 'Windows 命令'
-date: 2025-07-22 16:59:44
-tags: [Windows]
+id: X3fXlv
+title: Windows 命令
+createdAt: "2025-07-22 16:59:44"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Windows
+tag_ids:
+    - BhRpLA
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - echo (类似log) echo on / echo off  @echo @后面的命令不显示
 - cd (path) 切换到path目录 cd.. 返回上一级目录
 - dir 显示当前目录中的子文件夹和文件  dir /b 

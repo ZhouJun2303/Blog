@@ -1,12 +1,19 @@
 ---
-title: 'Cocos按钮封装'
-date: 2019-08-12 10:43:24
-tags: [Cocos]
+id: NUyUey
+title: Cocos按钮封装
+createdAt: "2019-08-12 10:43:24"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Cocos
+tag_ids:
+    - Zuqsnn
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 动态添加按钮组件：函数的封装
 ```
 cc.vv.addButton = function (data) {

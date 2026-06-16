@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 03：资源管理与热更新'
-date: 2026-06-10 21:53:00
-tags: [Unity,开发高级/资深,热更新,资源管理]
+id: l2v6wy
+title: Unity 开发高级/资深 03：资源管理与热更新
+createdAt: "2026-06-10 21:53:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 热更新
+    - 资源管理
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - Z3U3M1
+    - LRgF9g
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)

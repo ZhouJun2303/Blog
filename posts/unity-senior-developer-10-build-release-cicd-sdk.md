@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 10：构建发布、CI/CD 与 SDK'
-date: 2026-06-10 22:00:00
-tags: [Unity,开发高级/资深,构建发布,SDK]
+id: rrSZLc
+title: Unity 开发高级/资深 10：构建发布、CI/CD 与 SDK
+createdAt: "2026-06-10 22:00:00"
+updated: "2026-06-16 17:26:21"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 构建发布
+    - SDK
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - xn5J0z
+    - 0lhPed
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)

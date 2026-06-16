@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 12：跨平台、本地化、音视频、AI 与物理'
-date: 2026-06-10 22:02:00
-tags: [Unity,开发高级/资深,跨平台,本地化]
+id: o6CWyQ
+title: Unity 开发高级/资深 12：跨平台、本地化、音视频、AI 与物理
+createdAt: "2026-06-10 22:02:00"
+updated: "2026-06-16 17:26:21"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 跨平台
+    - 本地化
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - 8XtUrb
+    - zii89F
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)

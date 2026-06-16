@@ -1,12 +1,19 @@
 ---
-title: 'CocosAPI'
-date: 2019-12-28 10:54:57
-tags: [Cocos]
+id: XheKYm
+title: CocosAPI
+createdAt: "2019-12-28 10:54:57"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Cocos
+tag_ids:
+    - Zuqsnn
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 其他组件
 ```    
     cc.Motionstreak 拖尾

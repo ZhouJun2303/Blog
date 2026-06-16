@@ -1,10 +1,19 @@
 ---
-title: 'Unity Mobile Notifications'
-date: 2024-03-04 20:52:07
-tags: [UnityEngine,Android]
+id: 5mUk6O
+title: Unity Mobile Notifications
+createdAt: "2024-03-04 20:52:07"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEngine
+    - Android
+tag_ids:
+    - UNR80K
+    - SWem6w
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 todo

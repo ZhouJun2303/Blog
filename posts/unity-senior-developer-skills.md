@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深技能总览'
-date: 2026-06-10 21:50:00
-tags: [Unity,开发高级/资深,客户端架构,性能优化]
+id: VDzWPP
+title: Unity 开发高级/资深技能总览
+createdAt: "2026-06-10 21:50:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 客户端架构
+    - 性能优化
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - 4zUHdL
+    - HBW449
+categories: []
 published: true
 hideInList: false
 feature: https://zhoujun2303.github.io/post-images/unity-senior-developer-skill-map.svg
 isTop: false
 ---
+
 > “开发高级/资深”不是只负责写最难的代码，而是负责把 Unity 项目的技术方向、模块边界、性能质量、发版稳定性和团队交付串起来。本文采用“总分”结构：本文件是总览入口，下面的分文档展开每个方向的具体技能点。
 
 ![Unity 开发高级/资深技能地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-skill-map.svg)

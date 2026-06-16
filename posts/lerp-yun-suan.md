@@ -1,12 +1,19 @@
 ---
-title: 'Lerp运算'
-date: 2020-01-02 11:05:51
-tags: [随口说]
+id: zO3RAN
+title: Lerp运算
+createdAt: "2020-01-02 11:05:51"
+updated: "2026-06-16 17:26:22"
+tags:
+    - 随口说
+tag_ids:
+    - CtJG2N
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 cocos 中
 ```
 this.mapcamra.node.x = cc.misc.lerp(this.mapcamra.node.x, targetPos.x, 0.1);

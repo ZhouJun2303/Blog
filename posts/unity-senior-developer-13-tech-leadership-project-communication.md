@@ -1,12 +1,23 @@
 ---
-title: 'Unity 开发高级/资深 13：技术领导力、项目管理与表达'
-date: 2026-06-10 22:03:00
-tags: [Unity,开发高级/资深,项目管理]
+id: HTXMOB
+title: Unity 开发高级/资深 13：技术领导力、项目管理与表达
+createdAt: "2026-06-10 22:03:00"
+updated: "2026-06-16 17:26:21"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 项目管理
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - WjBp2s
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)

@@ -1,12 +1,21 @@
 ---
-title: 'Unity JAR 包制作'
-date: 2021-08-12 14:06:43
-tags: [Unity,Jar]
+id: lDOZzB
+title: Unity JAR 包制作
+createdAt: "2021-08-12 14:06:43"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - Jar
+tag_ids:
+    - FjODty
+    - Qh55SV
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 1,创建一个新的模块
 ![](https://zhoujun2303.github.io/post-images/1659766098389.jpg)
 - 2,拷贝unity 自带jar包到模块下的lib
@@ -60,5 +69,3 @@ public class MLSDK {
     }
 }
 ```
-
-

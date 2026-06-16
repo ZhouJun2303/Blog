@@ -1,12 +1,21 @@
 ---
-title: 'Unity 反射（Reflection）'
-date: 2023-03-06 19:30:57
-tags: [UnityEngine,C#]
+id: UgbxbR
+title: Unity 反射（Reflection）
+createdAt: "2023-03-06 19:30:57"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEngine
+    - C#
+tag_ids:
+    - UNR80K
+    - fOiXzM
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## 参考
 [参考视频](https://www.bilibili.com/video/BV1UP4y1T7jE/?spm_id_from=333.999.0.0&vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3)
 ## 基本使用

@@ -1,12 +1,17 @@
 ---
-title: 'Android 构建自动命名APK、AAB包，自动拷贝符号表'
-date: 2023-07-20 15:48:25
+id: YPMpbs
+title: Android 构建自动命名APK、AAB包，自动拷贝符号表
+createdAt: "2023-07-20 15:48:25"
+updated: "2026-06-16 16:11:55"
 tags: []
+tag_ids: []
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # APK、AAB的自动化命名
 ## 示例
 ```

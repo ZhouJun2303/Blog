@@ -1,12 +1,19 @@
 ---
-title: 'Unity Spine融合动画'
-date: 2023-03-02 09:25:09
-tags: [Spine]
+id: nlaJfF
+title: Unity Spine融合动画
+createdAt: "2023-03-02 09:25:09"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Spine
+tag_ids:
+    - YR4Yni
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # 解决需求
 边走路边砍人，边走路边挥手
 # 单层动画播放

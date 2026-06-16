@@ -1,10 +1,16 @@
 ---
-title: 'IIS'
-date: 2019-11-09 14:54:18
-tags: [Windows]
+id: BrSrpS
+title: IIS
+createdAt: "2019-11-09 14:54:18"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Windows
+tag_ids:
+    - BhRpLA
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
 

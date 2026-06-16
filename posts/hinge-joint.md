@@ -1,12 +1,21 @@
 ---
-title: 'hinge joint'
-date: 2021-04-29 13:58:01
-tags: [Unity,Physics]
+id: JRktub
+title: hinge joint
+createdAt: "2021-04-29 13:58:01"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - Physics
+tag_ids:
+    - FjODty
+    - vjxojo
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 [文档](https://docs.unity.cn/cn/2019.4/Manual/class-HingeJoint.html)
 - hinge joint 须配合 rigidbody 使用
 - 属性中的 spring  和 motor 不能同时使用，会导致意想不到的问题

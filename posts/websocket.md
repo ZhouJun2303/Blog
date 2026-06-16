@@ -1,10 +1,16 @@
 ---
-title: 'WebSocket'
-date: 2021-12-02 14:21:34
-tags: [WebSocket]
+id: 5ZPdEc
+title: WebSocket
+createdAt: "2021-12-02 14:21:34"
+updated: "2026-06-16 17:26:22"
+tags:
+    - WebSocket
+tag_ids:
+    - uf8pXo
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
 
@@ -160,4 +166,3 @@ let ws = new WebSocket('ws://192.168.5.178:3000');
     };
 ```
 ![](https://zhoujun2303.github.io/post-images/1659767263042.jpg)
-

@@ -1,12 +1,19 @@
 ---
-title: '阅读《代码整洁之道》'
-date: 2024-05-22 20:07:27
-tags: [Book]
+id: dRfNZ8
+title: 阅读《代码整洁之道》
+createdAt: "2024-05-22 20:07:27"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Book
+tag_ids:
+    - Oa6ONw
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - Seiri 正确的命名标识符
 - Seiton 整齐
 - Seiso 清洁 注释掉的代码，说明不需要了
@@ -56,4 +63,3 @@ isTop: false
 - 高内聚 -每个变量都被每个方法所使用，该类具有最大的内聚性
 # 系统
 - 系统构造和使用分开 不要使用延迟初始化/赋值 生命周期流程不明
-

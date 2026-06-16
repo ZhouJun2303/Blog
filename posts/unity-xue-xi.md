@@ -1,12 +1,19 @@
 ---
-title: 'Unity 学习'
-date: 2021-04-10 13:56:05
-tags: [Unity]
+id: 0zm7Iu
+title: Unity 学习
+createdAt: "2021-04-10 13:56:05"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+tag_ids:
+    - FjODty
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ```
 常用生命周期
 Awake() Start() Update() FixedUpdate()// 间隔每一帧的时间相同

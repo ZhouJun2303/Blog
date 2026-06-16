@@ -1,12 +1,21 @@
 ---
-title: 'Cocos Android环境搭建'
-date: 2020-01-30 11:15:12
-tags: [Cocos,Android]
+id: KCPTaG
+title: Cocos Android环境搭建
+createdAt: "2020-01-30 11:15:12"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Cocos
+    - Android
+tag_ids:
+    - Zuqsnn
+    - SWem6w
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # 安卓环境搭建
 JDK：1.8 个人qq群里有jdk1.8版本
 下载AS

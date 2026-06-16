@@ -1,12 +1,21 @@
 ---
-title: 'Attributes'
-date: 2022-03-02 14:31:49
-tags: [Unity,UnityEngine]
+id: WPYVsr
+title: Attributes
+createdAt: "2022-03-02 14:31:49"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - UnityEngine
+tag_ids:
+    - FjODty
+    - UNR80K
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ```
 [AddComponentMenu("Transform/AddComponentMenuT", 0)]
 可在Component里面快速增加脚本

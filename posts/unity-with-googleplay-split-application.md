@@ -1,12 +1,21 @@
 ---
-title: 'Unity With GooglePlay Split Application'
-date: 2023-09-28 10:46:50
-tags: [Android,Unity]
+id: vA4srT
+title: Unity With GooglePlay Split Application
+createdAt: "2023-09-28 10:46:50"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Android
+    - Unity
+tag_ids:
+    - SWem6w
+    - FjODty
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ### Google [官方文档](https://developer.android.google.cn/guide/playcore/asset-delivery/integrate-native?hl=zh-cn)
 ### 原理
 #### U3D
@@ -79,4 +88,3 @@ include ':UnityDataAssetPack'
 No newline at end of file
 
 ```
-

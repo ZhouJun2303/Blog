@@ -1,12 +1,19 @@
 ---
-title: 'Cocos适配'
-date: 2019-08-08 10:40:57
-tags: [Cocos]
+id: q6lbgH
+title: Cocos适配
+createdAt: "2019-08-08 10:40:57"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Cocos
+tag_ids:
+    - Zuqsnn
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ```
 cc.Canvas.prototype.applySettings = function () {
     var width = this.designResolution.width;

@@ -1,12 +1,21 @@
 ---
-title: 'Gridea 文档写作规范'
-date: 2026-06-10 22:10:00
-tags: [Gridea,写作规范,文档规范]
+id: hKNOLQ
+title: Gridea 文档写作规范
+createdAt: "2026-06-10 22:10:00"
+updated: "2026-06-16 17:26:21"
+tags:
+    - 写作规范
+    - 文档规范
+tag_ids:
+    - V2lHuS
+    - qtVIaK
+categories: []
 published: true
 hideInList: false
 feature: https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg
 isTop: false
 ---
+
 > 本规范用于本仓库后续新增文章。只要是要发布到 Gridea 的文档，都要按这里的结构、路径、图片和链接规则处理。
 
 ![](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)

@@ -1,12 +1,21 @@
 ---
-title: 'wheel collider'
-date: 2021-04-29 14:02:46
-tags: [Physics,Unity]
+id: PpWUq8
+title: wheel collider
+createdAt: "2021-04-29 14:02:46"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Physics
+    - Unity
+tag_ids:
+    - vjxojo
+    - FjODty
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - mass 质量
 - radius 半径
 - wheelDampingRate 车轮阻尼率

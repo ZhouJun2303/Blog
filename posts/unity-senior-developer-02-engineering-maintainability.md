@@ -1,12 +1,23 @@
 ---
-title: 'Unity 开发高级/资深 02：工程规范与可维护性'
-date: 2026-06-10 21:52:00
-tags: [Unity,开发高级/资深,工程规范]
+id: kcLvIj
+title: Unity 开发高级/资深 02：工程规范与可维护性
+createdAt: "2026-06-10 21:52:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 工程规范
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - 9dEULI
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)

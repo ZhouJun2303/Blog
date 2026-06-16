@@ -1,12 +1,19 @@
 ---
-title: 'Laya导出设置'
-date: 2020-11-25 13:39:31
-tags: [Laya]
+id: ABjV1r
+title: Laya导出设置
+createdAt: "2020-11-25 13:39:31"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Laya
+tag_ids:
+    - 1UVSeu
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # 工具
 ```
 vscode 

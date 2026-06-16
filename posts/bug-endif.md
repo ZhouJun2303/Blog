@@ -1,12 +1,21 @@
 ---
+id: aSEE9o
 title: 'BUG #endif'
-date: 2022-06-13 15:07:52
-tags: [Unity,Bug]
+createdAt: "2022-06-13 15:07:52"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - Bug
+tag_ids:
+    - FjODty
+    - T3SmZT
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - #if (UNITY_IOS || UNITY_ANDROID) #endif
 正确写法
 ```

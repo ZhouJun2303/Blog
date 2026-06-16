@@ -1,12 +1,19 @@
 ---
-title: '安卓应用签名配置'
-date: 2022-08-02 14:30:28
-tags: [Android]
+id: O4mgfJ
+title: 安卓应用签名配置
+createdAt: "2022-08-02 14:30:28"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Android
+tag_ids:
+    - SWem6w
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - Key store path:存放路径（文件名和后缀都可以根据需要任意填写）
 - Key Alias:别名
 - Validity(years):有效期（一般默认25年）

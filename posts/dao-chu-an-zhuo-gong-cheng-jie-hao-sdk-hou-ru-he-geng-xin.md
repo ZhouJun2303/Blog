@@ -1,12 +1,21 @@
 ---
-title: '导出安卓工程接好SDK后如何更新'
-date: 2022-06-11 14:56:02
-tags: [Unity,Android]
+id: 8akKGB
+title: 导出安卓工程接好SDK后如何更新
+createdAt: "2022-06-11 14:56:02"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - Android
+tag_ids:
+    - FjODty
+    - SWem6w
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ![](https://zhoujun2303.github.io/post-images/1659769096245.jpg)
 从空工程替换这个两个文件夹到已接好SDK的工程
 

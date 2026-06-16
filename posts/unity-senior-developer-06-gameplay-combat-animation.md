@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 06：玩法、战斗与动画'
-date: 2026-06-10 21:56:00
-tags: [Unity,开发高级/资深,战斗,动画]
+id: FJq6zL
+title: Unity 开发高级/资深 06：玩法、战斗与动画
+createdAt: "2026-06-10 21:56:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 战斗
+    - 动画
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - DIr6iK
+    - qodGq3
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)

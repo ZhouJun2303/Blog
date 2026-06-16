@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 08：性能、内存与包体'
-date: 2026-06-10 21:58:00
-tags: [Unity,开发高级/资深,性能优化,内存优化]
+id: uyCbBG
+title: Unity 开发高级/资深 08：性能、内存与包体
+createdAt: "2026-06-10 21:58:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 性能优化
+    - 内存优化
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - HBW449
+    - QXjDT2
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深学习路线](https://zhoujun2303.github.io/post-images/unity-senior-developer-learning-roadmap.svg)
@@ -462,4 +475,3 @@ public static IEnumerator InstantiateInBatches<T>(
 - 低端机画质降级生效，关闭高成本特效后帧率有明显改善。
 - 线上性能埋点、崩溃、OOM、加载失败、下载失败都能查询。
 - 性能风险和未解决项已经写进版本风险清单。
-

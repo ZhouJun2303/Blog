@@ -1,12 +1,21 @@
 ---
-title: '委托和事件'
-date: 2023-03-25 14:38:25
-tags: [UnityEngine,C#]
+id: s35UeN
+title: 委托和事件
+createdAt: "2023-03-25 14:38:25"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEngine
+    - C#
+tag_ids:
+    - UNR80K
+    - fOiXzM
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## 委托
 + 使用``delegate``关键字来声明
 + 委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null

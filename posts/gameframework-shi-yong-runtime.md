@@ -1,12 +1,21 @@
 ---
-title: 'GameFramework使用(Runtime)'
-date: 2022-09-17 12:23:54
-tags: [Unity,GameFramework]
+id: PTxFID
+title: GameFramework使用(Runtime)
+createdAt: "2022-09-17 12:23:54"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - GameFramework
+tag_ids:
+    - FjODty
+    - VNguF1
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # GameEntry
 整个框架的启动入口
 ## Builtin:内置组件

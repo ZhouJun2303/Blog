@@ -1,12 +1,19 @@
 ---
-title: '黑苹果'
-date: 2021-03-27 13:47:29
-tags: [黑苹果]
+id: QS4dzx
+title: 黑苹果
+createdAt: "2021-03-27 13:47:29"
+updated: "2026-06-16 17:26:22"
+tags:
+    - 黑苹果
+tag_ids:
+    - poK2r9
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 [黑苹果长期维护机型](https://blog.daliansky.net/Hackintosh-long-term-maintenance-model-checklist.html)
 
 [OpenCore下载](https://github.com/acidanthera/opencorepkg/releases)

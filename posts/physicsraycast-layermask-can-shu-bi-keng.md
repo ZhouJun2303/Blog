@@ -1,12 +1,21 @@
 ---
-title: 'Physics.Raycast （LayerMask 参数避坑）'
-date: 2021-10-29 14:13:53
-tags: [Physics,Unity]
+id: uC3gHM
+title: Physics.Raycast （LayerMask 参数避坑）
+createdAt: "2021-10-29 14:13:53"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Physics
+    - Unity
+tag_ids:
+    - vjxojo
+    - FjODty
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ```
 LayerMask mask1 = 1 << (LayerMask.NameToLayer("Default"));//
 LayerMask mask2 = 1 << (LayerMask.NameToLayer("Monster"));

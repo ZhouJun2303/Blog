@@ -1,12 +1,19 @@
 ---
-title: 'MySql随记'
-date: 2019-07-03 10:14:12
-tags: [MySql]
+id: EuWrT1
+title: MySql随记
+createdAt: "2019-07-03 10:14:12"
+updated: "2026-06-16 17:26:22"
+tags:
+    - MySql
+tag_ids:
+    - gRjAxH
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 创建数据库
 ```
 CREATE` SCHEMA `数据库名字` ;
@@ -95,4 +102,3 @@ show databases;
 
 - 非主键数据表数据删除
 ![](https://zhoujun2303.github.io/post-images/1659752528723.jpg)
-

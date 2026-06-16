@@ -1,12 +1,19 @@
 ---
-title: 'Unity RuntimeInitializeOnLoadMethod 吃人事件'
-date: 2023-03-14 15:16:17
-tags: [UnityEngine]
+id: rphcSC
+title: Unity RuntimeInitializeOnLoadMethod 吃人事件
+createdAt: "2023-03-14 15:16:17"
+updated: "2026-06-16 17:26:22"
+tags:
+    - UnityEngine
+tag_ids:
+    - UNR80K
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 ## 问题
 
 使用 RuntimeInitializeOnLoadMethod 进行自动初始化一个常驻节点并添加一个挂载一个脚本

@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 07：渲染、Shader 与 TA 协作'
-date: 2026-06-10 21:57:00
-tags: [Unity,开发高级/资深,渲染,Shader]
+id: 7oWg0w
+title: Unity 开发高级/资深 07：渲染、Shader 与 TA 协作
+createdAt: "2026-06-10 21:57:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - 渲染
+    - Shader
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - WIyoEq
+    - Shader
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)

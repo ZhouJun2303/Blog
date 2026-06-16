@@ -1,12 +1,19 @@
 ---
-title: 'Android 排除引用包冲突'
-date: 2023-03-19 14:53:08
-tags: [Android]
+id: v0exoq
+title: Android 排除引用包冲突
+createdAt: "2023-03-19 14:53:08"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Android
+tag_ids:
+    - SWem6w
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 [原文链接](https://fengzhouxuan.github.io/2022/10/24/Andoird-Gradle%E6%8E%92%E9%99%A4aar%E5%8C%85%E4%B8%AD%E5%BC%95%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%8C%85%E8%A7%A3%E5%86%B3%E5%BC%95%E7%94%A8%E5%86%B2%E7%AA%81/)
 随着接入的三方库越来越多，依赖的不管是jar包还是aar包也越来越多，依赖包之间的冲突经常出现,所以做个总结记录
 ## 定位冲突的包

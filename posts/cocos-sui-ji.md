@@ -1,12 +1,19 @@
 ---
-title: 'Cocos随记'
-date: 2019-06-29 10:03:13
-tags: [Cocos]
+id: uXwkG8
+title: Cocos随记
+createdAt: "2019-06-29 10:03:13"
+updated: "2026-06-16 17:26:23"
+tags:
+    - Cocos
+tag_ids:
+    - Zuqsnn
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 富文本使用
 ```
 this.win.string='<color=#00ff00>'+'游戏'+'</c><color=#0fffff>'+'完结</c>';
@@ -173,12 +180,3 @@ sprite.runAction(spawn);
 //坐标转换
 pos=this.convertToNodeSpace(pos);
 ```
-
-
-
-
-
-
-
-
-

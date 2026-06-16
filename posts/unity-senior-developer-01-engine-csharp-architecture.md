@@ -1,12 +1,25 @@
 ---
-title: 'Unity 开发高级/资深 01：引擎、C# 与客户端架构'
-date: 2026-06-10 21:51:00
-tags: [Unity,开发高级/资深,C#,架构]
+id: nKnFpw
+title: Unity 开发高级/资深 01：引擎、C# 与客户端架构
+createdAt: "2026-06-10 21:51:00"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - 开发高级/资深
+    - C#
+    - 架构
+tag_ids:
+    - FjODty
+    - P46nOZ
+    - fOiXzM
+    - 78c4Tb
+categories: []
 published: true
 hideInList: true
-feature: 
+feature: ""
 isTop: false
 ---
+
 [返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
 ![开发高级/资深架构分层](https://zhoujun2303.github.io/post-images/unity-senior-developer-architecture-layers.svg)

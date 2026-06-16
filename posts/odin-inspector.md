@@ -1,12 +1,21 @@
 ---
-title: 'Odin Inspector'
-date: 2022-09-25 14:02:55
-tags: [Unity,UnityEditor]
+id: 7Ha77O
+title: Odin Inspector
+createdAt: "2022-09-25 14:02:55"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Unity
+    - UnityEditor
+tag_ids:
+    - FjODty
+    - J7VXMO
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 - 记录一下Odin一些常用功能
 ## 标题类型
 ```

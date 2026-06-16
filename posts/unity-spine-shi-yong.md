@@ -1,12 +1,19 @@
 ---
-title: 'Unity Spine 使用'
-date: 2023-07-06 18:45:10
-tags: [Spine]
+id: 5KcprI
+title: Unity Spine 使用
+createdAt: "2023-07-06 18:45:10"
+updated: "2026-06-16 17:26:22"
+tags:
+    - Spine
+tag_ids:
+    - YR4Yni
+categories: []
 published: true
 hideInList: false
-feature: 
+feature: ""
 isTop: false
 ---
+
 # [融合动画](https://zhoujun2303.github.io/post/unity-spine-rong-he-dong-hua/)
 # 皮肤切换 附件挂点切换
 - GetNewAttachment 获取一个新的附件
@@ -80,4 +87,3 @@ skeletonGraphic.Update(0);
 //This is used by the UI system to determine what to put in the MaterialPropertyBlock.
 skeletonGraphic.OverrideTexture = runtimeAtlas;
 ```
- 
