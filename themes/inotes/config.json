@@ -2,7 +2,7 @@
   "name": "iNotes",
   "version": "1.0.0",
   "author": "Eliauk",
-  "description":"Notes 主题升级版",
+  "description": "Notes 主题升级版",
   "repository": "https://github.com/getgridea/gridea-theme-notes",
   "customConfig": [
     {
@@ -177,5 +177,7 @@
       "value": "",
       "type": "input"
     }
-  ]
+  ],
+  "engine": "go",
+  "templateEngine": "go"
 }

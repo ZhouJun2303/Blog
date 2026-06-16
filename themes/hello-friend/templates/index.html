@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ config.siteName }}{% if config.siteDescription %} — {{ config.siteDescription }}{% endif %}{% endblock %}
+
+{% block body_class %}{% if theme_config.backgroundImage %}background-image{% endif %}{% endblock %}
+{% block body_style %}{% if theme_config.backgroundImage %}background-image: url('{{ theme_config.backgroundImage }}');{% endif %}{% endblock %}
+
+{% block main %}
+    <section class="content-center">
+        <main>
+            {% if theme_config.portraitPath %}
+                <img src="{{ theme_config.portraitPath }}" class="circle" alt="{{ theme_config.portraitAlt|default:config.siteName }}"{% if theme_config.portraitMaxWidth %} style="width: {{ theme_config.portraitMaxWidth }}; height: {{ theme_config.portraitMaxWidth }};"{% endif %} />
+            {% endif %}
+
+            <h1>{{ config.siteName }}</h1>
+
+            {% include "partials/subtitle.html" %}
+
+            {% include "partials/social-icons.html" %}
+        </main>
+    </section>
+
+    {% if theme_config.showLatestOnHome and posts|length > 0 %}
+    <section class="content">
+        <main class="posts">
+            <h2>最新文章</h2>
+
+            <ul class="posts-list">
+                {% for post in posts %}
+                    <li class="post-item">
+                        <a href="{{ post.link }}" class="post-item-inner">
+                            <span class="post-title">{{ post.title }}</span>
+                            <span class="post-day">{{ post.dateFormat|default:post.date|truncatechars:10 }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {% include "partials/pagination-list.html" %}
+        </main>
+    </section>
+    {% endif %}
+{% endblock %}

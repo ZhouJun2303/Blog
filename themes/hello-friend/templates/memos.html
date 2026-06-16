@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}闪念 · {{ config.siteName }}{% endblock %}
+
+{% block main %}
+    <section class="content">
+        <main class="memos">
+            <h1>闪念</h1>
+
+            {% if memos|length > 0 %}
+                <ul class="memos-list">
+                    {% for memo in memos %}
+                        <li class="memo-item">
+                            <time class="memo-date" datetime="{{ memo.createdAtISO }}">{{ memo.createdAtISO|truncatechars:10 }}</time>
+                            <div class="memo-content">{{ memo.content|safe }}</div>
+                            {% if memo.tags|length > 0 %}
+                                <div class="memo-tags">
+                                    {% for t in memo.tags %}
+                                        <span class="memo-tag">#{{ t }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>暂无闪念。</p>
+            {% endif %}
+        </main>
+    </section>
+{% endblock %}

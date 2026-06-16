@@ -176,5 +176,8 @@
       "value": "",
       "type": "input"
     }
-  ]
+  ],
+  "description": "经典笔记风格主题，Gridea 社区的默认老牌主题，简洁易读。",
+  "engine": "ejs",
+  "templateEngine": "ejs"
 }

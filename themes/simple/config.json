@@ -107,5 +107,8 @@
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
     }
-  ]
+  ],
+  "description": "极简风格主题，专注阅读体验，由 EryouHao 开发。",
+  "engine": "ejs",
+  "templateEngine": "ejs"
 }

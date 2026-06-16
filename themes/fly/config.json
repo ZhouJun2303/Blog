@@ -93,5 +93,8 @@
       "type": "input",
       "note": "UA-xxxxxxxxx-x"
     }
-  ]
+  ],
+  "description": "现代简洁的博客主题，由 EryouHao 开发，支持响应式布局。",
+  "engine": "ejs",
+  "templateEngine": "ejs"
 }
