@@ -4,12 +4,12 @@ date: 2026-06-10 22:10:00
 tags: [Gridea,写作规范,文档规范]
 published: true
 hideInList: false
-feature: https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg
+feature: https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg
 isTop: false
 ---
 > 本规范用于本仓库后续新增文章。只要是要发布到 Gridea 的文档，都要按这里的结构、路径、图片和链接规则处理。
 
-![](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 
 ## 目录规则
 
@@ -22,7 +22,7 @@ isTop: false
 
 ## 文件命名
 
-- 文件名使用稳定 slug，例如 `unity-zhu-cheng-08-xing-neng-nei-cun-yu-bao-ti.md`。
+- 文件名使用稳定 slug，例如 `unity-senior-developer-08-performance-memory-package.md`。
 - 只使用小写英文、数字和连字符。
 - 不使用中文文件名、空格、特殊符号。
 - slug 一旦发布不要随意改，否则旧链接会失效。
@@ -33,7 +33,7 @@ isTop: false
 ---
 title: '文章标题'
 date: 2026-06-10 21:00:00
-tags: [Unity,主程,性能优化]
+tags: [Unity,开发高级/资深,性能优化]
 published: true
 hideInList: false
 feature: https://zhoujun2303.github.io/post-images/example.svg
@@ -69,11 +69,11 @@ isTop: false
 ## 图片规则
 
 - 图片文件放在 `LocalBK/post-images/`。
-- 图片命名使用文章 slug 前缀，例如 `unity-lead-programmer-toolchain-map.svg`。
+- 图片命名使用文章 slug 前缀，例如 `unity-senior-developer-toolchain-map.svg`。
 - Markdown 中使用完整线上路径：
 
 ```markdown
-![](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 ```
 
 - 不使用 `../`、`./images/`、本地绝对路径或仓库相对路径引用图片。
@@ -83,13 +83,13 @@ isTop: false
 - 文章之间跳转使用发布后的完整路径：
 
 ```markdown
-[性能、内存与包体](https://zhoujun2303.github.io/post/unity-zhu-cheng-08-xing-neng-nei-cun-yu-bao-ti/)
+[性能、内存与包体](https://zhoujun2303.github.io/post/unity-senior-developer-08-performance-memory-package/)
 ```
 
 - 跳到文章内小节时使用锚点：
 
 ```markdown
-[性能优化](https://zhoujun2303.github.io/post/unity-zhu-cheng-08-xing-neng-nei-cun-yu-bao-ti/#performance)
+[性能优化](https://zhoujun2303.github.io/post/unity-senior-developer-08-performance-memory-package/#performance)
 ```
 
 - 不使用 `../xxx.md` 这种源码相对链接。Gridea 发布后，源码路径不会直接存在。

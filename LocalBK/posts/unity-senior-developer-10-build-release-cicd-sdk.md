@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 10：构建发布、CI/CD 与 SDK'
+title: 'Unity 开发高级/资深 10：构建发布、CI/CD 与 SDK'
 date: 2026-06-10 22:00:00
-tags: [Unity,主程,构建发布,SDK]
+tags: [Unity,开发高级/资深,构建发布,SDK]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![主程交付闭环](https://zhoujun2303.github.io/post-images/unity-lead-programmer-delivery-loop.svg)
+![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)
 
 <a id="build-release"></a>
 ## 构建发布与 CI/CD
@@ -71,7 +71,7 @@ isTop: false
 - 登录、支付、广告、统计、推送。
 - 隐私合规、权限和应用商店审核。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - 构建产物是否可追溯到代码提交、资源版本、配置版本。
 - 构建失败是否能快速定位是 Unity、Gradle、Xcode、资源还是 SDK。

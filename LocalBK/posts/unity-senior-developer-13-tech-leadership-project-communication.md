@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 13：技术领导力、项目管理与表达'
+title: 'Unity 开发高级/资深 13：技术领导力、项目管理与表达'
 date: 2026-06-10 22:03:00
-tags: [Unity,主程,项目管理]
+tags: [Unity,开发高级/资深,项目管理]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![主程交付闭环](https://zhoujun2303.github.io/post-images/unity-lead-programmer-delivery-loop.svg)
+![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)
 
 <a id="leadership"></a>
 ## 团队管理与技术领导力
@@ -94,7 +94,7 @@ isTop: false
 - 排障文档和事故复盘。
 - 面向非技术成员的表达和汇报。
 
-## 主程工作方式
+## 开发高级/资深工作方式
 
 - 先确认目标和约束，再谈实现。
 - 先把接口和数据边界对齐，再开写复杂模块。

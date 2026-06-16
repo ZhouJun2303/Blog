@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 01：引擎、C# 与客户端架构'
+title: 'Unity 开发高级/资深 01：引擎、C# 与客户端架构'
 date: 2026-06-10 21:51:00
-tags: [Unity,主程,C#,架构]
+tags: [Unity,开发高级/资深,C#,架构]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![主程架构分层](https://zhoujun2303.github.io/post-images/unity-lead-programmer-architecture-layers.svg)
+![开发高级/资深架构分层](https://zhoujun2303.github.io/post-images/unity-senior-developer-architecture-layers.svg)
 
 <a id="unity-engine"></a>
 ## Unity 引擎基础
@@ -99,7 +99,7 @@ isTop: false
 - 全局服务、事件系统和对象池。
 - 异步流程、取消、超时和异常恢复。
 
-## 主程判断标准
+## 开发高级/资深判断标准
 
 - 新人能否在一天内理解项目启动流程。
 - 一个业务模块能否独立开发、测试、替换和定位问题。

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="Unity 主程学习路线">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="Unity 开发高级/资深学习路线">
   <rect width="1200" height="560" fill="#f8fafc"/>
-  <text x="600" y="58" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="34" font-weight="700" fill="#111827">Unity 主程学习路线</text>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="34" font-weight="700" fill="#111827">Unity 开发高级/资深学习路线</text>
   <g font-family="Arial, 'PingFang SC', sans-serif">
     <line x1="125" y1="300" x2="1075" y2="300" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
     <g>

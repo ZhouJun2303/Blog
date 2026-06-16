@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="Unity 主程能力分层图">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-label="Unity 开发高级/资深能力分层图">
   <rect width="1200" height="620" fill="#f8fafc"/>
-  <text x="600" y="58" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="34" font-weight="700" fill="#111827">Unity 主程能力分层</text>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, 'PingFang SC', sans-serif" font-size="34" font-weight="700" fill="#111827">Unity 开发高级/资深能力分层</text>
   <g font-family="Arial, 'PingFang SC', sans-serif">
     <rect x="140" y="110" width="920" height="90" rx="16" fill="#dbeafe" stroke="#2563eb"/>
     <text x="180" y="148" font-size="24" font-weight="700" fill="#1e40af">领导层</text>

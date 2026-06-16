@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 05：网络通信与多人同步'
+title: 'Unity 开发高级/资深 05：网络通信与多人同步'
 date: 2026-06-10 21:55:00
-tags: [Unity,主程,网络]
+tags: [Unity,开发高级/资深,网络]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 主程工具链地图](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 
 <a id="network"></a>
 ## 网络通信
@@ -78,7 +78,7 @@ isTop: false
 - 网络层只处理通信，不直接改业务 UI。
 - 协议解析失败必须记录协议号、版本、玩家 ID、服务器、原始长度。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - 弱网下用户是否能恢复，而不是只能重启游戏。
 - 协议版本不一致时是否有明确提示和升级路径。

@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 06：玩法、战斗与动画'
+title: 'Unity 开发高级/资深 06：玩法、战斗与动画'
 date: 2026-06-10 21:56:00
-tags: [Unity,主程,战斗,动画]
+tags: [Unity,开发高级/资深,战斗,动画]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![主程交付闭环](https://zhoujun2303.github.io/post-images/unity-lead-programmer-delivery-loop.svg)
+![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)
 
 <a id="combat"></a>
 ## 战斗系统
@@ -98,7 +98,7 @@ isTop: false
 - IK、挂点和换装骨骼。
 - 动画压缩、裁剪和性能降级。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - 战斗表现和结算边界是否清楚。
 - 玩法系统是否能复用条件、奖励、红点、活动开关。

@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 12：跨平台、本地化、音视频、AI 与物理'
+title: 'Unity 开发高级/资深 12：跨平台、本地化、音视频、AI 与物理'
 date: 2026-06-10 22:02:00
-tags: [Unity,主程,跨平台,本地化]
+tags: [Unity,开发高级/资深,跨平台,本地化]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 主程工具链地图](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 
 <a id="cross-platform"></a>
 ## 跨平台适配
@@ -121,7 +121,7 @@ isTop: false
 - Rigidbody、Collider、Trigger 和碰撞层。
 - 物理性能、Raycast 和卡点排查。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - 平台差异要封装成平台层能力，不让业务层承担复杂性。
 - 本地化要从 UI 设计阶段介入，而不是上线前硬塞长文本。

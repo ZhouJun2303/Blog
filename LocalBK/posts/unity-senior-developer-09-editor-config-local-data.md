@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 09：编辑器工具、配置与本地数据'
+title: 'Unity 开发高级/资深 09：编辑器工具、配置与本地数据'
 date: 2026-06-10 21:59:00
-tags: [Unity,主程,UnityEditor,配置]
+tags: [Unity,开发高级/资深,UnityEditor,配置]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 主程工具链地图](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 
 <a id="editor-tools"></a>
 ## 编辑器工具
@@ -95,7 +95,7 @@ isTop: false
 - 版本迁移和坏数据修复。
 - 多账号、本地缓存清理和服务端边界。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - 策划填错配置时是否能在导表阶段发现。
 - 编辑器工具是否能减少重复劳动，而不是制造新的维护负担。

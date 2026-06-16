@@ -1,17 +1,17 @@
 ---
-title: 'Unity 主程 08：性能、内存与包体'
+title: 'Unity 开发高级/资深 08：性能、内存与包体'
 date: 2026-06-10 21:58:00
-tags: [Unity,主程,性能优化,内存优化]
+tags: [Unity,开发高级/资深,性能优化,内存优化]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 主程学习路线](https://zhoujun2303.github.io/post-images/unity-lead-programmer-learning-roadmap.svg)
+![Unity 开发高级/资深学习路线](https://zhoujun2303.github.io/post-images/unity-senior-developer-learning-roadmap.svg)
 
-性能优化不是“感觉哪里慢就改哪里”，而是用数据证明瓶颈、用工具定位原因、用对比验证收益、用规则防止回退。主程需要建立一套能被团队重复执行的性能流程。
+性能优化不是“感觉哪里慢就改哪里”，而是用数据证明瓶颈、用工具定位原因、用对比验证收益、用规则防止回退。开发高级/资深需要建立一套能被团队重复执行的性能流程。
 
 ## 性能优化基本原则
 
@@ -25,7 +25,7 @@ isTop: false
 
 ## 推荐性能预算
 
-不同项目预算会变，下面是主程制定项目预算时的参考起点。
+不同项目预算会变，下面是开发高级/资深制定项目预算时的参考起点。
 
 | 场景 | 低端移动设备 | 中端移动设备 | 高端移动设备/PC | 说明 |
 | --- | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ isTop: false
 | 战斗加载 | 5 到 15 秒 | 3 到 8 秒 | 1 到 5 秒 | 受网络、磁盘、资源体积影响 |
 | UI 打开耗时 | 100 到 300 ms | 50 到 200 ms | 50 到 120 ms | 超过 300 ms 应有 Loading 或骨架屏 |
 
-预算不能只写在文档里，应该进入自动化采集和版本对比。主程至少要保证“性能变差时能被发现”。
+预算不能只写在文档里，应该进入自动化采集和版本对比。开发高级/资深至少要保证“性能变差时能被发现”。
 
 ## 标准排查流程
 
@@ -292,7 +292,7 @@ public static IEnumerator InstantiateInBatches<T>(
 <a id="memory"></a>
 ## 内存控制
 
-内存优化的重点不是“看到数字大就删资源”，而是区分托管堆、原生内存、显存、资源缓存和插件内存。主程要能回答：谁占用、谁持有、何时加载、何时释放、为什么释放不掉。
+内存优化的重点不是“看到数字大就删资源”，而是区分托管堆、原生内存、显存、资源缓存和插件内存。开发高级/资深要能回答：谁占用、谁持有、何时加载、何时释放、为什么释放不掉。
 
 ### 需要掌握的工具
 
@@ -361,7 +361,7 @@ public static IEnumerator InstantiateInBatches<T>(
 <a id="package-loading"></a>
 ## 包体与加载
 
-包体和加载不是资源同学一个人的事。主程需要把资源规范、Bundle 分组、热更策略、下载体验、加载流程和线上监控连起来。
+包体和加载不是资源同学一个人的事。开发高级/资深需要把资源规范、Bundle 分组、热更策略、下载体验、加载流程和线上监控连起来。
 
 ### 需要掌握的工具
 
@@ -440,7 +440,7 @@ public static IEnumerator InstantiateInBatches<T>(
 
 ## 性能优化交付物
 
-主程做性能优化时，建议最终产出这些东西：
+开发高级/资深做性能优化时，建议最终产出这些东西：
 
 - 性能预算表：按平台、场景、画质列出 FPS、CPU、GPU、内存、加载、包体目标。
 - 性能采样脚本：固定操作路径，能重复采集主城、战斗、UI、加载数据。

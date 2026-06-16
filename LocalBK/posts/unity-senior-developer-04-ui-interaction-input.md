@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 04：UI、交互与输入'
+title: 'Unity 开发高级/资深 04：UI、交互与输入'
 date: 2026-06-10 21:54:00
-tags: [Unity,主程,UI]
+tags: [Unity,开发高级/资深,UI]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 主程工具链地图](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 
 <a id="ui-framework"></a>
 ## UI 框架
@@ -80,7 +80,7 @@ isTop: false
 - SafeAreaAdapter：统一处理设备安全区。
 - ListVirtualizer：大量列表复用和增量刷新。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - UI 打开失败是否有日志和用户可恢复路径。
 - UI 关闭后是否释放事件、异步回调和资源引用。

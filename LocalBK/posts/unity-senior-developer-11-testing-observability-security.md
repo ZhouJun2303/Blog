@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 11：测试、监控、线上排障与安全'
+title: 'Unity 开发高级/资深 11：测试、监控、线上排障与安全'
 date: 2026-06-10 22:01:00
-tags: [Unity,主程,测试,安全]
+tags: [Unity,开发高级/资深,测试,安全]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![Unity 主程工具链地图](https://zhoujun2303.github.io/post-images/unity-lead-programmer-toolchain-map.svg)
+![Unity 开发高级/资深工具链地图](https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg)
 
 <a id="testing"></a>
 ## 测试与质量保障
@@ -96,7 +96,7 @@ isTop: false
 - 客户端资源保护和混淆。
 - 风控日志、作弊检测和服务端校验。
 
-## 主程关注点
+## 开发高级/资深关注点
 
 - 质量保障不是只靠 QA 手工点。
 - 线上问题必须能定位到版本、用户、设备、链路和失败原因。

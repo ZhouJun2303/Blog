@@ -1,15 +1,15 @@
 ---
-title: 'Unity 主程 03：资源管理与热更新'
+title: 'Unity 开发高级/资深 03：资源管理与热更新'
 date: 2026-06-10 21:53:00
-tags: [Unity,主程,热更新,资源管理]
+tags: [Unity,开发高级/资深,热更新,资源管理]
 published: true
 hideInList: true
 feature: 
 isTop: false
 ---
-[返回总览](https://zhoujun2303.github.io/post/unity-zhu-cheng-bi-bei-ji-neng/)
+[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
 
-![主程交付闭环](https://zhoujun2303.github.io/post-images/unity-lead-programmer-delivery-loop.svg)
+![开发高级/资深交付闭环](https://zhoujun2303.github.io/post-images/unity-senior-developer-delivery-loop.svg)
 
 <a id="asset-management"></a>
 ## 资源管理
@@ -93,7 +93,7 @@ isTop: false
 - 下载异常：检查 CDN、版本清单、缓存目录、磁盘空间、网络状态。
 - 包体膨胀：检查贴图格式、音频、动画曲线、Shader Variant、重复 Bundle。
 
-## 主程验收标准
+## 开发高级/资深验收标准
 
 - 首包、分包、活动包的边界清楚。
 - 任意资源能追踪到来源、分组、依赖和使用方。
