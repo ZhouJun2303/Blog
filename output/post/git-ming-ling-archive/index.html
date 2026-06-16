@@ -1,0 +1,257 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>git 命令archive | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="git 命令archive | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Git" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="git archieve 可以用于将库中代码打包。 基本用法： git archive --format tar.gz --output &amp;quot;./output.tar.gz&amp;quot; master 说明： 将master分支打包为output.tar.gz &amp;ndash;format指明打包格式，若不指明此项，则根据&amp;ndash;output中的文件名推断文件格式。所以你也可以将上述&amp;hellip;">
+<link rel="canonical" href="/post/git-ming-ling-archive/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"git 命令archive","url":"/post/git-ming-ling-archive/","description":"git archieve 可以用于将库中代码打包。 基本用法： git archive --format tar.gz --output \u0026quot;./output.tar.gz\u0026quot; master 说明： 将master分支打包为output.tar.gz \u0026ndash;format指明打包格式，若不指明此项，则根据\u0026ndash;output中的文件名推断文件格式。所以你也可以将上述\u0026hellip;","datePublished":"2022-06-28T15:10:55+08:00","dateModified":"2022-06-28T15:10:55+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/git-ming-ling-archive/","name":"git 命令archive","position":2}]}</script>
+<meta property="og:title" content="git 命令archive">
+<meta property="og:description" content="git archieve 可以用于将库中代码打包。 基本用法： git archive --format tar.gz --output &amp;quot;./output.tar.gz&amp;quot; master 说明： 将master分支打包为output.tar.gz &amp;ndash;format指明打包格式，若不指明此项，则根据&amp;ndash;output中的文件名推断文件格式。所以你也可以将上述&amp;hellip;">
+<meta property="og:url" content="/post/git-ming-ling-archive/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/git-ming-ling-archive/">
+<meta name="twitter:title" content="git 命令archive">
+<meta name="twitter:description" content="git archieve 可以用于将库中代码打包。 基本用法： git archive --format tar.gz --output &amp;quot;./output.tar.gz&amp;quot; master 说明： 将master分支打包为output.tar.gz &amp;ndash;format指明打包格式，若不指明此项，则根据&amp;ndash;output中的文件名推断文件格式。所以你也可以将上述&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        git 命令archive
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2022-06-28
+                        </span>
+                        <span>
+                            1 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/git/" class="post-tag">
+                            # Git
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <h1 id="git-archieve">git archieve</h1>
+<p>可以用于将库中代码打包。</p>
+<ul>
+<li>基本用法：</li>
+</ul>
+<pre><code>git archive --format tar.gz --output &quot;./output.tar.gz&quot; master
+</code></pre>
+<ul>
+<li>
+<p>说明：<br />
+将master分支打包为output.tar.gz<br />
+&ndash;format指明打包格式，若不指明此项，则根据&ndash;output中的文件名推断文件格式。所以你也可以将上述命令简化为:<br />
+git archive &ndash;output &ldquo;./output.tar.gz&rdquo; master</p>
+</li>
+<li>
+<p>可以使用-l参数获得支持的文件格式列表。</p>
+</li>
+</ul>
+<pre><code>git archive -l
+tar
+tgz
+tar.gz
+zip
+</code></pre>
+<ul>
+<li>&ndash;output指明输出包名</li>
+<li>打包不同的分支或commit<br />
+如果想打包不同分支，只要使用不同分支名即可。比如我有一个分支名为“testbr”，可以用如下命令将其打包。</li>
+</ul>
+<pre><code>git archive --format tar.gz --output &quot;./output.tar.gz&quot; testbr
+</code></pre>
+<ul>
+<li>如果要打包某个commit，只要先使用git log找到相应的commit id, 再使用该commit id打包即可。比如：</li>
+</ul>
+<pre><code>git archive --format tar.gz --output &quot;./output.tar.gz&quot; 5ca16ac0d603603
+</code></pre>
+<ul>
+<li>打包某个目录<br />
+如果想打包master下的mydir mydir2目录，可以用下面命令</li>
+</ul>
+<pre><code>git archive --format tar.gz --output &quot;./output.tar.gz&quot; master mydir mydir2  
+</code></pre>
+<ul>
+<li>注意<br />
+打包建议在代码库的根目录下进行，不然会碰到各种问题。比如，如果在master分支的mydir目录下执行如下命令：</li>
+</ul>
+<pre><code>git archive --output &quot;./output.tar.gz&quot; master
+</code></pre>
+<ul>
+<li>示例<br />
+将CN分支打包给发行<br />
+<img src="https://zhoujun2303.github.io/post-images/1659770215987.png" alt="" /><br />
+😀具体百度吧</li>
+</ul>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/bug-endif/">
+                    <h3 class="post-title">
+                        BUG #endif
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

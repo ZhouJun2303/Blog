@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>纹理内存优化 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="纹理内存优化 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="U3D性能优化" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="图片大小 图片大小一般采用小于等于2的次方大小 在Unity 中，如果图片的大小不是2的次方，如100*200Unity会在导入之后将其缩放为128*256的纹理、如果是129*256的纹理大小，则导入之后为256*256的纹理大小 Read/Wite Enable 开启Read/Wite Enable将允许自定义脚本访问，写入纹理数据。在运行时&amp;hellip;">
+<link rel="canonical" href="/post/wen-li-nei-cun-you-hua/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"纹理内存优化","url":"/post/wen-li-nei-cun-you-hua/","description":"图片大小 图片大小一般采用小于等于2的次方大小 在Unity 中，如果图片的大小不是2的次方，如100*200Unity会在导入之后将其缩放为128*256的纹理、如果是129*256的纹理大小，则导入之后为256*256的纹理大小 Read/Wite Enable 开启Read/Wite Enable将允许自定义脚本访问，写入纹理数据。在运行时\u0026hellip;","datePublished":"2023-04-02T17:35:21+08:00","dateModified":"2023-04-02T17:35:21+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/wen-li-nei-cun-you-hua/","name":"纹理内存优化","position":2}]}</script>
+<meta property="og:title" content="纹理内存优化">
+<meta property="og:description" content="图片大小 图片大小一般采用小于等于2的次方大小 在Unity 中，如果图片的大小不是2的次方，如100*200Unity会在导入之后将其缩放为128*256的纹理、如果是129*256的纹理大小，则导入之后为256*256的纹理大小 Read/Wite Enable 开启Read/Wite Enable将允许自定义脚本访问，写入纹理数据。在运行时&amp;hellip;">
+<meta property="og:url" content="/post/wen-li-nei-cun-you-hua/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/wen-li-nei-cun-you-hua/">
+<meta name="twitter:title" content="纹理内存优化">
+<meta name="twitter:description" content="图片大小 图片大小一般采用小于等于2的次方大小 在Unity 中，如果图片的大小不是2的次方，如100*200Unity会在导入之后将其缩放为128*256的纹理、如果是129*256的纹理大小，则导入之后为256*256的纹理大小 Read/Wite Enable 开启Read/Wite Enable将允许自定义脚本访问，写入纹理数据。在运行时&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        纹理内存优化
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2023-04-02
+                        </span>
+                        <span>
+                            2 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/u3d-xing-neng-you-hua/" class="post-tag">
+                            # U3D性能优化
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <h2 id="heading">图片大小</h2>
+<p>图片大小一般采用小于等于2的次方大小<br />
+在Unity 中，如果图片的大小不是2的次方，如<code>100*200</code>Unity会在导入之后将其缩放为128*256的纹理、如果是<code>129*256</code>的纹理大小，则导入之后为<code>256*256</code>的纹理大小</p>
+<h2 id="readwite-enable">Read/Wite Enable</h2>
+<p>开启<code>Read/Wite Enable</code>将允许自定义脚本访问，写入纹理数据。在运行时内存中会存储一份额外的贴图数据，使贴图大小翻倍，无特殊需要不要开启</p>
+<h2 id="heading-1">不是渐变色图片处理</h2>
+<p>在Ps中，对于用不到256色的图片，进行减色处理，减少图片大小</p>
+<h2 id="rgb24rgba32">RGB24和RGBA32</h2>
+<p>RGB的24位纹理和RGBA的32位纹理都是常见的图像格式，它们之间的主要区别在于纹理中存储的每个像素的颜色信息的位数和类型。</p>
+<p>24位RGB纹理存储每个像素的颜色信息使用24个位，其中8个位分别用于存储红、绿和蓝三种颜色的分量。这种格式没有透明度信息，因此不支持透明度的效果。</p>
+<p>32位RGBA纹理存储每个像素的颜色信息使用32个位，其中24个位用于存储红、绿和蓝三种颜色的分量，另外8个位用于存储透明度信息。这种格式支持透明度效果，可以在渲染时使用混合（blending）技术来实现透明效果。 &ndash; ChatGTP</p>
+<p>在游戏中选择使用哪种纹理格式通常取决于需要呈现的效果和资源的使用情况。如果需要呈现透明效果，或者需要在纹理中嵌入透明度信息，则应该使用32位RGBA纹理。如果不需要透明效果，则可以使用24位RGB纹理，这样可以减少资源占用，并提高渲染效率。</p>
+<h2 id="heading-2">根据平台选择支持的纹理压缩格式</h2>
+<p>在对应平台上选择支持的压缩格式，如果是不支持的压缩格式，Unity会自动转换成RGBA32/RGB24格式，并且转换之前的内存也会保留，将消耗更多的时间， 内存<br />
+[//Todo 各个平台纹理压缩区别] (<a href="https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html">https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html</a>)</p>
+<h2 id="generate-mip-maps">Generate Mip Maps</h2>
+<ul>
+<li>开启之后，可以让离摄像机较远的物体使用较小的纹理版本，但是运行时贴贴图大小将会变大。</li>
+<li>如果是图集开启了mipmap,图集中的图片必须应用于距离摄像机相近的位置，否则会增加每帧渲染所需的纹理大小，会导致DC降了，但是渲染速度反而变慢了</li>
+<li>2D游戏禁用此选项</li>
+</ul>
+<h2 id="heading-3">调整图集大小</h2>
+<p>图集通过9宫格调整大小，调整较小的图片，如<code>1024*2048</code>但是只超了一点点，可以通过编辑器工具或者手动优化成<code>1024*1024</code></p>
+<h2 id="heading-4">纹理压缩</h2>
+<p><code>Android</code> 首选  <code>RGBA Compressed ETC2 8 bits</code><br />
+<code>iOS</code>首选 <code>RGB(A) Compressed AST  4x4 block</code></p>
+<p><a href="https://zhuanlan.zhihu.com/p/125100817">参考于</a><br />
+<a href="https://github.com/vinjn/pkg-doctor">包体分析工具</a></p>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/unity-profiler/">
+                    <h3 class="post-title">
+                        Unity Profiler
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

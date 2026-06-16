@@ -1,0 +1,274 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>阅读《代码整洁之道》 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="阅读《代码整洁之道》 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Book" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="Seiri 正确的命名标识符 Seiton 整齐 Seiso 清洁 注释掉的代码，说明不需要了 Seiketsu 标准化 Shitsuke 自律 持续完善 细节中自有天地 童子军军规 上传的代码比下拉的代码更干净 改好一个证明的变量名 拆分过长函数 消除重复的代码 清理嵌套的If 有意义的命名 使用可搜索的名称 &amp;hellip;">
+<link rel="canonical" href="/post/yue-du-lesslessdai-ma-zheng-ji-zhi-dao-greatergreater/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"阅读《代码整洁之道》","url":"/post/yue-du-lesslessdai-ma-zheng-ji-zhi-dao-greatergreater/","description":"Seiri 正确的命名标识符 Seiton 整齐 Seiso 清洁 注释掉的代码，说明不需要了 Seiketsu 标准化 Shitsuke 自律 持续完善 细节中自有天地 童子军军规 上传的代码比下拉的代码更干净 改好一个证明的变量名 拆分过长函数 消除重复的代码 清理嵌套的If 有意义的命名 使用可搜索的名称 \u0026hellip;","datePublished":"2024-05-22T20:07:27+08:00","dateModified":"2024-05-22T20:07:27+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/yue-du-lesslessdai-ma-zheng-ji-zhi-dao-greatergreater/","name":"阅读《代码整洁之道》","position":2}]}</script>
+<meta property="og:title" content="阅读《代码整洁之道》">
+<meta property="og:description" content="Seiri 正确的命名标识符 Seiton 整齐 Seiso 清洁 注释掉的代码，说明不需要了 Seiketsu 标准化 Shitsuke 自律 持续完善 细节中自有天地 童子军军规 上传的代码比下拉的代码更干净 改好一个证明的变量名 拆分过长函数 消除重复的代码 清理嵌套的If 有意义的命名 使用可搜索的名称 &amp;hellip;">
+<meta property="og:url" content="/post/yue-du-lesslessdai-ma-zheng-ji-zhi-dao-greatergreater/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/yue-du-lesslessdai-ma-zheng-ji-zhi-dao-greatergreater/">
+<meta name="twitter:title" content="阅读《代码整洁之道》">
+<meta name="twitter:description" content="Seiri 正确的命名标识符 Seiton 整齐 Seiso 清洁 注释掉的代码，说明不需要了 Seiketsu 标准化 Shitsuke 自律 持续完善 细节中自有天地 童子军军规 上传的代码比下拉的代码更干净 改好一个证明的变量名 拆分过长函数 消除重复的代码 清理嵌套的If 有意义的命名 使用可搜索的名称 &amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        阅读《代码整洁之道》
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2024-05-22
+                        </span>
+                        <span>
+                            1 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/book/" class="post-tag">
+                            # Book
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <ul>
+<li>Seiri 正确的命名标识符</li>
+<li>Seiton 整齐</li>
+<li>Seiso 清洁 注释掉的代码，说明不需要了</li>
+<li>Seiketsu 标准化</li>
+<li>Shitsuke 自律 持续完善</li>
+<li>细节中自有天地</li>
+</ul>
+<h2 id="heading">童子军军规</h2>
+<ul>
+<li>上传的代码比下拉的代码更干净</li>
+<li>改好一个证明的变量名</li>
+<li>拆分过长函数</li>
+<li>消除重复的代码</li>
+<li>清理嵌套的If</li>
+</ul>
+<h1 id="heading-1">有意义的命名</h1>
+<ul>
+<li>使用可搜索的名称</li>
+<li>类型改变时，变量名同步</li>
+<li>类名是名词或者名词短语，不应是动词</li>
+<li>方法应该是动词或动词短语</li>
+<li>静态类无参构造函数</li>
+<li>每个概念对应一个词 如Controller和Manager</li>
+<li>尽可能用计算机术语 如JobQueue</li>
+</ul>
+<h1 id="heading-2">函数</h1>
+<ul>
+<li>短小 20行封顶最佳</li>
+<li>函数只做一件事 判断标准：能否在拆出一个函数</li>
+<li>函数的参数 无参&gt;一个&gt;多个</li>
+<li>函数的标识参数如果带了bool值，说明这个函数至少要做两件事情(3.6.5不赞同）</li>
+<li>指令和询问分隔开来 （Exists,Add）</li>
+<li>需要多重判断的方法，使用tryCatch替代各种日志打印</li>
+<li>TryCatch中的代码块抽离为单独的函数</li>
+<li>如何写好规范函数，遵循规则，逐步打磨，没有人能一开始就写出规范的函数</li>
+</ul>
+<h1 id="heading-3">注释</h1>
+<ul>
+<li>尽量减少注释（不赞同）</li>
+<li>注释不能代替屎山</li>
+</ul>
+<h1 id="heading-4">对象和数据结构</h1>
+<ul>
+<li>得墨忒耳律<br />
+<code>final String outputDir = ctxt.getoptions().getScratchDir().getAbsolutePath() </code></li>
+<li>区分数据结构和对象，存放数据的结构不能喝对象混用</li>
+</ul>
+<h1 id="heading-5">错误处理</h1>
+<ul>
+<li>尽量别返回空值，别传递空值</li>
+</ul>
+<h1 id="heading-6">单元测试</h1>
+<ul>
+<li>测试代码和正式代码一样重要，要遵守设计规范
+<ul>
+<li>构造测试数据</li>
+<li>操作测试数据</li>
+<li>检验操作是否得到期望结果</li>
+</ul>
+</li>
+</ul>
+<h1 id="heading-7">类</h1>
+<ul>
+<li>变量和方法应该有各自的位置，从上至下，不要穿插书写</li>
+<li>高内聚 -每个变量都被每个方法所使用，该类具有最大的内聚性</li>
+</ul>
+<h1 id="heading-8">系统</h1>
+<ul>
+<li>系统构造和使用分开 不要使用延迟初始化/赋值 生命周期流程不明</li>
+</ul>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/unity-mobile-notifications/">
+                    <h3 class="post-title">
+                        Unity Mobile Notifications
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

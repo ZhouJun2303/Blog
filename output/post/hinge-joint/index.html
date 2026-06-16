@@ -1,0 +1,225 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>hinge joint | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="hinge joint | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Unity,Physics" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="文档 hinge joint 须配合 rigidbody 使用 属性中的 spring 和 motor 不能同时使用，会导致意想不到的问题 配合rigidbody 中的mass 属性需要和主角的重量考虑 在 rockCrawling中 &amp;hellip;">
+<link rel="canonical" href="/post/hinge-joint/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"hinge joint","url":"/post/hinge-joint/","description":"文档 hinge joint 须配合 rigidbody 使用 属性中的 spring 和 motor 不能同时使用，会导致意想不到的问题 配合rigidbody 中的mass 属性需要和主角的重量考虑 在 rockCrawling中 \u0026hellip;","datePublished":"2021-04-29T13:58:01+08:00","dateModified":"2021-04-29T13:58:01+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/hinge-joint/","name":"hinge joint","position":2}]}</script>
+<meta property="og:title" content="hinge joint">
+<meta property="og:description" content="文档 hinge joint 须配合 rigidbody 使用 属性中的 spring 和 motor 不能同时使用，会导致意想不到的问题 配合rigidbody 中的mass 属性需要和主角的重量考虑 在 rockCrawling中 &amp;hellip;">
+<meta property="og:url" content="/post/hinge-joint/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/hinge-joint/">
+<meta name="twitter:title" content="hinge joint">
+<meta name="twitter:description" content="文档 hinge joint 须配合 rigidbody 使用 属性中的 spring 和 motor 不能同时使用，会导致意想不到的问题 配合rigidbody 中的mass 属性需要和主角的重量考虑 在 rockCrawling中 &amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        hinge joint
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2021-04-29
+                        </span>
+                        <span>
+                            1 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unity/" class="post-tag">
+                            # Unity
+                        </a>
+                        
+                        <a href="/tag/physics/" class="post-tag">
+                            # Physics
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <p><a href="https://docs.unity.cn/cn/2019.4/Manual/class-HingeJoint.html">文档</a></p>
+<ul>
+<li>hinge joint 须配合 rigidbody 使用</li>
+<li>属性中的 spring  和 motor 不能同时使用，会导致意想不到的问题</li>
+<li>配合rigidbody 中的mass 属性需要和主角的重量考虑
+<ul>
+<li>在 rockCrawling中</li>
+<li>car mass 500 hinge joint 25</li>
+</ul>
+</li>
+<li>car body</li>
+<li>car wheel<br />
+<img src="https://zhoujun2303.github.io/post-images/1659765712852.jpg" alt="" /></li>
+<li>hingejoint rigidbofy<br />
+<img src="https://zhoujun2303.github.io/post-images/1659765716689.jpg" alt="" /></li>
+<li>hinge joint<br />
+<img src="https://zhoujun2303.github.io/post-images/1659765720978.jpg" alt="" /></li>
+</ul>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/unity-xue-xi/">
+                    <h3 class="post-title">
+                        Unity 学习
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

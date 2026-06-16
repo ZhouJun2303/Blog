@@ -1,0 +1,245 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Unity 反射（Reflection） | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Unity 反射（Reflection） | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="UnityEngine,C#" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="参考 参考视频 基本使用 //step 1 获取对象的描述对象实例 Type t = System.Type.GetType(&amp;quot;Reflec...">
+<link rel="canonical" href="/post/unity-fan-she-reflection/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity 反射（Reflection）","url":"/post/unity-fan-she-reflection/","description":"参考 参考视频 基本使用 //step 1 获取对象的描述对象实例 Type t = System.Type.GetType(\u0026quot;Reflec...","datePublished":"2023-03-06T19:30:57+08:00","dateModified":"2023-03-06T19:30:57+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/unity-fan-she-reflection/","name":"Unity 反射（Reflection）","position":2}]}</script>
+<meta property="og:title" content="Unity 反射（Reflection）">
+<meta property="og:description" content="参考 参考视频 基本使用 //step 1 获取对象的描述对象实例 Type t = System.Type.GetType(&amp;quot;Reflec...">
+<meta property="og:url" content="/post/unity-fan-she-reflection/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/unity-fan-she-reflection/">
+<meta name="twitter:title" content="Unity 反射（Reflection）">
+<meta name="twitter:description" content="参考 参考视频 基本使用 //step 1 获取对象的描述对象实例 Type t = System.Type.GetType(&amp;quot;Reflec...">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Unity 反射（Reflection）
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2023-03-06
+                        </span>
+                        <span>
+                            1 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unityengine/" class="post-tag">
+                            # UnityEngine
+                        </a>
+                        
+                        <a href="/tag/c/" class="post-tag">
+                            # C#
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <h2 id="heading">参考</h2>
+<p><a href="https://www.bilibili.com/video/BV1UP4y1T7jE/?spm_id_from=333.999.0.0&amp;vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3">参考视频</a></p>
+<h2 id="heading-1">基本使用</h2>
+<pre><code>//step 1 获取对象的描述对象实例
+Type t = System.Type.GetType(&quot;ReflectionTest&quot;);
+
+//step 2 根据描述对象实例，构建一个对象实例
+var instance = Activator.CreateInstance(t);
+
+//step 3 对成员变量进行设值
+//获取所有成员变量
+FieldInfo[] fields = t.GetFields();
+//获取单个 fieldInfo
+FieldInfo intValue = t.GetField(&quot;IntValue&quot;);
+//设值对象实例的 IntValue 值
+intValue.SetValue(instance, 100);
+
+//debug
+ReflectionTest reflectionTest = instance as ReflectionTest;
+Debug.Log(reflectionTest.IntValue);
+
+//调用成员函数
+MethodInfo methodInfo = t.GetMethod(&quot;Add&quot;);
+object[] par = new object[2] { 1, 3 };
+object value = methodInfo.Invoke(instance, par);
+if(null != value)
+{
+    Debug.Log((int)value);
+}
+</code></pre>
+<h2 id="heading-2">注意项</h2>
+<h3 id="2023314175910">补充于2023年3月14日17:59:10</h3>
+<p>获取成员函数时，如果有重载同名方法，需要传方法参数，否则会获取不到成员函数</p>
+<pre><code> MethodInfo methodInfo = T.GetMethod(&quot;Awake&quot;,
+     BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(GameObject), typeof(UIWindowConfigBindingAttribute) }, null);
+ object[] par = new object[] { windowObj, attribute };
+ methodInfo.Invoke(instance, par);
+</code></pre>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/unity-spine-rong-he-dong-hua/">
+                    <h3 class="post-title">
+                        Unity Spine融合动画
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

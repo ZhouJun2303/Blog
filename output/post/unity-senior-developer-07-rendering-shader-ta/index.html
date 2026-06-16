@@ -1,0 +1,275 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Unity 开发高级/资深 07：渲染、Shader 与 TA 协作 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Unity 开发高级/资深 07：渲染、Shader 与 TA 协作 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Unity,开发高级/资深,渲染,Shader" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="返回总览 &amp;lt;a id=&amp;ldquo;renderi&amp;hellip;">
+<link rel="canonical" href="/post/unity-senior-developer-07-rendering-shader-ta/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity 开发高级/资深 07：渲染、Shader 与 TA 协作","url":"/post/unity-senior-developer-07-rendering-shader-ta/","description":"返回总览 \u0026lt;a id=\u0026ldquo;renderi\u0026hellip;","datePublished":"2026-06-10T21:57:00+08:00","dateModified":"2026-06-10T21:57:00+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/unity-senior-developer-07-rendering-shader-ta/","name":"Unity 开发高级/资深 07：渲染、Shader 与 TA 协作","position":2}]}</script>
+<meta property="og:title" content="Unity 开发高级/资深 07：渲染、Shader 与 TA 协作">
+<meta property="og:description" content="返回总览 &amp;lt;a id=&amp;ldquo;renderi&amp;hellip;">
+<meta property="og:url" content="/post/unity-senior-developer-07-rendering-shader-ta/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/unity-senior-developer-07-rendering-shader-ta/">
+<meta name="twitter:title" content="Unity 开发高级/资深 07：渲染、Shader 与 TA 协作">
+<meta name="twitter:description" content="返回总览 &amp;lt;a id=&amp;ldquo;renderi&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Unity 开发高级/资深 07：渲染、Shader 与 TA 协作
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2026-06-10
+                        </span>
+                        <span>
+                            3 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unity/" class="post-tag">
+                            # Unity
+                        </a>
+                        
+                        <a href="/tag/kai-fa-gao-ji-zi-shen/" class="post-tag">
+                            # 开发高级/资深
+                        </a>
+                        
+                        <a href="/tag/xuan-ran/" class="post-tag">
+                            # 渲染
+                        </a>
+                        
+                        <a href="/tag/shader/" class="post-tag">
+                            # Shader
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <p><a href="https://zhoujun2303.github.io/post/unity-senior-developer-skills/">返回总览</a></p>
+<p><img src="https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg" alt="Unity 开发高级/资深工具链地图" /></p>
+<p><a id="rendering"></a></p>
+<h2 id="-shader">渲染管线与 Shader</h2>
+<ul>
+<li>管线选择：Built-in、URP、HDRP 的效果、性能、平台和团队成本。</li>
+<li>渲染流程：Queue、Pass、Batch、SetPass、Draw Call、Overdraw、深度。</li>
+<li>SRP Batcher：材质属性、Shader 写法、常量缓冲区、兼容规则。</li>
+<li>Shader 基础：顶点、片元、光照、采样、Keyword、Variant、宏、Include。</li>
+<li>常见效果：角色 Rim、描边、溶解、流光、水、玻璃、草、雪、受击闪白。</li>
+<li>光照系统：实时光、烘焙光、混合光、Light Probe、Reflection Probe、阴影。</li>
+<li>后处理：Bloom、Color Grading、AO、景深、抗锯齿、移动端降级。</li>
+<li>调试工具：Frame Debugger、RenderDoc、Profiler、GPU Profiler。</li>
+<li>平台差异：Metal、Vulkan、OpenGLES、DirectX 的 Shader 兼容问题。</li>
+</ul>
+<h3 id="heading">需要掌握的工具</h3>
+<ul>
+<li>URP/HDRP Render Pipeline Asset：管理渲染质量、阴影、后处理和平台参数。</li>
+<li>Shader Graph 与手写 HLSL：实现和维护项目 Shader。</li>
+<li>Frame Debugger：查看渲染顺序、Pass、SetPass 和 Draw Call。</li>
+<li>RenderDoc：分析 GPU 渲染、纹理采样、Buffer、Pass 输出。</li>
+<li>Xcode GPU Frame Capture、Android GPU Inspector：定位平台 GPU 问题。</li>
+<li>Unity Profiler GPU 模块：查看渲染线程、GPU 耗时和瓶颈。</li>
+<li>Shader Variant Collection 与自研统计工具：控制变体数量和预热。</li>
+</ul>
+<h3 id="heading-1">可继续细分方向</h3>
+<ul>
+<li>URP/HDRP 管线配置。</li>
+<li>Shader Graph 与 HLSL。</li>
+<li>光照、阴影和后处理。</li>
+<li>渲染调试、GPU 分析和平台兼容。</li>
+</ul>
+<p><a id="technical-art"></a></p>
+<h2 id="ta-">TA 与美术管线</h2>
+<ul>
+<li>资源预算：模型面数、骨骼数、贴图尺寸、材质数、特效粒子数。</li>
+<li>导入规则：贴图压缩、模型 Rig、动画裁剪、Read/Write、MipMap、sRGB。</li>
+<li>材质规范：公共材质、实例材质、贴图通道复用、命名和参数范围。</li>
+<li>特效规范：粒子数量、透明面积、Overdraw、生命周期、对象池兼容。</li>
+<li>场景规范：LOD、Occlusion、静态合批、Lightmap、Probe、碰撞体。</li>
+<li>验收工具：资源扫描、材质扫描、Shader Variant 统计、贴图尺寸统计。</li>
+<li>美术协作：效果目标、性能预算、低端降级、资源提交检查。</li>
+<li>版本控制：大资源锁定、Meta 文件、Prefab 冲突和材质覆盖。</li>
+</ul>
+<h3 id="heading-2">需要掌握的工具</h3>
+<ul>
+<li>Blender、Maya、3ds Max：理解模型、骨骼、UV、动画和导出问题。</li>
+<li>Photoshop、Substance Painter/Designer：理解贴图通道、压缩和材质输入。</li>
+<li>TexturePacker、SpriteAtlas：管理 UI 和 2D 资源图集。</li>
+<li>Unity AssetPostprocessor：自动设置模型、贴图、音频和动画导入规则。</li>
+<li>资源扫描器：检查面数、骨骼、贴图尺寸、材质数量、Read/Write。</li>
+<li>Shader Variant 统计工具：追踪美术效果带来的变体和包体变化。</li>
+<li>Perforce/Git LFS/Plastic SCM：管理大资源、锁文件和美术协作流程。</li>
+</ul>
+<h3 id="heading-3">可继续细分方向</h3>
+<ul>
+<li>美术资源导入规范。</li>
+<li>场景、角色、特效和 UI 资源预算。</li>
+<li>材质、贴图和 Shader 参数规范。</li>
+<li>自动验收、资源扫描和提交检查。</li>
+</ul>
+<h2 id="heading-4">开发高级/资深关注点</h2>
+<ul>
+<li>效果上线前是否知道它的 CPU、GPU、内存和包体成本。</li>
+<li>Shader Keyword 是否受控，Variant 是否爆炸。</li>
+<li>移动端低端机是否有替代材质、替代特效和画质分级。</li>
+<li>美术资源是否能自动校验，而不是靠人工记忆规范。</li>
+<li>渲染问题是否能用工具定位到具体 Pass、材质、贴图或特效。</li>
+</ul>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

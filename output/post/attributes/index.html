@@ -1,0 +1,299 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Attributes | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Attributes | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Unity,UnityEngine" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="[AddComponentMenu(&amp;quot;Transform/AddComponentMenuT&amp;quot;, 0)] 可在Component里面快速增加脚本 [AssemblyIsEditorAssembly] 视为编辑器类，讲道理不会被打包 [ColorUsage(true, true)] public Color Corlor; 作用于 Color 类型变量上，使其可在取...">
+<link rel="canonical" href="/post/attributes/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Attributes","url":"/post/attributes/","description":"[AddComponentMenu(\u0026quot;Transform/AddComponentMenuT\u0026quot;, 0)] 可在Component里面快速增加脚本 [AssemblyIsEditorAssembly] 视为编辑器类，讲道理不会被打包 [ColorUsage(true, true)] public Color Corlor; 作用于 Color 类型变量上，使其可在取...","datePublished":"2022-03-02T14:31:49+08:00","dateModified":"2022-03-02T14:31:49+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/attributes/","name":"Attributes","position":2}]}</script>
+<meta property="og:title" content="Attributes">
+<meta property="og:description" content="[AddComponentMenu(&amp;quot;Transform/AddComponentMenuT&amp;quot;, 0)] 可在Component里面快速增加脚本 [AssemblyIsEditorAssembly] 视为编辑器类，讲道理不会被打包 [ColorUsage(true, true)] public Color Corlor; 作用于 Color 类型变量上，使其可在取...">
+<meta property="og:url" content="/post/attributes/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/attributes/">
+<meta name="twitter:title" content="Attributes">
+<meta name="twitter:description" content="[AddComponentMenu(&amp;quot;Transform/AddComponentMenuT&amp;quot;, 0)] 可在Component里面快速增加脚本 [AssemblyIsEditorAssembly] 视为编辑器类，讲道理不会被打包 [ColorUsage(true, true)] public Color Corlor; 作用于 Color 类型变量上，使其可在取...">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Attributes
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2022-03-02
+                        </span>
+                        <span>
+                            4 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unity/" class="post-tag">
+                            # Unity
+                        </a>
+                        
+                        <a href="/tag/unityengine/" class="post-tag">
+                            # UnityEngine
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <pre><code>[AddComponentMenu(&quot;Transform/AddComponentMenuT&quot;, 0)]
+可在Component里面快速增加脚本
+
+[AssemblyIsEditorAssembly]
+视为编辑器类，讲道理不会被打包
+
+[ColorUsage(true, true)]
+ public Color Corlor;
+ 作用于 Color 类型变量上，使其可在取色面板配置显示 Alpha 和采用 HDR 标准
+
+[ContextMenu(&quot;WarlG Context Menu&quot;)]
+void CustomContext()
+{
+  Debug.Log(&quot;WarlGContext&quot;);
+}
+作用于非静态方法上，在脚本 Inspector 的 context menu
+上添加额外操作（Inspector 上脚本右击菜单）
+
+[ContextMenuItem(&quot;ResetString&quot;, &quot;ResetSampleString&quot;)]
+public string SampleString = &quot;&quot;;
+void ResetSampleString()
+{
+      SampleString = &quot;WarlGSampleString&quot;;
+}
+作用于变量上，给作用的变量在Inspector上添加右键菜单方法
+
+[CreateAssetMenu(fileName = &quot;WarlGAssetSample.asset&quot;, menuName = &quot;WarlGAssetMenu/WarlGAssetItem&quot;)]
+public class WarlGAssetMenuSample : ScriptableObject
+{
+    public string assetName = &quot;WarlGAssetSample&quot;;
+}
+作用于可脚本化的类上，自动列入Assets/Create 的子菜单中，添加创建&quot;.asset&quot;文件的快捷路径
+
+[DisallowMultipleComponent]
+作用于类上，禁止 GameObject 添加多个相同类型组件
+
+ [ExecuteAlways]
+    public class ExecuteAlwaysT : MonoBehaviour
+    {
+        private void Update()
+        {
+            Debug.Log(&quot;1&quot;);
+        }
+    }
+无论是编辑器模式还是运行模式都会执行
+[ExecuteInEditMode]    
+在编辑器模式下执行同上
+
+[Header(&quot;WarlGHeader&quot;)] 
+public string header;
+作用于变量上，给变量在 Inspector 中添加标题头
+
+[HelpURL(&quot;https://warl-g.github.io/&quot;)]
+public class WarlGAttributeSample : MonoBehaviour
+{
+}
+作用于类上，为类添加说明链接，可在 Inspector 脚本组件上的&quot;?&quot;标志跳转
+
+[Min(10)]
+public int minValue;
+作用于 int 和 float 约束变量最小值
+
+[MultilineAttribute(30)]
+        public string hhhh = &quot;@向量（Vector3）在虚拟的游戏世界中，3D数学决定了游戏，+&quot; +
+            &quot;如何计算和模拟出开发者以及玩家看到的每一帧画面。学习基础的3D数学知识可以帮主用户对游戏引擎产生更深刻的了解。&quot; +
+            &quot; 向量定义：既有大小又有方向的量叫做向量。在空间中，向量用一段有方向的线段来表示。应用十分广泛，可用于描述具有大小和&quot; +
+            &quot;方向两个属性的物理量，例如物体运动的速度、加速度、摄像机观察方向、刚体受到的力等都是向量。因此向量是物理&quot; +
+            &quot;动画、三维图形的基础。 与向量相对的量成为标量:即只有大小没有方向的量。例如物体移动中的平均速率、路程。 &quot; +
+            &quot;模：向量的长度标准化（Normalizing）：保持方向不变，将向量的长度变为1.&quot; +
+            &quot;单位向量：长度为1的向量。 零向量：各分量均为0的向量向量运算——加减：&quot; +
+            &quot;向量的加法（减法）为各个分量分别相加（相减）。在物理上可以用来计算两个里的合力，或者几个速度份量的叠加。 &quot;;
+作用于 string ，使 string 在 Inspector 显示多行文本区
+30 行数
+Tips : string太长可以前面+ @ 之后回车可随意换行
+
+ [RequireComponent(typeof(Rigidbody))]
+ 作用于类， 在挂载该脚本同时会自动挂载该脚本依赖的组件，且删除时弹出警告
+
+  [RuntimeInitializeOnLoadMethodAttribute(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+        static void RuntimeInitializeOnLoadMethodAttributeTT()
+        {
+            Debug.Log(&quot;RuntimeInitializeOnLoadMethodAttribute&quot;);
+        }
+作用于静态方法，允许运行时情况下加载游戏后，无需用户行为即可初始化运行时类方法；
+
+[SelectionBaseAttribute]
+作用于类，使被挂载的 GameObject 优先被选中；如当前 GameObject 为子物体，当点击该物体时会默认选中父物体，
+在该特性脚本挂载到子物体后会优先选中子物体
+
+[InitializeOnEnterPlayModeAttribute]
+作用于静态方法，使编辑器类方法在进入 Play Mode 时初始化
+</code></pre>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/unity-yi-xie-wen-ti-ji-lu/">
+                    <h3 class="post-title">
+                        Unity 一些问题记录
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

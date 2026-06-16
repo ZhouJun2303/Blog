@@ -1,0 +1,312 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Unity 开发高级/资深 01：引擎、C# 与客户端架构 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Unity 开发高级/资深 01：引擎、C# 与客户端架构 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Unity,开发高级/资深,C#,架构" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="返回总览 &amp;lt;a id=&amp;ldquo;unity-en&amp;hellip;">
+<link rel="canonical" href="/post/unity-senior-developer-01-engine-csharp-architecture/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity 开发高级/资深 01：引擎、C# 与客户端架构","url":"/post/unity-senior-developer-01-engine-csharp-architecture/","description":"返回总览 \u0026lt;a id=\u0026ldquo;unity-en\u0026hellip;","datePublished":"2026-06-10T21:51:00+08:00","dateModified":"2026-06-10T21:51:00+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/unity-senior-developer-01-engine-csharp-architecture/","name":"Unity 开发高级/资深 01：引擎、C# 与客户端架构","position":2}]}</script>
+<meta property="og:title" content="Unity 开发高级/资深 01：引擎、C# 与客户端架构">
+<meta property="og:description" content="返回总览 &amp;lt;a id=&amp;ldquo;unity-en&amp;hellip;">
+<meta property="og:url" content="/post/unity-senior-developer-01-engine-csharp-architecture/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/unity-senior-developer-01-engine-csharp-architecture/">
+<meta name="twitter:title" content="Unity 开发高级/资深 01：引擎、C# 与客户端架构">
+<meta name="twitter:description" content="返回总览 &amp;lt;a id=&amp;ldquo;unity-en&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Unity 开发高级/资深 01：引擎、C# 与客户端架构
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2026-06-10
+                        </span>
+                        <span>
+                            5 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unity/" class="post-tag">
+                            # Unity
+                        </a>
+                        
+                        <a href="/tag/kai-fa-gao-ji-zi-shen/" class="post-tag">
+                            # 开发高级/资深
+                        </a>
+                        
+                        <a href="/tag/c/" class="post-tag">
+                            # C#
+                        </a>
+                        
+                        <a href="/tag/jia-gou/" class="post-tag">
+                            # 架构
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <p><a href="https://zhoujun2303.github.io/post/unity-senior-developer-skills/">返回总览</a></p>
+<p><img src="https://zhoujun2303.github.io/post-images/unity-senior-developer-architecture-layers.svg" alt="开发高级/资深架构分层" /></p>
+<p><a id="unity-engine"></a></p>
+<h2 id="unity-">Unity 引擎基础</h2>
+<ul>
+<li>生命周期：Awake、OnEnable、Start、Update、LateUpdate、FixedUpdate、OnDisable、OnDestroy 的调用顺序和适用边界。</li>
+<li>场景与对象：GameObject、Component、Prefab、Scene、ScriptableObject 的职责和引用关系。</li>
+<li>坐标系统：世界坐标、本地坐标、屏幕坐标、UI 坐标、四元数、矩阵、父子节点变换。</li>
+<li>序列化规则：Unity 可序列化字段、非序列化字段、Inspector 引用、Prefab Override、丢引用问题。</li>
+<li>PlayerLoop：理解 Unity 每帧执行链，知道脚本、物理、动画、渲染大致发生在哪些阶段。</li>
+<li>场景管理：单场景、多场景 Additive、异步加载、切场景状态、常驻对象管理。</li>
+<li>时间系统：Time.deltaTime、fixedDeltaTime、timeScale、真实时间、服务器时间、本地时间。</li>
+<li>输入系统：旧 Input、新 Input System、触控、键鼠、手柄在架构中的抽象方式。</li>
+<li>编辑器与运行时：Editor 代码隔离、Assembly Definition、条件编译、打包裁剪。</li>
+<li>版本意识：Unity LTS 选择、升级风险、插件兼容、渲染管线差异。</li>
+</ul>
+<h3 id="heading">需要掌握的工具</h3>
+<ul>
+<li>Unity Editor：Scene、Game、Inspector、Hierarchy、Project、Console、Profiler 等核心窗口。</li>
+<li>Package Manager：管理官方包、第三方包和本地包依赖。</li>
+<li>Project Settings：质量、输入、物理、图形、脚本后端、平台参数。</li>
+<li>Unity Profiler：查看脚本、物理、动画、渲染、加载的基础耗时。</li>
+<li>Frame Debugger：理解渲染顺序和 Draw Call。</li>
+<li>Unity Scripting API/Manual：查生命周期、组件 API 和版本差异。</li>
+</ul>
+<h3 id="heading-1">可继续细分方向</h3>
+<ul>
+<li>生命周期与 PlayerLoop。</li>
+<li>场景、Prefab 与序列化。</li>
+<li>Unity 平台参数与构建设置。</li>
+<li>编辑器扩展与运行时代码隔离。</li>
+</ul>
+<p><a id="csharp"></a></p>
+<h2 id="c-">C# 与代码基本功</h2>
+<ul>
+<li>语法能力：泛型、委托、事件、Attribute、扩展方法、反射、迭代器、Lambda。</li>
+<li>类型理解：值类型、引用类型、装箱拆箱、可空类型、struct 拷贝成本。</li>
+<li>集合选择：Array、List、Dictionary、HashSet、Queue、Stack、LinkedList 的使用场景和性能差异。</li>
+<li>GC 控制：闭包分配、LINQ 分配、foreach 分配、字符串拼接、装箱、临时 List。</li>
+<li>异步能力：Coroutine、async/await、Task、UniTask、回调之间的取舍。</li>
+<li>线程意识：Unity API 主线程限制、后台线程 IO、锁、并发队列、主线程调度。</li>
+<li>错误处理：异常、错误码、Result、断言、日志等级、失败回调。</li>
+<li>IL2CPP/AOT：泛型裁剪、反射保留、link.xml、AOT 泛型补充、符号堆栈。</li>
+<li>代码表达：命名清楚、函数短小、参数明确、避免魔法值、避免过深嵌套。</li>
+</ul>
+<h3 id="heading-2">需要掌握的工具</h3>
+<ul>
+<li>Rider 或 Visual Studio：调试、重构、代码导航、性能提示。</li>
+<li>Roslyn Analyzer：静态检查空引用、命名、分配和风格问题。</li>
+<li>Unity Test Framework：验证纯逻辑、配置解析、状态机和公式。</li>
+<li>ILSpy/dnSpy：查看程序集、IL、第三方库结构和 AOT 问题线索。</li>
+<li>dotTrace/dotMemory 或 Rider Profiler：分析 C# 层耗时和托管内存。</li>
+<li>link.xml 与 Unity Managed Stripping 工具链：处理裁剪和反射保留。</li>
+</ul>
+<h3 id="heading-3">可继续细分方向</h3>
+<ul>
+<li>C# 基础语法与工程写法。</li>
+<li>GC、内存分配与性能敏感写法。</li>
+<li>async/await、Coroutine、UniTask 与线程模型。</li>
+<li>IL2CPP、AOT、反射和泛型裁剪。</li>
+</ul>
+<p><a id="client-architecture"></a></p>
+<h2 id="heading-4">客户端架构设计</h2>
+<ul>
+<li>分层架构：入口层、框架层、业务层、表现层、数据层、平台层。</li>
+<li>模块边界：登录、资源、UI、网络、战斗、任务、背包、活动、音频、引导等模块互不乱调。</li>
+<li>启动流程：初始化配置、日志、热更、SDK、资源系统、网络、登录、进场景。</li>
+<li>全局服务：事件系统、计时器、对象池、音频、输入、红点、埋点、权限、时间同步。</li>
+<li>依赖治理：避免循环依赖、隐式单例、静态状态污染和跨模块直接访问。</li>
+<li>状态机：登录态、热更态、游戏态、切场景态、重连态、战斗态、后台态。</li>
+<li>异步规范：加载取消、超时、失败重试、重复请求合并、资源释放、异常捕获。</li>
+<li>Assembly 拆分：Runtime、Editor、Tests、ThirdParty、HotUpdate 独立边界。</li>
+<li>可演进性：给业务留扩展点，同时避免为了“未来可能需要”过度抽象。</li>
+</ul>
+<h3 id="heading-5">需要掌握的工具</h3>
+<ul>
+<li>Assembly Definition：拆分 Runtime、Editor、Tests、HotUpdate 和第三方依赖。</li>
+<li>Mermaid、PlantUML、draw.io：画模块图、流程图、状态图和时序图。</li>
+<li>Notion/Confluence/飞书文档：沉淀架构说明、接入流程和排障文档。</li>
+<li>Unity Profiler 与自定义埋点：验证架构链路中的耗时和失败点。</li>
+<li>GitHub/GitLab Code Review：让架构约束通过评审持续落地。</li>
+<li>依赖分析脚本：检查 Assembly、命名空间、资源和模块引用边界。</li>
+</ul>
+<h3 id="heading-6">可继续细分方向</h3>
+<ul>
+<li>启动流程与游戏状态机。</li>
+<li>模块边界与依赖治理。</li>
+<li>全局服务、事件系统和对象池。</li>
+<li>异步流程、取消、超时和异常恢复。</li>
+</ul>
+<h2 id="heading-7">开发高级/资深判断标准</h2>
+<ul>
+<li>新人能否在一天内理解项目启动流程。</li>
+<li>一个业务模块能否独立开发、测试、替换和定位问题。</li>
+<li>切场景、热更失败、断线重连等复杂链路是否有明确状态。</li>
+<li>框架代码是否稳定，业务迭代是否不用频繁改底层。</li>
+<li>出问题时能否通过日志和状态快速定位是哪一层失败。</li>
+</ul>
+<h2 id="heading-8">常见风险</h2>
+<ul>
+<li>所有模块都依赖一个巨大的 GameManager。</li>
+<li>单例过多，模块之间直接互相调用，测试和替换困难。</li>
+<li>异步流程没有取消和超时，切场景后回调继续修改已销毁对象。</li>
+<li>Editor 脚本混入 Runtime，导致打包失败或包体膨胀。</li>
+<li>为了“架构漂亮”写出团队难以理解的抽象。</li>
+</ul>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

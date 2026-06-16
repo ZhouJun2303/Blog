@@ -1,0 +1,399 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>委托和事件 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="委托和事件 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="UnityEngine,C#" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="委托 使用delegate关键字来声明 委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null 委托是独立的，不依赖于事件 包含Combine()和Remove()方法，用于将方法添加到调用类表 可以作为方法参数传递 =用于分配单个方法，+=分配多个方法 多播委托 using System.Collect...">
+<link rel="canonical" href="/post/wei-tuo-he-shi-jian/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"委托和事件","url":"/post/wei-tuo-he-shi-jian/","description":"委托 使用delegate关键字来声明 委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null 委托是独立的，不依赖于事件 包含Combine()和Remove()方法，用于将方法添加到调用类表 可以作为方法参数传递 =用于分配单个方法，+=分配多个方法 多播委托 using System.Collect...","datePublished":"2023-03-25T14:38:25+08:00","dateModified":"2023-03-25T14:38:25+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/wei-tuo-he-shi-jian/","name":"委托和事件","position":2}]}</script>
+<meta property="og:title" content="委托和事件">
+<meta property="og:description" content="委托 使用delegate关键字来声明 委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null 委托是独立的，不依赖于事件 包含Combine()和Remove()方法，用于将方法添加到调用类表 可以作为方法参数传递 =用于分配单个方法，+=分配多个方法 多播委托 using System.Collect...">
+<meta property="og:url" content="/post/wei-tuo-he-shi-jian/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/wei-tuo-he-shi-jian/">
+<meta name="twitter:title" content="委托和事件">
+<meta name="twitter:description" content="委托 使用delegate关键字来声明 委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null 委托是独立的，不依赖于事件 包含Combine()和Remove()方法，用于将方法添加到调用类表 可以作为方法参数传递 =用于分配单个方法，+=分配多个方法 多播委托 using System.Collect...">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        委托和事件
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2023-03-25
+                        </span>
+                        <span>
+                            6 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unityengine/" class="post-tag">
+                            # UnityEngine
+                        </a>
+                        
+                        <a href="/tag/c/" class="post-tag">
+                            # C#
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <h2 id="heading">委托</h2>
+<ul>
+<li>使用<code>delegate</code>关键字来声明</li>
+<li>委托是一个函数指针数组，运行时保存一个或多个方式引用，可以为null</li>
+<li>委托是独立的，不依赖于事件</li>
+<li>包含<code>Combine()</code>和<code>Remove()</code>方法，用于将方法添加到调用类表</li>
+<li>可以作为方法参数传递</li>
+<li>=用于分配单个方法，+=分配多个方法<br />
+多播委托</li>
+</ul>
+<pre><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Main : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        //create Game
+        MainGame mainGame = new MainGame();
+        //create Player
+        List&lt;Player&gt; cachedPlayers = new List&lt;Player&gt;();
+        for (int i = 0; i &lt; 10; i++)
+        {
+            //Player player = new Player(mainGame.OnGameOverDelegate);
+            Player player = new Player();
+            cachedPlayers.Add(player);
+        }
+        //call MainGame GameOver
+        mainGame.GameOver();
+        //log
+
+        //relesePlayer
+        for (int i = 0; i &lt; cachedPlayers.Count; i++)
+        {
+            cachedPlayers[i]?.Dispose();
+            cachedPlayers[i] = null;
+        }
+        cachedPlayers.Clear();
+
+        //call MainGame GameOver
+        mainGame.GameOver();
+
+        //可以直接赋值置空
+        MainGame.OnGameOverDelegate = null;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+
+}
+
+public delegate void OnGameOverDelegate();
+public class MainGame
+{
+    public static OnGameOverDelegate OnGameOverDelegate = null;
+
+    public void GameOver()
+    {
+        OnGameOverDelegate?.Invoke();
+    }
+}
+
+public class Player
+{
+    public static int PlayerIndex = 0;
+
+    private int _playerIndex;
+    public Player()
+    {
+        ++PlayerIndex;
+        _playerIndex = PlayerIndex;
+        MainGame.OnGameOverDelegate += OnGameOver;
+    }
+
+    public void Dispose()
+    {
+        MainGame.OnGameOverDelegate -= OnGameOver;
+    }
+
+    ~Player()
+    {
+
+    }
+
+    private void OnGameOver()
+    {
+        Debug.Log($&quot;player {_playerIndex} game over&quot;);
+    }
+}
+
+</code></pre>
+<h2 id="heading-1">事件</h2>
+<ul>
+<li>使用<code>event</code>关键字来声明</li>
+<li>依赖于委托的通知机制</li>
+<li>依赖于委托，没有委托就无法创建，只允许添加或者移除目标</li>
+<li>通过<code>AddEventHandler()</code>和<code>RemoveEventHandler()</code>向调用类表添加或者移除方法</li>
+<li>事件被引发，不能作为方法参数传递</li>
+<li>=运算符不能应用于事件</li>
+</ul>
+<pre><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MainEvent : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        //create Game
+        MainGame1 mainGame = new MainGame1();
+        //create Player
+        List&lt;Player&gt; cachedPlayers = new List&lt;Player&gt;();
+        for (int i = 0; i &lt; 10; i++)
+        {
+            //Player player = new Player(mainGame.OnGameOverDelegate);
+            Player player = new Player();
+            cachedPlayers.Add(player);
+        }
+        //call MainGame GameOver
+        mainGame.GameOver();
+        //log
+
+        //relesePlayer
+        for (int i = 0; i &lt; cachedPlayers.Count; i++)
+        {
+            cachedPlayers[i]?.Dispose();
+            cachedPlayers[i] = null;
+        }
+        cachedPlayers.Clear();
+
+        //call MainGame GameOver
+        mainGame.GameOver();
+
+        //不能直接赋值
+        MainGame1.OnGameOverDelegateEvent = null;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+
+}
+
+public class MainGame1
+{
+    public static event OnGameOverDelegate OnGameOverDelegateEvent;
+    public void GameOver()
+    {
+        OnGameOverDelegateEvent?.Invoke();
+    }
+}
+
+public class Player1
+{
+    public static int PlayerIndex = 0;
+
+    private int _playerIndex;
+    public Player1()
+    {
+        ++PlayerIndex;
+        _playerIndex = PlayerIndex;
+        MainGame1.OnGameOverDelegateEvent += OnGameOver;
+
+    }
+
+    public void Dispose()
+    {
+        MainGame1.OnGameOverDelegateEvent -= OnGameOver;
+    }
+
+    ~Player1()
+    {
+
+    }
+
+    private void OnGameOver()
+    {
+        Debug.Log($&quot;player {_playerIndex} game over&quot;);
+    }
+}
+
+</code></pre>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/android-pai-chu-yin-yong-bao-chong-tu/">
+                    <h3 class="post-title">
+                        Android 排除引用包冲突
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

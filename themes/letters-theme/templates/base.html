@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ config.siteName }}{% endblock %}</title>
+
+  {# SEO/Open Graph 标签由 Gridea Pro 的 HtmlPostProcessor 统一注入 #}
+
+  {# Fonts #}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  {# Main Stylesheet #}
+  <link rel="stylesheet" href="/styles/main.css">
+
+  {# RSS #}
+  <link rel="alternate" type="application/rss+xml" title="{{ config.siteName }}" href="/feed.xml">
+
+  {# Custom Header Code #}
+  {% if theme_config.customHeader %}
+  {{ theme_config.customHeader|safe }}
+  {% endif %}
+
+  {# Page-specific head #}
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  {% include "partials/header.html" %}
+
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "partials/footer.html" %}
+
+  {# Search Modal #}
+  {% if theme_config.showSearch %}
+  {% include "partials/search.html" %}
+  {% endif %}
+
+  {# Custom Footer Code #}
+  {% if theme_config.customFooter %}
+  {{ theme_config.customFooter|safe }}
+  {% endif %}
+
+  {# Search Script #}
+  {% if theme_config.showSearch %}
+  <script src="{{ cdnPrefix }}/js/search.js" defer></script>
+  {% endif %}
+</body>
+
+</html>

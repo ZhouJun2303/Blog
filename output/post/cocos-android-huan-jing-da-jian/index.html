@@ -1,0 +1,237 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Cocos Android环境搭建 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Cocos Android环境搭建 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Cocos,Android" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="安卓环境搭建 JDK：1.8 个人qq群里有jdk1.8版本 下载AS *1，下载NKDR16版本 2，下载SDK主流版本，22-29 3，配置好NDK和SDK的环境变量 4，cocos Creator中配置 使用cocos creator构建项目* 并使用cocos creator导入构建好的项目 可能出现的问题 ![](https://zhoujun2303.git&amp;hellip;">
+<link rel="canonical" href="/post/cocos-android-huan-jing-da-jian/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cocos Android环境搭建","url":"/post/cocos-android-huan-jing-da-jian/","description":"安卓环境搭建 JDK：1.8 个人qq群里有jdk1.8版本 下载AS *1，下载NKDR16版本 2，下载SDK主流版本，22-29 3，配置好NDK和SDK的环境变量 4，cocos Creator中配置 使用cocos creator构建项目* 并使用cocos creator导入构建好的项目 可能出现的问题 ![](https://zhoujun2303.git\u0026hellip;","datePublished":"2020-01-30T11:15:12+08:00","dateModified":"2020-01-30T11:15:12+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/cocos-android-huan-jing-da-jian/","name":"Cocos Android环境搭建","position":2}]}</script>
+<meta property="og:title" content="Cocos Android环境搭建">
+<meta property="og:description" content="安卓环境搭建 JDK：1.8 个人qq群里有jdk1.8版本 下载AS *1，下载NKDR16版本 2，下载SDK主流版本，22-29 3，配置好NDK和SDK的环境变量 4，cocos Creator中配置 使用cocos creator构建项目* 并使用cocos creator导入构建好的项目 可能出现的问题 ![](https://zhoujun2303.git&amp;hellip;">
+<meta property="og:url" content="/post/cocos-android-huan-jing-da-jian/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/cocos-android-huan-jing-da-jian/">
+<meta name="twitter:title" content="Cocos Android环境搭建">
+<meta name="twitter:description" content="安卓环境搭建 JDK：1.8 个人qq群里有jdk1.8版本 下载AS *1，下载NKDR16版本 2，下载SDK主流版本，22-29 3，配置好NDK和SDK的环境变量 4，cocos Creator中配置 使用cocos creator构建项目* 并使用cocos creator导入构建好的项目 可能出现的问题 ![](https://zhoujun2303.git&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Cocos Android环境搭建
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2020-01-30
+                        </span>
+                        <span>
+                            2 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/cocos/" class="post-tag">
+                            # Cocos
+                        </a>
+                        
+                        <a href="/tag/android/" class="post-tag">
+                            # Android
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <h1 id="heading">安卓环境搭建</h1>
+<p>JDK：1.8 个人qq群里有jdk1.8版本<br />
+下载AS<br />
+*1，下载NKDR16版本<br />
+2，下载SDK主流版本，22-29<br />
+3，配置好NDK和SDK的环境变量<br />
+4，cocos Creator中配置</p>
+<h1 id="cocos-creator">使用cocos creator构建项目*</h1>
+<p>并使用cocos creator导入构建好的项目<br />
+可能出现的问题<br />
+<img src="https://zhoujun2303.github.io/post-images/1659755923050.jpg" alt="" /></p>
+<pre><code>Manifest merger failed : uses-sdk:minSdkVersion 16 cannot be smaller than version 22 declared in library [:libcocos2dx] D:\tmyclient\build\jsb-default\frameworks\cocos2d-x\cocos\platform\android\libcocos2dx\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml as the library might be using APIs not available in 16
+	Suggestion: use a compatible library with a minSdk of at most 16,
+		or increase this project's minSdk version to at least 22,
+		or use tools:overrideLibrary=&quot;org.cocos2dx.lib&quot; to force usage (may lead to runtime failures)
+</code></pre>
+<p>sdk版本不一致导致的问题<br />
+解决办法 更改为最低需要的SDK版本</p>
+<h1 id="heading-1">导入依赖的资源包</h1>
+<p>showInExport:打开资源路径<br />
+libs包引入成功<br />
+<img src="https://zhoujun2303.github.io/post-images/1659755991694.jpg" alt="" /><br />
+打开build.gradle，将所需的libs包引入<br />
+<img src="https://zhoujun2303.github.io/post-images/1659756019666.jpg" alt="" /><br />
+点击sync now：立即改变<br />
+打开appActivity<br />
+将需要用到的方法声明写入<br />
+<img src="https://zhoujun2303.github.io/post-images/1659756064938.jpg" alt="" /><br />
+<img src="https://zhoujun2303.github.io/post-images/1659756078819.jpg" alt="" /></p>
+<p>打包成功之后就是原生反射调用JAVA中的函数</p>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/lerp-yun-suan/">
+                    <h3 class="post-title">
+                        Lerp运算
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

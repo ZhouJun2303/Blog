@@ -1,0 +1,279 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Unity 开发高级/资深 05：网络通信与多人同步 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Unity 开发高级/资深 05：网络通信与多人同步 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Unity,开发高级/资深,网络" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="返回总览 &amp;lt;a id=&amp;ldquo;network&amp;hellip;">
+<link rel="canonical" href="/post/unity-senior-developer-05-network-sync/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity 开发高级/资深 05：网络通信与多人同步","url":"/post/unity-senior-developer-05-network-sync/","description":"返回总览 \u0026lt;a id=\u0026ldquo;network\u0026hellip;","datePublished":"2026-06-10T21:55:00+08:00","dateModified":"2026-06-10T21:55:00+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/unity-senior-developer-05-network-sync/","name":"Unity 开发高级/资深 05：网络通信与多人同步","position":2}]}</script>
+<meta property="og:title" content="Unity 开发高级/资深 05：网络通信与多人同步">
+<meta property="og:description" content="返回总览 &amp;lt;a id=&amp;ldquo;network&amp;hellip;">
+<meta property="og:url" content="/post/unity-senior-developer-05-network-sync/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/unity-senior-developer-05-network-sync/">
+<meta name="twitter:title" content="Unity 开发高级/资深 05：网络通信与多人同步">
+<meta name="twitter:description" content="返回总览 &amp;lt;a id=&amp;ldquo;network&amp;hellip;">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Unity 开发高级/资深 05：网络通信与多人同步
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2026-06-10
+                        </span>
+                        <span>
+                            3 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/unity/" class="post-tag">
+                            # Unity
+                        </a>
+                        
+                        <a href="/tag/kai-fa-gao-ji-zi-shen/" class="post-tag">
+                            # 开发高级/资深
+                        </a>
+                        
+                        <a href="/tag/wang-luo/" class="post-tag">
+                            # 网络
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <p><a href="https://zhoujun2303.github.io/post/unity-senior-developer-skills/">返回总览</a></p>
+<p><img src="https://zhoujun2303.github.io/post-images/unity-senior-developer-toolchain-map.svg" alt="Unity 开发高级/资深工具链地图" /></p>
+<p><a id="network"></a></p>
+<h2 id="heading">网络通信</h2>
+<ul>
+<li>协议选择：HTTP、WebSocket、TCP、UDP、KCP、可靠 UDP 的适用场景。</li>
+<li>连接状态：未连接、连接中、已连接、重连中、断开、后台、恢复。</li>
+<li>心跳机制：客户端心跳、服务器超时、时间同步、网络延迟估算。</li>
+<li>消息结构：包头、长度、协议号、序列号、压缩、加密、签名。</li>
+<li>序列化：Protobuf、FlatBuffers、MessagePack、JSON 的成本和调试便利性。</li>
+<li>请求回调：请求 ID、超时、取消、重试、错误码、重复请求。</li>
+<li>消息分发：按模块订阅、弱引用、生命周期解绑、主线程派发。</li>
+<li>弱网处理：延迟、丢包、断网、网络切换、切后台、锁屏。</li>
+<li>调试工具：网络日志、抓包、协议回放、模拟延迟、模拟断线。</li>
+</ul>
+<h3 id="heading-1">需要掌握的工具</h3>
+<ul>
+<li>Protobuf、FlatBuffers、MessagePack：协议序列化和版本兼容。</li>
+<li>Postman、Apifox：调试 HTTP 接口、登录、活动和运营后台接口。</li>
+<li>Wireshark、Charles、tcpdump：抓包、分析连接、延迟、重传和数据内容。</li>
+<li>Network Link Conditioner、Clumsy、tc：模拟弱网、延迟、丢包和断线。</li>
+<li>Logcat、Xcode Console：查看移动端网络错误和系统状态变化。</li>
+<li>自研协议日志工具：按协议号、请求 ID、玩家 ID、耗时和错误码追踪。</li>
+<li>协议回放工具：复现线上请求序列，验证兼容和错误处理。</li>
+</ul>
+<h3 id="heading-2">可继续细分方向</h3>
+<ul>
+<li>连接状态机、心跳和重连。</li>
+<li>协议结构、序列化和版本兼容。</li>
+<li>弱网模拟、超时和重试。</li>
+<li>网络日志、抓包和协议回放。</li>
+</ul>
+<p><a id="multiplayer-aoi"></a></p>
+<h2 id="-aoi">多人同步与 AOI</h2>
+<ul>
+<li>AOI 策略：距离、格子、区域、房间、兴趣列表、服务器分线。</li>
+<li>实体生命周期：进入视野、离开视野、创建、销毁、换线、下线。</li>
+<li>移动同步：位置、朝向、速度、动作、时间戳、插值、纠偏。</li>
+<li>外观同步：角色、时装、武器、坐骑、宠物、称号、挂件、特效。</li>
+<li>行为同步：表情、互动、技能展示、采集、坐下、跳舞、社交动作。</li>
+<li>优先级：近处高频、远处低频、屏外降频、关键动作即时同步。</li>
+<li>客户端预测：输入预测、表现预测、服务器校验、回滚或平滑修正。</li>
+<li>分线机制：自动分线、手动换线、好友跟随、活动线、拥挤保护。</li>
+<li>断线重连：位置恢复、队伍恢复、战斗恢复、面板恢复、临时对象清理。</li>
+</ul>
+<h3 id="heading-3">需要掌握的工具</h3>
+<ul>
+<li>Unity Multiplayer Tools：参考网络性能统计、消息量和延迟观察方式。</li>
+<li>Netcode for GameObjects、Mirror、Photon 文档：理解常见同步模型和取舍。</li>
+<li>Scene Gizmos：可视化 AOI 范围、同步格子、兴趣列表和实体状态。</li>
+<li>网络模拟器：模拟高延迟、抖动、丢包、断线和分线切换。</li>
+<li>Replay/录像工具：回放移动、动作、外观和同步纠偏过程。</li>
+<li>性能面板：统计同屏人数、实体数量、消息频率、带宽和实例化耗时。</li>
+</ul>
+<h3 id="heading-4">可继续细分方向</h3>
+<ul>
+<li>AOI 和兴趣管理。</li>
+<li>移动同步、插值和纠偏。</li>
+<li>外观、动作和社交同步。</li>
+<li>分线、断线重连和状态恢复。</li>
+</ul>
+<h2 id="heading-5">网络层接口建议</h2>
+<ul>
+<li>Connect、Disconnect、Reconnect、Send、Request、Subscribe、Unsubscribe。</li>
+<li>Request 支持超时、取消、错误码、重试策略。</li>
+<li>Subscribe 绑定生命周期，避免关闭面板后仍收到消息。</li>
+<li>网络层只处理通信，不直接改业务 UI。</li>
+<li>协议解析失败必须记录协议号、版本、玩家 ID、服务器、原始长度。</li>
+</ul>
+<h2 id="heading-6">开发高级/资深关注点</h2>
+<ul>
+<li>弱网下用户是否能恢复，而不是只能重启游戏。</li>
+<li>协议版本不一致时是否有明确提示和升级路径。</li>
+<li>断线重连后客户端状态和服务器状态是否一致。</li>
+<li>多人同屏是否有带宽、CPU、实例数量、动画和 UI 降级策略。</li>
+<li>网络日志是否足够定位“客户端没发、服务器没回、客户端没处理”。</li>
+</ul>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+<html>
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="Gridea Pro 1.2.2">
+<title>Android 原生加密Jar工具包制作 | Gridea Pro</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1781596415">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Android 原生加密Jar工具包制作 | Gridea Pro - Atom Feed" href="/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="Java,Jar" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+<meta name="description" content="设计 设计思路 可读接口-&amp;gt;不可读接口 Android 创建一个新的Lib 目录结构 --src --main --java com.tool.hwtools --CheckRoot --Hw.Tools --SignatureUtil --pro...">
+<link rel="canonical" href="/post/android-yuan-sheng-jia-mi-jar-gong-ju-bao-zhi-zuo/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Android 原生加密Jar工具包制作","url":"/post/android-yuan-sheng-jia-mi-jar-gong-ju-bao-zhi-zuo/","description":"设计 设计思路 可读接口-\u0026gt;不可读接口 Android 创建一个新的Lib 目录结构 --src --main --java com.tool.hwtools --CheckRoot --Hw.Tools --SignatureUtil --pro...","datePublished":"2024-09-30T11:26:54+08:00","dateModified":"2024-09-30T11:26:54+08:00","author":{"@type":"Person","name":"Gridea Pro"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Gridea Pro"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"","name":"Gridea Pro","position":1},{"@type":"ListItem","item":"/post/android-yuan-sheng-jia-mi-jar-gong-ju-bao-zhi-zuo/","name":"Android 原生加密Jar工具包制作","position":2}]}</script>
+<meta property="og:title" content="Android 原生加密Jar工具包制作">
+<meta property="og:description" content="设计 设计思路 可读接口-&amp;gt;不可读接口 Android 创建一个新的Lib 目录结构 --src --main --java com.tool.hwtools --CheckRoot --Hw.Tools --SignatureUtil --pro...">
+<meta property="og:url" content="/post/android-yuan-sheng-jia-mi-jar-gong-ju-bao-zhi-zuo/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gridea Pro">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="/post/android-yuan-sheng-jia-mi-jar-gong-ju-bao-zhi-zuo/">
+<meta name="twitter:title" content="Android 原生加密Jar工具包制作">
+<meta name="twitter:description" content="设计 设计思路 可读接口-&amp;gt;不可读接口 Android 创建一个新的Lib 目录结构 --src --main --java com.tool.hwtools --CheckRoot --Hw.Tools --SignatureUtil --pro...">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main-content">
+            
+<div class="site-header">
+    <a href="/">
+        <img class="avatar" src="/images/avatar.png?v=1781596415" alt="">
+    </a>
+    <h1 class="site-title">
+        Gridea Pro
+    </h1>
+    <p class="site-description">
+        Welcome to Gridea Pro
+    </p>
+    <div class="menu-container">
+        
+        
+        <a href="/" class="menu">
+            首页
+        </a>
+        
+        
+        
+        <a href="/post" class="menu">
+            博客
+        </a>
+        
+        
+        
+        <a href="/memos" class="menu">
+            闪念
+        </a>
+        
+        
+        
+        <a href="/archives" class="menu">
+            归档
+        </a>
+        
+        
+        
+        <a href="/tags" class="menu">
+            标签
+        </a>
+        
+        
+        
+        <a href="/links" class="menu">
+            友链
+        </a>
+        
+        
+        
+        <a href="/post/about" class="menu">
+            关于
+        </a>
+        
+        
+    </div>
+    <div class="social-container">
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+            <div class="post-detail">
+                <article class="post">
+                    <h2 class="post-title">
+                        Android 原生加密Jar工具包制作
+                    </h2>
+                    <div class="post-info">
+                        <span>
+                            2024-09-30
+                        </span>
+                        <span>
+                            24 分钟阅读
+                        </span>
+                        
+                        <a href="/tag/java/" class="post-tag">
+                            # Java
+                        </a>
+                        
+                        <a href="/tag/jar/" class="post-tag">
+                            # Jar
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="post-content-wrapper">
+                        <div class="post-content" v-pre>
+                            <h1 id="heading">设计</h1>
+<ul>
+<li>设计思路<br />
+可读接口-&gt;不可读接口</li>
+<li>Android 创建一个新的Lib<br />
+目录结构</li>
+</ul>
+<pre><code>--src
+    --main
+        --java com.tool.hwtools
+            --CheckRoot
+            --Hw.Tools
+            --SignatureUtil
+    --proguard-rules.pro
+</code></pre>
+<h1 id="heading-1">未加密代码</h1>
+<pre><code>package com.tool.hwtools;
+
+import android.content.Context;
+import android.content.pm.Signature;
+
+public class HwTools {
+    public static boolean CachedValue = false;
+
+    public static boolean IsDeviceRooted() {
+        CachedValue = CheckRoot.isDeviceRooted();
+        return CheckRoot.isDeviceRooted();
+    }
+
+    public static String getSignatureInfo256(Context context, String packageName) {
+        return SignatureUtil.getSignatureInfo256(context, packageName);
+    }
+
+    public static String getSignatureInfo1(Context context, String packageName) {
+        return SignatureUtil.getSignatureInfo1(context, packageName);
+    }
+
+    public static String getSignatureInfo256(Signature[] signatures) {
+        return SignatureUtil.getSignatureInfo256(signatures);
+    }
+
+    public static String getSignatureInfo1(Signature[] signatures) {
+        return SignatureUtil.getSignatureInfo1(signatures);
+    }
+
+    public static String getApkHash(Context context, String packageName) {
+        return SignatureUtil.getApkHash(context, packageName);
+    }
+}
+
+</code></pre>
+<pre><code>package com.tool.hwtools;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+
+import android.util.Log;
+
+
+public class CheckRoot {
+    // 定义TAG常量
+    private static String TAG = CheckRoot.class.getName();
+
+    public static boolean isDeviceRooted() {
+        if (checkDeviceDebuggable()) {
+            return true;
+        }//check buildTags
+        if (checkSuperuserApk()) {
+            return true;
+        }//Superuser.apk
+        if (checkRootPathSU()) {
+            return true;
+        }//find su in some path
+        if (checkRootWhichSU()) {
+            return true;
+        }//find su use 'which'
+        if (checkBusybox()) {
+            return true;
+        }//find su use 'which'
+        if (checkAccessRootData()) {
+            return true;
+        }//find su use 'which'
+        if (checkGetRootAuth()) {
+            return true;
+        }//exec su
+
+        return false;
+    }
+
+
+    // 检查判断是否存在SuperSU.apk文件，存在的话就是root
+    private static boolean checkSuperuserApk() {
+        try {
+            File file = new File(&quot;/system/app/SuperSU/SuperSU.apk&quot;);
+            if (file.exists()) {
+                Log.w(TAG, &quot;/system/app/SuperSU/SuperSU.apk exist&quot;);
+                return true;
+            }
+        } catch (Exception e) {
+        }
+        return false;
+    }
+
+
+    private static boolean checkDeviceDebuggable() {
+        String buildTags = android.os.Build.TAGS;
+        if (buildTags != null &amp;&amp; buildTags.contains(&quot;test-keys&quot;)) {
+            Log.i(TAG, &quot;buildTags=&quot; + buildTags);
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean checkRootPathSU() {
+        File f = null;
+        final String kSuSearchPaths[] = {&quot;/system/bin/&quot;, &quot;/system/xbin/&quot;, &quot;/system/sbin/&quot;, &quot;/sbin/&quot;, &quot;/vendor/bin/&quot;};
+        try {
+            for (int i = 0; i &lt; kSuSearchPaths.length; i++) {
+                f = new File(kSuSearchPaths[i] + &quot;su&quot;);
+                if (f != null &amp;&amp; f.exists()) {
+                    Log.i(TAG, &quot;find su in : &quot; + kSuSearchPaths[i]);
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private static boolean checkRootWhichSU() {
+        String[] strCmd = new String[]{&quot;/system/xbin/which&quot;, &quot;su&quot;};
+        ArrayList&lt;String&gt; execResult = executeCommand(strCmd);
+        if (execResult != null) {
+            Log.i(TAG, &quot;execResult=&quot; + execResult.toString());
+            return true;
+        } else {
+            Log.i(TAG, &quot;execResult=null&quot;);
+            return false;
+        }
+    }
+
+    private static ArrayList&lt;String&gt; executeCommand(String[] shellCmd) {
+        String line = null;
+        ArrayList&lt;String&gt; fullResponse = new ArrayList&lt;String&gt;();
+        Process localProcess = null;
+        try {
+            Log.i(TAG, &quot;to shell exec which for find su :&quot;);
+            localProcess = Runtime.getRuntime().exec(shellCmd);
+        } catch (Exception e) {
+            return null;
+        }
+        BufferedWriter out = new BufferedWriter(new OutputStreamWriter(localProcess.getOutputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(localProcess.getInputStream()));
+        try {
+            while ((line = in.readLine()) != null) {
+                Log.i(TAG, &quot;–&gt; Line received: &quot; + line);
+                fullResponse.add(line);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Log.i(TAG, &quot;–&gt; Full response was: &quot; + fullResponse);
+        return fullResponse;
+    }
+
+    private static synchronized boolean checkGetRootAuth() {
+        Process process = null;
+        DataOutputStream os = null;
+        try {
+            Log.i(TAG, &quot;to exec su&quot;);
+            process = Runtime.getRuntime().exec(&quot;su&quot;);
+            os = new DataOutputStream(process.getOutputStream());
+            os.writeBytes(&quot;exit\n&quot;);
+            os.flush();
+            int exitValue = process.waitFor();
+            Log.i(TAG, &quot;exitValue=&quot; + exitValue);
+            if (exitValue == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            Log.i(TAG, &quot;Unexpected error - Here is what I know: &quot;
+                    + e.getMessage());
+            return false;
+        } finally {
+            try {
+                if (os != null) {
+                    os.close();
+                }
+                process.destroy();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static synchronized boolean checkBusybox() {
+        try {
+            Log.i(TAG, &quot;to exec busybox df&quot;);
+            String[] strCmd = new String[]{&quot;busybox&quot;, &quot;df&quot;};
+            ArrayList&lt;String&gt; execResult = executeCommand(strCmd);
+            if (execResult != null) {
+                Log.i(TAG, &quot;execResult=&quot; + execResult.toString());
+                return true;
+            } else {
+                Log.i(TAG, &quot;execResult=null&quot;);
+                return false;
+            }
+        } catch (Exception e) {
+            Log.i(TAG, &quot;Unexpected error - Here is what I know: &quot;
+                    + e.getMessage());
+            return false;
+        }
+    }
+
+    private static synchronized boolean checkAccessRootData() {
+        try {
+            Log.i(TAG, &quot;to write /data&quot;);
+            String fileContent = &quot;test_ok&quot;;
+            Boolean writeFlag = writeFile(&quot;/data/su_test&quot;, fileContent);
+            if (writeFlag) {
+                Log.i(TAG, &quot;write ok&quot;);
+            } else {
+                Log.i(TAG, &quot;write failed&quot;);
+            }
+
+            Log.i(TAG, &quot;to read /data&quot;);
+            String strRead = readFile(&quot;/data/su_test&quot;);
+            Log.i(TAG, &quot;strRead=&quot; + strRead);
+            if (fileContent.equals(strRead)) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            Log.i(TAG, &quot;Unexpected error - Here is what I know: &quot;
+                    + e.getMessage());
+            return false;
+        }
+    }
+
+    //写文件
+    private static Boolean writeFile(String fileName, String message) {
+        try {
+            FileOutputStream fout = new FileOutputStream(fileName);
+            byte[] bytes = message.getBytes();
+            fout.write(bytes);
+            fout.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    //读文件
+    private static String readFile(String fileName) {
+        File file = new File(fileName);
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            byte[] bytes = new byte[1024];
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            int len;
+            while ((len = fis.read(bytes)) &gt; 0) {
+                bos.write(bytes, 0, len);
+            }
+            String result = new String(bos.toByteArray());
+            Log.i(TAG, result);
+            return result;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+</code></pre>
+<pre><code>package com.tool.hwtools;
+
+
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.util.Log;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class SignatureUtil {
+    private static final String TAG = &quot;SignatureUtil&quot;;
+
+    public static String getSignatureInfo256(Context context, String packageName) {
+        try {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+           return getSignatureInfo256(packageInfo.signatures);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String getSignatureInfo1(Context context, String packageName) {
+        try {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+            return getSignatureInfo1(packageInfo.signatures);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static String getSignatureInfo256(Signature[] signatures) {
+        if (null == signatures) return &quot;Null&quot;;
+        StringBuilder sb = new StringBuilder();
+        try {
+            MessageDigest md = MessageDigest.getInstance(&quot;SHA-256&quot;);
+            for (Signature signature : signatures) {
+                byte[] signatureBytes = signature.toByteArray();
+                byte[] hashBytes = md.digest(signatureBytes);
+                String hash = bytesToHex(hashBytes);
+                sb.append(&quot;Signature Hash 256: &quot;).append(hash).append(&quot;\n\n&quot;);
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+
+    public static String getSignatureInfo1(Signature[] signatures) {
+        if (null == signatures) return &quot;Null&quot;;
+        StringBuilder sb = new StringBuilder();
+        try {
+            MessageDigest md = MessageDigest.getInstance(&quot;SHA-1&quot;);
+            for (Signature signature : signatures) {
+                byte[] signatureBytes = signature.toByteArray();
+                byte[] hashBytes = md.digest(signatureBytes);
+                String hash = bytesToHex(hashBytes);
+                sb.append(&quot;Signature Hash 1: &quot;).append(hash).append(&quot;\n\n&quot;);
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+
+    private static String bytesToHex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(String.format(&quot;%02x:&quot;, b));
+        }
+        // 删除最后一个冒号
+        sb.deleteCharAt(sb.length() - 1);
+        return sb.toString();
+    }
+
+    public static String getApkHash(Context context, String packageName) {
+        try {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+            String apkFilePath = packageInfo.applicationInfo.sourceDir;
+            return calculateHash(apkFilePath);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException | NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
+    }
+
+    private static String calculateHash(String filePath) throws IOException, NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance(&quot;SHA-256&quot;);
+        try (FileInputStream fis = new FileInputStream(filePath)) {
+            byte[] buffer = new byte[8192];
+            int bytesRead;
+            while ((bytesRead = fis.read(buffer)) != -1) {
+                md.update(buffer, 0, bytesRead);
+            }
+        }
+        byte[] hashBytes = md.digest();
+        StringBuilder sb = new StringBuilder();
+        for (byte hashByte : hashBytes) {
+            sb.append(Integer.toString((hashByte &amp; 0xff) + 0x100, 16).substring(1));
+        }
+        return sb.toString();
+    }
+
+    public static String convertFormattedHashToHex(String formattedHash) {
+        // 去除冒号
+        // formattedHash = formattedHash.replaceAll(&quot;:&quot;, &quot;&quot;);
+
+        // 转换为十六进制表示
+        StringBuilder hexHash = new StringBuilder();
+        for (int i = 0; i &lt; formattedHash.length(); i += 2) {
+            String hexByte = formattedHash.substring(i, i + 2);
+            int decimal = Integer.parseInt(hexByte, 16);
+            String hex = Integer.toHexString(decimal);
+            hexHash.append(hex);
+        }
+
+        return hexHash.toString();
+    }
+
+}
+</code></pre>
+<pre><code># Add project specific ProGuard rules here.
+# You can control the set of applied configuration files using the
+# proguardFiles setting in build.gradle.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+# Uncomment this to preserve the line number information for
+# debugging stack traces.
+#-keepattributes SourceFile,LineNumberTable
+
+# If you keep the line number information, uncomment this to
+# hide the original source file name.
+#-renamesourcefileattribute SourceFile
+-keep class com.tool.hwtools.HwTools {
+    *;
+}
+
+-keepnames class com.tool.hwtools.HwTools {
+    *;
+}
+</code></pre>
+<h1 id="jar">Jar生成位置</h1>
+<pre><code>build/.transforms..../out/jars/classes.jar
+</code></pre>
+
+                        </div>
+                        <div class="toc-container">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            
+            <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="/post/yue-du-lesslessdai-ma-zheng-ji-zhi-dao-greatergreater/">
+                    <h3 class="post-title">
+                        阅读《代码整洁之道》
+                    </h3>
+                </a>
+            </div>
+            
+
+            
+
+            
+<div class="site-footer">
+    Powered by Gridea Pro
+    <a class="rss" href="/atom.xml" target="_blank">
+        <i class="ri-rss-line"></i> RSS
+    </a>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        hljs.initHighlightingOnLoad()
+
+        let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+        
+        
+        
+        
+        
+        
+        
+        
+
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach((link, index) => {
+                let section = document.getElementById(decodeURI(link.hash).substring(1));
+                let nextSection = null
+                if (mainNavLinks[index + 1]) {
+                    nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+                }
+                if (section.offsetTop <= fromTop) {
+                    if (nextSection) {
+                        if (nextSection.offsetTop > fromTop) {
+                            link.classList.add("current");
+                        } else {
+                            link.classList.remove("current");
+                        }
+                    } else {
+                        link.classList.add("current");
+                    }
+                } else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+
+    </script>
+<script>console.log("\n%c ✦ Gridea Pro v1.2.2 %c · Theme: inotes v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+
+</html>
