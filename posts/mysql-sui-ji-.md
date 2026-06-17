@@ -7,7 +7,8 @@ tags:
     - MySql
 tag_ids:
     - gRjAxH
-categories: []
+categories:
+    - 编程基础
 published: true
 hideInList: false
 feature: ""
@@ -53,8 +54,8 @@ update  userinfo set passworld=6666,gameWon=10 where nickName="B";
 -- 查找表是否存在
 -- SELECT table_name FROM information_schema.TABLES WHERE table_name = "userinfo";
 ```
-# 数据库的
-![](https://zhoujun2303.github.io/post-images/1659752245956.jpg)
+## 数据库的
+![](/post-images/1659752245956.jpg)
 
 - 创建数据表的操作指令
 ```
@@ -82,9 +83,9 @@ CREATE TABLE `数据库名`.`表名`(
     
 )
 ```
-![](https://zhoujun2303.github.io/post-images/1659752355662.jpg)
+![](/post-images/1659752355662.jpg)
 - 数据库的查询
-![](https://zhoujun2303.github.io/post-images/1659752379560.jpg)
+![](/post-images/1659752379560.jpg)
 ```
 show databases;
 ```
@@ -92,13 +93,13 @@ show databases;
 ```
 --  空格
 ```
-![](https://zhoujun2303.github.io/post-images/1659752454143.jpg)
+![](/post-images/1659752454143.jpg)
 
 - 查看表单具体结构
-![](https://zhoujun2303.github.io/post-images/1659752471099.jpg)
+![](/post-images/1659752471099.jpg)
 
 - 表中添加 信息
-![](https://zhoujun2303.github.io/post-images/1659752504465.jpg)
+![](/post-images/1659752504465.jpg)
 
 - 非主键数据表数据删除
-![](https://zhoujun2303.github.io/post-images/1659752528723.jpg)
+![](/post-images/1659752528723.jpg)

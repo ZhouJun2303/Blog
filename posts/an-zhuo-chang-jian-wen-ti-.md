@@ -7,7 +7,8 @@ tags:
     - Android
 tag_ids:
     - SWem6w
-categories: []
+categories:
+    - Android / iOS
 published: true
 hideInList: false
 feature: ""
@@ -19,7 +20,7 @@ isTop: false
   url'http://maven.aliyun.com/nexus/content/groups/public/'
 ```
 - 2，解决Failure [INSTALL_FAILED_TEST_ONLY]
-![](https://zhoujun2303.github.io/post-images/1659768635872.jpg)
+![](/post-images/1659768635872.jpg)
 ```
 android:testOnly="true" 
 改成 android:testOnly="false"
@@ -31,7 +32,7 @@ android.injected.testOnly=false
     - b,连接至Androidstudio
     - c,查看logcat（能查看包名的release包不能上架市场，不能查看即为正常）
     - d,检查 androidManifest.xml 文件中是否存在 isDebugger = true的标签，如果存在该标签,即使使用签名文件发布正式包，打出来的apk或者aab 也是debug包
-![](https://zhoujun2303.github.io/post-images/1659768662006.jpg)
+![](/post-images/1659768662006.jpg)
 
 - 4，存在重复引用库问题
 [log.txt](https://note.youdao.com/s/GLwOleTm)

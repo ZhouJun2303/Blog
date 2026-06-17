@@ -9,14 +9,15 @@ tags:
 tag_ids:
     - FjODty
     - SWem6w
-categories: []
+categories:
+    - Android / iOS
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-![](https://zhoujun2303.github.io/post-images/1659769096245.jpg)
+![](/post-images/1659769096245.jpg)
 从空工程替换这个两个文件夹到已接好SDK的工程
 
 //TODO 

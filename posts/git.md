@@ -7,7 +7,8 @@ tags:
     - Git
 tag_ids:
     - 8A3Umz
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""

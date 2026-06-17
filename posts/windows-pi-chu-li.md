@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - BhRpLA
     - pQW03i
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""

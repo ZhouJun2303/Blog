@@ -7,7 +7,8 @@ tags:
     - 随口说
 tag_ids:
     - CtJG2N
-categories: []
+categories:
+    - 编程基础
 published: true
 hideInList: false
 feature: ""

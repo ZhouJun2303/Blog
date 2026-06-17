@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - V2lHuS
     - qtVIaK
-categories: []
+categories:
+    - 阅读与资料
 published: true
 hideInList: false
 feature: /post-images/unity-senior-developer-toolchain-map.svg

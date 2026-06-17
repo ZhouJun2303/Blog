@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - NodeJS
     - gRjAxH
-categories: []
+categories:
+    - 编程基础
 published: true
 hideInList: false
 feature: ""

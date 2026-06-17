@@ -7,22 +7,23 @@ tags:
     - Spine
 tag_ids:
     - YR4Yni
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# 解决需求
+## 解决需求
 边走路边砍人，边走路边挥手
-# 单层动画播放
+## 单层动画播放
 ```
   skeletonAnimation.AnimationState.SetAnimation(0, animationName, loop);
 ```
-# 多层融合
+## 多层融合
 ## Unity导入Spine 动画后，在Unity端导出Animation Referance Assets
-![](https://zhoujun2303.github.io/post-images/1677721091327.jpg)
+![](/post-images/1677721091327.jpg)
 ## 代码中使用
 ```
 //Step1: 加载并缓存 AnimationReferenceAsset 文件

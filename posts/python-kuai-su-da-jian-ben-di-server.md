@@ -7,7 +7,8 @@ tags:
     - Python
 tag_ids:
     - Python
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""

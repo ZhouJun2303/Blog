@@ -7,7 +7,8 @@ tags:
     - 收藏
 tag_ids:
     - bWHHfa
-categories: []
+categories:
+    - 阅读与资料
 published: true
 hideInList: false
 feature: ""
@@ -16,64 +17,64 @@ isTop: false
 
 [疑难杂症大佬在线](https://www.jianshu.com/p/ff462d5efd2)
 [github多人协作](https://www.cnblogs.com/zhaoyanjun/p/5882784.html)
-[B站视频解析地址](https://www.guoxingjun.com/video/bilibili)
+B站视频解析地址（原链接已无法稳定访问）
 [shell脚本编写](https://blog.csdn.net/nmgrd/article/details/78990468?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-1)
-[贝塞尔曲线生成](https://1ko1.com/games/bezier/index.html)
+贝塞尔曲线生成（原链接已失效）
 [网站模板](http://www.cssmoban.com/)
 [阿里云服务器控制台](https://www.aliyun.com/spm=5176.12901015.ahjq0uaqt.1.2b9a525cife9GO)
-[gitLab](https://gitlab.com/hordesolutions/Hamsters.js)
+[Hamsters.js](https://gitlab.com/asmithdev/Hamsters.js)
 [nodejs中文文档](http://nodejs.cn/api/cluster.html)
-[5G云资源分享网站](https://www.yunziyuan.com.cn/)
-[unity官方文档](https://learn.unity.com/projects)
+5G云资源分享网站（原链接证书异常，暂不保留跳转）
+[unity官方文档](https://docs.unity.cn/cn/current/Manual/UnityOverview.html)
 [安卓开发文档](https://developer.android.google.cn/index.html)
 [excel转JSON](http://www.bejson.com/json/col2json/)
 [linux使用](https://blog.csdn.net/intflojx/article/details/85882002)
 [前端状态管理mobx](https://cn.mobx.js.org/)
-[网络协议讲解](https://blog.shipengqi.top/2018/11/23/network-protocol/)
+网络协议讲解（原链接已失效）
 [npm protobufjs](https://protobufjs.github.io/protobuf.js/Root.html#load)
 [pbkiller使用](https://www.jianshu.com/p/1ae9ce39e8d7)
-[nodejs多线程](https://gitlab.com/hordesolutions/Hamsters.js)
+[nodejs多线程](https://gitlab.com/asmithdev/Hamsters.js)
 [mySql8.0安装教程](https://www.seoxiehui.cn/article-144156-1.html)
 [安卓官网](https://developer.android.google.cn/studio/intro/studio-config)
 [数据库](https://www.seoxiehui.cn/article-144156-1.html)
 [支付宝接入](https://blog.csdn.net/lck8989/article/details/80324391)
 [cocos.org](https://forum.cocos.org/t/topic/42484)
 [cocos使用安卓打包](https://blog.csdn.net/hj3601947/article/details/81475408)
-[网道](https://wangdoc.com/javascript/oop/new.html)
+[网道](https://wangdoc.com/javascript/oop/new)
 [菜鸟教程 Java script语法 ](https://www.runoob.com/js/js-datatypes.html)
 [cocos原生文档](https://docs.cocos2d-x.org/api-ref/js/V3.3/)
 [creator开发文档](https://docs.cocos.com/creator/2.1/manual/zh/getting-started/install.html)
 [在线抠图网](https://www.gaoding.com/koutu?hmsr=pcbaidu-sem-koutu-kt-kt-108292-sem&utm_medium=cpc&utm_source=pcbaidu)
-[在线抠图网2](https://www.gaoding.com/clip)
+[在线抠图网2](https://www.gaoding.com/editor/koutu/clip)
 [简书之cocos动作](https://www.jianshu.com/p/1588fd0b4135)
 [creator打包](https://www.cnblogs.com/skysand/p/4063584.html)
 [ES6语法](http://es6.ruanyifeng.com/)
 [画任意角度的弧形圆](https://blog.csdn.net/DayDreamWMM/article/details/83048699)
-[艺术字生成网站](https://www.qt86.com/)
+艺术字生成网站（原链接证书已过期）
 [图片缩小](https://tinypng.com/)
 [激励视频广告开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/ad/rewarded-video-ad.html)
 [免费音效网址](http://www.aigei.com/s?q=%E8%84%9A%E6%AD%A5&type=sound&detailTab=file)
 [阿里免费icon](https://www.iconfont.cn/)
 [cocos论坛项目汇总](https://forum.cocos.com/t/creator/44782)
 [网址变成二维码](https://cli.im/url/info?a9a4071a3012dd63171048902c5820f5)
-[fiddler截包教程](http://www.mianfeidianhua.net/fiddler-shujubao.html)
+fiddler截包教程（原链接已无法稳定访问）
 [cocos物理引擎示例](https://github.com/2youyou2/physics-example)
 [php中文网站](https://www.php.cn/)
 [微信官方文档](https://developers.weixin.qq.com/doc/)
 [VSCode中使用git](https://www.jianshu.com/p/727ec2b586b4)
-[基于 Unity 引擎的游戏框架](https://gameframework.cn/)
-[手势识别](http://uwdata.github.io/gestrec/)
+[基于 Unity 引擎的游戏框架](http://gameframework.cn/)
+[手势识别](https://idl.uw.edu/gestrec/)
 [一笔画](https://blog.csdn.net/qq_41903941/article/details/90259274)
 [Laya2.0 实现模拟物体影子shader](https://blog.csdn.net/u012740992/article/details/89173665)
-[unity圣典](https://dev.gameres.com/program/unity3dmanual/Manual/index.html)
+[unity圣典](https://docs.unity.cn/cn/current/Manual/UnityOverview.html)
 [文件在线转换](https://cloudconvert.com/)
 [MP3压缩 ](https://www.mp3smaller.com/zh/)
 [js在线混淆 ](https://obfuscator.io/)
-[jshaman](http://www.jshaman.com/protect.html)
+[jshaman](https://www.jshaman.com/)
 [图片在线压缩](https://tinypng.com/)
 [bat文件目录问题](https://blog.csdn.net/chiyu5368/article/details/100611484?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159842026219195188328928%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=159842026219195188328928&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~rank_business_v1-2-100611484.ecpm_v3_rank_business_v1&utm_term=bat%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%AD%E5%90%8E%E7%BC%80%E5%90%8D&spm=1018.2118.3001.4187)
 [Laya的位图字体bitmapFont字体用法](https://blog.csdn.net/u010156024/article/details/88620229)
-[qq官方文档](https://q.qq.com/#/home)
+[qq官方文档](https://q.qq.com/wiki/)
 [穿山甲广告接入](https://www.pangle.cn/union/media/union/billing)
 [Laya原生反射](https://blog.csdn.net/xmx5166/article/details/106650449?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v28-3-106650449.nonecase&utm_term=android%E4%B8%8Elaya%E4%BA%92%E7%9B%B8%E8%B0%83%E7%94%A8&spm=1000.2123.3001.4430)
 [unity2018.4中文文档](https://docs.unity.cn/cn/current/Manual/UnityOverview.html)

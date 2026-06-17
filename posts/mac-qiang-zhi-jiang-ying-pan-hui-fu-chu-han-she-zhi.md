@@ -7,7 +7,8 @@ tags:
     - Mac
 tag_ids:
     - 1dgFIU
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""

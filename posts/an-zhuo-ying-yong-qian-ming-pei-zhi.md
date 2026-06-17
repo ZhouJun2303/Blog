@@ -7,7 +7,8 @@ tags:
     - Android
 tag_ids:
     - SWem6w
-categories: []
+categories:
+    - Android / iOS
 published: true
 hideInList: false
 feature: ""

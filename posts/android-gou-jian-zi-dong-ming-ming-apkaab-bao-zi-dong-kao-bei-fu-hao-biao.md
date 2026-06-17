@@ -3,16 +3,21 @@ id: YPMpbs
 title: Android 构建自动命名APK、AAB包，自动拷贝符号表
 createdAt: "2023-07-20 15:48:25"
 updated: "2026-06-16 16:11:55"
-tags: []
-tag_ids: []
-categories: []
+tags:
+    - Android
+    - 构建发布
+tag_ids:
+    - SWem6w
+    - xn5J0z
+categories:
+    - Android / iOS
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# APK、AAB的自动化命名
+## APK、AAB的自动化命名
 ## 示例
 ```
  defaultConfig {
@@ -46,7 +51,7 @@ def getAppName() {
     return s.replaceAll("\"", "");
 }
 ```
-# 自动拷贝符号表
+## 自动拷贝符号表
 ```
  applicationVariants.all { variant ->
         variant.outputs.all { output ->

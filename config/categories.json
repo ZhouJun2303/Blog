@@ -1,10 +1,58 @@
 {
     "categories": [
         {
-            "id": "DfCat0",
-            "name": "默认分类",
-            "slug": "default",
-            "description": "默认分类"
+            "id": "cat-unity",
+            "name": "Unity",
+            "slug": "unity",
+            "description": "Unity 引擎、编辑器、性能、构建、SDK、工具与高级开发内容"
+        },
+        {
+            "id": "cat-android-ios",
+            "name": "Android / iOS",
+            "slug": "android-ios",
+            "description": "移动端原生平台、SDK、签名、打包和跨平台接入"
+        },
+        {
+            "id": "cat-cocos-laya",
+            "name": "Cocos / Laya",
+            "slug": "cocos-laya",
+            "description": "Cocos Creator 与 Laya 相关开发笔记"
+        },
+        {
+            "id": "cat-programming",
+            "name": "编程基础",
+            "slug": "programming",
+            "description": "C#、JavaScript、NodeJS、Python、数据库、网络和通用编程知识"
+        },
+        {
+            "id": "cat-tools",
+            "name": "工具链",
+            "slug": "tools",
+            "description": "Git、Jenkins、Windows、Linux、IIS、脚本、自动化和本地工具"
+        },
+        {
+            "id": "cat-security",
+            "name": "安全与逆向",
+            "slug": "security-reverse",
+            "description": "逆向分析、防护加固、混淆和安全相关内容"
+        },
+        {
+            "id": "cat-reading",
+            "name": "阅读与资料",
+            "slug": "reading-notes",
+            "description": "读书笔记、关键词、收藏链接、写作规范与个人记录"
+        },
+        {
+            "id": "cat-game",
+            "name": "游戏项目",
+            "slug": "game-projects",
+            "description": "游戏项目记录、玩法系统和作品整理"
+        },
+        {
+            "id": "cat-personal",
+            "name": "个人",
+            "slug": "personal",
+            "description": "关于页面和个人随笔"
         }
     ]
 }

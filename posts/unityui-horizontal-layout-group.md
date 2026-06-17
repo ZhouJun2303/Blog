@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - UNR80K
     - Bpnrqu
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -31,8 +32,8 @@ ui.RightNode.rectTransform.sizeDelta = new Vector2(nodeItemLength, 52);
 
 ## 方案2
 Horizontal Layout Group 设置控制子节点大小
-![](https://zhoujun2303.github.io/post-images/1679208119320.jpeg)
+![](/post-images/1679208119320.jpeg)
 中间节点设置固定大小
-![](https://zhoujun2303.github.io/post-images/1679208147076.jpg)
+![](/post-images/1679208147076.jpg)
 左右节点设置按比例自动分配大小
-![](https://zhoujun2303.github.io/post-images/1679208171158.jpg)
+![](/post-images/1679208171158.jpg)

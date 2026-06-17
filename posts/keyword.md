@@ -7,7 +7,8 @@ tags:
     - keyword
 tag_ids:
     - NcZ27q
-categories: []
+categories:
+    - 阅读与资料
 published: true
 hideInList: true
 feature: ""

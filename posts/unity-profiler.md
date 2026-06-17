@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - J7VXMO
     - IQkNhj
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -17,7 +18,7 @@ isTop: false
 ---
 
 ## Stats面板
-![](https://zhoujun2303.github.io/post-images/1680420126719.jpg)
+![](/post-images/1680420126719.jpg)
 + Render thread 渲染线程，渲染一帧需要多少ms
 + Batches 批次，需要分几个批次提交给GPU
 + Saved by batching  有多少物体是同一批次提交给GPU（合批数量）
@@ -31,7 +32,7 @@ isTop: false
 ## Profiler
 [Up主讲解](https://www.bilibili.com/video/BV1Rd4y1q7jt/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=6f81433b8f1dda2a8d9fd1f770a72ef3)
 Profiler(Standalone Process) 单独开启一个线程进行分析，对现有游戏影响较小
-![](https://zhoujun2303.github.io/post-images/1680423428267.jpg)
+![](/post-images/1680423428267.jpg)
 使用一个循环来伪造有问题的代码
 ```
 using System.Collections;

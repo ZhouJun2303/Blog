@@ -7,14 +7,15 @@ tags:
     - Linux
 tag_ids:
     - J1aZtK
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# 搭建
+## 搭建
 ## node.js环境服务器
 ## 安装mysql
 ```

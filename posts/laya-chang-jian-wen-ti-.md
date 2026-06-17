@@ -7,7 +7,8 @@ tags:
     - Laya
 tag_ids:
     - 1UVSeu
-categories: []
+categories:
+    - Cocos / Laya
 published: true
 hideInList: false
 feature: ""

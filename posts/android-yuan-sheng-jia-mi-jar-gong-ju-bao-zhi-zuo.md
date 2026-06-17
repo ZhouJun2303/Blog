@@ -9,14 +9,15 @@ tags:
 tag_ids:
     - irFZ9L
     - Qh55SV
-categories: []
+categories:
+    - 安全与逆向
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# 设计
+## 设计
 - 设计思路
   可读接口->不可读接口
 - Android 创建一个新的Lib
@@ -30,7 +31,7 @@ isTop: false
             --SignatureUtil
     --proguard-rules.pro
 ```
-# 未加密代码
+## 未加密代码
 ```
 package com.tool.hwtools;
 
@@ -464,7 +465,7 @@ public class SignatureUtil {
     *;
 }
 ```
-# Jar生成位置
+## Jar生成位置
 ```
 build/.transforms..../out/jars/classes.jar
 ```

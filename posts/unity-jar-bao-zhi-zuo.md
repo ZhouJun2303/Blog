@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - FjODty
     - Qh55SV
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -17,13 +18,13 @@ isTop: false
 ---
 
 - 1,创建一个新的模块
-![](https://zhoujun2303.github.io/post-images/1659766098389.jpg)
+![](/post-images/1659766098389.jpg)
 - 2,拷贝unity 自带jar包到模块下的lib
-![](https://zhoujun2303.github.io/post-images/1659766112757.jpg)
+![](/post-images/1659766112757.jpg)
 - 3,添加lib到模块
 - 4,java 调用 C# 代码
-![](https://zhoujun2303.github.io/post-images/1659766121750.jpg)
-![](https://zhoujun2303.github.io/post-images/1659766125549.jpg)
+![](/post-images/1659766121750.jpg)
+![](/post-images/1659766125549.jpg)
 ```
 package com.miaole.mlunityplugins_v1_1;
 

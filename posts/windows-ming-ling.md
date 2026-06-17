@@ -7,7 +7,8 @@ tags:
     - Windows
 tag_ids:
     - BhRpLA
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""

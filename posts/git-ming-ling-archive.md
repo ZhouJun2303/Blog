@@ -7,14 +7,15 @@ tags:
     - Git
 tag_ids:
     - 8A3Umz
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# git archieve
+## git archieve
 可以用于将库中代码打包。
 - 基本用法：
 ```
@@ -55,5 +56,5 @@ git archive --output "./output.tar.gz" master
 ```
 - 示例
 将CN分支打包给发行
-![](https://zhoujun2303.github.io/post-images/1659770215987.png)
+![](/post-images/1659770215987.png)
 😀具体百度吧

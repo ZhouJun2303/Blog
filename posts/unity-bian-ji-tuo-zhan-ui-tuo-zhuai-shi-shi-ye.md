@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - J7VXMO
     - FjODty
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -20,7 +21,7 @@ isTop: false
 ## **先来看看效果**
 <!-- more -->
 
-![](https://zhoujun2303.github.io/post-images/1660790489890.gif)
+![](/post-images/1660790489890.gif)
 
 <!-- more -->
 

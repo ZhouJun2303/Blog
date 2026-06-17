@@ -7,14 +7,15 @@ tags:
     - UnityEngine
 tag_ids:
     - UNR80K
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# 原生Task
+## 原生Task
 ## 使用
 ```
 await Test3();
@@ -108,7 +109,7 @@ private struct <Test3>d__8 : IAsyncStateMachine
 ```
 以 await 为分隔符，分成不同的State
 
-# 参考ETTask实现一个最基本的 [ET文档](https://et-framework.cn/)
+## 参考ETTask实现一个最基本的 [ET文档](https://github.com/egametang/ET)
 ## 实现
 ### 使用System.Runtime.CompilerServices.AsyncMethodBuilder(typeof(MyAsyncTaskMethodBuilder)
 ```
@@ -321,7 +322,7 @@ private struct <Test5>d__10 : IAsyncStateMachine
         ...other code
 ```
 - Unity 的Task 异步是伪异步，本质是状态机进行状态控制
-# 其他异步
+## 其他异步
 ## 协程
 ```
 	...other code

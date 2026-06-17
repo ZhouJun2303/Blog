@@ -7,7 +7,8 @@ tags:
     - JavaScript
 tag_ids:
     - Q353xo
-categories: []
+categories:
+    - 安全与逆向
 published: true
 hideInList: false
 feature: ""
@@ -15,4 +16,4 @@ isTop: false
 ---
 
 [混淆地址](https://obfuscator.io/)
-![](https://zhoujun2303.github.io/post-images/1659757241403.jpg)
+![](/post-images/1659757241403.jpg)

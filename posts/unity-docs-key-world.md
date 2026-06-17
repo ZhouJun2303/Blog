@@ -11,14 +11,15 @@ tag_ids:
     - NcZ27q
     - UNR80K
     - J7VXMO
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
 isTop: true
 ---
 
-# 见识少的人才会极其自信
+## 见识少的人才会极其自信
 [官方文档2020.3.33](https://docs.unity.cn/cn/2020.3/Manual/VisualStudioIntegration.html)
 ## Unity Editor
 ### 预设的覆盖，预设的变体

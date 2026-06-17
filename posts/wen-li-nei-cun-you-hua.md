@@ -7,7 +7,8 @@ tags:
     - U3D性能优化
 tag_ids:
     - IQkNhj
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -31,7 +32,7 @@ RGB的24位纹理和RGBA的32位纹理都是常见的图像格式，它们之间
 在游戏中选择使用哪种纹理格式通常取决于需要呈现的效果和资源的使用情况。如果需要呈现透明效果，或者需要在纹理中嵌入透明度信息，则应该使用32位RGBA纹理。如果不需要透明效果，则可以使用24位RGB纹理，这样可以减少资源占用，并提高渲染效率。
 ## 根据平台选择支持的纹理压缩格式
 在对应平台上选择支持的压缩格式，如果是不支持的压缩格式，Unity会自动转换成RGBA32/RGB24格式，并且转换之前的内存也会保留，将消耗更多的时间， 内存
-[//Todo 各个平台纹理压缩区别] (https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html)
+[//Todo 各个平台纹理压缩区别](https://docs.unity3d.com/cn/current/Manual/class-TextureImporter.html)
 ## Generate Mip Maps 
 + 开启之后，可以让离摄像机较远的物体使用较小的纹理版本，但是运行时贴贴图大小将会变大。
 + 如果是图集开启了mipmap,图集中的图片必须应用于距离摄像机相近的位置，否则会增加每帧渲染所需的纹理大小，会导致DC降了，但是渲染速度反而变慢了

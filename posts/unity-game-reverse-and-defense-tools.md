@@ -13,7 +13,8 @@ tag_ids:
     - W6Rjr9
     - UEWN8u
     - IL2CPP
-categories: []
+categories:
+    - 安全与逆向
 published: true
 hideInList: false
 feature: ""
@@ -1087,7 +1088,7 @@ Android 可以接入 Google Play Integrity API。基本思路：
 服务端根据 verdict 参与风控决策
 ```
 
-不要只在客户端判断，也不要把完整性结果当成唯一封禁依据。官方文档：`https://developer.android.com/google/play/integrity`。
+不要只在客户端判断，也不要把完整性结果当成唯一封禁依据。官方文档：`https://developer.android.google.cn/google/play/integrity?hl=zh-cn`。
 
 ### 14.3 iOS App Attest / DeviceCheck
 

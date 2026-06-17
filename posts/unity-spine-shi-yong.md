@@ -7,15 +7,16 @@ tags:
     - Spine
 tag_ids:
     - YR4Yni
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# [融合动画](https://zhoujun2303.github.io/post/unity-spine-rong-he-dong-hua/)
-# 皮肤切换 附件挂点切换
+## [融合动画](https://zhoujun2303.github.io/post/unity-spine-rong-he-dong-hua/)
+## 皮肤切换 附件挂点切换
 - GetNewAttachment 获取一个新的附件
 ```
 //获取 Sprite资源

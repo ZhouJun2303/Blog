@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - FjODty
     - vjxojo
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -24,8 +25,8 @@ isTop: false
     - car mass 500 hinge joint 25
 - car body
 - car wheel
-![](https://zhoujun2303.github.io/post-images/1659765712852.jpg)
+![](/post-images/1659765712852.jpg)
 - hingejoint rigidbofy
-![](https://zhoujun2303.github.io/post-images/1659765716689.jpg)
+![](/post-images/1659765716689.jpg)
 - hinge joint
-![](https://zhoujun2303.github.io/post-images/1659765720978.jpg)
+![](/post-images/1659765720978.jpg)

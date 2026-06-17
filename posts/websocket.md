@@ -7,7 +7,8 @@ tags:
     - WebSocket
 tag_ids:
     - uf8pXo
-categories: []
+categories:
+    - 编程基础
 published: true
 hideInList: false
 feature: ""
@@ -27,7 +28,7 @@ npm install socket.io --save
 npm install -g ws //全局安装WS  npm指令自行学习
 ```
 目录如下
-![](https://zhoujun2303.github.io/post-images/1659767199779.jpg)
+![](/post-images/1659767199779.jpg)
 constValue.js
 ```
 exports.config = {
@@ -103,7 +104,7 @@ console.log(constValue.config);
 npm init
 ```
 package.json配置
-![](https://zhoujun2303.github.io/post-images/1659767215597.jpg)
+![](/post-images/1659767215597.jpg)
 ```
 //test:"node app.js"
 //启用包配置之后
@@ -112,8 +113,8 @@ package.json配置
     2-> npm test
 ```
 服务器启动
-![](https://zhoujun2303.github.io/post-images/1659767226470.jpg)
-![](https://zhoujun2303.github.io/post-images/1659767244493.jpg)
+![](/post-images/1659767226470.jpg)
+![](/post-images/1659767244493.jpg)
 ```
 Ctrl + c 关闭服务器
 ```
@@ -165,4 +166,4 @@ let ws = new WebSocket('ws://192.168.5.178:3000');
       console.log('收到服务器响应', e.data)
     };
 ```
-![](https://zhoujun2303.github.io/post-images/1659767263042.jpg)
+![](/post-images/1659767263042.jpg)

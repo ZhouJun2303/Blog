@@ -7,7 +7,8 @@ tags:
     - Cocos
 tag_ids:
     - Zuqsnn
-categories: []
+categories:
+    - Cocos / Laya
 published: true
 hideInList: false
 feature: ""

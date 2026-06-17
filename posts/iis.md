@@ -7,18 +7,19 @@ tags:
     - Windows
 tag_ids:
     - BhRpLA
-categories: []
+categories:
+    - 工具链
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-![](https://zhoujun2303.github.io/post-images/1659750458057.jpg)
+![](/post-images/1659750458057.jpg)
 打开计算机管理
 compmgmt.msc
-![](https://zhoujun2303.github.io/post-images/1659750471290.jpg)
-![](https://zhoujun2303.github.io/post-images/1659750476496.jpg)
+![](/post-images/1659750471290.jpg)
+![](/post-images/1659750476496.jpg)
 刷新DNS缓存
 ipconfig/flushdns
 

@@ -9,14 +9,15 @@ tags:
 tag_ids:
     - J7VXMO
     - NodeJS
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# 配置
+## 配置
 
 * 下载本仓库
 * 在DB文件夹中手动创建DB  //FIXME
@@ -29,7 +30,7 @@ isTop: false
 * 项目依赖Visual Studio
 * 启动项目双击 .\FirstStartup.bat
 
-# 说明
+## 说明
 
 * 目前仅支持局域网访问 //FIXME 内网穿透
 * 同时仅支持一个项目构建
@@ -38,7 +39,7 @@ isTop: false
 ## 界面说明
 
   ### 构建控制台
-  -  构建控制台地址 http://本机ip:9998
+  -  构建控制台地址 `http://本机ip:9998`
   -  增加自动构建项目请点击 ``项目配置``
   ### 项目配置界面
   - 名称（主Key）
@@ -84,7 +85,7 @@ isTop: false
 10. 打包APK，拷贝至下载路径
 11. 打包AAB，拷贝至下载路径
 
-# 重要提示
+## 重要提示
 
 * projectPath + "/launcher/build.gradle" 配置签名路径
 

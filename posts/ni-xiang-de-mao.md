@@ -7,7 +7,8 @@ tags:
     - 逆向
 tag_ids:
     - UEWN8u
-categories: []
+categories:
+    - 安全与逆向
 published: true
 hideInList: false
 feature: ""
@@ -19,7 +20,7 @@ isTop: false
 ## 工具
 ### IDA (Interactive Disassembler Professiona)
 ### WinHex (16 [进制](https://baike.baidu.com/item/%E8%BF%9B%E5%88%B6/317457?fromModule=lemma_inlink)编辑器)
-### jadx ([**jadx** - Dex to Java decompiler](https//github.com/skylot/jadx))
+### jadx ([**jadx** - Dex to Java decompiler](https://github.com/skylot/jadx))
 ### [APK Easy Tool ](https://www.filehorse.com/download-apk-easy-tool/)
 ### [Il2CppDumper](https://github.com/Perfare/Il2CppDumper#command-line)
 ### [frida](https://frida.re/docs/examples/android/)

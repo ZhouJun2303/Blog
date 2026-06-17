@@ -7,7 +7,8 @@ tags:
     - C#
 tag_ids:
     - fOiXzM
-categories: []
+categories:
+    - 编程基础
 published: true
 hideInList: false
 feature: ""

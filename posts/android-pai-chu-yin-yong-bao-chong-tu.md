@@ -7,14 +7,15 @@ tags:
     - Android
 tag_ids:
     - SWem6w
-categories: []
+categories:
+    - Android / iOS
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-[原文链接](https://fengzhouxuan.github.io/2022/10/24/Andoird-Gradle%E6%8E%92%E9%99%A4aar%E5%8C%85%E4%B8%AD%E5%BC%95%E7%94%A8%E7%9A%84%E5%85%B6%E4%BB%96%E5%8C%85%E8%A7%A3%E5%86%B3%E5%BC%95%E7%94%A8%E5%86%B2%E7%AA%81/)
+原文链接已失效，本文保留本地整理内容。
 随着接入的三方库越来越多，依赖的不管是jar包还是aar包也越来越多，依赖包之间的冲突经常出现,所以做个总结记录
 ## 定位冲突的包
 首先需要找到哪些包冲突了，有些冲突的包是被其他包引用的，所以肉眼是看不出来的，比如 A包和B包冲突，是因为B包自己依赖了一个其他版本的A包，这个时候就需要定位

@@ -13,7 +13,8 @@ tag_ids:
     - P46nOZ
     - 4zUHdL
     - HBW449
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: /post-images/unity-senior-developer-skill-map.svg

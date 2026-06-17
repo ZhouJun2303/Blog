@@ -9,14 +9,15 @@ tags:
 tag_ids:
     - FjODty
     - VNguF1
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
 isTop: false
 ---
 
-# GameEntry
+## GameEntry
 整个框架的启动入口
 ## Builtin:内置组件
 ### config
@@ -222,6 +223,6 @@ NativeComponent Native = UnityGameFramework.Runtime.GameEntryGetComponent<Native
 GameEntry.Native.Vibrate(50);
 //其他同
 ```
-# 传送门
-### [GameFramework官网](https://gameframework.cn/)
+## 传送门
+### [GameFramework官网](http://gameframework.cn/)
 ### [GameFramework仓库](https://github.com/EllanJiang/GameFramework)

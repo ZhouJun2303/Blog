@@ -7,7 +7,8 @@ tags:
     - GameRecord
 tag_ids:
     - gUMsIn
-categories: []
+categories:
+    - 游戏项目
 published: true
 hideInList: false
 feature: ""
@@ -21,8 +22,8 @@ isTop: true
 
 |  游戏名 |研发引擎| 研发类型 | 推荐指数 | 链接 |
 |  :----: | :----:   | :----:  | :----:  |:----:  |
-|欢乐坦克大战 |Cocos Creator|💪|👍|[🔍](http://47.105.209.80:8891/)|
-|卡牌 |Cocos Creator|💪|👍|[🔍](http://193.112.39.144:9000/)  [🔍](http://47.105.209.80:9001/)|
+|欢乐坦克大战 |Cocos Creator|💪|👍|已宕机|
+|卡牌 |Cocos Creator|💪|👍|已宕机|
 |盛世棋牌 |Cocos Creator|💪|👍👍|已和谐|
 
 ## 小游戏(微信等平台搜索即玩)
@@ -45,30 +46,30 @@ isTop: true
 |兄弟别揍我|Laya| 🤝|👍|
 
 🍏📱
-## 原生平台（点击游戏Icon 或 游戏名即可跳转下载主页，需要科学上网）
+## 原生平台（可用链接保留，已下架作品保留记录）
 
 |  游戏名  |研发引擎 | 研发类型  |上架平台| 推荐指数 |
 |  :----:  | :----:   | :----:  | :----:  | :----:  |
 |飞机大战|Cocos Creator|🤝|📱|👍|
 |取骰子|Cocos Creator|🤝|📱|👍|
-|[![](https://zhoujun2303.github.io/post-images/1659845022573.png)shopaholic Go](https://play.google.com/store/apps/details?id=wanyou.miaole.myqueen)|U3D|🤝|📱|👍|
-[![](https://zhoujun2303.github.io/post-images/1659845623950.jpg)Flappy3D](https://play.google.com/store/apps/details?id=flying.bird.arcade.games)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659845697290.jpg)Art of Sword](https://play.google.com/store/apps/details?id=sword.battle.arcade.games)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659845754343.jpg)DateQueen](https://play.google.com/store/apps/details?id=com.miaole.wanyou.DateQueen)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659845815235.jpg)CarCraftRace](https://play.google.com/store/apps/details?id=wanyou.miaole.CarCraftRace)|U3D|💪|📱|👍👍
-[![](https://zhoujun2303.github.io/post-images/1659845839016.jpg)Fashion Road](https://play.google.com/store/apps/details?id=wanyou.miaole.fashionrun)|U3D|🤝|📱🍏|👍
-[![](https://zhoujun2303.github.io/post-images/1659845891605.jpg)Pop Queen Run](https://play.google.com/store/apps/details?id=wanyou.miaole.PopQueenRun)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846000661.jpg)Ragdoll Soccer](https://play.google.com/store/apps/details?id=wanyou.miaole.RagdollSoccer)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846026930.jpg)MonsterEscape](https://play.google.com/store/apps/details?id=wanyou.miaole.MonsterEscape)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846055954.jpg)CarCraftRacing](https://play.google.com/store/apps/details?id=wanyou.miaole.CarCraftRacing)|U3D|🤝|📱🍏|👍👍👍
-[![](https://zhoujun2303.github.io/post-images/1659846179768.jpg)Pop Culture Run](https://play.google.com/store/apps/details?id=wanyou.miaole.PopCultureRun)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846232700.jpg)Truth Or Dare](https://play.google.com/store/apps/details?id=wanyou.miaole.TruthOrDare)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846263109.jpg)Draw Bridge Run](https://play.google.com/store/apps/details?id=wanyou.miaole.DrawBridgeRun)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846299471.jpg)Fridge Rush](https://play.google.com/store/apps/details?id=wanyou.miaole.FridgeRush)|U3D|💪|📱|👍
-[![](https://zhoujun2303.github.io/post-images/1659846330439.jpg)Delivery Master](https://play.google.com/store/apps/details?id=wanyou.miaole.DeliveryMaster)|U3D|💪|📱|👍👍
-[![](https://zhoujun2303.github.io/post-images/1659846366154.jpg)Dinosaur Race](https://play.google.com/store/apps/details?id=wanyou.miaole.DinosaurRace)|U3D|💪|📱|👍👍
-[![](https://zhoujun2303.github.io/post-images/1659846401825.png)Stack Build IO](https://play.google.com/store/apps/details?id=wanyou.miaole.drawfight)|U3D|💪|📱|👍👍👍
-[![](https://zhoujun2303.github.io/post-images/1659846469584.png)SankeRaceIO](https://play.google.com/store/apps/details?id=wanyou.miaole.snakeraceio)|U3D|💪|📱|👍👍
-[瘦身](https://play.google.com/store/apps/details?id=com.hg.fitnessclub.android)|U3D|🤝|📱|👍👍👍
-[英雄工厂](https://play.google.com/store/apps/details?id=com.hg.heromaking)|U3D|🤝|📱|👍👍👍
-[小鸡工厂](https://play.google.com/store/apps/details?id=com.hg.fitnessclub.android)|U3D|🤝|📱|👍👍👍
+|![](/post-images/1659845022573.png)shopaholic Go（已下架）|U3D|🤝|📱|👍|
+|![](/post-images/1659845623950.jpg)Flappy3D（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659845697290.jpg)Art of Sword（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659845754343.jpg)DateQueen（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659845815235.jpg)CarCraftRace（已下架）|U3D|💪|📱|👍👍|
+|![](/post-images/1659845839016.jpg)Fashion Road（已下架）|U3D|🤝|📱🍏|👍|
+|![](/post-images/1659845891605.jpg)Pop Queen Run（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846000661.jpg)Ragdoll Soccer（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846026930.jpg)MonsterEscape（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846055954.jpg)CarCraftRacing（已下架）|U3D|🤝|📱🍏|👍👍👍|
+|![](/post-images/1659846179768.jpg)Pop Culture Run（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846232700.jpg)Truth Or Dare（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846263109.jpg)Draw Bridge Run（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846299471.jpg)Fridge Rush（已下架）|U3D|💪|📱|👍|
+|![](/post-images/1659846330439.jpg)Delivery Master（已下架）|U3D|💪|📱|👍👍|
+|![](/post-images/1659846366154.jpg)Dinosaur Race（已下架）|U3D|💪|📱|👍👍|
+|![](/post-images/1659846401825.png)Stack Build IO（已下架）|U3D|💪|📱|👍👍👍|
+|![](/post-images/1659846469584.png)SankeRaceIO（已下架）|U3D|💪|📱|👍👍|
+|[瘦身](https://play.google.com/store/apps/details?id=com.hg.fitnessclub.android)|U3D|🤝|📱|👍👍👍|
+|[英雄工厂](https://play.google.com/store/apps/details?id=com.hg.heromaking)|U3D|🤝|📱|👍👍👍|
+|[小鸡工厂](https://play.google.com/store/apps/details?id=com.hg.fitnessclub.android)|U3D|🤝|📱|👍👍👍|

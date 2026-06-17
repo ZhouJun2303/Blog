@@ -9,7 +9,8 @@ tags:
 tag_ids:
     - J7VXMO
     - FjODty
-categories: []
+categories:
+    - Unity
 published: true
 hideInList: false
 feature: ""
@@ -176,5 +177,5 @@ namespace MLSpace.Editor
 }
 ```
 ## 测试一下
-![](https://zhoujun2303.github.io/post-images/1660787596237.jpg)
+![](/post-images/1660787596237.jpg)
 ## 在需要打包之前或者上传Git之前可以加上自动检测，有重复资源自动打开页面
