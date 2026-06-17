@@ -2,7 +2,7 @@
 id: hKNOLQ
 title: Gridea 文档写作规范
 createdAt: "2026-06-10 22:10:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-17 10:35:00"
 tags:
     - 写作规范
     - 文档规范
@@ -19,18 +19,21 @@ feature: /post-images/unity-senior-developer-toolchain-map.svg
 isTop: false
 ---
 
-> 本规范用于本仓库后续新增文章。只要是要发布到 Gridea 的文档，都要按这里的结构、路径、图片和链接规则处理。
+> 本规范用于当前 Gridea Pro 站点后续新增和维护文章。只要文章最终要发布到本站，就按这里的目录、元数据、图片、链接和渲染规则处理。
 
 ![](/post-images/unity-senior-developer-toolchain-map.svg)
 
 ## 目录规则
 
-- 文章 Markdown 必须放在 `LocalBK/posts/`。
-- 图片必须放在 `LocalBK/post-images/`。
-- Gridea 文章是扁平结构，`LocalBK/posts/` 下不要再建子目录。
-- 长文档采用“一篇主文档 + N 篇分文档”的方式拆分。
+- 站点根目录是当前 Gridea Pro 项目目录，也就是本仓库根目录。
+- 文章 Markdown 放在 `posts/`。
+- 文章图片放在 `post-images/`。
+- 通用静态资源放在 `static/`，不要混进文章图片目录。
+- Gridea Pro 文章仍按扁平结构管理，`posts/` 下不要再建子目录。
+- 长文档采用“一篇主文档 + N 篇分文档”的方式拆分，每篇文档都有独立 slug。
 - 主文档 `hideInList: false`，分文档建议 `hideInList: true`，通过主文档目录跳转。
-- 新增或修改文章后，同步更新 `LocalBK/config/posts.json`，否则 Gridea 客户端可能识别不到。
+- `output/` 是 Gridea Pro 渲染后的产物，不要手动编辑。
+- 新增、修改、发布和渲染优先通过 Gridea Pro 客户端或 Gridea Pro MCP 完成。
 
 ## 文件命名
 
@@ -43,9 +46,20 @@ isTop: false
 
 ```yaml
 ---
-title: '文章标题'
-date: 2026-06-10 21:00:00
-tags: [Unity,开发高级/资深,性能优化]
+id: AbCd12
+title: 文章标题
+createdAt: "2026-06-17 10:30:00"
+updated: "2026-06-17 10:30:00"
+tags:
+    - Unity
+    - 性能优化
+tag_ids:
+    - WOSAx0
+    - 584J9D
+categories:
+    - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: /post-images/example.svg
@@ -55,13 +69,20 @@ isTop: false
 
 字段要求：
 
+- `id`：Gridea Pro 的文章 ID。新文章优先让 Gridea Pro 生成；迁移旧文时保持稳定。
 - `title`：文章标题，使用中文即可。
-- `date`：格式固定为 `YYYY-MM-DD HH:mm:ss`。
-- `tags`：使用方括号数组，标签不要过多。
+- `createdAt`：首次创建时间，格式固定为 `YYYY-MM-DD HH:mm:ss`。
+- `updated`：最近更新时间，内容变更后同步更新。
+- `tags`：使用 YAML 列表，标签不要过多。
+- `tag_ids`：与 `tags` 一一对应，使用 Gridea Pro 已有标签 ID。
+- `categories`：通常只放一个分类。
+- `category_ids`：与 `categories` 一一对应，使用 Gridea Pro 已有分类 ID。
 - `published`：正式文章为 `true`。
 - `hideInList`：主文档为 `false`，分文档可设为 `true`。
 - `feature`：有封面图时使用站点根路径 `/post-images/...`，没有则留空。
 - `isTop`：默认 `false`。
+
+> 手动写 frontmatter 时，优先复用 `config/tags.json` 和 `config/categories.json` 里的名称与 ID。更推荐的做法是用 Gridea Pro 创建文章，再补正文。
 
 ## 正文结构
 
@@ -80,7 +101,7 @@ isTop: false
 
 ## 图片规则
 
-- 图片文件放在 `LocalBK/post-images/`。
+- 图片文件放在 `post-images/`。
 - 图片命名使用文章 slug 前缀，例如 `unity-senior-developer-toolchain-map.svg`。
 - Markdown 中使用站点根路径：
 
@@ -89,6 +110,8 @@ isTop: false
 ```
 
 - 不使用 `../`、`./images/`、本地绝对路径或仓库相对路径引用图片。
+- 能说明内容的图片要写 alt 文本，例如 `![Unity 开发技能地图](/post-images/unity-senior-developer-skill-map.svg)`。
+- 封面图路径写在 `feature` 字段里，正文里是否再次展示按文章需要决定。
 
 ## 内部跳转规则
 
@@ -105,16 +128,22 @@ isTop: false
 ```
 
 - 不使用 `../xxx.md` 这种源码相对链接。Gridea 发布后，源码路径不会直接存在。
+- 当前项目发布路径由 Gridea Pro 配置决定：文章路径是 `/post/<slug>/`，标签路径是 `/tag/<slug>/`。
 
-## posts.json 同步规则
+## Gridea Pro 元数据规则
 
-每篇文章都要在 `LocalBK/config/posts.json` 中有一条记录：
+- `config/posts.json`、`config/tags.json`、`config/categories.json` 是 Gridea Pro 的站点数据，不再当作文档写作的手工主入口。
+- 通过 Gridea Pro 客户端或 Gridea Pro MCP 创建、更新文章时，让工具维护这些 JSON。
+- 如果直接修改 `posts/*.md`，要确认对应文章在 `config/posts.json` 中的 `content`、标题、标签、分类、发布时间也已同步，否则渲染结果可能仍是旧内容。
+- 不要手动改 `output/post/.../index.html`，它会在渲染时被覆盖。
+- 不要随意删除或重建已有文章 `id`、`tag_ids`、`category_ids`，这些字段会影响 Gridea Pro 识别和分类。
 
-- `fileName`：不带 `.md` 的 slug。
-- `content`：正文内容，不包含 frontmatter。
-- `data`：与 frontmatter 保持一致。
-- `isEmpty`：有正文时为 `false`。
-- `excerpt` 和 `abstract`：默认空字符串。
+## 发布与渲染规则
+
+- 内容修改完成后，用 Gridea Pro 渲染站点。
+- 渲染后检查 `output/post/<slug>/index.html` 是否更新。
+- 发布前确认页面里没有本地路径、源码相对链接、失效图片和旧域名。
+- RSS、站点地图、首页列表、标签页和分类页都属于渲染产物，异常时重新渲染，不手动改输出文件。
 
 ## 长文档拆分规范
 
@@ -128,12 +157,15 @@ isTop: false
 
 ## 新增文档检查清单
 
-- 文件是否在 `LocalBK/posts/`。
-- 是否有完整 frontmatter。
+- 文件是否在 `posts/`。
+- 是否有完整 Gridea Pro frontmatter。
 - slug 是否稳定、可读、无中文和空格。
-- 图片是否在 `LocalBK/post-images/`。
+- `createdAt` 和 `updated` 是否是 `YYYY-MM-DD HH:mm:ss`。
+- 标签、分类名称是否存在，对应 ID 是否同步。
+- 图片是否在 `post-images/`。
 - 图片是否使用 `/post-images/...`。
 - 内部链接是否使用 `https://zhoujun2303.github.io/post/<slug>/`。
 - 被跳转的小节是否有稳定 `<a id="..."></a>`。
-- 是否同步更新 `LocalBK/config/posts.json`。
+- 如手动改 Markdown，是否同步或确认了 `config/posts.json`。
+- 是否完成 Gridea Pro 渲染并检查输出页。
 - 是否避免空泛表达，写清工具、流程、交付物和验收方式。
