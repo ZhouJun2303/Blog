@@ -2,7 +2,7 @@
 id: 80WgAX
 title: Unity 开发高级/资深 09：编辑器工具、配置与本地数据
 createdAt: "2026-06-10 21:59:00"
-updated: "2026-06-16 17:26:21"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -15,6 +15,8 @@ tag_ids:
     - UTkVfb
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

@@ -2,7 +2,7 @@
 id: g0LTEg
 title: Unity 游戏逆向分析与防逆向加固工具教程
 createdAt: "2026-06-10 16:30:00"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 安全
@@ -15,6 +15,8 @@ tag_ids:
     - IL2CPP
 categories:
     - 安全与逆向
+category_ids:
+    - 35S97K
 published: true
 hideInList: false
 feature: ""

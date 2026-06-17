@@ -2,7 +2,7 @@
 id: l2v6wy
 title: Unity 开发高级/资深 03：资源管理与热更新
 createdAt: "2026-06-10 21:53:00"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -15,6 +15,8 @@ tag_ids:
     - LRgF9g
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

@@ -2,7 +2,7 @@
 id: BLIX9P
 title: NodeJS连接数据库
 createdAt: "2019-07-03 10:06:59"
-updated: "2026-06-16 17:26:23"
+updated: "2026-06-17 10:11:00"
 tags:
     - NodeJS
     - MySql
@@ -11,6 +11,8 @@ tag_ids:
     - gRjAxH
 categories:
     - 编程基础
+category_ids:
+    - kthGs4
 published: true
 hideInList: false
 feature: ""

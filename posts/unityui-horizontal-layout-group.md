@@ -2,7 +2,7 @@
 id: q4CQUm
 title: Unity(UI Horizontal Layout Group)
 createdAt: "2023-03-19 14:24:12"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - UnityEngine
     - User  Interface
@@ -11,6 +11,8 @@ tag_ids:
     - Bpnrqu
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

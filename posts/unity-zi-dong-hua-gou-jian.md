@@ -2,7 +2,7 @@
 id: ChbiBE
 title: Unity自动化构建
 createdAt: "2024-02-01 15:08:08"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - UnityEditor
     - NodeJS
@@ -11,6 +11,8 @@ tag_ids:
     - NodeJS
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

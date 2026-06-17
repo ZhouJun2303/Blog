@@ -2,7 +2,7 @@
 id: kFUH0c
 title: Unity 开发高级/资深 05：网络通信与多人同步
 createdAt: "2026-06-10 21:55:00"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -13,6 +13,8 @@ tag_ids:
     - hKdl9N
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

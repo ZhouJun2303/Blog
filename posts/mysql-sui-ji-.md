@@ -2,13 +2,15 @@
 id: EuWrT1
 title: MySql随记
 createdAt: "2019-07-03 10:14:12"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - MySql
 tag_ids:
     - gRjAxH
 categories:
     - 编程基础
+category_ids:
+    - kthGs4
 published: true
 hideInList: false
 feature: ""

@@ -2,13 +2,15 @@
 id: X4LiOL
 title: Unity 一些问题记录
 createdAt: "2022-02-23 15:21:36"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
 tag_ids:
     - FjODty
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

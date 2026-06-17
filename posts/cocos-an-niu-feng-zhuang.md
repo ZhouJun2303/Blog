@@ -2,13 +2,15 @@
 id: NUyUey
 title: Cocos按钮封装
 createdAt: "2019-08-12 10:43:24"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Cocos
 tag_ids:
     - Zuqsnn
 categories:
     - Cocos / Laya
+category_ids:
+    - Lwedfg
 published: true
 hideInList: false
 feature: ""

@@ -2,7 +2,7 @@
 id: o6CWyQ
 title: Unity 开发高级/资深 12：跨平台、本地化、音视频、AI 与物理
 createdAt: "2026-06-10 22:02:00"
-updated: "2026-06-16 17:26:21"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -15,6 +15,8 @@ tag_ids:
     - zii89F
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

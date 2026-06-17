@@ -2,7 +2,7 @@
 id: uScrjg
 title: windows批处理
 createdAt: "2020-08-26 10:33:42"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Windows
     - Bat
@@ -11,6 +11,8 @@ tag_ids:
     - pQW03i
 categories:
     - 工具链
+category_ids:
+    - VFyF1L
 published: true
 hideInList: false
 feature: ""

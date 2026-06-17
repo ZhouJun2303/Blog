@@ -2,13 +2,15 @@
 id: pKBd5t
 title: JS笔记
 createdAt: "2019-05-17 09:57:55"
-updated: "2026-06-16 17:26:23"
+updated: "2026-06-17 10:11:00"
 tags:
     - JavaScript
 tag_ids:
     - Q353xo
 categories:
     - 编程基础
+category_ids:
+    - kthGs4
 published: true
 hideInList: false
 feature: ""

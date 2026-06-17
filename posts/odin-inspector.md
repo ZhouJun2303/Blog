@@ -2,7 +2,7 @@
 id: 7Ha77O
 title: Odin Inspector
 createdAt: "2022-09-25 14:02:55"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - UnityEditor
@@ -11,6 +11,8 @@ tag_ids:
     - J7VXMO
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

@@ -2,13 +2,15 @@
 id: necwsC
 title: Mac强制将硬盘恢复出厂设置
 createdAt: "2022-01-05 14:28:58"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Mac
 tag_ids:
     - 1dgFIU
 categories:
     - 工具链
+category_ids:
+    - VFyF1L
 published: true
 hideInList: false
 feature: ""

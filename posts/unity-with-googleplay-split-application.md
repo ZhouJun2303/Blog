@@ -2,7 +2,7 @@
 id: vA4srT
 title: Unity With GooglePlay Split Application
 createdAt: "2023-09-28 10:46:50"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Android
     - Unity
@@ -11,6 +11,8 @@ tag_ids:
     - FjODty
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

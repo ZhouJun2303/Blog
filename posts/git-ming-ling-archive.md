@@ -2,13 +2,15 @@
 id: sruHC3
 title: git 命令archive
 createdAt: "2022-06-28 15:10:55"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Git
 tag_ids:
     - 8A3Umz
 categories:
     - 工具链
+category_ids:
+    - VFyF1L
 published: true
 hideInList: false
 feature: ""

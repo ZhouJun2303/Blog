@@ -2,7 +2,7 @@
 id: PTxFID
 title: GameFramework使用(Runtime)
 createdAt: "2022-09-17 12:23:54"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - GameFramework
@@ -11,6 +11,8 @@ tag_ids:
     - VNguF1
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

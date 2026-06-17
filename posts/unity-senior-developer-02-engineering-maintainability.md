@@ -2,7 +2,7 @@
 id: kcLvIj
 title: Unity 开发高级/资深 02：工程规范与可维护性
 createdAt: "2026-06-10 21:52:00"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -13,6 +13,8 @@ tag_ids:
     - 9dEULI
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

@@ -2,13 +2,15 @@
 id: 5KcprI
 title: Unity Spine 使用
 createdAt: "2023-07-06 18:45:10"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Spine
 tag_ids:
     - YR4Yni
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

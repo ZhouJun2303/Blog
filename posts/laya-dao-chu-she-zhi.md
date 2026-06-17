@@ -2,13 +2,15 @@
 id: ABjV1r
 title: Laya导出设置
 createdAt: "2020-11-25 13:39:31"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Laya
 tag_ids:
     - 1UVSeu
 categories:
     - Cocos / Laya
+category_ids:
+    - Lwedfg
 published: true
 hideInList: false
 feature: ""

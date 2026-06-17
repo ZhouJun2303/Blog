@@ -2,7 +2,7 @@
 id: 8akKGB
 title: 导出安卓工程接好SDK后如何更新
 createdAt: "2022-06-11 14:56:02"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - Android
@@ -11,6 +11,8 @@ tag_ids:
     - SWem6w
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

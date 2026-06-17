@@ -2,7 +2,7 @@
 id: D7AiFR
 title: Unity打包安卓项目目录了解
 createdAt: "2021-08-12 14:11:24"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - Android
@@ -11,6 +11,8 @@ tag_ids:
     - SWem6w
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

@@ -2,7 +2,7 @@
 id: rrSZLc
 title: Unity 开发高级/资深 10：构建发布、CI/CD 与 SDK
 createdAt: "2026-06-10 22:00:00"
-updated: "2026-06-16 17:26:21"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -15,6 +15,8 @@ tag_ids:
     - 0lhPed
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

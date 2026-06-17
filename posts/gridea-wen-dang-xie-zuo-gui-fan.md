@@ -2,7 +2,7 @@
 id: hKNOLQ
 title: Gridea 文档写作规范
 createdAt: "2026-06-10 22:10:00"
-updated: "2026-06-16 17:26:21"
+updated: "2026-06-17 10:10:59"
 tags:
     - 写作规范
     - 文档规范
@@ -11,6 +11,8 @@ tag_ids:
     - qtVIaK
 categories:
     - 阅读与资料
+category_ids:
+    - czdc35
 published: true
 hideInList: false
 feature: /post-images/unity-senior-developer-toolchain-map.svg

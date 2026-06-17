@@ -2,13 +2,15 @@
 id: nlaJfF
 title: Unity Spine融合动画
 createdAt: "2023-03-02 09:25:09"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Spine
 tag_ids:
     - YR4Yni
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

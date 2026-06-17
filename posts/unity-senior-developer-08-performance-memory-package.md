@@ -2,7 +2,7 @@
 id: uyCbBG
 title: Unity 开发高级/资深 08：性能、内存与包体
 createdAt: "2026-06-10 21:58:00"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -15,6 +15,8 @@ tag_ids:
     - QXjDT2
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

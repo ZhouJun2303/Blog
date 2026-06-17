@@ -2,13 +2,15 @@
 id: v0exoq
 title: Android 排除引用包冲突
 createdAt: "2023-03-19 14:53:08"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Android
 tag_ids:
     - SWem6w
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

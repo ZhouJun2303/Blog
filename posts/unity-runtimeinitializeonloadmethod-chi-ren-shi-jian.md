@@ -2,13 +2,15 @@
 id: rphcSC
 title: Unity RuntimeInitializeOnLoadMethod 吃人事件
 createdAt: "2023-03-14 15:16:17"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - UnityEngine
 tag_ids:
     - UNR80K
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

@@ -2,7 +2,7 @@
 id: SEom4K
 title: Jenkins-Unity-Android/iOS打包自动化
 createdAt: "2025-07-22 11:08:06"
-updated: "2026-06-16 16:11:54"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - Android
@@ -15,6 +15,8 @@ tag_ids:
     - xn5J0z
 categories:
     - 工具链
+category_ids:
+    - VFyF1L
 published: true
 hideInList: false
 feature: ""

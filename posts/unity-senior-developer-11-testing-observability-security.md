@@ -2,7 +2,7 @@
 id: xrEfaR
 title: Unity 开发高级/资深 11：测试、监控、线上排障与安全
 createdAt: "2026-06-10 22:01:00"
-updated: "2026-06-16 17:26:21"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -15,6 +15,8 @@ tag_ids:
     - W6Rjr9
 categories:
     - 安全与逆向
+category_ids:
+    - 35S97K
 published: true
 hideInList: true
 feature: ""

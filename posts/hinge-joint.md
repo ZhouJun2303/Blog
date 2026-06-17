@@ -2,7 +2,7 @@
 id: JRktub
 title: hinge joint
 createdAt: "2021-04-29 13:58:01"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - Physics
@@ -11,6 +11,8 @@ tag_ids:
     - vjxojo
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

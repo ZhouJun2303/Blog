@@ -2,7 +2,7 @@
 id: YPMpbs
 title: Android 构建自动命名APK、AAB包，自动拷贝符号表
 createdAt: "2023-07-20 15:48:25"
-updated: "2026-06-16 16:11:55"
+updated: "2026-06-17 10:11:00"
 tags:
     - Android
     - 构建发布
@@ -11,6 +11,8 @@ tag_ids:
     - xn5J0z
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

@@ -2,13 +2,15 @@
 id: X37hML
 title: 纹理内存优化
 createdAt: "2023-04-02 17:35:21"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - U3D性能优化
 tag_ids:
     - IQkNhj
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

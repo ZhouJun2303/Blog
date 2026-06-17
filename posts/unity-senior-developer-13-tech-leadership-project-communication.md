@@ -2,7 +2,7 @@
 id: HTXMOB
 title: Unity 开发高级/资深 13：技术领导力、项目管理与表达
 createdAt: "2026-06-10 22:03:00"
-updated: "2026-06-16 17:26:21"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -13,6 +13,8 @@ tag_ids:
     - WjBp2s
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

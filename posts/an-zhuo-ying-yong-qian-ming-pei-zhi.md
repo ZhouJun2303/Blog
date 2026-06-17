@@ -2,13 +2,15 @@
 id: O4mgfJ
 title: 安卓应用签名配置
 createdAt: "2022-08-02 14:30:28"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Android
 tag_ids:
     - SWem6w
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

@@ -2,7 +2,7 @@
 id: 7wdXJp
 title: AAB 转 APKS本地测试(bundletool)
 createdAt: "2021-11-08 14:16:20"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Java
     - Bundletool
@@ -11,6 +11,8 @@ tag_ids:
     - kWGCzX
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

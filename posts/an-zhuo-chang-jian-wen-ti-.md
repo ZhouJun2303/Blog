@@ -2,13 +2,15 @@
 id: 3GjgPK
 title: 安卓常见问题
 createdAt: "2021-06-16 14:48:34"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Android
 tag_ids:
     - SWem6w
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

@@ -2,13 +2,15 @@
 id: zO3RAN
 title: Lerp运算
 createdAt: "2020-01-02 11:05:51"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - 随口说
 tag_ids:
     - CtJG2N
 categories:
     - 编程基础
+category_ids:
+    - kthGs4
 published: true
 hideInList: false
 feature: ""

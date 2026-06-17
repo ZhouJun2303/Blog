@@ -2,7 +2,7 @@
 id: ZENVes
 title: 导出Xcode工程接好SDK如何更新
 createdAt: "2022-06-11 14:59:17"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - iOS
@@ -13,6 +13,8 @@ tag_ids:
     - rny1Wk
 categories:
     - Android / iOS
+category_ids:
+    - DjJyPP
 published: true
 hideInList: false
 feature: ""

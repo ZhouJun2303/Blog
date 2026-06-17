@@ -2,7 +2,7 @@
 id: ety3Zc
 title: Unity 编辑拓展(重复资源检查)
 createdAt: "2022-08-18 09:28:28"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - UnityEditor
     - Unity
@@ -11,6 +11,8 @@ tag_ids:
     - FjODty
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

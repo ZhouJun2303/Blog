@@ -2,7 +2,7 @@
 id: csEUEO
 title: Unity 开发高级/资深 04：UI、交互与输入
 createdAt: "2026-06-10 21:54:00"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - 开发高级/资深
@@ -13,6 +13,8 @@ tag_ids:
     - 6wRaJA
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: true
 feature: ""

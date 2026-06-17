@@ -2,7 +2,7 @@
 id: G3qaRS
 title: EditorAttribute
 createdAt: "2022-03-02 14:42:08"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - UnityEditor
@@ -11,6 +11,8 @@ tag_ids:
     - J7VXMO
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

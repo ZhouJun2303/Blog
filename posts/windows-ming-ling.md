@@ -2,13 +2,15 @@
 id: X3fXlv
 title: Windows 命令
 createdAt: "2025-07-22 16:59:44"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:10:59"
 tags:
     - Windows
 tag_ids:
     - BhRpLA
 categories:
     - 工具链
+category_ids:
+    - VFyF1L
 published: true
 hideInList: false
 feature: ""

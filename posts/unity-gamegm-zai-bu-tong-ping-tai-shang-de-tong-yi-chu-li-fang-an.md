@@ -2,7 +2,7 @@
 id: jhvssb
 title: Unity GameGM 在不同平台上的统一处理方案
 createdAt: "2023-07-20 15:57:18"
-updated: "2026-06-16 16:11:54"
+updated: "2026-06-17 10:10:59"
 tags:
     - Unity
     - UnityEditor
@@ -13,6 +13,8 @@ tag_ids:
     - UTkVfb
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

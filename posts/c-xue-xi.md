@@ -2,13 +2,15 @@
 id: eL81LM
 title: C# 学习
 createdAt: "2021-04-10 13:51:18"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - C#
 tag_ids:
     - fOiXzM
 categories:
     - 编程基础
+category_ids:
+    - kthGs4
 published: true
 hideInList: false
 feature: ""

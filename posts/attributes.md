@@ -2,7 +2,7 @@
 id: WPYVsr
 title: Attributes
 createdAt: "2022-03-02 14:31:49"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - UnityEngine
@@ -11,6 +11,8 @@ tag_ids:
     - UNR80K
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""

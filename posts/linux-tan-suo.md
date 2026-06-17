@@ -2,13 +2,15 @@
 id: atrQWQ
 title: Linux 探索
 createdAt: "2020-07-22 11:26:27"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Linux
 tag_ids:
     - J1aZtK
 categories:
     - 工具链
+category_ids:
+    - VFyF1L
 published: true
 hideInList: false
 feature: ""

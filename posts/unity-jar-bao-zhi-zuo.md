@@ -2,7 +2,7 @@
 id: lDOZzB
 title: Unity JAR 包制作
 createdAt: "2021-08-12 14:06:43"
-updated: "2026-06-16 17:26:22"
+updated: "2026-06-17 10:11:00"
 tags:
     - Unity
     - Jar
@@ -11,6 +11,8 @@ tag_ids:
     - Qh55SV
 categories:
     - Unity
+category_ids:
+    - h3GlEL
 published: true
 hideInList: false
 feature: ""
