@@ -21,5 +21,12 @@ feature: ""
 isTop: false
 ---
 
-[有道笔记](https://note.youdao.com/s/d3aB0JW2)
-*图片真麻烦*
+将 1 Classes/native 2 Data 3 Libraries（改了引用库） 下的资源都替换了  报错（adjust或者Libraries里面文件报错）
+
+![](/post-images/youdao-dao-chu-xcode-gong-cheng-jie-hao-sdk-ru-he-geng-xin-01.png)
+
+![](/post-images/youdao-dao-chu-xcode-gong-cheng-jie-hao-sdk-ru-he-geng-xin-02.png)
+
+![](/post-images/youdao-dao-chu-xcode-gong-cheng-jie-hao-sdk-ru-he-geng-xin-03.png)
+
+![](/post-images/youdao-dao-chu-xcode-gong-cheng-jie-hao-sdk-ru-he-geng-xin-04.png)
