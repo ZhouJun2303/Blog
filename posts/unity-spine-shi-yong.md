@@ -17,7 +17,7 @@ feature: ""
 isTop: false
 ---
 
-## [融合动画](https://zhoujun2303.github.io/post/unity-spine-rong-he-dong-hua/)
+## [融合动画](/post/unity-spine-rong-he-dong-hua/)
 ## 皮肤切换 附件挂点切换
 - GetNewAttachment 获取一个新的附件
 ```

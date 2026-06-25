@@ -23,7 +23,7 @@ feature: ""
 isTop: false
 ---
 
-[返回总览](https://zhoujun2303.github.io/post/unity-senior-developer-skills/)
+[返回总览](/post/unity-senior-developer-skills/)
 
 ![Unity 开发高级/资深工具链地图](/post-images/unity-senior-developer-toolchain-map.svg)
 

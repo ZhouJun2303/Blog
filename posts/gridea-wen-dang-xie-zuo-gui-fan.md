@@ -115,16 +115,16 @@ isTop: false
 
 ## 内部跳转规则
 
-- 文章之间跳转使用发布后的完整路径：
+- 文章之间跳转使用站点根路径 `/post/<slug>/`：
 
 ```markdown
-[性能、内存与包体](https://zhoujun2303.github.io/post/unity-senior-developer-08-performance-memory-package/)
+[性能、内存与包体](/post/unity-senior-developer-08-performance-memory-package/)
 ```
 
 - 跳到文章内小节时使用锚点：
 
 ```markdown
-[性能优化](https://zhoujun2303.github.io/post/unity-senior-developer-08-performance-memory-package/#performance)
+[性能优化](/post/unity-senior-developer-08-performance-memory-package/#performance)
 ```
 
 - 不使用 `../xxx.md` 这种源码相对链接。Gridea 发布后，源码路径不会直接存在。
@@ -164,7 +164,7 @@ isTop: false
 - 标签、分类名称是否存在，对应 ID 是否同步。
 - 图片是否在 `post-images/`。
 - 图片是否使用 `/post-images/...`。
-- 内部链接是否使用 `https://zhoujun2303.github.io/post/<slug>/`。
+- 内部链接是否使用 `/post/<slug>/`。
 - 被跳转的小节是否有稳定 `<a id="..."></a>`。
 - 如手动改 Markdown，是否同步或确认了 `config/posts.json`。
 - 是否完成 Gridea Pro 渲染并检查输出页。

@@ -37,9 +37,9 @@ public void SetTestGameVersion()
 ```
 ### UnityEditor的展示
 实现基于Odin 的 ``Button`` 和 ``FoldoutGroup`` 特性在编辑器面板上展示.asset显示
-Odin 的使用可参考 [Odin Inspector](https://zhoujun2303.github.io/post/odin-inspector/);
+Odin 的使用可参考 [Odin Inspector](/post/odin-inspector/);
 ### 真机平台如何使用
-#### 必要知识 [反射](https://zhoujun2303.github.io/post/unity-fan-she-reflection/)
+#### 必要知识 [反射](/post/unity-fan-she-reflection/)
 #### GameGMRunTimeAttribute
 ```
 using System;

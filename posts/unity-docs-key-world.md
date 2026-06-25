@@ -58,10 +58,10 @@ public class OnPreBuildProcessor : IPreprocessBuildWithReport
 - 允许在运行时加载游戏时不通过用户操作 初始化一个运行时类方法。
 - 游戏加载后，将调用标记为 [RuntimeInitializeOnLoadMethod] 的 方法。这是在调用 Awake 方法后进行的。
 - 注意：标记为 [RuntimeInitializeOnLoadMethod] 的方法的执行顺序是不确定的
-- [RuntimeInitializeOnLoadMethod 吃人事件](https://zhoujun2303.github.io/post/unity-runtimeinitializeonloadmethod-chi-ren-shi-jian/)
+- [RuntimeInitializeOnLoadMethod 吃人事件](/post/unity-runtimeinitializeonloadmethod-chi-ren-shi-jian/)
 ### RenderDoc  
 - todo 后续应该单独研究
-### [UnityProfiler](https://zhoujun2303.github.io/post/unity-profiler/)
+### [UnityProfiler](/post/unity-profiler/)
 ### [Unity的垃圾回收](https://docs.unity.cn/cn/2020.3/Manual/performance-garbage-collector.html)
 ### Unity中的优化
 #### 资源优化
@@ -91,7 +91,7 @@ OnPostprocessSprites
 OnPostprocessTexture
 所有导入完成后触发的最后一个后处理回调是 OnPostprocessAllAssets。
 ```
-#### [纹理方面的优化](https://zhoujun2303.github.io/post/wen-li-nei-cun-you-hua/)
+#### [纹理方面的优化](/post/wen-li-nei-cun-you-hua/)
 #### [字符串和文本的优化及其他官方优化](https://docs.unity.cn/cn/current/Manual/BestPracticeUnderstandingPerformanceInUnity5.html)可以直接看官方文档
 ### 特殊文件夹命名
 - Assets 资源主文件夹
