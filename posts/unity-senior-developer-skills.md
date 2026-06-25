@@ -34,7 +34,7 @@ isTop: false
 - 细分方式：每个分文档内继续按小方向拆分；如果某个方向后续需要更深案例，可以在同目录下继续新增专题文档。
 - 可跳转：目录表中的方向名都可以直接跳到对应分文档或分文档内的小节。
 - 工具要求：每个方向都列出了开发高级/资深需要掌握或至少能判断适用边界的工具。
-- 图片资源：本专题图片都放在 `LocalBK/post-images/` 下，正文统一使用 `/post-images/...` 引用。
+- 图片资源：本专题图片都放在 `post-images/` 下，正文统一使用 `/post-images/...` 引用。
 
 ## 分文档导航
 
@@ -227,23 +227,23 @@ isTop: false
 ## 专题文件结构
 
 ```text
-LocalBK/posts/unity-senior-developer-skills.md
-LocalBK/posts/unity-senior-developer-01-engine-csharp-architecture.md
-LocalBK/posts/unity-senior-developer-02-engineering-maintainability.md
-LocalBK/posts/unity-senior-developer-03-assets-hot-update.md
-LocalBK/posts/unity-senior-developer-04-ui-interaction-input.md
-LocalBK/posts/unity-senior-developer-05-network-sync.md
-LocalBK/posts/unity-senior-developer-06-gameplay-combat-animation.md
-LocalBK/posts/unity-senior-developer-07-rendering-shader-ta.md
-LocalBK/posts/unity-senior-developer-08-performance-memory-package.md
-LocalBK/posts/unity-senior-developer-09-editor-config-local-data.md
-LocalBK/posts/unity-senior-developer-10-build-release-cicd-sdk.md
-LocalBK/posts/unity-senior-developer-11-testing-observability-security.md
-LocalBK/posts/unity-senior-developer-12-cross-platform-localization-audio-ai-physics.md
-LocalBK/posts/unity-senior-developer-13-tech-leadership-project-communication.md
-LocalBK/post-images/unity-senior-developer-skill-map.svg
-LocalBK/post-images/unity-senior-developer-toolchain-map.svg
-LocalBK/post-images/unity-senior-developer-architecture-layers.svg
-LocalBK/post-images/unity-senior-developer-delivery-loop.svg
-LocalBK/post-images/unity-senior-developer-learning-roadmap.svg
+posts/unity-senior-developer-skills.md
+posts/unity-senior-developer-01-engine-csharp-architecture.md
+posts/unity-senior-developer-02-engineering-maintainability.md
+posts/unity-senior-developer-03-assets-hot-update.md
+posts/unity-senior-developer-04-ui-interaction-input.md
+posts/unity-senior-developer-05-network-sync.md
+posts/unity-senior-developer-06-gameplay-combat-animation.md
+posts/unity-senior-developer-07-rendering-shader-ta.md
+posts/unity-senior-developer-08-performance-memory-package.md
+posts/unity-senior-developer-09-editor-config-local-data.md
+posts/unity-senior-developer-10-build-release-cicd-sdk.md
+posts/unity-senior-developer-11-testing-observability-security.md
+posts/unity-senior-developer-12-cross-platform-localization-audio-ai-physics.md
+posts/unity-senior-developer-13-tech-leadership-project-communication.md
+post-images/unity-senior-developer-skill-map.svg
+post-images/unity-senior-developer-toolchain-map.svg
+post-images/unity-senior-developer-architecture-layers.svg
+post-images/unity-senior-developer-delivery-loop.svg
+post-images/unity-senior-developer-learning-roadmap.svg
 ```
