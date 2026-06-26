@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-25T06:18:04.5507293Z",
+  "generatedAt": "2026-06-26T02:22:29.4132097Z",
   "files": [
     ".current_theme",
     "404.html",
@@ -255,6 +255,7 @@
     "post/unity-mobile-notifications/index.html",
     "post/unity-profiler/index.html",
     "post/unity-runtimeinitializeonloadmethod-chi-ren-shi-jian/index.html",
+    "post/unity-senior-developer-01-01-render-pipeline-differences/index.html",
     "post/unity-senior-developer-01-engine-csharp-architecture/index.html",
     "post/unity-senior-developer-02-engineering-maintainability/index.html",
     "post/unity-senior-developer-03-assets-hot-update/index.html",

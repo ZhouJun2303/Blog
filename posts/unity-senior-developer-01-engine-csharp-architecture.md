@@ -2,7 +2,7 @@
 id: nKnFpw
 title: Unity 开发高级/资深 01：引擎、C# 与客户端架构
 createdAt: "2026-06-10 21:51:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-26 09:48:24"
 tags:
     - Unity
     - 开发高级/资深
@@ -39,7 +39,197 @@ isTop: false
 - 时间系统：Time.deltaTime、fixedDeltaTime、timeScale、真实时间、服务器时间、本地时间。
 - 输入系统：旧 Input、新 Input System、触控、键鼠、手柄在架构中的抽象方式。
 - 编辑器与运行时：Editor 代码隔离、Assembly Definition、条件编译、打包裁剪。
-- 版本意识：Unity LTS 选择、升级风险、插件兼容、渲染管线差异。
+- 版本意识：Unity LTS 选择、升级风险、插件兼容。
+- 渲染管线差异：[单独阅读](/post/unity-senior-developer-01-01-render-pipeline-differences/) Built-in、URP、HDRP 的定位、资源兼容、Shader/材质、后处理、性能和迁移成本。
+
+### 坐标、旋转与父子变换
+
+坐标系统不要死记名词，核心是先问一句：这个值是相对于谁的？
+
+- 世界坐标：相对于整个 Scene 的坐标。`transform.position`、`transform.rotation` 表示物体在世界里的位置和旋转，适合做寻路、相机跟随、子弹飞行、怪物距离判断。
+- 本地坐标：相对于父节点的坐标。`transform.localPosition`、`transform.localRotation`、`transform.localScale` 表示子节点在父节点空间里的偏移，适合做挂点、武器、特效、UI 子节点布局。
+- 屏幕坐标：相对于屏幕像素的坐标。鼠标、触摸、`Camera.WorldToScreenPoint` 得到的通常是屏幕坐标，常用于点击检测、血条跟随角色、把 3D 位置投到屏幕上。
+- UI 坐标：相对于某个 `RectTransform` 或 Canvas 的坐标。UGUI 里不要直接把屏幕坐标当成 `anchoredPosition`，通常要用 `RectTransformUtility.ScreenPointToLocalPointInRectangle` 做转换。
+
+常用转换可以按这个顺序理解：
+
+```csharp
+// 子节点挂点：本地偏移 -> 世界位置
+Vector3 worldPoint = weaponRoot.TransformPoint(localOffset);
+
+// 判断一个世界点在某个物体自己的前后左右：世界位置 -> 本地位置
+Vector3 localPoint = transform.InverseTransformPoint(enemy.position);
+bool enemyInFront = localPoint.z > 0f;
+
+// 角色头顶世界坐标 -> 屏幕坐标 -> UI 面板坐标
+Vector3 screenPoint = Camera.main.WorldToScreenPoint(head.position);
+RectTransformUtility.ScreenPointToLocalPointInRectangle(
+    hpBarRoot,
+    screenPoint,
+    uiCamera,
+    out Vector2 uiPoint
+);
+hpBar.anchoredPosition = uiPoint;
+```
+
+角色头顶是 3D 世界坐标，血条是 2D UI 坐标，二者不能直接赋值。先转成屏幕坐标，是因为屏幕是相机投影后的共同参照：`WorldToScreenPoint` 会把世界点经过相机位置、朝向、FOV、透视投影和分辨率，变成屏幕上的像素点；然后再用 `ScreenPointToLocalPointInRectangle` 转成某个 UI 容器下的本地坐标。实际项目里还要判断 `screenPoint.z`，如果角色在相机背后，血条应该隐藏。
+
+四元数和矩阵可以先按“工具”理解，不用一开始就钻数学细节。
+
+- 四元数 `Quaternion` 用来表示旋转。它比欧拉角稳定，不容易遇到万向锁。业务代码里不要直接改 `x/y/z/w`，优先用 `Quaternion.Euler`、`Quaternion.LookRotation`、`Quaternion.AngleAxis`、`Quaternion.Slerp`。
+- 矩阵 `Matrix4x4` 可以把位置、旋转、缩放合成一次变换。Unity 的 `Transform` 背后本质就是矩阵变换：`localToWorldMatrix` 把本地空间转到世界空间，`worldToLocalMatrix` 反过来。日常业务优先用 `TransformPoint`、`InverseTransformPoint`，写 Shader、批量渲染、自定义骨骼或大量数学计算时再直接碰矩阵。
+- 父子节点变换的关系是：父节点的世界变换乘上子节点的本地变换，得到子节点的世界变换。父节点移动、旋转、缩放，子节点会一起变化；子节点改 `localPosition`，是在父节点空间里调整偏移。
+
+万向锁是欧拉角的典型问题：3D 旋转本来有三个自由度，但在某些角度下，两个旋转轴会重合，实际只剩两个有效方向。表现到 Unity 里，就是连续改 `transform.eulerAngles` 时可能出现角度跳变、方向怪、某个轴像是转不动。欧拉角适合 Inspector 显示和配置，四元数更适合代码里的旋转计算、插值和组合。
+
+几个容易踩坑的点：
+
+- `position` 和 `localPosition` 不是一回事。没有父节点时两者看起来一样，有父节点后差异会立刻出现。
+- `TransformPoint` 会受位置、旋转、缩放影响；`TransformDirection` 只处理方向，不处理位置。算方向时不要用点位转换硬减。
+- `SetParent(parent, true)` 会尽量保持当前世界位置不变，并重新计算本地坐标；`SetParent(parent, false)` 会保留当前本地值，世界位置可能变化。
+- 父节点有非等比缩放时，子节点旋转、碰撞体、粒子和 UI 都可能出现奇怪结果。项目里尽量不要把复杂逻辑挂在被拉伸的父节点下面。
+- UI 的 Overlay、Screen Space Camera、World Space 三种 Canvas 模式转换方式不同。遇到“血条位置偏了”“点击区域不对”，先检查 Canvas 模式、相机参数和坐标转换函数。
+
+实际项目里，能把坐标系统讲清楚的人，通常能更快定位这类问题：角色头顶血条漂移、子弹方向不对、特效挂点偏移、拖拽 UI 跟手异常、相机跟随抖动、换父节点后物体瞬移。
+
+### PlayerLoop 与每帧执行链
+
+PlayerLoop 可以理解成 Unity 一帧内部的执行流水线。开发时不需要背完整源码，但要知道脚本、物理、动画和渲染大致先后发生在哪里。
+
+简化顺序可以这样看：
+
+```text
+输入与时间更新
+↓
+FixedUpdate，可能 0 次、1 次或多次
+↓
+物理模拟
+↓
+Update
+↓
+动画、状态机、协程等更新
+↓
+LateUpdate
+↓
+相机、剔除、渲染提交
+↓
+画面显示
+```
+
+`FixedUpdate` 按固定时间步长执行，不是每帧一定一次。帧率低时 Unity 可能连续执行多次来追物理时间，帧率高时也可能一次都不执行。`Rigidbody` 移动、加力、物理前控制适合放这里。
+
+`Update` 基本每帧一次，适合输入、普通业务逻辑、角色状态、技能冷却、UI 刷新等。`LateUpdate` 在所有 `Update` 后执行，适合相机跟随、角色后处理、需要等别人先动完再修正自己的逻辑。
+
+渲染在脚本逻辑之后。也就是说这一帧在 `Update` 或 `LateUpdate` 改了位置、材质、显隐，后面的渲染阶段才会把变化画出来。理解 PlayerLoop，主要是为了排查物理抖动、相机抖动、输入延迟、动画覆盖位移、UI 跟随 3D 角色偏一帧、协程时机不符合预期这类问题。
+
+### 输入系统与动作抽象
+
+输入系统的核心不是 API 名字，而是不要让业务代码到处直接读具体设备。角色、战斗、UI、交互系统应该关心“玩家想做什么”，而不是关心这个输入来自键盘、鼠标、触屏还是手柄。
+
+旧 `Input` 常见写法是直接读按键：
+
+```csharp
+if (Input.GetKeyDown(KeyCode.Space))
+{
+    Jump();
+}
+```
+
+这种方式简单，适合小项目和旧项目。但平台一多，业务代码里会散落很多 `GetKeyDown`、`GetMouseButtonDown`、`GetTouch`，后面支持手柄、改键位、做触屏虚拟摇杆都会很难收。
+
+New Input System 更推荐先定义 Action：
+
+```text
+Move：移动
+Look：视角旋转
+Jump：跳跃
+Attack：攻击
+Interact：交互
+OpenMenu：打开菜单
+```
+
+一个 Action 可以绑定多个输入来源：
+
+```text
+Move
+- Keyboard：WASD
+- Gamepad：Left Stick
+- Touch：Virtual Joystick
+
+Attack
+- Mouse：Left Button
+- Gamepad：Right Trigger
+- Touch：攻击按钮
+```
+
+业务层只读统一动作：
+
+```csharp
+Vector2 move = moveAction.ReadValue<Vector2>();
+```
+
+它不应该关心这个 `Vector2` 是键盘、摇杆还是虚拟摇杆来的。
+
+`Action Map` 是一组输入动作的集合，通常按当前游戏状态划分：
+
+```text
+Gameplay
+- Move
+- Look
+- Jump
+- Attack
+- Interact
+
+UI
+- Navigate
+- Submit
+- Cancel
+- Point
+- Click
+
+Vehicle
+- Steer
+- Brake
+- Accelerate
+```
+
+分 Action Map 的意义是防止状态混乱。比如 `Esc` 在 Gameplay 里是打开菜单，在 UI 里是关闭弹窗；打开背包时应该禁用 Gameplay，启用 UI，避免“点 UI 的同时角色还在攻击或移动”。
+
+```csharp
+gameplayMap.Disable();
+uiMap.Enable();
+```
+
+设备热插拔指游戏运行中设备随时接入或断开。玩家可能先用键鼠，进入游戏后插入手柄；也可能中途拔掉手柄切回键鼠。New Input System 可以监听设备变化：
+
+```csharp
+InputSystem.onDeviceChange += (device, change) =>
+{
+    if (change == InputDeviceChange.Added)
+    {
+        Debug.Log($"设备接入: {device.displayName}");
+    }
+
+    if (change == InputDeviceChange.Removed)
+    {
+        Debug.Log($"设备断开: {device.displayName}");
+    }
+};
+```
+
+中大型项目里，一般会再包一层 `InputService` 或 `InputReader`：
+
+```text
+New Input System
+↓
+InputReader / InputService
+↓
+统一动作数据
+↓
+角色、UI、战斗、交互系统
+```
+
+这样 UI 提示可以根据当前设备显示“按 E 交互”或“按 A 交互”，业务逻辑也不会因为新增触屏、手柄、键位重绑而大面积修改。
 
 ### 需要掌握的工具
 
@@ -55,6 +245,7 @@ isTop: false
 - 生命周期与 PlayerLoop。
 - 场景、Prefab 与序列化。
 - Unity 平台参数与构建设置。
+- [渲染管线差异与升级迁移](/post/unity-senior-developer-01-01-render-pipeline-differences/)。
 - 编辑器扩展与运行时代码隔离。
 
 <a id="csharp"></a>

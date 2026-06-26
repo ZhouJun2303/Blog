@@ -2,7 +2,7 @@
 id: VDzWPP
 title: Unity 开发高级/资深技能总览
 createdAt: "2026-06-10 21:50:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-26 09:48:24"
 tags:
     - Unity
     - 开发高级/资深
@@ -31,7 +31,7 @@ isTop: false
 
 - 总览入口：当前文档负责列出全部方向、能力地图、学习路线和自检清单。
 - 分文档：每个专题都有独立 Markdown，适合继续补充案例、代码片段和项目复盘。
-- 细分方式：每个分文档内继续按小方向拆分；如果某个方向后续需要更深案例，可以在同目录下继续新增专题文档。
+- 细分方式：主文档使用 `01`、`02` 这类一级编号；子级专题统一使用 `01-01`、`01-02` 这类二级编号，文件名也必须带完整二级编号。
 - 可跳转：目录表中的方向名都可以直接跳到对应分文档或分文档内的小节。
 - 工具要求：每个方向都列出了开发高级/资深需要掌握或至少能判断适用边界的工具。
 - 图片资源：本专题图片都放在 `post-images/` 下，正文统一使用 `/post-images/...` 引用。
@@ -41,6 +41,7 @@ isTop: false
 | 编号 | 分文档 | 覆盖方向 |
 | --- | --- | --- |
 | 01 | [引擎、C# 与客户端架构](/post/unity-senior-developer-01-engine-csharp-architecture/) | Unity 基础、C#、架构分层、启动流程、模块边界 |
+| 01-01 | [渲染管线差异](/post/unity-senior-developer-01-01-render-pipeline-differences/) | Built-in、URP、HDRP 的定位、兼容、迁移和选型成本 |
 | 02 | [工程规范与可维护性](/post/unity-senior-developer-02-engineering-maintainability/) | 代码规范、目录规范、Review、技术债、文档 |
 | 03 | [资源管理与热更新](/post/unity-senior-developer-03-assets-hot-update/) | Addressables、AssetBundle、资源生命周期、热更、Shader Variant |
 | 04 | [UI、交互与输入](/post/unity-senior-developer-04-ui-interaction-input/) | UI 框架、红点、适配、输入、场景交互 |
@@ -98,7 +99,7 @@ isTop: false
 
 | 方向 | 具体交付物 |
 | --- | --- |
-| Unity 引擎基础 | 项目启动流程图、生命周期规范、Prefab/Scene 使用规范、Unity 版本升级风险清单 |
+| Unity 引擎基础 | 项目启动流程图、生命周期规范、Prefab/Scene 使用规范、Unity 版本升级和渲染管线迁移风险清单 |
 | C# 与代码基本功 | 代码规范、GC 零分配示例、异步取消模板、IL2CPP/AOT 问题处理记录 |
 | 客户端架构设计 | 模块依赖图、启动状态机、全局服务注册表、异步加载和失败恢复流程 |
 | 工程规范与可维护性 | 目录规范、Review Checklist、错误码规范、模块 README、技术债清单 |
@@ -229,6 +230,7 @@ isTop: false
 ```text
 posts/unity-senior-developer-skills.md
 posts/unity-senior-developer-01-engine-csharp-architecture.md
+posts/unity-senior-developer-01-01-render-pipeline-differences.md
 posts/unity-senior-developer-02-engineering-maintainability.md
 posts/unity-senior-developer-03-assets-hot-update.md
 posts/unity-senior-developer-04-ui-interaction-input.md
