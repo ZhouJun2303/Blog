@@ -2,7 +2,7 @@
 id: o6CWyQ
 title: Unity 开发高级/资深 12：跨平台、本地化、音视频、AI 与物理
 createdAt: "2026-06-10 22:02:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-29 15:42:42"
 tags:
     - Unity
     - 开发高级/资深
@@ -25,7 +25,7 @@ isTop: false
 
 [返回总览](/post/unity-senior-developer-skills/)
 
-![Unity 开发高级/资深工具链地图](/post-images/unity-senior-developer-toolchain-map.svg)
+相关图示：[工具速查总览](/post/unity-senior-developer-skills/#toolchain-map)
 
 <a id="cross-platform"></a>
 ## 跨平台适配

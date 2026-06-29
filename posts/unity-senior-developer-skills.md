@@ -2,7 +2,7 @@
 id: VDzWPP
 title: Unity 开发高级/资深技能总览
 createdAt: "2026-06-10 21:50:00"
-updated: "2026-06-26 09:48:24"
+updated: "2026-06-29 15:42:42"
 tags:
     - Unity
     - 开发高级/资深
@@ -24,8 +24,6 @@ isTop: false
 ---
 
 > “开发高级/资深”不是只负责写最难的代码，而是负责把 Unity 项目的技术方向、模块边界、性能质量、发版稳定性和团队交付串起来。本文采用“总分”结构：本文件是总览入口，下面的分文档展开每个方向的具体技能点。
-
-![Unity 开发高级/资深技能地图](/post-images/unity-senior-developer-skill-map.svg)
 
 ## 阅读方式
 
@@ -133,6 +131,7 @@ isTop: false
 | 项目管理与风险控制 | 里程碑计划、关键路径、风险清单、降级方案、灰度和回滚预案 |
 | 文档与表达能力 | 技术方案、接口文档、流程图、状态图、排障文档、版本复盘 |
 
+<a id="toolchain-map"></a>
 ## 工具速查总览
 
 ![Unity 开发高级/资深工具链地图](/post-images/unity-senior-developer-toolchain-map.svg)
@@ -173,6 +172,7 @@ isTop: false
 | 项目管理与风险控制 | 甘特图/里程碑工具、风险清单、灰度后台、监控看板、事故复盘模板 | [查看](/post/unity-senior-developer-13-tech-leadership-project-communication/#project-risk) |
 | 文档与表达能力 | Markdown、Mermaid、PlantUML、draw.io、Notion/Confluence、PPT/Keynote | [查看](/post/unity-senior-developer-13-tech-leadership-project-communication/#communication) |
 
+<a id="architecture-layers"></a>
 ## 能力分层图
 
 ![开发高级/资深架构分层](/post-images/unity-senior-developer-architecture-layers.svg)
@@ -184,6 +184,7 @@ isTop: false
 - 质量层：性能、内存、测试、日志、监控、安全、稳定性。
 - 领导层：技术方案、风险控制、团队协作、发版节奏、线上复盘。
 
+<a id="delivery-loop"></a>
 ## 交付闭环图
 
 ![开发高级/资深交付闭环](/post-images/unity-senior-developer-delivery-loop.svg)
@@ -199,6 +200,7 @@ isTop: false
 - 上线能监控。
 - 事故能回滚和复盘。
 
+<a id="learning-roadmap"></a>
 ## 推荐学习路线
 
 ![Unity 开发高级/资深学习路线](/post-images/unity-senior-developer-learning-roadmap.svg)

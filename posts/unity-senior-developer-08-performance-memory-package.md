@@ -2,7 +2,7 @@
 id: uyCbBG
 title: Unity 开发高级/资深 08：性能、内存与包体
 createdAt: "2026-06-10 21:58:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-29 15:42:42"
 tags:
     - Unity
     - 开发高级/资深
@@ -25,7 +25,7 @@ isTop: false
 
 [返回总览](/post/unity-senior-developer-skills/)
 
-![Unity 开发高级/资深学习路线](/post-images/unity-senior-developer-learning-roadmap.svg)
+相关图示：[推荐学习路线](/post/unity-senior-developer-skills/#learning-roadmap)
 
 性能优化不是“感觉哪里慢就改哪里”，而是用数据证明瓶颈、用工具定位原因、用对比验证收益、用规则防止回退。开发高级/资深需要建立一套能被团队重复执行的性能流程。
 

@@ -2,7 +2,7 @@
 id: 7oWg0w
 title: Unity 开发高级/资深 07：渲染、Shader 与 TA 协作
 createdAt: "2026-06-10 21:57:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-29 15:42:42"
 tags:
     - Unity
     - 开发高级/资深
@@ -25,7 +25,7 @@ isTop: false
 
 [返回总览](/post/unity-senior-developer-skills/)
 
-![Unity 开发高级/资深工具链地图](/post-images/unity-senior-developer-toolchain-map.svg)
+相关图示：[工具速查总览](/post/unity-senior-developer-skills/#toolchain-map)
 
 <a id="rendering"></a>
 ## 渲染管线与 Shader

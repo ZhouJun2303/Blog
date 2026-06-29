@@ -2,7 +2,7 @@
 id: HTXMOB
 title: Unity 开发高级/资深 13：技术领导力、项目管理与表达
 createdAt: "2026-06-10 22:03:00"
-updated: "2026-06-17 10:10:59"
+updated: "2026-06-29 15:42:42"
 tags:
     - Unity
     - 开发高级/资深
@@ -23,7 +23,7 @@ isTop: false
 
 [返回总览](/post/unity-senior-developer-skills/)
 
-![开发高级/资深交付闭环](/post-images/unity-senior-developer-delivery-loop.svg)
+相关图示：[交付闭环图](/post/unity-senior-developer-skills/#delivery-loop)
 
 <a id="leadership"></a>
 ## 团队管理与技术领导力

@@ -2,7 +2,7 @@
 id: rPd01A
 title: Unity 开发高级/资深 01-01：渲染管线差异
 createdAt: "2026-06-25 21:01:09"
-updated: "2026-06-26 09:48:24"
+updated: "2026-06-29 15:42:42"
 tags:
     - Unity
     - 开发高级/资深
@@ -25,7 +25,7 @@ isTop: false
 
 [返回总览](/post/unity-senior-developer-skills/)
 
-![开发高级/资深架构分层](/post-images/unity-senior-developer-architecture-layers.svg)
+相关图示：[能力分层图](/post/unity-senior-developer-skills/#architecture-layers)
 
 ## 为什么单独看渲染管线
 

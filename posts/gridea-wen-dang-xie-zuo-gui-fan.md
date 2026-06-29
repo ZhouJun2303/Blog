@@ -2,7 +2,7 @@
 id: hKNOLQ
 title: Gridea 文档写作规范
 createdAt: "2026-06-10 22:10:00"
-updated: "2026-06-26 09:48:24"
+updated: "2026-06-29 15:42:42"
 tags:
     - 写作规范
     - 文档规范
@@ -15,13 +15,11 @@ category_ids:
     - czdc35
 published: true
 hideInList: false
-feature: /post-images/unity-senior-developer-toolchain-map.svg
+feature: ""
 isTop: false
 ---
 
 > 本规范用于当前 Gridea Pro 站点后续新增和维护文章。只要文章最终要发布到本站，就按这里的目录、元数据、图片、链接和渲染规则处理。
-
-![](/post-images/unity-senior-developer-toolchain-map.svg)
 
 ## 目录规则
 
