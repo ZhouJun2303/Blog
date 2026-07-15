@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-01T13:37:58.2690734Z",
+  "generatedAt": "2026-07-15T06:15:35.2484729Z",
   "files": [
     ".current_theme",
     "404.html",
@@ -254,6 +254,7 @@
     "post/unity-ji-yu-obfuscator-de-dai-ma-hun-yao/index.html",
     "post/unity-mobile-notifications/index.html",
     "post/unity-profiler/index.html",
+    "post/unity-roslyn-analyzer-iap-rule/index.html",
     "post/unity-runtimeinitializeonloadmethod-chi-ren-shi-jian/index.html",
     "post/unity-senior-developer-01-01-render-pipeline-differences/index.html",
     "post/unity-senior-developer-01-engine-csharp-architecture/index.html",
