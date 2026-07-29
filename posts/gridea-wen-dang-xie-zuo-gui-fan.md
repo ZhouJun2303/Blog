@@ -2,7 +2,7 @@
 id: hKNOLQ
 title: Gridea 文档写作规范
 createdAt: "2026-06-10 22:10:00"
-updated: "2026-06-29 15:42:42"
+updated: "2026-07-21 19:57:38"
 tags:
     - 写作规范
     - 文档规范
@@ -13,8 +13,8 @@ categories:
     - 阅读与资料
 category_ids:
     - czdc35
-published: true
-hideInList: false
+published: false
+hideInList: true
 feature: ""
 isTop: false
 ---
